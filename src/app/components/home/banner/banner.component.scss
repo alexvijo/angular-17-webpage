@@ -1,0 +1,60 @@
+
+@import "./../../../../variables.scss";
+
+.banner{
+    min-height: 100vh;
+
+    .container{
+        display: table;
+        height: 100vh;
+
+        .section-box-banner{
+            display: table-cell;
+            vertical-align: middle;
+
+            .content{
+              margin-top: 132px;
+            }
+
+            h1{
+                color: $Green;
+                margin: 0 0 13px 3px;
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: normal;
+                font-family: $CodeFont;
+            }
+
+            h2, h3 {
+                font-weight: 600;
+                font-size: 80px;
+                line-height: 1;
+                margin: 0;
+                font-family: $MainFont;
+            }
+
+            h2{
+                color: $LightestSlate;
+
+            }
+            h3{
+                color: $Slate;
+                font-weight: 100;
+            }
+
+            .banner-description{
+                margin-bottom: 70px;
+            }
+
+            p{
+                max-width: 500px;
+            }
+
+            .div-btn-banner{
+                height: 43px;
+            }
+        }
+
+
+    }
+}

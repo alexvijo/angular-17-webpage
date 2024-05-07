@@ -1,0 +1,266 @@
+{
+  "Header.init": "Inicio",
+  "Header.Item0": "&nbsp;&nbsp;",
+  "Header.Item1": "About me",
+  "Header.Item2": "Interests",
+  "Header.Item3": "Projects",
+  "Header.Item4": "Notes",
+  "Header.Item5": "Contact",
+  "Header.cvBtn": "Resume",
+  "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
+
+  "Banner.Pretitle": "Hello My name is",
+  "Banner.Description": "I am a software developer with over 9 years of experience. <br>I focus on building intuitive and efficient interfaces.",
+  "Banner.ActionBtn": "Greet me",
+
+  "AboutMe.Title": "About me",
+  "AboutMe.Paragraphs": [
+    "I specialize in the framework <span class='underline'>Angular</span>.",
+    "I work writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
+    "My capabilities also include implementing improvements in systems, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
+    "I am the sum of many skills and talents. I enjoy observing those who think disruptively and step out of their comfort zone.",
+    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by what I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
+    "I have ease in communication to understand, analyze, and provide solutions to client requirements. <br>I work comfortably autonomously but even more so doing it as a team and under agile methodology.",
+
+    "Some technologies I work with are:"
+  ],
+
+  "Experience.Title": "Interests",
+  "Experience.Jobs": [
+    {
+      "imageUrl": "data:image/jpeg;base64,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",
+      "Tab": "Pablo d'Ors",
+      "Title": "",
+      "Date": "",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://yt3.googleusercontent.com/810dnpzdmae4e5p-AASoYluXLtRU2_humb1_C6QdoQ_DO5ycbIkHabdibOma1JxnBkI3I0f_XP4=s176-c-k-c0x00ffffff-no-rj",
+      "Tab": "Marc Vidal",
+      "Title": "@marc_vidal",
+      "Date": "https://www.youtube.com/@marc_vidal",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://yt3.ggpht.com/ytc/AIdro_kFMlV5pd9yp52QPeW3OpNkNjZJ2n_hJxjKlBSOkKZtOLk=s88-c-k-c0x00ffffff-no-rj",
+      "Tab": "Fernando Herrera",
+      "Title": "DevTalles",
+      "Date": "https://www.youtube.com/@DevTalles",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lEIrmryzUXB2wZIfX8TXsxTJsXg9TRr_pVmFSv4gSuFKE=s176-c-k-c0x00ffffff-no-rj",
+      "Tab": "Daniel Santos",
+      "Title": "Mr. Santos",
+      "Date": "https://www.youtube.com/@MrSantos",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nw4xlzfT5u3snP6fTJHZW_yQm1-ZgEfa0veu7Ah2Ukx7k=s176-c-k-c0x00ffffff-no-rj",
+      "Tab": "David Battaglia",
+      "Title": "@DavidBattaglia",
+      "Date": "https://www.youtube.com/@DavidBattaglia",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_k8my_tmix5ihzXepDQ78FiMtvv-nZCU2Ld8mrxn5s6vR4=s176-c-k-c0x00ffffff-no-rj",
+      "Tab": "Joshua Morony",
+      "Title": "@JoshuaMorony",
+      "Date": "https://www.youtube.com/@JoshuaMorony",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "data:image/jpeg;base64,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",
+      "Tab": "Brian Tracy",
+      "Title": "Psicologia Del exito",
+      "Date": "https://www.ivoox.com/psicologia-del-exito-brian-tracy_bk_list_1198_1.html",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://btcprague.com/wp-content/uploads/2024/02/Luna-768x768.png",
+      "Tab": "Lunaticoin  (Luna)",
+      "Title": "@Lunaticoin",
+      "Date": "https://www.youtube.com/@Lunaticoin",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMUUspj7H-G9GqGNOr5JD83qHf0kRSV9jhdA&s",
+      "Tab": "Gerry Garbulsky",
+      "Title": "Aprender de Grandes",
+      "Date": "https://www.ivoox.com/suscripciones_jb_41261225_1.html",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://m.media-amazon.com/images/S/amzn-author-media-prod/2me6agjeql2ks133chc88egt8j._SY600_.jpg",
+      "Tab": "Alejandro Cuba Ruiz",
+      "Title": "Angularidades",
+      "Date": "https://medium.com/angularidades",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://pbs.twimg.com/profile_images/1163409824417288192/-o_sWf3y_400x400.jpg",
+      "Tab": "Ángel García Galiano",
+      "Title": "",
+      "Date": "https://www.youtube.com/watch?v=YL08Vbc81hQ",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrScUgqsIoKVAPeqiO12dg1BcV0wbEnbQnf2iJfy6iRQ&s",
+      "Tab": "Brad Traversy",
+      "Title": "Traversy Media",
+      "Date": "https://www.traversymedia.com/",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://salvadosporlabolsa.com/wp-content/uploads/2022/03/dani-firma-byn.jpg",
+      "Tab": "Dani Sóñora",
+      "Title": "Salvados por la bolsa",
+      "Date": "https://www.ivoox.com/podcast-salvados-bolsa_sq_f11177054_1.html",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "data:image/jpeg;base64,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",
+      "Tab": "Bezael Pérez",
+      "Title": "Domini Code",
+      "Date": "https://www.youtube.com/@DominiCode",
+      "Description": [
+      ]
+    },
+    {
+      "imageUrl": "https://media.licdn.com/dms/image/D4E03AQGPO2G9QJdMCg/profile-displayphoto-shrink_200_200/0/1710441907478?e=2147483647&v=beta&t=rpmaO4jma91U14IFqlTZTLoFAgh4awSBKN-Gv4a7iHw",
+      "Tab": "Jimy Dolores",
+      "Title": "LogiDev",
+      "Date": "https://www.youtube.com/@LogiDev",
+      "Description": [
+      ]
+    }
+  ],
+
+  "FeatureProjects.Title": "My Projects",
+    "FeatureProjects.Label": "Featured Project",
+    "FeatureProjects.Projects": [
+        {
+            "Title": "Agrourbana",
+            "Description": "An application for monitoring developed from scratch with an auth module, <span class='underline'>configurable charts</span>, <span class='underline'>configurable alarms</span>, and <span class='underline'>user management</span>. It also includes reactive form logic for parameter configuration.",
+            "imgs": [
+                "assets/images/agrourbana/agrourbana1.png"
+            ],
+            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+        },
+        {
+            "Title": "Your Super Plan",
+            "Description": "A health plan calculator that includes an advanced search feature. Plans are displayed based on user age, monthly income, and location. It features <span class='underline'>online chat</span>, <span class='underline'>contact form</span>, <span class='underline'>whatsapp and email notifications system</span>, <span class='underline'>auth</span>, and <span class='underline'>internet information management through the administrator role</span>.",
+            "imgs": [
+                "assets/images/tusuperplan/tusuperplan1.png"
+            ],
+            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+        },
+        {
+            "Title": "Proyexiot",
+            "Description": "A monitoring platform for data related to water wells, towboats, and various installations developed from scratch with an auth module, <span class='underline'>configurable charts</span>, <span class='underline'>configurable alarms</span>, <span class='underline'>user management</span>, and <span class='underline'>geolocation with openlayers.</span> It also includes reactive form logic for parameter configuration.",
+            "imgs": [
+                "assets/images/proyex/proyex1.png"
+            ],
+            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+        },
+        {
+            "Title": "Hands Game",
+            "Description": "An extended rock-paper-scissors game. A personal project developed in Angular where you play against the machine at random. It utilizes services, interfaces, and components.",
+            "imgs": ["assets/images/hands-game.png"],
+            "ghLink": "https://github.com/alexvijo/hands-game",
+            "demoLink": "https://proyectos.alexvijo.com/hands-game",
+            "Technologies": ["Angular", "CSS GRID", "SASS", "Angular animations"]
+        },
+        {
+            "Title": "Countries Viewer",
+            "Description": "An interface that consumes a countries API allowing you to view a list of countries, see details of each country, filter by name and region. It also features a dark mode for switching between light and dark themes.",
+            "imgs": ["assets/images/countries-viewer.png"],
+            "ghLink": "https://github.com/alexvijo/countries-viewer",
+            "demoLink": "https://proyectos.alexvijo.com/countries-viewer",
+            "Technologies": ["Angular", "RxJS", "SASS", "API"]
+        }
+    ],
+    "OtherProjects.Title": "Notes",
+    "OtherProjects.Projects": [
+        {
+            "Title": "SOLID PRINCIPLES",
+            "Description": "Principles and best practices",
+            "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+            "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+            "Technologies": []
+        },
+        {
+            "Title": "DESIGN PATTERNS",
+            "Description": "Creational, structural, behavioral patterns",
+            "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+            "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
+            "Technologies": []
+        },
+        {
+            "Title": "CLEAN CODE",
+            "Description": "HEXAGONAL ARCHITECTURE",
+            "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "RESOURCES",
+            "Description": "",
+            "ghLink": "https://github.com/alexvijo/social-proof-section",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "ICONS",
+            "Description": "",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "COMPONENTS",
+            "Description": "",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "DESIGN SYSTEM",
+            "Description": "",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "SIGNALS",
+            "Description": "",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": []
+        },
+        {
+            "Title": "NGRX",
+            "Description": "",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": []
+        }
+    ],
+    "Contact.Pretitle": "If you've made it this far...",
+    "Contact.Title": "Say Hello!",
+    "Contact.Content": "I'd be delighted to receive your contact if you're interested in discussing new opportunities. Write me, and I'll respond as soon as I see your message.",
+    "Contact.Btn": "Send me an email"
+}
