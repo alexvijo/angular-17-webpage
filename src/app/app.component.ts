@@ -27,7 +27,7 @@ export class AppComponent {
 
   ngOnInit(): void{
     this.languageService.initLanguage()
-    this.titleService.setTitle( "Alex Vicente <FrontEndDev>" );
-    AOS.init(); 
+    this.titleService.setTitle( "Alex Vicente | Frontend Dev." );
+    AOS.init();
   }
 }

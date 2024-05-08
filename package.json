@@ -12,10 +12,11 @@
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "build:github-pages": "ng deploy --base-href=https://alex-vicente.dev/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "delete:docs": "del docs",
     "copy:dist": "xcopy /E /I /H dist\\alexvijo\\browser\\* docs",
-    "build:show": "cd dist\\alexvijo\\browser && http-server -o"
+    "build:show": "cd dist\\alexvijo\\browser && http-server -o",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "private": true,
   "dependencies": {
@@ -45,15 +46,17 @@
     "@angular/cli": "^17.3.0",
     "@angular/compiler-cli": "^17.3.0",
     "@types/aos": "^3.0.7",
-    "@types/jasmine": "~5.1.0",
+    "@types/jest": "^29.5.12",
     "copyfiles": "^2.4.1",
     "del-cli": "^5.1.0",
-    "jasmine-core": "~5.1.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "jest": "^29.7.0",
+    "jest-preset-angular": "^14.0.4",
     "typescript": "~5.4.2"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-jest.ts"
+    ]
   }
 }
