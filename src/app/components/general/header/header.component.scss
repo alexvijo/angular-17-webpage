@@ -1,7 +1,7 @@
 @import "./../../../../variables.scss";
 .main-navbar {
     height: 70px;
-    background: $Navy;
+    background: transparent; /*$Navy;*/
     font-family: $CodeFont;
     .menu-ul{
       li{
@@ -125,7 +125,7 @@
         }
     }
     .nav-inicio {
-        color: #64ffda;
+        color: #FF4248;
         font-weight: 700;
         font-size: 30px;
         padding: 0 0 13px 0px;
@@ -205,6 +205,7 @@
     height: 70px;
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    background-color: $Navy;
 }
 
 @media (max-width: 1000px) {
@@ -240,9 +241,9 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 0px;
-    background: #172a45;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid #9ea4b7c2;
 }
 
 .language-container-selector {
@@ -289,7 +290,7 @@
     font-size: 20px;
     height: 20px;
     width: 25px;
-    fill: #64ffda;
+    fill: #FF4248;
     visibility: hidden;
 }
 
