@@ -163,6 +163,20 @@
         "Title": "FaszCode",
         "Date": "https://www.youtube.com/@FaztCode",
         "Description": []
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png",
+        "Tab": "Bitcoin",
+        "Title": "",
+        "Date": "https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://play-lh.googleusercontent.com/6qi3w4uqKaD1c-CBdkkfO6IL0lH4OoCTEdiX0oYbLFxwfvxu1t8vuwHcagdYSFmFKmI=w480-h960-rw",
+        "Tab": "ChatGPT",
+        "Title": "",
+        "Date": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=US&pli=1",
+        "Description": []
       }
     ],
 
