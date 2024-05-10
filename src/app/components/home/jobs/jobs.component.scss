@@ -148,6 +148,9 @@
     margin: 6px;
     filter: grayscale(1);
     transition: filter 0.3s ease;
+    &:hover {
+      cursor: pointer;
+    }
     &::before {
       content: "";
       position: absolute;

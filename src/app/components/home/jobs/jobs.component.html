@@ -10,7 +10,9 @@
             <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
               <div class="image-grid">
                 <div *ngFor='let job of "Experience.Jobs" | translate; let i = index' [title]="job.Tab">
-                   <div class="img-background" [style.background-image]="'url(' + job.imageUrl + ')'"></div>
+                  <div (click)="openLink(job.Date)" [title]="job.Title" >
+                    <div class="img-background" [style.background-image]="'url(' + job.imageUrl + ')'"></div>
+                  </div>
                    <div class="company-tab-content">{{job.Tab}}</div>
                 </div>
               </div>
