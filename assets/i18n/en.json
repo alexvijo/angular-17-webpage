@@ -30,8 +30,8 @@
     {
       "imageUrl": "data:image/jpeg;base64,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",
       "Tab": "Pablo d'Ors",
-      "Title": "",
-      "Date": "",
+      "Title": "Pablo d'Ors",
+      "Date": "https://www.youtube.com/watch?v=orkHFyr6dpI",
       "Description": []
     },
     {
@@ -165,6 +165,34 @@
       "Tab": "FaszCode",
       "Title": "FaszCode",
       "Date": "https://www.youtube.com/@FaztCode",
+      "Description": []
+    },
+    {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png",
+      "Tab": "Bitcoin",
+      "Title": "",
+      "Date": "https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf",
+      "Description": []
+    },
+    {
+      "imageUrl": "https://play-lh.googleusercontent.com/6qi3w4uqKaD1c-CBdkkfO6IL0lH4OoCTEdiX0oYbLFxwfvxu1t8vuwHcagdYSFmFKmI=w480-h960-rw",
+      "Tab": "ChatGPT",
+      "Title": "",
+      "Date": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=US&pli=1",
+      "Description": []
+    },
+    {
+      "imageUrl": "https://m.media-amazon.com/images/I/61pk2aciU1L._SL1200_.jpg",
+      "Tab": "Marco Aurelio",
+      "Title": "",
+      "Date": "https://www.amazon.es/gp/product/8416544530/ref=ox_sc_act_title_2?smid=A1AT7YVPFBWXBL&psc=1",
+      "Description": []
+    },
+    {
+      "imageUrl": "https://img-b.udemycdn.com/user/200_H/74145960_beb9.jpg",
+      "Tab": "Leifer Mendez",
+      "Title": "@LeiferMendez",
+      "Date": "https://www.youtube.com/@LeiferMendez",
       "Description": []
     }
   ],
