@@ -196,50 +196,16 @@
 
     "FeatureProjects.Title": "Mis proyectos",
     "FeatureProjects.Label": "Proyecto Destacado",
-    "FeatureProjects.Projects": [{
-            "Title": "Agrourbana",
-            "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
-            "imgs": [
-                "assets/images/agrourbana/agrourbana1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Tu super plan",
-            "Description": "Cotizador de planes de salud que cuenta con un buscador con el que se hacen consultas avanzadas. Los planes son mostrados en base a la edad, ingreso mensual y ubicacion del usuario. Cuenta con <span class='underline'>chat en linea</span>, <span class='underline'>formulario de contacto</span>, <span class='underline'>sistema de notificaiones por whatsapp y correo</span>, <span class='underline'>auth</span>, y <span class='underline'>gestion de informacion internet a travez del rol de administrador</span>.",
-            "imgs": [
-                "assets/images/tusuperplan/tusuperplan1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Proyexiot",
-            "Description": "Plataforma de monitoreo de datos pertenecientes a pozos de agua, remolcadores y diversas instalaciones realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span>, <span class='underline'>gestión de usuarios</span> y <span class='underline'>geolocalizacion con openlayers.</span> Cuenta también con lógica de formularios reactivos para la configuración de parámetros.",
-            "imgs": [
-                "assets/images/proyex/proyex1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Hands game",
-            "Description": "Juego de piedra papel y tijeras extendido. Un proyecto personal desarrollado en angular en el que juegas al azar contra la máquina. Cuenta con la utilización de servicios, interfaces y componentes.",
-            "imgs": ["assets/images/hands-game.png"],
-            "ghLink": "https://github.com/alexvijo/hands-game",
-            "demoLink": "https://proyectos.alexvijo.com/hands-game",
-            "Technologies": ["Angular", "CSS GRID", "SASS", "Angular animations"]
-        },
-        {
-            "Title": "Countries viewer",
-            "Description": "Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Ademas cuenta con un dark mode para alternar entre el tema oscuro y el claro.",
-            "imgs": ["assets/images/countries-viewer.png"],
-            "ghLink": "https://github.com/alexvijo/countries-viewer",
-            "demoLink": "https://proyectos.alexvijo.com/countries-viewer",
-            "Technologies": ["Angular", "RxJS", "SASS", "API"]
-        }
+    "FeatureProjects.Projects": [
+      {
+        "Title": "Agrourbana",
+        "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
+        "imgs": [
+            "assets/images/agrourbana/agrourbana1.png"
+        ],
+        "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+      }
     ],
-
-
-
     "OtherProjects.Title": "Apuntes",
     "OtherProjects.Projects": [
         {

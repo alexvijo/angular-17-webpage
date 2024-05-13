@@ -1,6 +1,6 @@
 {
   "Header.init": "Inicio",
-  "Header.Item0": "&nbsp;&nbsp;",
+  "Header.Item0": "/&nbsp;&nbsp;",
   "Header.Item1": "About me",
   "Header.Item2": "Interests",
   "Header.Item3": "Projects",
@@ -200,46 +200,14 @@
   "FeatureProjects.Title": "My Projects",
     "FeatureProjects.Label": "Featured Project",
     "FeatureProjects.Projects": [
-        {
-            "Title": "Agrourbana",
-            "Description": "An application for monitoring developed from scratch with an auth module, <span class='underline'>configurable charts</span>, <span class='underline'>configurable alarms</span>, and <span class='underline'>user management</span>. It also includes reactive form logic for parameter configuration.",
-            "imgs": [
-                "assets/images/agrourbana/agrourbana1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Your Super Plan",
-            "Description": "A health plan calculator that includes an advanced search feature. Plans are displayed based on user age, monthly income, and location. It features <span class='underline'>online chat</span>, <span class='underline'>contact form</span>, <span class='underline'>whatsapp and email notifications system</span>, <span class='underline'>auth</span>, and <span class='underline'>internet information management through the administrator role</span>.",
-            "imgs": [
-                "assets/images/tusuperplan/tusuperplan1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Proyexiot",
-            "Description": "A monitoring platform for data related to water wells, towboats, and various installations developed from scratch with an auth module, <span class='underline'>configurable charts</span>, <span class='underline'>configurable alarms</span>, <span class='underline'>user management</span>, and <span class='underline'>geolocation with openlayers.</span> It also includes reactive form logic for parameter configuration.",
-            "imgs": [
-                "assets/images/proyex/proyex1.png"
-            ],
-            "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-        },
-        {
-            "Title": "Hands Game",
-            "Description": "An extended rock-paper-scissors game. A personal project developed in Angular where you play against the machine at random. It utilizes services, interfaces, and components.",
-            "imgs": ["assets/images/hands-game.png"],
-            "ghLink": "https://github.com/alexvijo/hands-game",
-            "demoLink": "https://proyectos.alexvijo.com/hands-game",
-            "Technologies": ["Angular", "CSS GRID", "SASS", "Angular animations"]
-        },
-        {
-            "Title": "Countries Viewer",
-            "Description": "An interface that consumes a countries API allowing you to view a list of countries, see details of each country, filter by name and region. It also features a dark mode for switching between light and dark themes.",
-            "imgs": ["assets/images/countries-viewer.png"],
-            "ghLink": "https://github.com/alexvijo/countries-viewer",
-            "demoLink": "https://proyectos.alexvijo.com/countries-viewer",
-            "Technologies": ["Angular", "RxJS", "SASS", "API"]
-        }
+      {
+        "Title": "Agrourbana",
+        "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
+        "imgs": [
+            "assets/images/agrourbana/agrourbana1.png"
+        ],
+        "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+      }
     ],
     "OtherProjects.Title": "Notes",
     "OtherProjects.Projects": [
