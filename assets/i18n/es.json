@@ -237,6 +237,13 @@
             "Technologies": []
         },
         {
+          "Title": "PATRONES DE ARQUITECTURA",
+          "Description": "MVC, MVP, MVVM",
+          "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+          "demoLink": "",
+          "Technologies": []
+      },
+        {
             "Title": "CLEAN CODE",
             "Description": "ARQUITECTURA HEXAGONAL, ",
             "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
@@ -258,7 +265,7 @@
             "Technologies": []
         },
         {
-            "Title": "COMPONENTES",
+            "Title": "STANDALONE | MODULES",
             "Description": "",
             "ghLink": "",
             "demoLink": "",
