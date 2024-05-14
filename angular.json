@@ -46,6 +46,8 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "allowedCommonJsDependencies": ["aos"],
               "budgets": [
                 {
                   "type": "initial",
@@ -61,7 +63,8 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "allowedCommonJsDependencies": ["aos"],
+              "optimization": true,
               "extractLicenses": false,
               "sourceMap": true
             }

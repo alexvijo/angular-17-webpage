@@ -19,4 +19,8 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  trackByFn(index: any, item: { id: any; }) {
+    return item.id; // unique id corresponding to the item
+  }
+
 }
