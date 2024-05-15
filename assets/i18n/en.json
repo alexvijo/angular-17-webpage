@@ -301,7 +301,14 @@
         "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
         "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
         "Technologies": ["Cloud Shell", "CodePen", "..."]
-    }
+      },
+      {
+        "Title": "CORS CONFIG",
+        "Description": "EDITORES EN LINEA",
+        "ghLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+        "demoLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+        "Technologies": ["CORS", "REGLAS CSP", "..."]
+      }
     ],
     "Contact.Pretitle": "If you've made it this far...",
     "Contact.Title": "Say Hello!",
