@@ -1,5 +1,5 @@
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
@@ -10,6 +10,7 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-header',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

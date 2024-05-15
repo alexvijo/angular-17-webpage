@@ -9,7 +9,7 @@
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
-  "Banner.Pretitle": "Hello My name is",
+  "Banner.Pretitle": "Hello, my name is",
   "Banner.Description": "I am a software developer with over 9 years of experience. <br>I focus on building intuitive and efficient interfaces.",
   "Banner.ActionBtn": "Greet me",
 
@@ -211,69 +211,104 @@
     ],
     "OtherProjects.Title": "Notes",
     "OtherProjects.Projects": [
-        {
-            "Title": "SOLID PRINCIPLES",
-            "Description": "Principles and best practices",
-            "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-            "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-            "Technologies": []
-        },
-        {
-            "Title": "DESIGN PATTERNS",
-            "Description": "Creational, structural, behavioral patterns",
-            "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
-            "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
-            "Technologies": []
-        },
-        {
-            "Title": "CLEAN CODE",
-            "Description": "HEXAGONAL ARCHITECTURE",
-            "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "RESOURCES",
-            "Description": "",
-            "ghLink": "https://github.com/alexvijo/social-proof-section",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "ICONS",
-            "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "COMPONENTS",
-            "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "DESIGN SYSTEM",
-            "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "SIGNALS",
-            "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": []
-        },
-        {
-            "Title": "NGRX",
-            "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": []
-        }
+      {
+        "Title": "TESTING CON JEST",
+        "Description": "Configuración de JEST en Angular y Node",
+        "ghLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
+        "demoLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
+        "Technologies": ["Angular", "Node.js", "Jest"]
+      },
+      {
+        "Title": "E2E CON CYPRESS",
+        "Description": "Configuración de Cypress en Angular",
+        "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
+        "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
+        "Technologies": ["Angular", "Cypress"]
+      },
+      {
+          "Title": "PRINCIPIOS SOLID",
+          "Description": "Principios y buenas prácticas",
+          "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+          "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+          "Technologies": ["Angular"]
+      },
+      {
+          "Title": "PATRONES DE DISEÑO",
+          "Description": "Patrones creacionales, estructurales, de comportamiento",
+          "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+          "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
+          "Technologies": ["Angular"]
+      },
+      {
+        "Title": "PATRONES DE ARQUITECTURA",
+        "Description": "MVC, MVP, MVVM",
+        "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+        "demoLink": "",
+        "Technologies": ["Angular"]
+      },
+      {
+          "Title": "CLEAN CODE",
+          "Description": "ARQUITECTURA HEXAGONAL, ",
+          "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
+          "demoLink": "",
+          "Technologies": ["Angular"]
+      },
+      {
+          "Title": "RECURSOS",
+          "Description": "",
+          "ghLink": "https://github.com/alexvijo/social-proof-section",
+          "demoLink": "",
+          "Technologies": ["Angular"]
+      },
+      {
+          "Title": "ICONS",
+          "Description": "",
+          "ghLink": "",
+          "demoLink": "",
+          "Technologies": ["Angular"]
+      },
+      {
+          "Title": "STANDALONE | MODULES",
+          "Description": "",
+          "ghLink": "",
+          "demoLink": "",
+          "Technologies": ["Angular"]
+      },
+      {
+        "Title": "DESIGN SYSTEM",
+        "Description": "",
+        "ghLink": "",
+        "demoLink": "",
+        "Technologies": ["Angular"]
+      },
+      {
+        "Title": "SIGNALS",
+        "Description": "",
+        "ghLink": "",
+        "demoLink": "",
+        "Technologies": ["Angular"]
+      },
+      {
+        "Title": "NGRX",
+        "Description": "",
+        "ghLink": "",
+        "demoLink": "",
+        "Technologies": ["Angular", "NGRX"]
+      },
+      {
+        "Title": "EDITORES DE CÓDIGO",
+        "Description": "EDITORES EN LINEA",
+        "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+        "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+        "Technologies": ["Cloud Shell", "CodePen", "..."]
+      },
+      {
+        "Title": "CORS CONFIG",
+        "Description": "EDITORES EN LINEA",
+        "ghLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+        "demoLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+        "Technologies": ["CORS", "REGLAS CSP", "..."]
+      }
     ],
     "Contact.Pretitle": "If you've made it this far...",
     "Contact.Title": "Say Hello!",

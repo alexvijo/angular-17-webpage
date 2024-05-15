@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "aot": true,
             "baseHref": "/",
             "outputPath": "dist/alexvijo",
             "index": "src/index.html",

@@ -1,5 +1,5 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { WindowRefService } from '../../../window-ref.service';
@@ -7,6 +7,7 @@ import { WindowRefService } from '../../../window-ref.service';
 @Component({
   selector: 'app-jobs',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     TranslateModule, CommonModule, NgbModule, NgbNavModule, NgOptimizedImage
   ],

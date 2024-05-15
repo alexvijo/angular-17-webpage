@@ -53,14 +53,19 @@
             }
 
             .other-proyect-title{
-                margin: 0 0 10px;
                 font-size: 22px;
+                font-weight: 300;
                 color: $LightestSlate;
+                margin: 9px 0 0 0px;
+                padding: 0 0 0 0;
             }
 
             .other-proyect-description{
-                font-size: 17px;
-                color: $LightSlate;
+              font-size: 17px;
+              padding: 0;
+              margin: 4px 0 0 0;
+              line-height: 16px;
+              color: $LightSlate;
             }
 
             .more-projects-skills{

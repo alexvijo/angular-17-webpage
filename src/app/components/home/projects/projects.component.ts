@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -7,6 +7,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-projects',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     TranslateModule,
     CommonModule,
@@ -43,7 +44,7 @@ export class ProjectsComponent implements OnInit {
     this.imgContainer.nativeElement.scroll({
       top: this.imgContainer.nativeElement.scrollHeight,
       left: 0,
-      behavior: 'smooth',    
+      behavior: 'smooth',
     });
   }
 

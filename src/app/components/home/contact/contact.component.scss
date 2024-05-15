@@ -16,22 +16,24 @@
     }
 
     .contact-title{
+      color: #ababab;
+      line-height: 45px;
+      font-size: 60px;
+      font-weight: 600;
 
-        position: relative;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        white-space: nowrap;
-        font-size: 60px;
-        font-weight: 600;
-        color: $LightestSlate;
-        margin: auto;
-        width: fit-content;
+      /*position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      white-space: nowrap;
+      color: $LightestSlate;
+      margin: auto;
+      width: fit-content;*/
     }
     .contact-pre-title{
         position: relative;
@@ -63,7 +65,7 @@
 }
 
 @media (max-width: 768px){
-    
+
     .contact{
         height: 100vh;
         padding: 0 !important;
