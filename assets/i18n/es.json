@@ -10,7 +10,7 @@
     "Header.cvName": "CV_Alex_Vicente_Espanol.pdf",
 
     "Banner.Pretitle": "Hola! Mi nombre es",
-    "Banner.Description": "Soy desarrollador de software con más de 9 años de experiencia. <br>Pongo mi atención en la construcción de interfaces intuitivas y eficientes.",
+    "Banner.Description": "Soy desarrollador de software con +9 años de experiencia. <br>Pongo mi atención en la construcción de interfaces intuitivas y eficientes.",
     "Banner.ActionBtn": "Salúdame",
 
     "AboutMe.Title": "Acerca de mi",
@@ -213,87 +213,93 @@
           "Description": "Configuración de JEST en Angular y Node",
           "ghLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
           "demoLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
-          "Technologies": []
+          "Technologies": ["Angular", "Node.js", "Jest"]
         },
         {
           "Title": "E2E CON CYPRESS",
           "Description": "Configuración de Cypress en Angular",
           "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
           "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
-          "Technologies": []
+          "Technologies": ["Angular", "Cypress"]
         },
         {
             "Title": "PRINCIPIOS SOLID",
             "Description": "Principios y buenas prácticas",
             "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
             "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
             "Title": "PATRONES DE DISEÑO",
             "Description": "Patrones creacionales, estructurales, de comportamiento",
             "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
             "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
           "Title": "PATRONES DE ARQUITECTURA",
           "Description": "MVC, MVP, MVVM",
           "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
           "demoLink": "",
-          "Technologies": []
-      },
+          "Technologies": ["Angular"]
+        },
         {
             "Title": "CLEAN CODE",
             "Description": "ARQUITECTURA HEXAGONAL, ",
             "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
             "demoLink": "",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
             "Title": "RECURSOS",
             "Description": "",
             "ghLink": "https://github.com/alexvijo/social-proof-section",
             "demoLink": "",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
             "Title": "ICONS",
             "Description": "",
             "ghLink": "",
             "demoLink": "",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
             "Title": "STANDALONE | MODULES",
             "Description": "",
             "ghLink": "",
             "demoLink": "",
-            "Technologies": []
+            "Technologies": ["Angular"]
         },
         {
           "Title": "DESIGN SYSTEM",
           "Description": "",
           "ghLink": "",
           "demoLink": "",
-          "Technologies": []
+          "Technologies": ["Angular"]
         },
         {
           "Title": "SIGNALS",
           "Description": "",
           "ghLink": "",
           "demoLink": "",
-          "Technologies": []
+          "Technologies": ["Angular"]
         },
         {
           "Title": "NGRX",
           "Description": "",
           "ghLink": "",
           "demoLink": "",
-          "Technologies": []
-        }
+          "Technologies": ["Angular", "NGRX"]
+        },
+        {
+          "Title": "EDITORES DE CÓDIGO",
+          "Description": "EDITORES EN LINEA",
+          "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+          "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+          "Technologies": ["Cloud Shell", "CodePen", "..."]
+      }
     ],
-
     "Contact.Pretitle": "Si has llegado hasta aquí...",
     "Contact.Title": "¡Escríbeme para contactar!",
     "Contact.Content": "Estaré encantado de recibir tu contacto si quieres conversar acerca de nuevas oportunidades. Escríbeme, y te responderé tan pronto como vea tu mensaje.",
