@@ -148,9 +148,12 @@
     margin: 6px;
     filter: grayscale(1);
     transition: filter 0.3s ease;
+
     &:hover {
       cursor: pointer;
+      filter: grayscale(0);
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -158,18 +161,17 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: #AD22EF;
-      mix-blend-mode: multiply;
+      background: linear-gradient(90deg, $Green 0%, #0000ff 100%);
+      mix-blend-mode: screen;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.5s ease;
     }
-    &:hover {
-      filter: grayscale(0);
-    }
+
     &:hover::before {
       opacity: 1;
     }
   }
+
   .company-tab-content {
     color: $Green;
     max-width: 100px;
