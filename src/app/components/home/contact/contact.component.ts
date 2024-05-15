@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Platform } from '@angular/cdk/platform';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -13,5 +15,15 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  constructor(private platform: Platform, private sanitizer: DomSanitizer) { }
+
+  openWhatsApp() {
+    const url = this.platform.ANDROID || this.platform.IOS
+      ? 'whatsapp://send?phone=34644720496'
+      : 'https://web.whatsapp.com/send?phone=34644720496';
+    const safeUrl: SafeUrl = this.sanitizer.bypassSecurityTrustUrl(url);
+    window.open(safeUrl as string, '_blank');
+  }
 
 }
