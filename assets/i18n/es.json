@@ -9,9 +9,9 @@
     "Header.cvBtn": "Curriculum",
     "Header.cvName": "CV_Alex_Vicente_Espanol.pdf",
 
-    "Banner.Pretitle": "Hola! Mi nombre es",
-    "Banner.Description": "Soy desarrollador de software con +9 años de experiencia. <br>Pongo mi atención en la construcción de interfaces intuitivas y eficientes.",
-    "Banner.ActionBtn": "Salúdame",
+    "Banner.Pretitle": "Hola, mi nombre es",
+    "Banner.Description": "Soy desarrollador de software con experiencia destacada en <span class='underline'>Angular</span>. Apasionado por la creación de interfaces web intuitivas y eficientes. Comprometido con la calidad del código y la mejora continua.",
+    "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Acerca de mi",
     "AboutMe.Paragraphs": [
