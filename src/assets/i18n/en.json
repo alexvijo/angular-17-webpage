@@ -9,9 +9,9 @@
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
-  "Banner.Pretitle": "Hello, my name is",
-  "Banner.Description": "I am a software developer with over 9 years of experience. <br>I focus on building intuitive and efficient interfaces.",
-  "Banner.ActionBtn": "Greet me",
+  "Banner.Pretitle": "Hi, my name is",
+  "Banner.Description": "I'm a software developer with outstanding experience in <span class='underline'>Angular</span>. Passionate about creating intuitive and efficient web interfaces. Committed to code quality and continuous improvement.",
+  "Banner.ActionBtn": "Send me an email",
 
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
@@ -318,8 +318,8 @@
       }
     ],
     "Contact.Pretitle": "If you've made it this far...",
-    "Contact.Title": "Say Hello!",
-    "Contact.Content": "I'd be delighted to receive your contact if you're interested in discussing new opportunities. Write me, and I'll respond as soon as I see your message.",
+    "Contact.Title": "Write to get in touch!",
+    "Contact.Content": "I'll be happy to chat about how I can assist you. Drop me a line, and I'll get back to you as soon as I see your message.",
     "Contact.Btn": "Send me an email",
-    "Contact.Btnwhatsapp": "Send me a whatsapp"
+    "Contact.Btnwhatsapp": "Send me a WhatsApp message"
 }
