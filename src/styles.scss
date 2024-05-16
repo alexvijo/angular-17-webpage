@@ -91,6 +91,7 @@ section {
 
 
 .main-btn{
+    margin-bottom: 10px;
     display: inline-block;
     color: $Green;
     background-color: transparent;
@@ -198,13 +199,13 @@ a{
 
 @media (max-width: 768px){
     .banner h2, .banner h3, .big-title{
-        font-size: 60px !important;
+        font-size: 60px; /* !important;*/
     }
 
 }
 @media (max-width: 480px){
     .banner h2, .banner h3, .big-title{
-        font-size: 50px !important;
+        font-size: 50px; /*!important;*/
     }
 
 }
