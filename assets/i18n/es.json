@@ -251,6 +251,13 @@
           "Technologies": ["Angular"]
         },
         {
+          "Title": "MICROFRONTEND(s)",
+          "Description": "ARQUITECTURA DE MICROFRONTENDS",
+          "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+          "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+          "Technologies": ["Angular", "Monorepo", "Module Federation"]
+        },
+        {
             "Title": "CLEAN CODE",
             "Description": "ARQUITECTURA HEXAGONAL, ",
             "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
@@ -280,10 +287,10 @@
         },
         {
           "Title": "DESIGN SYSTEM",
-          "Description": "",
-          "ghLink": "",
-          "demoLink": "",
-          "Technologies": ["Angular"]
+          "Description": "SISTEMAS DE DISEÑO",
+          "ghLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+          "demoLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+          "Technologies": ["Bootstap","Tailwind"]
         },
         {
           "Title": "SIGNALS",
