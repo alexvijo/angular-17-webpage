@@ -172,10 +172,10 @@
         "Description": []
       },
       {
-        "imageUrl": "https://play-lh.googleusercontent.com/6qi3w4uqKaD1c-CBdkkfO6IL0lH4OoCTEdiX0oYbLFxwfvxu1t8vuwHcagdYSFmFKmI=w480-h960-rw",
-        "Tab": "ChatGPT",
-        "Title": "",
-        "Date": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=US&pli=1",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbBVD4yTNofVgO0g6gW59HxiV7mb_EgRa0IwPjTk8jw&s",
+        "Tab": "Anton Krupicka",
+        "Title": "Anton Krupicka",
+        "Date": "https://www.youtube.com/watch?v=BnkhclKlUag",
         "Description": []
       },
       {
@@ -197,6 +197,13 @@
         "Tab": "Leifer Mendez",
         "Title": "@LeiferMendez",
         "Date": "https://www.youtube.com/@LeiferMendez",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://media.licdn.com/dms/image/C5603AQHVMJHgwUVWtQ/profile-displayphoto-shrink_100_100/0/1614001067796?e=1721865600&v=beta&t=PiZuj3gPOFWO_fQPKSo95ju1edUmru1-3c61_k96taM",
+        "Tab": "Juan Ramón Rallo",
+        "Title": "@juanrallo",
+        "Date": "https://www.youtube.com/@juanrallo/videos",
         "Description": []
       }
     ],
