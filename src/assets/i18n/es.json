@@ -172,10 +172,10 @@
         "Description": []
       },
       {
-        "imageUrl": "https://play-lh.googleusercontent.com/6qi3w4uqKaD1c-CBdkkfO6IL0lH4OoCTEdiX0oYbLFxwfvxu1t8vuwHcagdYSFmFKmI=w480-h960-rw",
-        "Tab": "ChatGPT",
-        "Title": "",
-        "Date": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=US&pli=1",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbBVD4yTNofVgO0g6gW59HxiV7mb_EgRa0IwPjTk8jw&s",
+        "Tab": "Anton Krupicka",
+        "Title": "Anton Krupicka",
+        "Date": "https://www.youtube.com/watch?v=BnkhclKlUag",
         "Description": []
       },
       {
@@ -197,6 +197,13 @@
         "Tab": "Leifer Mendez",
         "Title": "@LeiferMendez",
         "Date": "https://www.youtube.com/@LeiferMendez",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://media.licdn.com/dms/image/C5603AQHVMJHgwUVWtQ/profile-displayphoto-shrink_100_100/0/1614001067796?e=1721865600&v=beta&t=PiZuj3gPOFWO_fQPKSo95ju1edUmru1-3c61_k96taM",
+        "Tab": "Juan Ramón Rallo",
+        "Title": "@juanrallo",
+        "Date": "https://www.youtube.com/@juanrallo/videos",
         "Description": []
       }
     ],
@@ -251,6 +258,13 @@
           "Technologies": ["Angular"]
         },
         {
+          "Title": "MICROFRONTEND(s)",
+          "Description": "ARQUITECTURA DE MICROFRONTENDS",
+          "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+          "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+          "Technologies": ["Monorepo", "Module Federation"]
+        },
+        {
             "Title": "CLEAN CODE",
             "Description": "ARQUITECTURA HEXAGONAL, ",
             "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
@@ -272,18 +286,18 @@
             "Technologies": ["Angular"]
         },
         {
-            "Title": "STANDALONE | MODULES",
+            "Title": "WEBCOMPONENT(s)",
             "Description": "",
-            "ghLink": "",
-            "demoLink": "",
-            "Technologies": ["Angular"]
+            "ghLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+            "demoLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+            "Technologies": ["HTMLElement"]
         },
         {
           "Title": "DESIGN SYSTEM",
-          "Description": "",
-          "ghLink": "",
-          "demoLink": "",
-          "Technologies": ["Angular"]
+          "Description": "SISTEMAS DE DISEÑO",
+          "ghLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+          "demoLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+          "Technologies": ["Bootstap","Tailwind"]
         },
         {
           "Title": "SIGNALS",

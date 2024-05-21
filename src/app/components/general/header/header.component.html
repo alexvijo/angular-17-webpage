@@ -5,7 +5,7 @@
         </a>
         <ul ngbNav #nav="ngbNav" class="menu-ul">
             <li ngbNavItem>
-              <a ngbNavLink (click)='scroll("banner")'>
+              <a ngbNavLink (click)='scroll("banner")' [ngClass]="{'active': true}">
                 <span class="underline nav-text">
                   <span class='nav-number'>00. </span>  <span [innerHTML]='"Header.Item0" | translate'></span>
                 </span>
@@ -13,7 +13,7 @@
               <ng-template ngbNavContent>First content</ng-template>
             </li>
             <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("about")'>
+                <a ngbNavLink (click)='scroll("about")' [ngClass]="{'active': true}">
                   <span class="underline nav-text">
                     <span class='nav-number'>01. </span> {{"Header.Item1" | translate}}
                   </span>
@@ -21,7 +21,7 @@
                 <ng-template ngbNavContent></ng-template>
             </li>
             <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("jobs")'>
+                <a ngbNavLink (click)='scroll("jobs")' [ngClass]="{'active': true}">
                   <span class="underline nav-text">
                     <span class='nav-number'>02. </span> <span>{{"Header.Item2" | translate}}</span>
                   </span>
@@ -29,7 +29,7 @@
                 <ng-template ngbNavContent></ng-template>
             </li>
             <li ngbNavItem>
-              <a ngbNavLink (click)='scroll("more-projects")'>
+              <a ngbNavLink (click)='scroll("more-projects")' [ngClass]="{'active': true}">
                 <span class="underline nav-text">
                   <span class='nav-number'>04. </span> <span>{{"Header.Item4" | translate}}</span>
                 </span>
@@ -37,7 +37,7 @@
               <ng-template ngbNavContent></ng-template>
             </li>
             <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("contact")'>
+                <a ngbNavLink (click)='scroll("contact")' [ngClass]="{'active': true}">
                   <span class="underline nav-text">
                     <span class='nav-number'>05. </span> <span>{{"Header.Item5" | translate}}</span>
                   </span>
