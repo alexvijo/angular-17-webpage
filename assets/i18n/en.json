@@ -265,7 +265,7 @@
         "Description": "ARQUITECTURA DE MICROFRONTENDS",
         "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
         "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
-        "Technologies": ["Angular", "Monorepo", "Module Federation"]
+        "Technologies": ["Monorepo", "Module Federation"]
       },
       {
           "Title": "CLEAN CODE",
@@ -289,11 +289,11 @@
           "Technologies": ["Angular"]
       },
       {
-          "Title": "STANDALONE | MODULES",
-          "Description": "",
-          "ghLink": "",
-          "demoLink": "",
-          "Technologies": ["Angular"]
+        "Title": "WEBCOMPONENT(s)",
+        "Description": "",
+        "ghLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+        "demoLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+        "Technologies": ["HTMLElement"]
       },
       {
         "Title": "DESIGN SYSTEM",
