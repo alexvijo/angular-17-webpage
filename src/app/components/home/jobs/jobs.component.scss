@@ -143,8 +143,9 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    background-position: center 27%;
+    width: 140px;
+    height: 86.52px;
     margin: 6px;
     filter: grayscale(1);
     transition: filter 0.3s ease;
@@ -174,9 +175,9 @@
 
   .company-tab-content {
     color: $Green;
-    max-width: 100px;
-    padding: 4px 9px 0 10px;
-    line-height: 18px;
-    min-height: 56px;
+    max-width: 140px;
+    padding: 4px 52px 0 10px;
+    line-height: 20px;
+    min-height: 70px;
   }
 }
