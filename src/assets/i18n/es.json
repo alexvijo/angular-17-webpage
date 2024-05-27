@@ -328,9 +328,9 @@
           "Technologies": ["CORS", "REGLAS CSP", "..."]
         }
     ],
-    "Contact.Pretitle": "Si has llegado hasta aquí...",
+    "Contact.Pretitle": "Entonces...",
     "Contact.Title": "¡Escríbeme para contactar!",
-    "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Escríbeme y te responderé tan pronto como vea tu mensaje.",
+    "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Te responderé tan pronto como vea tu mensaje.",
     "Contact.Btn": "Envíame un email",
     "Contact.Btnwhatsapp": "Mándame un whatsapp"
 }

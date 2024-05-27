@@ -102,6 +102,15 @@
         }
     }
 
+    input {
+        background: transparent;
+        border: 1px solid #d3792a;
+        color: #ccd6f6;
+        &:active, &:focus, &:focus-visible {
+            border: 1px solid $Green !important;
+        }
+    }
+
 }
 
 

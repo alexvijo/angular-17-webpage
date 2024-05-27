@@ -15,7 +15,7 @@
         height: 0;
         padding-bottom: calc(100% / 1.618);
         position: relative;
-        background: #000000;
+        background: #1E1C36; /* #000000;*/
         margin-top: 35px;
 
         &:after{
@@ -27,8 +27,8 @@
           height: 100%;
           border-radius: 0;
           position: absolute;
-          top: 19px;
-          left: 25px;
+          top: 18px;
+          left: 19px;
         }
 
         img{
@@ -38,6 +38,8 @@
           width: 65%;
           height: 100%;
           object-fit: cover;
+          border: 1px solid #d3792a;
+          border-radius: 0px !important;
         }
     }
 

@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Project } from '../../../models/Project.interface';
 
 @Component({
   selector: 'app-more-projects',
@@ -16,10 +17,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class MoreProjectsComponent implements OnInit {
 
   gistUrl: SafeResourceUrl;
+  filteredProjects: Project[] = [];
+  Projects: Project[] = [];
 
   constructor(
     private router: Router,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private translateService: TranslateService
   ) {
     this.gistUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e.pibb');
   }
@@ -27,10 +31,22 @@ export class MoreProjectsComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0)
+          return;
+        }
+        window.scrollTo(0, 0)
     });
+    
+    // Get the entire es.json
+    this.translateService.getTranslation('es').subscribe((translations: any) => {
+        console.log("translations", translations)
+        if (translations && translations['OtherProjects.Projects']) {
+            this.Projects = translations['OtherProjects.Projects'];
+            this.filteredProjects = this.Projects;
+            console.log("this.Projects", this.Projects);
+          } else {
+            console.error('OtherProjects.Projects is undefined');
+          }
+      });
   }
 
   redirect(route: string, event: any) {
@@ -39,6 +55,20 @@ export class MoreProjectsComponent implements OnInit {
       return
     }
     window.open(route, '_blank');
+  }
+
+  filterProjects(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const searchString = target.value;
+  
+    if (this.Projects && searchString) {
+      this.filteredProjects = this.Projects.filter((project: Project) =>
+        project.Title.toLowerCase().includes(searchString.toLowerCase()) ||
+        project.Description.toLowerCase().includes(searchString.toLowerCase())
+      );
+    } else {
+      this.filteredProjects = this.Projects ? [...this.Projects] : [];
+    }
   }
 
 }
