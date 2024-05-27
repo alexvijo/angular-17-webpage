@@ -225,6 +225,20 @@
     ],
     "OtherProjects.Title": "Notes",
     "OtherProjects.Projects": [
+        {
+            "Title": "CUSTOM WEBPACK",
+            "Description": "Configuracion Custom Webpack con Angular",
+            "ghLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
+            "demoLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
+            "Technologies": ["Webpack", ".env"]
+        },
+        {
+            "Title": "ENVIRONMENTS",
+            "Description": "Generar entornos con CLI",
+            "ghLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
+            "demoLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
+            "Technologies": ["environments", "--configuration"]
+        },
       {
         "Title": "TESTING CON JEST",
         "Description": "Configuración de JEST en Angular y Node",
