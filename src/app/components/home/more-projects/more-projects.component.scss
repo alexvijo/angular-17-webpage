@@ -103,6 +103,11 @@
     }
 
     input {
+        border-radius: 0;
+        padding: 6px 3px 3px 37px;
+        font-weight: 100;
+        font-size: 21px;
+        line-height: 21px;
         background: transparent;
         border: 1px solid #d3792a;
         color: #ccd6f6;
@@ -110,6 +115,18 @@
             border: 1px solid $Green !important;
         }
     }
+    .input-group-text {
+        border: 0;
+        &.search-icon {
+            background-color: transparent;
+            position: absolute;
+            right: auto;
+            left: 2px;
+            top: 9%;
+            z-index: 2;
+            color: #b36623;
+        }
+    }    
 
 }
 
