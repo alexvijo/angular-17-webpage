@@ -261,6 +261,13 @@
         "Technologies": ["Angular", "Cypress"]
       },
       {
+        "Title": "CROSS-SITE SCRIPTING (XSS)",
+        "Description": "Evita el Cross Site Scripting",
+        "ghLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
+        "demoLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
+        "Technologies": ["DomSanitizer", "innerHTML"]
+      },
+      {
           "Title": "PRINCIPIOS SOLID",
           "Description": "Principios y buenas prácticas",
           "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
