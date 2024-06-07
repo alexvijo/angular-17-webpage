@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { JobsComponent } from './jobs/jobs.component';
@@ -15,7 +14,6 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BannerComponent,
     AboutComponent,
-    ProjectsComponent,
     MoreProjectsComponent,
     JobsComponent,
     ContactComponent,
