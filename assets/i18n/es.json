@@ -46,6 +46,13 @@
         "Description": []
       },
       {
+        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F6264944f-9d75-4823-86b0-e8f1a0287c8b_16-9-discover-aspect-ratio_default_0.jpg&f=1&nofb=1&ipt=9ebf6a3000f979fee766bd998828a2dacfe95bb072273a3d73c56f24fe7a0b82&ipo=images",
+        "Tab": "Patricia Ramírez",
+        "Title": "Patri Psicóloga",
+        "Date": "https://www.youtube.com/watch?v=avfeFe-hGTM",
+        "Description": []
+      },
+      {
         "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lEIrmryzUXB2wZIfX8TXsxTJsXg9TRr_pVmFSv4gSuFKE=s176-c-k-c0x00ffffff-no-rj",
         "Tab": "Daniel Santos",
         "Title": "Mr. Santos",
@@ -222,6 +229,13 @@
     ],
     "OtherProjects.Title": "Apuntes",
     "OtherProjects.Projects": [
+        {
+            "Title": "LIGHT WEIGTH CHARTS",
+            "Description": "Repo demo using Tradingview library",
+            "ghLink": "https://github.com/alexvijo/my-lightweight-charts-app",
+            "demoLink": "https://github.com/alexvijo/my-lightweight-charts-app",
+            "Technologies": ["Lightweight", "Charts"]
+        },
         {
             "Title": "CUSTOM WEBPACK",
             "Description": "Configuracion Custom Webpack con Angular",
