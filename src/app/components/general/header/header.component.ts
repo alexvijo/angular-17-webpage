@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { LanguageService } from '../../../services/language.service';
+import { Language, LanguageService } from '../../../services/language.service';
 import { TranslateModule} from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,9 +28,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
+    this.languageFormControl.valueChanges.subscribe(val => this.languageService.setLanguage(val));
 
-    this.languageFormControl.setValue(this.languageService.language)
+    this.languageFormControl.setValue(this.languageService.getLanguage());
 
   }
 
@@ -51,10 +51,11 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
     getScrollPosition(event: any) {
-        this.pageYPosition=window.pageYOffset
+        this.pageYPosition = window.scrollY;
     }
 
-    changeLanguage(language: string) {
+    setLanguage(language: Language) {
+      this.languageService.setLanguage(language);
       this.languageFormControl.setValue(language);
     }
 }
