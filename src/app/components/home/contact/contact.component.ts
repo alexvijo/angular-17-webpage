@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, SecurityContext } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Platform } from '@angular/cdk/platform';
@@ -9,8 +9,8 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    TranslateModule, CommonModule
-  ],
+    TranslateModule
+],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

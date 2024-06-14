@@ -1,124 +1,128 @@
 <nav class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition!>0'><!--[@animateMenu] -->
-    <div class="container">
-        <a class="navbar-brand text-light" [routerLink]="'inicio'">
-            <!--<img src='assets/images/logo.png' width='25' />-->
+  <div class="container">
+    <a class="navbar-brand text-light" [routerLink]="'inicio'">
+      <!--<img src='assets/images/logo.png' width='25' />-->
+    </a>
+    <ul ngbNav #nav="ngbNav" class="menu-ul">
+      <li ngbNavItem>
+        <a ngbNavLink (click)='scroll("banner")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>00. </span>  <span [innerHTML]='"Header.Item0" | translate'></span>
+          </span>
         </a>
-        <ul ngbNav #nav="ngbNav" class="menu-ul">
-            <li ngbNavItem>
-              <a ngbNavLink (click)='scroll("banner")' [ngClass]="{'active': true}">
-                <span class="underline nav-text">
-                  <span class='nav-number'>00. </span>  <span [innerHTML]='"Header.Item0" | translate'></span>
-                </span>
+        <ng-template ngbNavContent>First content</ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink (click)='scroll("about")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>01. </span> {{"Header.Item1" | translate}}
+          </span>
+        </a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink (click)='scroll("jobs")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>02. </span> <span>{{"Header.Item2" | translate}}</span>
+          </span>
+        </a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink (click)='scroll("more-projects")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>04. </span> <span>{{"Header.Item4" | translate}}</span>
+          </span>
+        </a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink (click)='scroll("contact")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>05. </span> <span>{{"Header.Item5" | translate}}</span>
+          </span>
+        </a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li>
+        <div ngbDropdown class="nav-link" style="padding-top: 5px;">
+          <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
+            @if (languageFormControl.value == "en") {
+              <span class="flag-text nav-text" title="English">en</span>
+            }
+            @if (languageFormControl.value == "es") {
+              <span class="flag-text nav-text" title="Español">es</span>
+            }
+            <svg class='arrow-language' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+          </div>
+          <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+            <div (click)='changeLanguage("es")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "es"'>
+              <span class="flag-text">Español</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </div>
+            <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
+              <span class="flag-text">English</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="menu-wrapper" (click)='responsiveMenuVisible = !responsiveMenuVisible'>
+      <div [class.animate]='responsiveMenuVisible' class="hamburger-menu"></div>
+    </div>
+    <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
+      <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition && this.pageYPosition>0' class="on-top">
+        <nav>
+          <ol>
+            <li>
+              <a (click)='scroll("banner")'>
+                <span></span> <span [innerHTML]='"Header.Item0" | translate'></span>
               </a>
-              <ng-template ngbNavContent>First content</ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("about")' [ngClass]="{'active': true}">
-                  <span class="underline nav-text">
-                    <span class='nav-number'>01. </span> {{"Header.Item1" | translate}}
-                  </span>
-                </a>
-                <ng-template ngbNavContent></ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("jobs")' [ngClass]="{'active': true}">
-                  <span class="underline nav-text">
-                    <span class='nav-number'>02. </span> <span>{{"Header.Item2" | translate}}</span>
-                  </span>
-                </a>
-                <ng-template ngbNavContent></ng-template>
-            </li>
-            <li ngbNavItem>
-              <a ngbNavLink (click)='scroll("more-projects")' [ngClass]="{'active': true}">
-                <span class="underline nav-text">
-                  <span class='nav-number'>04. </span> <span>{{"Header.Item4" | translate}}</span>
-                </span>
-              </a>
-              <ng-template ngbNavContent></ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink (click)='scroll("contact")' [ngClass]="{'active': true}">
-                  <span class="underline nav-text">
-                    <span class='nav-number'>05. </span> <span>{{"Header.Item5" | translate}}</span>
-                  </span>
-                </a>
-                <ng-template ngbNavContent></ng-template>
             </li>
             <li>
-                <div ngbDropdown class="nav-link" style="padding-top: 5px;">
-                    <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
-                        <span *ngIf='languageFormControl.value == "en"' class="flag-text nav-text" title="English">en</span>
-                        <span *ngIf='languageFormControl.value == "es"' class="flag-text nav-text" title="Español">es</span>
-                        <svg class='arrow-language' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-                    </div>
-                    <div ngbDropdownMenu aria-labelledby="dropdownForm1">
-                        <div (click)='changeLanguage("es")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "es"'>
-                            <span class="flag-text">Español</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>
-                        </div>
-                        <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
-                            <span class="flag-text">English</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+              <a (click)='scroll("about")'>
+                <span>01. </span> {{"Header.Item1" | translate}}
+              </a>
             </li>
-        </ul>
-        <div class="menu-wrapper" (click)='responsiveMenuVisible = !responsiveMenuVisible'>
-            <div [class.animate]='responsiveMenuVisible' class="hamburger-menu"></div>
-        </div>
-        <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
-          <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition && this.pageYPosition>0' class="on-top">
-            <nav>
-                <ol>
-                  <li>
-                      <a (click)='scroll("banner")'>
-                          <span></span> <span [innerHTML]='"Header.Item0" | translate'></span>
-                      </a>
-                  </li>
-                  <li>
-                      <a (click)='scroll("about")'>
-                          <span>01. </span> {{"Header.Item1" | translate}}
-                      </a>
-                  </li>
-                  <li>
-                      <a (click)='scroll("jobs")'>
-                          <span>02. </span> {{"Header.Item2" | translate}}
-                      </a>
-                  </li>
-                  <li>
-                    <a (click)='scroll("more-projects")'>
-                        <span>04. </span> {{"Header.Item4" | translate}}
-                    </a>
-                  </li>
-                  <li>
-                    <a (click)='scroll("contact")'>
-                        <span>05. </span> {{"Header.Item5" | translate}}
-                    </a>
-                  </li>
-                  <li>
-                    <div class="language-container">
-                        <div (click)='changeLanguage("es")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "es"'>
-                            <span class="flag-text">Español</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>
-                        </div>
-                        <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
-                            <span class="flag-text">English</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                  </li>
-                </ol>
-            </nav>
-          </aside>
-      </div>
+            <li>
+              <a (click)='scroll("jobs")'>
+                <span>02. </span> {{"Header.Item2" | translate}}
+              </a>
+            </li>
+            <li>
+              <a (click)='scroll("more-projects")'>
+                <span>04. </span> {{"Header.Item4" | translate}}
+              </a>
+            </li>
+            <li>
+              <a (click)='scroll("contact")'>
+                <span>05. </span> {{"Header.Item5" | translate}}
+              </a>
+            </li>
+            <li>
+              <div class="language-container">
+                <div (click)='changeLanguage("es")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "es"'>
+                  <span class="flag-text">Español</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </div>
+                <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
+                  <span class="flag-text">English</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </aside>
     </div>
+  </div>
 </nav>

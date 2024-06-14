@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
@@ -9,8 +9,11 @@ import { WindowRefService } from '../../../window-ref.service';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    TranslateModule, CommonModule, NgbModule, NgbNavModule, NgOptimizedImage
-  ],
+    TranslateModule,
+    NgbModule,
+    NgbNavModule,
+    NgOptimizedImage
+],
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.scss'
 })

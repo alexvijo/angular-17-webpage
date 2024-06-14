@@ -1,5 +1,5 @@
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -8,8 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    TranslateModule, CommonModule
-  ],
+    TranslateModule
+],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
   animations: [

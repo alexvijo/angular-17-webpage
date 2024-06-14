@@ -1,27 +1,29 @@
 <section class="section jobs" id='jobs'>
-    @defer (on viewport) {
-        <div class="container">
-            <div class="section-box">
-              <div class="about-title mb-4" data-aos="fade-up" data-aos-duration="1000">
-                  <h3 class="e-font section-title">
-                      <span class='code-font n-section-title'>02.</span> {{"Experience.Title" | translate}}
-                  </h3>
+  @defer (on viewport) {
+  <div class="container">
+    <div class="section-box">
+      <div class="about-title mb-4" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="e-font section-title">
+          <span class='code-font n-section-title'>02.</span> {{"Experience.Title" | translate}}
+        </h3>
+      </div>
+
+      <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
+        <div class="image-grid">
+          @for (job of "Experience.Jobs" | translate; track job; let i = $index) {
+            <div [title]="job.Tab">
+              <div (click)="openLink(job.Date)" [title]="job.Date" >
+                <div class="img-background" [style.background-image]="'url(' + job.imageUrl + ')'"></div>
               </div>
-    
-              <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
-                <div class="image-grid">
-                  <div *ngFor='let job of "Experience.Jobs" | translate; let i = index' [title]="job.Tab">
-                    <div (click)="openLink(job.Date)" [title]="job.Date" >
-                      <div class="img-background" [style.background-image]="'url(' + job.imageUrl + ')'"></div>
-                    </div>
-                      <div class="company-tab-content" [title]="job.Title">{{job.Tab}}</div>
-                  </div>
-                </div>
-              </div>
+              <div class="company-tab-content" [title]="job.Title">{{job.Tab}}</div>
             </div>
+          }
         </div>
-    } @placeholder {
-        <div>Me interesa...</div>
-    }
+      </div>
+    </div>
+  </div>
+  } @placeholder {
+  <div>Me interesa...</div>
+}
 </section>
 

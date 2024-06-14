@@ -4,7 +4,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MoreProjectsComponent } from './more-projects/more-projects.component';
-import { CommonModule } from '@angular/common';
+
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -17,9 +17,8 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     MoreProjectsComponent,
     JobsComponent,
     ContactComponent,
-    CommonModule,
     NgbNavModule
-  ],
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

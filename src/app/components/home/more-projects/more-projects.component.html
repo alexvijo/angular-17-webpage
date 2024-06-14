@@ -1,52 +1,56 @@
 <section class="section more-projects" id="more-projects">
-    @defer (on viewport) {
-        <div class="container">
-            <div class="section-box">
-                    <div class="d-flex flex-md-row flex-column justify-content-between">
-                        <h3 class="section-title m-0">
-                            <span class='n-section-title'>04.</span> {{"OtherProjects.Title" | translate}}
-                        </h3>
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control" (keyup)="filterProjects($event)" placeholder="">
-                            <span class="input-group-text search-icon">
-                              <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-    
-                <div class="mt-2">
-                    <div class="row p-0">
-                        <div *ngFor='let project of filteredProjects; let i = index'
-                          (click)="redirect(project['demoLink'], $event)"
-                          class="col-12 col-md-6 col-lg-6 col-xl-4 proyect-col" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="more-proyect-box">
-                                <div class="row w-100 text-left m-0 p-0">
-                                    <div class="col-6 p-0">
-                                        <img src='assets/icons/folder.svg' width="25">
-                                    </div>
-                                    <div class="col-6 d-flex p-0 justify-content-end">
-                                        <!--<a style='color: inherit' [href]="project['ghLink']" target="_blank"><i id="ghLink" class="ml-4 fas fa-link mt-1"></i></a>-->
-                                    </div>
-                                    <h5 class="other-proyect-title" [innerHTML]="project.Title"></h5>
-                                    <p class="other-proyect-description">
-                                        {{project.Description}}
-                                    </p>
-                                </div>
-                                <div>
-                                    <ul class="more-projects-skills">
-                                        <li *ngFor='let technology of project.Technologies'>
-                                          <span class="underline">{{technology}}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  @defer (on viewport) {
+  <div class="container">
+    <div class="section-box">
+      <div class="d-flex flex-md-row flex-column justify-content-between">
+        <h3 class="section-title m-0">
+          <span class='n-section-title'>04.</span> {{"OtherProjects.Title" | translate}}
+        </h3>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" (keyup)="filterProjects($event)" placeholder="">
+          <span class="input-group-text search-icon">
+            <i class="fa fa-search"></i>
+          </span>
         </div>
-    } @placeholder {
-        <div>Apuntes...</div>
-    }
+      </div>
+
+      <div class="mt-2">
+        <div class="row p-0">
+          @for (project of filteredProjects; track project; let i = $index) {
+            <div
+              (click)="redirect(project['demoLink'], $event)"
+              class="col-12 col-md-6 col-lg-6 col-xl-4 proyect-col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="more-proyect-box">
+                <div class="row w-100 text-left m-0 p-0">
+                  <div class="col-6 p-0">
+                    <img src='assets/icons/folder.svg' width="25">
+                  </div>
+                  <div class="col-6 d-flex p-0 justify-content-end">
+                    <!--<a style='color: inherit' [href]="project['ghLink']" target="_blank"><i id="ghLink" class="ml-4 fas fa-link mt-1"></i></a>-->
+                  </div>
+                  <h5 class="other-proyect-title" [innerHTML]="project.Title"></h5>
+                  <p class="other-proyect-description">
+                    {{project.Description}}
+                  </p>
+                </div>
+                <div>
+                  <ul class="more-projects-skills">
+                    @for (technology of project.Technologies; track technology) {
+                      <li>
+                        <span class="underline">{{technology}}</span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  } @placeholder {
+  <div>Apuntes...</div>
+}
 </section>
 

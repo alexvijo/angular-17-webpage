@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
@@ -7,7 +7,7 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-about',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule],
+  imports: [TranslateModule, NgbModule, NgbNavModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

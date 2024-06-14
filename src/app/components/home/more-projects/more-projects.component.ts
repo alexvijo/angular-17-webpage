@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { CommonModule } from '@angular/common';
+
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -10,7 +10,7 @@ import { Project } from '../../../models/Project.interface';
   selector: 'app-more-projects',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule],
+  imports: [TranslateModule, NgbModule, NgbNavModule],
   templateUrl: './more-projects.component.html',
   styleUrl: './more-projects.component.scss'
 })
