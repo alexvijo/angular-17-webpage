@@ -1,9 +1,8 @@
-import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule} from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,21 +12,7 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-  animations:[
-    trigger("animateMenu",[
-      transition(":enter",[
-        query("*", [
-          style({opacity: 0, transform: "translateY(-50%)"}),
-          stagger(50,[
-            animate(
-              "250ms cubic-bezier(0.35, 0, 0.25, 1)",
-              style({opacity: 1, transform: "none"}))
-          ])
-        ])
-      ])
-    ])
-  ]
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
 

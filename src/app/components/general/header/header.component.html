@@ -1,4 +1,4 @@
-<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition!>0'>
+<nav class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition!>0'><!--[@animateMenu] -->
     <div class="container">
         <a class="navbar-brand text-light" [routerLink]="'inicio'">
             <!--<img src='assets/images/logo.png' width='25' />-->
@@ -68,8 +68,8 @@
                 </div>
             </li>
         </ul>
-        <div class="menu-wrapper">
-            <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible' class="hamburger-menu"></div>
+        <div class="menu-wrapper" (click)='responsiveMenuVisible = !responsiveMenuVisible'>
+            <div [class.animate]='responsiveMenuVisible' class="hamburger-menu"></div>
         </div>
         <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
           <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition && this.pageYPosition>0' class="on-top">

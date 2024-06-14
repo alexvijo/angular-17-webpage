@@ -16,17 +16,13 @@ import { Project } from '../../../models/Project.interface';
 })
 export class MoreProjectsComponent implements OnInit {
 
-  gistUrl: SafeResourceUrl;
   filteredProjects: Project[] = [];
   Projects: Project[] = [];
 
   constructor(
     private router: Router,
-    private sanitizer: DomSanitizer,
     private translateService: TranslateService
-  ) {
-    this.gistUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e.pibb');
-  }
+  ) {}
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {
@@ -42,7 +38,6 @@ export class MoreProjectsComponent implements OnInit {
         if (translations && translations['OtherProjects.Projects']) {
             this.Projects = translations['OtherProjects.Projects'];
             this.filteredProjects = this.Projects;
-            console.log("this.Projects", this.Projects);
           } else {
             console.error('OtherProjects.Projects is undefined');
           }
