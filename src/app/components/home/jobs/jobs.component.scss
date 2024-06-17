@@ -136,17 +136,18 @@
 .image-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
   .img-background {
     background-color: #fd5cff;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 27%;
-    width: 140px;
-    height: 86.52px;
-    margin: 6px;
+    width: 178px; /*140px;*/
+    height: 110px; /*86.52px;*/
+    margin: 4px 37px 5px 0;
     filter: grayscale(1);
     transition: filter 0.3s ease;
 

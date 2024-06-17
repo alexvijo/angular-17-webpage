@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { Language, LanguageService } from '../../../services/language.service';
 import { TranslateModule} from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   pageYPosition: number | undefined;
   languageFormControl: FormControl= new FormControl();
   cvName: string = "";
+
+  @ViewChild('myDropdown') myDropdown!: NgbDropdown;
 
   constructor(
     private router: Router,
@@ -57,5 +59,6 @@ export class HeaderComponent implements OnInit {
     setLanguage(language: Language) {
       this.languageService.setLanguage(language);
       this.languageFormControl.setValue(language);
+      this.myDropdown.close();
     }
 }

@@ -45,7 +45,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li>
-        <div ngbDropdown class="nav-link" style="padding-top: 5px;">
+        <div ngbDropdown #myDropdown="ngbDropdown" class="nav-link" style="padding-top: 5px;">
           <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
             @if (languageFormControl.value == "en") {
               <span class="flag-text nav-text" title="English">en</span>
