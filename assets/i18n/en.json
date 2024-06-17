@@ -10,7 +10,7 @@
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Description": "I'm a software developer with outstanding experience in <span class='underline'>Angular</span>. Passionate about creating intuitive and efficient web interfaces. Committed to code quality and continuous improvement.",
+ "Banner.Description": "Software developer specialized in <span class='underline'>Angular</span>,<br> passionate about creating intuitive and efficient web interfaces.<br>Committed to code quality and continuous improvement<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
 
   "AboutMe.Title": "About me",
