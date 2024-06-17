@@ -15,12 +15,12 @@
 
     "AboutMe.Title": "Acerca de mi",
     "AboutMe.Paragraphs": [
-        "Estoy especializado en el framework <span class='underline'>Angular</span>.",
-        "Trabajo escribiendo <span class='underline'>pruebas unitarias</span>, realizando <span class='underline'>integración continua</span> y también cubriendo roles de backend developer con <span class='underline'>Spring Boot</span> y <span class='underline'>Mysql</span>.",
-        "Mis capacidades también incluyen implementar mejoras en sistemas, optimizar sitios, estandarizar patrones y sugerir y ejecutar ideas que añadan valor al proyecto en el que este trabajando.",
-        "Soy el cúmulo de muchas habilidades y talentos. Me gusta observar a quienes piensan de manera disruptiva y escapan de su zona de confort.",
-        "Me defino <span class='underline'>no</span> por el trabajo que he hecho sino <span class='underline'>por el que quiero hacer</span>. Puedo aprender cualquier habilidad. Mi manera de ser es lo que me diferencia de los demás.",
-        "Algunas tecnologías con las que trabajo son:"
+        "Soy especialista en el framework <span class='underline'>Angular</span>.",
+        "Me dedico a escribir <span class='underline'>pruebas unitarias</span>, realizar <span class='underline'>integración continua</span> y cubrir roles de backend developer utilizando <span class='underline'>Spring Boot</span> y <span class='underline'>MySQL</span>.",
+        "Mis habilidades incluyen la implementación de mejoras en sistemas, la optimización de sitios, la estandarización de patrones y la propuesta y ejecución de ideas que aporten valor a los proyectos en los que participo.",
+        "Poseo un conjunto diversificado de habilidades y talentos. Me inspiran las personas que piensan de manera disruptiva y se aventuran fuera de su zona de confort.",
+        "Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar. Estoy capacitado para aprender cualquier habilidad. Mi carácter es lo que me distingue de los demás.",
+        "Algunas de las tecnologías con las que trabajo incluyen:"
     ],
     "Experience.Title": "Me interesa",
     "Experience.Jobs": [
@@ -372,7 +372,7 @@
     ],
     "Contact.Pretitle": "Entonces...",
     "Contact.Title": "¡Escríbeme para contactar!",
-    "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Te responderé tan pronto como vea tu mensaje.",
+    "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Te responderé tan pronto vea tu mensaje.",
     "Contact.Btn": "Envíame un email",
     "Contact.Btnwhatsapp": "Mándame un whatsapp"
 }
