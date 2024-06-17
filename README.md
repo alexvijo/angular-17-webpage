@@ -1,6 +1,17 @@
 # Alexvijo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0
+and updated to 18.0.3 following [Angular Udate Guide - https://angular.dev/update-guide](https://angular.dev/update-guide?v=17.0-18.0&l=1)
+```bash
+rm -rf node_modules package-lock.json
+npm cache clean --force
+npm uninstall -g @angular/cli 
+npm install -g @angular/cli@18
+ng update @angular/core@18
+npm install @popperjs/core
+npm cache clean --force
+npm install --legacy-peer-deps
+```
 
 ## Development server
 
