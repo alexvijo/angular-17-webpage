@@ -10,21 +10,18 @@
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Description": "I'm a software developer with outstanding experience in <span class='underline'>Angular</span>. Passionate about creating intuitive and efficient web interfaces. Committed to code quality and continuous improvement.",
+  "Banner.Description": "Software developer specialized in <span class='underline'>Angular</span>,<br> passionate about creating intuitive and efficient web interfaces.<br>Committed to code quality and continuous improvement<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
 
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-    "I specialize in the framework <span class='underline'>Angular</span>.",
-    "I work writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
-    "My capabilities also include implementing improvements in systems, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
-    "I am the sum of many skills and talents. I enjoy observing those who think disruptively and step out of their comfort zone.",
-    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by what I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
-    "I have ease in communication to understand, analyze, and provide solutions to client requirements. <br>I work comfortably autonomously but even more so doing it as a team and under agile methodology.",
-
+    "I specialize in the <span class='underline'>Angular</span> framework.",
+    "I work on writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
+    "My skills also include implementing system improvements, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
+    "I am the culmination of many skills and talents. I like to observe those who think disruptively and step out of their comfort zone.",
+    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by the work I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
     "Some technologies I work with are:"
   ],
-
   "Experience.Title": "Interests",
   "Experience.Jobs": [
     {
