@@ -7,7 +7,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
+    "build": "ng build && npm run purgecss",
     "build:href": "ng build --base-href ./",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "build:github-pages": "ng deploy --base-href=https://alex-vicente.dev/",
@@ -16,7 +16,8 @@
     "copy:dist": "xcopy /E /I /H dist\\alexvijo\\browser\\* docs",
     "build:show": "cd dist\\alexvijo\\browser && http-server -o",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "purgecss": "purgecss --config ./purgecss.config.js"
   },
   "private": true,
   "dependencies": {
@@ -38,13 +39,13 @@
     "bootstrap": "^5.3.3",
     "embla-carousel-angular": "^14.1.0",
     "ngx-owl-carousel-o": "18.0.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "rxjs": "7.8.1",
+    "tslib": "2.3.0",
+    "zone.js": "0.14.7"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.4",
-    "@angular/cli": "18.0.4",
+    "@angular/cli": "^18.0.4",
     "@angular/compiler-cli": "^18.0.3",
     "@types/aos": "^3.0.7",
     "@types/jest": "^29.5.12",
@@ -53,7 +54,8 @@
     "gh-pages": "^6.1.1",
     "jest": "^29.7.0",
     "jest-preset-angular": "^14.0.4",
-    "typescript": "~5.4.2"
+    "purgecss": "^6.0.0",
+    "typescript": "5.4.5"
   },
   "jest": {
     "preset": "jest-preset-angular",

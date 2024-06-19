@@ -1,5 +1,5 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -25,5 +25,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ]
 })
 export class FooterComponent {
+    
+    version = VERSION.full;
 
 }
