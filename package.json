@@ -34,6 +34,7 @@
     "@ng-bootstrap/ng-bootstrap": "17.0.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "alexvijo": "file:",
     "angular-cli-ghpages": "^2.0.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
