@@ -10,18 +10,21 @@
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Description": "Software developer specialized in <span class='underline'>Angular</span>,<br> passionate about creating intuitive and efficient web interfaces.<br>Committed to code quality and continuous improvement<span class='blinking-cursor'>_</span>",
+  "Banner.Description": "I'm a software developer with outstanding experience in <span class='underline'>Angular</span>. Passionate about creating intuitive and efficient web interfaces. Committed to code quality and continuous improvement.",
   "Banner.ActionBtn": "Send me an email",
 
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-    "I specialize in the <span class='underline'>Angular</span> framework.",
-    "I work on writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
-    "My skills also include implementing system improvements, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
-    "I am the culmination of many skills and talents. I like to observe those who think disruptively and step out of their comfort zone.",
-    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by the work I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
+    "I specialize in the framework <span class='underline'>Angular</span>.",
+    "I work writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
+    "My capabilities also include implementing improvements in systems, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
+    "I am the sum of many skills and talents. I enjoy observing those who think disruptively and step out of their comfort zone.",
+    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by what I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
+    "I have ease in communication to understand, analyze, and provide solutions to client requirements. <br>I work comfortably autonomously but even more so doing it as a team and under agile methodology.",
+
     "Some technologies I work with are:"
   ],
+
   "Experience.Title": "Interests",
   "Experience.Jobs": [
     {
@@ -46,25 +49,11 @@
       "Description": []
     },
     {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DwehyU6m_w4O8inuzm1_CQHaF0%26pid%3DApi&f=1&ipt=bac1788c7d3c71555d057a80697910f4bbb952c1478e441ccd3d9b2ca34af837&ipo=images",
-        "Tab": "Antonio Lastra",
-        "Title": "La torre del Virrey",
-        "Date": "https://www.youtube.com/watch?v=BY4rGbH8rVc&list=PLi-6U-LmwPxkF-0jzfp7ucSVKZ6VYkhCX&index=3",
-        "Description": []
-    },
-    {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eepgn6CXVwU2wvEZQZwupAHaEK%26pid%3DApi&f=1&ipt=7076d7438d003829ee00cfbea397f179b6e05662ac44f6a31c2af5365867fbb4&ipo=images",
-        "Tab": "Jesús G. Maestro ",
-        "Title": "JesúsGMaestro",
-        "Date": "https://www.youtube.com/@Jes%C3%BAsGMaestro/videos",
-        "Description": []
-    },
-    {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F6264944f-9d75-4823-86b0-e8f1a0287c8b_16-9-discover-aspect-ratio_default_0.jpg&f=1&nofb=1&ipt=9ebf6a3000f979fee766bd998828a2dacfe95bb072273a3d73c56f24fe7a0b82&ipo=images",
-        "Tab": "Patricia Ramírez",
-        "Title": "Patri Psicóloga",
-        "Date": "https://www.youtube.com/watch?v=avfeFe-hGTM",
-        "Description": []
+      "imageUrl": "https://www.lavanguardia.com/libros/images/authors/l/57/218a7553-9e87-3ecd-8144-7946beb2447b-image.webp",
+      "Tab": "Lorenzo Ramirez",
+      "Title": "@marc_vidal",
+      "Date": "https://www.youtube.com/@marc_vidal",
+      "Description": []
     },
     {
       "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lEIrmryzUXB2wZIfX8TXsxTJsXg9TRr_pVmFSv4gSuFKE=s176-c-k-c0x00ffffff-no-rj",
@@ -144,7 +133,7 @@
       "Description": []
     },
     {
-      "imageUrl": "https://trycatch.tv/_astro/jimydolores.d4938788_2rAWQi.webp",
+      "imageUrl": "https://media.licdn.com/dms/image/D4E03AQGPO2G9QJdMCg/profile-displayphoto-shrink_200_200/0/1710441907478?e=2147483647&v=beta&t=rpmaO4jma91U14IFqlTZTLoFAgh4awSBKN-Gv4a7iHw",
       "Tab": "Jimy Dolores",
       "Title": "LogiDev",
       "Date": "https://www.youtube.com/@LogiDev",
@@ -183,6 +172,13 @@
       "Tab": "FaszCode",
       "Title": "FaszCode",
       "Date": "https://www.youtube.com/@FaztCode",
+      "Description": []
+    },
+    {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png",
+      "Tab": "Bitcoin",
+      "Title": "",
+      "Date": "https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf",
       "Description": []
     },
     {
@@ -237,13 +233,6 @@
     "OtherProjects.Title": "Notes",
     "OtherProjects.Projects": [
         {
-          "Title": "LIGHT WEIGTH CHARTS",
-          "Description": "Repo demo using Tradingview library",
-          "ghLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "demoLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "Technologies": ["Lightweight", "Charts"]
-        },
-        {
             "Title": "CUSTOM WEBPACK",
             "Description": "Configuracion Custom Webpack con Angular",
             "ghLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
@@ -270,20 +259,6 @@
         "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
         "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
         "Technologies": ["Angular", "Cypress"]
-      },
-      {
-        "Title": "CROSS-SITE SCRIPTING (XSS)",
-        "Description": "Evita el Cross Site Scripting",
-        "ghLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "demoLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "Technologies": ["DomSanitizer", "innerHTML"]
-      },
-      {
-        "Title": "SOCKET IO",
-        "Description": "Socket.io en Angular y Node",
-        "ghLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "demoLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "Technologies": ["socket.io", "express "]
       },
       {
           "Title": "PRINCIPIOS SOLID",
