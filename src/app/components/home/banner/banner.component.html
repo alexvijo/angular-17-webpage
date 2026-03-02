@@ -12,6 +12,12 @@
           <div class='banner-description'>
               <p [innerHTML]='"Banner.Description" | translate' class="mt-1"></p>
           </div>
+          <div class="mt-4">
+            <a [href]="'assets/' + ('Header.cvName' | translate)" target="_blank" class="main-btn" data-aos="fade-up" data-aos-duration="1000"
+               [attr.aria-label]="'Header.cvBtn' | translate">
+              <i class="fas fa-file-alt"></i> {{"Header.cvBtn" | translate}}
+            </a>
+          </div>
         </div>
       </div>
     </div>

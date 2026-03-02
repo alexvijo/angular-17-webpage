@@ -8,11 +8,9 @@
   "Header.Item5": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
-
   "Banner.Pretitle": "Hi, my name is",
   "Banner.Description": "Software developer specialized in <span class='underline'>Angular</span>,<br> passionate about creating intuitive and efficient web interfaces.<br>Committed to code quality and continuous improvement<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
-
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
     "I specialize in the <span class='underline'>Angular</span> framework.",
@@ -46,25 +44,25 @@
       "Description": []
     },
     {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DwehyU6m_w4O8inuzm1_CQHaF0%26pid%3DApi&f=1&ipt=bac1788c7d3c71555d057a80697910f4bbb952c1478e441ccd3d9b2ca34af837&ipo=images",
-        "Tab": "Antonio Lastra",
-        "Title": "La torre del Virrey",
-        "Date": "https://www.youtube.com/watch?v=BY4rGbH8rVc&list=PLi-6U-LmwPxkF-0jzfp7ucSVKZ6VYkhCX&index=3",
-        "Description": []
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DwehyU6m_w4O8inuzm1_CQHaF0%26pid%3DApi&f=1&ipt=bac1788c7d3c71555d057a80697910f4bbb952c1478e441ccd3d9b2ca34af837&ipo=images",
+      "Tab": "Antonio Lastra",
+      "Title": "La torre del Virrey",
+      "Date": "https://www.youtube.com/watch?v=BY4rGbH8rVc&list=PLi-6U-LmwPxkF-0jzfp7ucSVKZ6VYkhCX&index=3",
+      "Description": []
     },
     {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eepgn6CXVwU2wvEZQZwupAHaEK%26pid%3DApi&f=1&ipt=7076d7438d003829ee00cfbea397f179b6e05662ac44f6a31c2af5365867fbb4&ipo=images",
-        "Tab": "Jesús G. Maestro ",
-        "Title": "JesúsGMaestro",
-        "Date": "https://www.youtube.com/@Jes%C3%BAsGMaestro/videos",
-        "Description": []
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eepgn6CXVwU2wvEZQZwupAHaEK%26pid%3DApi&f=1&ipt=7076d7438d003829ee00cfbea397f179b6e05662ac44f6a31c2af5365867fbb4&ipo=images",
+      "Tab": "Jesús G. Maestro ",
+      "Title": "JesúsGMaestro",
+      "Date": "https://www.youtube.com/@Jes%C3%BAsGMaestro/videos",
+      "Description": []
     },
     {
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F6264944f-9d75-4823-86b0-e8f1a0287c8b_16-9-discover-aspect-ratio_default_0.jpg&f=1&nofb=1&ipt=9ebf6a3000f979fee766bd998828a2dacfe95bb072273a3d73c56f24fe7a0b82&ipo=images",
-        "Tab": "Patricia Ramírez",
-        "Title": "Patri Psicóloga",
-        "Date": "https://www.youtube.com/watch?v=avfeFe-hGTM",
-        "Description": []
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.eldiario.es%2Fclip%2F6264944f-9d75-4823-86b0-e8f1a0287c8b_16-9-discover-aspect-ratio_default_0.jpg&f=1&nofb=1&ipt=9ebf6a3000f979fee766bd998828a2dacfe95bb072273a3d73c56f24fe7a0b82&ipo=images",
+      "Tab": "Patricia Ramírez",
+      "Title": "Patri Psicóloga",
+      "Date": "https://www.youtube.com/watch?v=avfeFe-hGTM",
+      "Description": []
     },
     {
       "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lEIrmryzUXB2wZIfX8TXsxTJsXg9TRr_pVmFSv4gSuFKE=s176-c-k-c0x00ffffff-no-rj",
@@ -193,11 +191,11 @@
       "Description": []
     },
     {
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbBVD4yTNofVgO0g6gW59HxiV7mb_EgRa0IwPjTk8jw&s",
-        "Tab": "Anton Krupicka",
-        "Title": "Anton Krupicka",
-        "Date": "https://www.youtube.com/watch?v=BnkhclKlUag",
-        "Description": []
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbBVD4yTNofVgO0g6gW59HxiV7mb_EgRa0IwPjTk8jw&s",
+      "Tab": "Anton Krupicka",
+      "Title": "Anton Krupicka",
+      "Date": "https://www.youtube.com/watch?v=BnkhclKlUag",
+      "Description": []
     },
     {
       "imageUrl": "data:image/jpeg;base64,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",
@@ -221,172 +219,242 @@
       "Description": []
     },
     {
-        "imageUrl": "https://media.licdn.com/dms/image/C5603AQHVMJHgwUVWtQ/profile-displayphoto-shrink_100_100/0/1614001067796?e=1721865600&v=beta&t=PiZuj3gPOFWO_fQPKSo95ju1edUmru1-3c61_k96taM",
-        "Tab": "Juan Ramón Rallo",
-        "Title": "@juanrallo",
-        "Date": "https://www.youtube.com/@juanrallo/videos",
-        "Description": []
+      "imageUrl": "https://media.licdn.com/dms/image/C5603AQHVMJHgwUVWtQ/profile-displayphoto-shrink_100_100/0/1614001067796?e=1721865600&v=beta&t=PiZuj3gPOFWO_fQPKSo95ju1edUmru1-3c61_k96taM",
+      "Tab": "Juan Ramón Rallo",
+      "Title": "@juanrallo",
+      "Date": "https://www.youtube.com/@juanrallo/videos",
+      "Description": []
     }
   ],
-
   "FeatureProjects.Title": "My Projects",
-    "FeatureProjects.Label": "Featured Project",
-    "FeatureProjects.Projects": [
-      {
-        "Title": "Agrourbana",
-        "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
-        "imgs": [
-            "assets/images/agrourbana/agrourbana1.png"
-        ],
-        "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
-      }
-    ],
-    "OtherProjects.Title": "Notes",
-    "OtherProjects.Projects": [
-        {
-          "Title": "LIGHT WEIGTH CHARTS",
-          "Description": "Repo demo using Tradingview library",
-          "ghLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "demoLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "Technologies": ["Lightweight", "Charts"]
-        },
-        {
-            "Title": "CUSTOM WEBPACK",
-            "Description": "Configuracion Custom Webpack con Angular",
-            "ghLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
-            "demoLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
-            "Technologies": ["Webpack", ".env"]
-        },
-        {
-            "Title": "ENVIRONMENTS",
-            "Description": "Generar entornos con CLI",
-            "ghLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
-            "demoLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
-            "Technologies": ["environments", "--configuration"]
-        },
-      {
-        "Title": "TESTING CON JEST",
-        "Description": "Configuración de JEST en Angular y Node",
-        "ghLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
-        "demoLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
-        "Technologies": ["Angular", "Node.js", "Jest"]
-      },
-      {
-        "Title": "E2E CON CYPRESS",
-        "Description": "Configuración de Cypress en Angular",
-        "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
-        "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
-        "Technologies": ["Angular", "Cypress"]
-      },
-      {
-        "Title": "CROSS-SITE SCRIPTING (XSS)",
-        "Description": "Evita el Cross Site Scripting",
-        "ghLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "demoLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "Technologies": ["DomSanitizer", "innerHTML"]
-      },
-      {
-        "Title": "SOCKET IO",
-        "Description": "Socket.io en Angular y Node",
-        "ghLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "demoLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "Technologies": ["socket.io", "express "]
-      },
-      {
-          "Title": "PRINCIPIOS SOLID",
-          "Description": "Principios y buenas prácticas",
-          "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-          "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "PATRONES DE DISEÑO",
-          "Description": "Patrones creacionales, estructurales, de comportamiento",
-          "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
-          "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
-          "Technologies": ["Angular"]
-      },
-      {
-        "Title": "PATRONES DE ARQUITECTURA",
-        "Description": "MVC, MVP, MVVM",
-        "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
-        "demoLink": "",
-        "Technologies": ["Angular"]
-      },
-      {
-        "Title": "MICROFRONTEND(s)",
-        "Description": "ARQUITECTURA DE MICROFRONTENDS",
-        "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
-        "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
-        "Technologies": ["Monorepo", "Module Federation"]
-      },
-      {
-          "Title": "CLEAN CODE",
-          "Description": "ARQUITECTURA HEXAGONAL, ",
-          "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "RECURSOS",
-          "Description": "",
-          "ghLink": "https://github.com/alexvijo/social-proof-section",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "ICONS",
-          "Description": "",
-          "ghLink": "",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-        "Title": "WEBCOMPONENT(s)",
-        "Description": "",
-        "ghLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
-        "demoLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
-        "Technologies": ["HTMLElement"]
-      },
-      {
-        "Title": "DESIGN SYSTEM",
-        "Description": "SISTEMAS DE DISEÑO",
-        "ghLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
-        "demoLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
-        "Technologies": ["Bootstap","Tailwind"]
-      },
-      {
-        "Title": "SIGNALS",
-        "Description": "",
-        "ghLink": "",
-        "demoLink": "",
-        "Technologies": ["Angular"]
-      },
-      {
-        "Title": "NGRX",
-        "Description": "",
-        "ghLink": "",
-        "demoLink": "",
-        "Technologies": ["Angular", "NGRX"]
-      },
-      {
-        "Title": "EDITORES DE CÓDIGO",
-        "Description": "EDITORES EN LINEA",
-        "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
-        "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
-        "Technologies": ["Cloud Shell", "CodePen", "..."]
-      },
-      {
-        "Title": "CORS CONFIG",
-        "Description": "EDITORES EN LINEA",
-        "ghLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
-        "demoLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
-        "Technologies": ["CORS", "REGLAS CSP", "..."]
-      }
-    ],
-    "Contact.Pretitle": "If you've made it this far...",
-    "Contact.Title": "Write to get in touch!",
-    "Contact.Content": "I'll be happy to chat about how I can assist you. Drop me a line, and I'll get back to you as soon as I see your message.",
-    "Contact.Btn": "Send me an email",
-    "Contact.Btnwhatsapp": "Send me a WhatsApp message"
+  "FeatureProjects.Label": "Featured Project",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Agrourbana",
+      "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
+      "imgs": [
+        "assets/images/agrourbana/agrourbana1.png"
+      ],
+      "Technologies": [
+        "Laravel",
+        "Angular",
+        "SASS",
+        "Angular Material",
+        "RxJS"
+      ]
+    }
+  ],
+  "OtherProjects.Title": "Notes",
+  "OtherProjects.Projects": [
+    {
+      "Title": "LIGHT WEIGTH CHARTS",
+      "Description": "Repo demo using Tradingview library",
+      "ghLink": "https://github.com/alexvijo/my-lightweight-charts-app",
+      "demoLink": "https://github.com/alexvijo/my-lightweight-charts-app",
+      "Technologies": [
+        "Lightweight",
+        "Charts"
+      ]
+    },
+    {
+      "Title": "CUSTOM WEBPACK",
+      "Description": "Configuracion Custom Webpack con Angular",
+      "ghLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
+      "demoLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
+      "Technologies": [
+        "Webpack",
+        ".env"
+      ]
+    },
+    {
+      "Title": "ENVIRONMENTS",
+      "Description": "Generar entornos con CLI",
+      "ghLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
+      "demoLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
+      "Technologies": [
+        "environments",
+        "--configuration"
+      ]
+    },
+    {
+      "Title": "TESTING CON JEST",
+      "Description": "Configuración de JEST en Angular y Node",
+      "ghLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
+      "demoLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "Jest"
+      ]
+    },
+    {
+      "Title": "E2E CON CYPRESS",
+      "Description": "Configuración de Cypress en Angular",
+      "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
+      "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
+      "Technologies": [
+        "Angular",
+        "Cypress"
+      ]
+    },
+    {
+      "Title": "CROSS-SITE SCRIPTING (XSS)",
+      "Description": "Evita el Cross Site Scripting",
+      "ghLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
+      "demoLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
+      "Technologies": [
+        "DomSanitizer",
+        "innerHTML"
+      ]
+    },
+    {
+      "Title": "SOCKET IO",
+      "Description": "Socket.io en Angular y Node",
+      "ghLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
+      "demoLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
+      "Technologies": [
+        "socket.io",
+        "express "
+      ]
+    },
+    {
+      "Title": "PRINCIPIOS SOLID",
+      "Description": "Principios y buenas prácticas",
+      "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+      "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "PATRONES DE DISEÑO",
+      "Description": "Patrones creacionales, estructurales, de comportamiento",
+      "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+      "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "PATRONES DE ARQUITECTURA",
+      "Description": "MVC, MVP, MVVM",
+      "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
+      "demoLink": "",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "MICROFRONTEND(s)",
+      "Description": "ARQUITECTURA DE MICROFRONTENDS",
+      "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+      "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
+      "Technologies": [
+        "Monorepo",
+        "Module Federation"
+      ]
+    },
+    {
+      "Title": "CLEAN CODE",
+      "Description": "ARQUITECTURA HEXAGONAL, ",
+      "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
+      "demoLink": "",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "RECURSOS",
+      "Description": "",
+      "ghLink": "https://github.com/alexvijo/social-proof-section",
+      "demoLink": "",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "ICONS",
+      "Description": "",
+      "ghLink": "",
+      "demoLink": "",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "WEBCOMPONENT(s)",
+      "Description": "",
+      "ghLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+      "demoLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
+      "Technologies": [
+        "HTMLElement"
+      ]
+    },
+    {
+      "Title": "DESIGN SYSTEM",
+      "Description": "SISTEMAS DE DISEÑO",
+      "ghLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+      "demoLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
+      "Technologies": [
+        "Bootstap",
+        "Tailwind"
+      ]
+    },
+    {
+      "Title": "SIGNALS",
+      "Description": "",
+      "ghLink": "",
+      "demoLink": "",
+      "Technologies": [
+        "Angular"
+      ]
+    },
+    {
+      "Title": "NGRX",
+      "Description": "",
+      "ghLink": "",
+      "demoLink": "",
+      "Technologies": [
+        "Angular",
+        "NGRX"
+      ]
+    },
+    {
+      "Title": "EDITORES DE CÓDIGO",
+      "Description": "EDITORES EN LINEA",
+      "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+      "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
+      "Technologies": [
+        "Cloud Shell",
+        "CodePen",
+        "..."
+      ]
+    },
+    {
+      "Title": "CORS CONFIG",
+      "Description": "EDITORES EN LINEA",
+      "ghLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+      "demoLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
+      "Technologies": [
+        "CORS",
+        "REGLAS CSP",
+        "..."
+      ]
+    }
+  ],
+  "Contact.Pretitle": "If you've made it this far...",
+  "Contact.Title": "Write to get in touch!",
+  "Contact.Content": "I'll be happy to chat about how I can assist you. Drop me a line, and I'll get back to you as soon as I see your message.",
+  "Contact.Btn": "Send me an email",
+  "Contact.Btnwhatsapp": "Send me a WhatsApp message",
+  "AboutMe.Skills": [
+    "Angular",
+    "RxJS",
+    "HTML5 & (S)CSS",
+    "NgRx",
+    "Docker",
+    "Jest/Cypress",
+    "Postman",
+    "Jenkins (CI/CD)"
+  ]
 }
