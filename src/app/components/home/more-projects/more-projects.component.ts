@@ -1,9 +1,8 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router, NavigationEnd } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Project } from '../../../models/Project.interface';
 
 @Component({
@@ -21,7 +20,8 @@ export class MoreProjectsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -31,13 +31,21 @@ export class MoreProjectsComponent implements OnInit {
         }
         window.scrollTo(0, 0)
     });
-    
-    // Get the entire es.json
-    this.translateService.getTranslation('es').subscribe((translations: any) => {
-        console.log("translations", translations)
+
+    this.loadProjects();
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.loadProjects();
+    });
+  }
+
+  private loadProjects() {
+    const lang = this.translateService.currentLang || this.translateService.defaultLang;
+    this.translateService.getTranslation(lang).subscribe((translations: any) => {
         if (translations && translations['OtherProjects.Projects']) {
             this.Projects = translations['OtherProjects.Projects'];
             this.filteredProjects = this.Projects;
+            this.cdr.markForCheck();
           } else {
             console.error('OtherProjects.Projects is undefined');
           }

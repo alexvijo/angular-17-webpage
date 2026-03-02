@@ -15,14 +15,9 @@
               </p>
             }
             <ul class="skills-list" data-aos="fade-up">
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Angular </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">RxJS</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">HTML5 &amp; (S)CSS </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">NgRX </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Docker</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jest/Cypress </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Postman</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jenkins (CI/CD) </span></li>
+              @for (skill of "AboutMe.Skills" | translate; track $index) {
+                <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">{{skill}}</span></li>
+              }
             </ul>
           </div>
         </div>

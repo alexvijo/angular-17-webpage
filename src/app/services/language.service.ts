@@ -35,6 +35,7 @@ export class LanguageService {
     
       setLanguage(language: Language){
         this.translateService.setDefaultLang(language)
+        this.translateService.use(language)
         this.location.go(language)
         this.languageSubject.next(language);
       }
