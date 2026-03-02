@@ -14,7 +14,7 @@
     "watch": "ng build --watch --configuration development",
     "delete:docs": "del docs",
     "copy:dist": "xcopy /E /I /H dist\\alexvijo\\browser\\* docs",
-    "build:show": "cd dist\\alexvijo\\browser && http-server -o",
+    "build:show": "npm run build:href && cd dist\\alexvijo\\browser && http-server -c-1 -o",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "purgecss": "purgecss --config ./purgecss.config.js"

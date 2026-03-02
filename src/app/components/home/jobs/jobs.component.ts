@@ -1,4 +1,3 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
@@ -11,8 +10,7 @@ import { WindowRefService } from '../../../window-ref.service';
   imports: [
     TranslateModule,
     NgbModule,
-    NgbNavModule,
-    NgOptimizedImage
+    NgbNavModule
 ],
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.scss'
