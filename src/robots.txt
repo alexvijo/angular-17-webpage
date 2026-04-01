@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.angular/
+Disallow: /dist/
+
+Sitemap: https://alex-vicente.dev/sitemap.xml
+
+# Allow common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay for aggressive bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

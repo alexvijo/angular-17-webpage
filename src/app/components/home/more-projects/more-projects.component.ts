@@ -2,9 +2,10 @@ import { ChangeDetectionStrategy, Component, ElementRef, OnInit, Renderer2 } fro
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Project } from '../../../models/Project.interface';
+import { SeoService } from '../../../services/seo.service';
 
 @Component({
   selector: 'app-more-projects',
@@ -21,10 +22,28 @@ export class MoreProjectsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private seoService: SeoService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
+    const lang = this.route.snapshot.paramMap.get('language') || 'es';
+    const isSpanish = lang === 'es';
+
+    this.seoService.updatePageSEO({
+      title: isSpanish 
+        ? 'IA Aplicada - Master en Inteligencia Artificial para Empresas' 
+        : 'Applied AI - Master in Applied Artificial Intelligence for Enterprise',
+      description: isSpanish 
+        ? 'Índice completo de un Master en Inteligencia Artificial Aplicada para empresas. Cubre ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps y más.' 
+        : 'Complete index of a Master in Applied Artificial Intelligence for enterprise. Covers ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps and more.',
+      keywords: isSpanish 
+        ? 'IA, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps'
+        : 'AI, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps',
+      url: `https://alex-vicente.dev/${lang}/ia-aplicada`
+    });
+
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
           return;
