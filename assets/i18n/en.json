@@ -4,7 +4,7 @@
   "Header.Item1": "About me",
   "Header.Item2": "Interests",
   "Header.Item3": "Projects",
-  "Header.Item4": "Notes",
+  "Header.Item4": "Applied AI",
   "Header.Item5": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
@@ -53,7 +53,7 @@
         "Description": []
       },
       {
-        "imageUrl": "https://yt3.ggpht.com/ytc/AIdro_kFMlV5pd9yp52QPeW3OpNkNjZJ2n_hJxjKlBSOkKZtOLk=s88-c-k-c0x00ffffff-no-rj",
+        "imageUrl": "https://unavatar.io/youtube/@DevTalles",
         "Tab": "Fernando Herrera",
         "Title": "DevTalles",
         "Date": "https://www.youtube.com/@DevTalles",
@@ -234,148 +234,120 @@
         "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
       }
     ],
-    "OtherProjects.Title": "Notes",
+    "OtherProjects.Title": "Applied AI",
     "OtherProjects.Projects": [
         {
-          "Title": "LIGHT WEIGTH CHARTS",
-          "Description": "Repo demo using Tradingview library",
-          "ghLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "demoLink": "https://github.com/alexvijo/my-lightweight-charts-app",
-          "Technologies": ["Lightweight", "Charts"]
+            "Title": "Machine Learning Fundamentals",
+            "Description": "Supervised, unsupervised and reinforcement learning algorithms. Model evaluation.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Sklearn", "Python", "Regression"]
         },
         {
-            "Title": "CUSTOM WEBPACK",
-            "Description": "Configuracion Custom Webpack con Angular",
-            "ghLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
-            "demoLink": "https://gist.github.com/alexvijo/8b48d5279cc811682f42c0dea5acbf13",
-            "Technologies": ["Webpack", ".env"]
+            "Title": "Deep Learning and Neural Networks",
+            "Description": "Convolutional and recurrent neural networks. Modern architectures.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["TensorFlow", "PyTorch", "CNN", "RNN"]
         },
         {
-            "Title": "ENVIRONMENTS",
-            "Description": "Generar entornos con CLI",
-            "ghLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
-            "demoLink": "https://gist.github.com/alexvijo/b1dc48221b63d477a80967e72cac0593",
-            "Technologies": ["environments", "--configuration"]
+            "Title": "Natural Language Processing",
+            "Description": "NLP, sentiment analysis, text classification and machine translation.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["NLTK", "SpaCy", "Transformers", "BERT"]
         },
-      {
-        "Title": "TESTING CON JEST",
-        "Description": "Configuración de JEST en Angular y Node",
-        "ghLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
-        "demoLink": "https://gist.github.com/alexvijo/22329837a202f862a548e190a6cadce9",
-        "Technologies": ["Angular", "Node.js", "Jest"]
-      },
-      {
-        "Title": "E2E CON CYPRESS",
-        "Description": "Configuración de Cypress en Angular",
-        "ghLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
-        "demoLink": "https://gist.github.com/alexvijo/7adc5d2473d1b6faafa22971987308e9",
-        "Technologies": ["Angular", "Cypress"]
-      },
-      {
-        "Title": "CROSS-SITE SCRIPTING (XSS)",
-        "Description": "Evita el Cross Site Scripting",
-        "ghLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "demoLink": "https://gist.github.com/alexvijo/f7cfa130669a7083afe60c101d9465aa",
-        "Technologies": ["DomSanitizer", "innerHTML"]
-      },
-      {
-        "Title": "SOCKET IO",
-        "Description": "Socket.io en Angular y Node",
-        "ghLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "demoLink": "https://gist.github.com/alexvijo/8ad0e7147147bf48bf44d0b886c55097",
-        "Technologies": ["socket.io", "express "]
-      },
-      {
-          "Title": "PRINCIPIOS SOLID",
-          "Description": "Principios y buenas prácticas",
-          "ghLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-          "demoLink": "https://gist.github.com/alexvijo/39b151d6bec3d254cbe142b116f2951e",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "PATRONES DE DISEÑO",
-          "Description": "Patrones creacionales, estructurales, de comportamiento",
-          "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
-          "demoLink": "https://refactoring.guru/es/design-patterns/catalog",
-          "Technologies": ["Angular"]
-      },
-      {
-        "Title": "PATRONES DE ARQUITECTURA",
-        "Description": "MVC, MVP, MVVM",
-        "ghLink": "https://refactoring.guru/es/design-patterns/catalog",
-        "demoLink": "",
-        "Technologies": ["Angular"]
-      },
-      {
-        "Title": "MICROFRONTEND(s)",
-        "Description": "ARQUITECTURA DE MICROFRONTENDS",
-        "ghLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
-        "demoLink": "https://gist.github.com/alexvijo/802f6beec5a9e02e3d80c131b46b7650",
-        "Technologies": ["Monorepo", "Module Federation"]
-      },
-      {
-          "Title": "CLEAN CODE",
-          "Description": "ARQUITECTURA HEXAGONAL, ",
-          "ghLink": "https://github.com/alexvijo/fourd-card-feature-section",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "RECURSOS",
-          "Description": "",
-          "ghLink": "https://github.com/alexvijo/social-proof-section",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-          "Title": "ICONS",
-          "Description": "",
-          "ghLink": "",
-          "demoLink": "",
-          "Technologies": ["Angular"]
-      },
-      {
-        "Title": "WEBCOMPONENT(s)",
-        "Description": "",
-        "ghLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
-        "demoLink": "https://gist.github.com/alexvijo/0a3a669c5d5b2820a1d3dcd09a70361e",
-        "Technologies": ["HTMLElement"]
-      },
-      {
-        "Title": "DESIGN SYSTEM",
-        "Description": "SISTEMAS DE DISEÑO",
-        "ghLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
-        "demoLink": "https://gist.github.com/alexvijo/389037cc7a5719b04ce4f1896b56c77b",
-        "Technologies": ["Bootstap","Tailwind"]
-      },
-      {
-        "Title": "SIGNALS",
-        "Description": "",
-        "ghLink": "",
-        "demoLink": "",
-        "Technologies": ["Angular"]
-      },
-      {
-        "Title": "NGRX",
-        "Description": "",
-        "ghLink": "",
-        "demoLink": "",
-        "Technologies": ["Angular", "NGRX"]
-      },
-      {
-        "Title": "EDITORES DE CÓDIGO",
-        "Description": "EDITORES EN LINEA",
-        "ghLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
-        "demoLink": "https://gist.github.com/alexvijo/85edeb2b3f117a88b2fdf35239724537",
-        "Technologies": ["Cloud Shell", "CodePen", "..."]
-      },
-      {
-        "Title": "CORS CONFIG",
-        "Description": "EDITORES EN LINEA",
-        "ghLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
-        "demoLink": "https://gist.github.com/alexvijo/116c0c7c741a1818a8177f3864cdf5e1",
-        "Technologies": ["CORS", "REGLAS CSP", "..."]
-      }
+        {
+            "Title": "Computer Vision",
+            "Description": "Object detection, segmentation and image classification.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["OpenCV", "YOLO", "Detectron2"]
+        },
+        {
+            "Title": "Big Data and Advanced Analytics",
+            "Description": "Processing large data volumes, distributed storage.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Spark", "Hadoop", "SQL", "NoSQL"]
+        },
+        {
+            "Title": "Forecasting and Time Series",
+            "Description": "Time series forecasting, trend analysis and financial predictions.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["ARIMA", "Prophet", "LSTM"]
+        },
+        {
+            "Title": "Recommendation Systems",
+            "Description": "Collaborative and content-based filtering for personalization.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Collaborative Filtering", "Content-based"]
+        },
+        {
+            "Title": "Explainable AI (XAI)",
+            "Description": "Model interpretability, explainability and decision traceability.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["SHAP", "LIME", "InterpretML"]
+        },
+        {
+            "Title": "Ethics and Responsible AI",
+            "Description": "Bias, fairness, privacy and social impact of AI systems.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Fairness", "Privacy", "Governance"]
+        },
+        {
+            "Title": "MLOps and Production",
+            "Description": "ML pipelines, monitoring, deployment and production maintenance.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Docker", "Kubernetes", "CI/CD"]
+        },
+        {
+            "Title": "Diagnostic Analysis and Medical Imaging",
+            "Description": "AI applications in healthcare, diagnosis and medical image analysis.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Segmentation", "Classification", "3D"]
+        },
+        {
+            "Title": "Clustering and Segmentation",
+            "Description": "Clustering techniques, cluster analysis and customer segmentation.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["K-means", "DBSCAN", "Hierarchical"]
+        },
+        {
+            "Title": "Intelligent Process Automation",
+            "Description": "RPA, workflow automation and business process optimization.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["RPA", "Process Mining", "BPM"]
+        },
+        {
+            "Title": "AI in Cybersecurity",
+            "Description": "Anomaly detection, threat analysis and automated response.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Anomaly Detection", "Threat Intelligence"]
+        },
+        {
+            "Title": "Enterprise Applications",
+            "Description": "Real use cases, implementation in business contexts and ROI.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Strategy", "Implementation", "Governance"]
+        },
+        {
+            "Title": "Claude Code on Local with Ollama",
+            "Description": "Installation and configuration of unlocked Claude Code with Ollama to use private local LLMs offline.",
+            "ghLink": "",
+            "demoLink": "",
+            "Technologies": ["Claude", "Ollama", "Local LLM", "Open Source"]
+        }
     ],
     "Contact.Pretitle": "If you've made it this far...",
     "Contact.Title": "Write to get in touch!",
