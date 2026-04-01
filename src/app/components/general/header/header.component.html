@@ -1,11 +1,11 @@
 <nav class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition!>0'><!--[@animateMenu] -->
   <div class="container">
-    <a class="navbar-brand text-light" [routerLink]="'inicio'">
+    <a class="navbar-brand text-light" [routerLink]="['/', languageFormControl.value || languageService.getLanguage(), 'inicio']">
       <!--<img src='assets/images/logo.png' width='25' />-->
     </a>
     <ul ngbNav #nav="ngbNav" class="menu-ul">
       <li ngbNavItem>
-        <a ngbNavLink (click)='scroll("banner")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("inicio")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>00. </span>  <span [innerHTML]='"Header.Item0" | translate'></span>
           </span>
@@ -13,7 +13,7 @@
         <ng-template ngbNavContent>First content</ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='scroll("about")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("acerca-de-mi")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>01. </span> {{"Header.Item1" | translate}}
           </span>
@@ -21,7 +21,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='scroll("jobs")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("me-interesa")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>02. </span> <span>{{"Header.Item2" | translate}}</span>
           </span>
@@ -29,7 +29,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='scroll("more-projects")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("ia-aplicada")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>04. </span> <span>{{"Header.Item4" | translate}}</span>
           </span>
@@ -37,7 +37,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='scroll("contact")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("contacto")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>05. </span> <span>{{"Header.Item5" | translate}}</span>
           </span>
@@ -80,27 +80,27 @@
         <nav>
           <ol>
             <li>
-              <a (click)='scroll("banner")'>
+              <a (click)='navigateTo("inicio")'>
                 <span></span> <span [innerHTML]='"Header.Item0" | translate'></span>
               </a>
             </li>
             <li>
-              <a (click)='scroll("about")'>
+              <a (click)='navigateTo("acerca-de-mi")'>
                 <span>01. </span> {{"Header.Item1" | translate}}
               </a>
             </li>
             <li>
-              <a (click)='scroll("jobs")'>
+              <a (click)='navigateTo("me-interesa")'>
                 <span>02. </span> {{"Header.Item2" | translate}}
               </a>
             </li>
             <li>
-              <a (click)='scroll("more-projects")'>
+              <a (click)='navigateTo("ia-aplicada")'>
                 <span>04. </span> {{"Header.Item4" | translate}}
               </a>
             </li>
             <li>
-              <a (click)='scroll("contact")'>
+              <a (click)='navigateTo("contacto")'>
                 <span>05. </span> {{"Header.Item5" | translate}}
               </a>
             </li>

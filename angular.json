@@ -113,7 +113,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://alex-vicente.dev/",
-            "repo": "https://github.com/alexvijo/angular-17-webpage.git"
+            "repo": "git@github.com:alexvijo/angular-17-webpage.git"
           }
         }
       }

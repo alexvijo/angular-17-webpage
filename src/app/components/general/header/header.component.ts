@@ -29,26 +29,21 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.setLanguage(val));
-
-    this.languageFormControl.setValue(this.languageService.getLanguage());
-
+    this.languageFormControl.setValue(this.languageService.getLanguage(), { emitEvent: false });
   }
 
-  scroll(el: string) {
-    const element = document.getElementById(el);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      this.router.navigate(['/home']).then(() => {
-        const targetElement = document.getElementById(el);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    }
+  navigateTo(page: string) {
+    const language = this.getCurrentLanguage();
+    this.router.navigate(['/', language, page]);
     this.responsiveMenuVisible = false;
+  }
+
+  private getCurrentLanguage(): Language {
+    return (this.languageFormControl.value as Language) || this.languageService.getLanguage();
+  }
+
+  private getCurrentPathSegments(): string[] {
+    return this.router.url.split('?')[0].split('#')[0].split('/').filter(Boolean);
   }
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
@@ -58,7 +53,18 @@ export class HeaderComponent implements OnInit {
 
     setLanguage(language: Language) {
       this.languageService.setLanguage(language);
-      this.languageFormControl.setValue(language);
-      this.myDropdown.close();
+      this.languageFormControl.setValue(language, { emitEvent: false });
+
+      const currentSegments = this.getCurrentPathSegments();
+      if (currentSegments.length === 0) {
+        this.router.navigate(['/', language, 'inicio']);
+      } else {
+        currentSegments[0] = language;
+        this.router.navigate(['/', ...currentSegments]);
+      }
+
+      if (this.myDropdown) {
+        this.myDropdown.close();
+      }
     }
 }

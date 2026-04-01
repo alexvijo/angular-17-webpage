@@ -13,7 +13,7 @@
           @for (job of "Experience.Jobs" | translate; track job; let i = $index) {
             <div [title]="job.Tab">
               <div (click)="openLink(job.Date)" [title]="job.Date" >
-                <div class="img-background" [style.background-image]="'url(' + job.imageUrl + ')'"></div>
+                <div class="img-background" [style.background-image]="getBackgroundImage(job.imageUrl)"></div>
               </div>
               <div class="company-tab-content" [title]="job.Title">{{job.Tab}}</div>
             </div>

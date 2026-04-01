@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Location } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
 export type Language = "es" | "en";
@@ -15,7 +14,6 @@ export class LanguageService {
 
     constructor(
         public translateService: TranslateService,
-        private location: Location,
       ) {
         let defaultLanguage: Language = "es";
         this.languageSubject = new BehaviorSubject<Language>(defaultLanguage);
@@ -32,7 +30,7 @@ export class LanguageService {
       }
 
       private getLanguageFromPath(): Language | null {
-        const path = this.location.path() || '';
+        const path = window.location.pathname || '';
         const firstSegment = path.split('?')[0].split('#')[0].split('/').filter(Boolean)[0];
 
         if (firstSegment === 'es' || firstSegment === 'en') {
@@ -49,7 +47,6 @@ export class LanguageService {
       setLanguage(language: Language){
         this.translateService.setDefaultLang(language);
         this.translateService.use(language);
-        this.location.go('/' + language);
         this.languageSubject.next(language);
       }
 }
