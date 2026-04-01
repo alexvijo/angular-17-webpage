@@ -32,13 +32,13 @@ export class MoreProjectsComponent implements OnInit {
     const isSpanish = lang === 'es';
 
     this.seoService.updatePageSEO({
-      title: isSpanish 
-        ? 'IA Aplicada - Master en Inteligencia Artificial para Empresas' 
+      title: isSpanish
+        ? 'IA Aplicada - Master en Inteligencia Artificial para Empresas'
         : 'Applied AI - Master in Applied Artificial Intelligence for Enterprise',
-      description: isSpanish 
-        ? 'Índice completo de un Master en Inteligencia Artificial Aplicada para empresas. Cubre ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps y más.' 
+      description: isSpanish
+        ? 'Índice completo de un Master en Inteligencia Artificial Aplicada para empresas. Cubre ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps y más.'
         : 'Complete index of a Master in Applied Artificial Intelligence for enterprise. Covers ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps and more.',
-      keywords: isSpanish 
+      keywords: isSpanish
         ? 'IA, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps'
         : 'AI, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps',
       url: `https://alex-vicente.dev/${lang}/ia-aplicada`
@@ -50,7 +50,7 @@ export class MoreProjectsComponent implements OnInit {
         }
         window.scrollTo(0, 0)
     });
-    
+
     // Get the entire es.json
     this.translateService.getTranslation('es').subscribe((translations: any) => {
         console.log("translations", translations)
@@ -74,7 +74,7 @@ export class MoreProjectsComponent implements OnInit {
   filterProjects(event: Event) {
     const target = event.target as HTMLInputElement;
     const searchString = target.value;
-  
+
     if (this.Projects && searchString) {
       this.filteredProjects = this.Projects.filter((project: Project) =>
         project.Title.toLowerCase().includes(searchString.toLowerCase()) ||

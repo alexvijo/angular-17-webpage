@@ -42,13 +42,13 @@ export class BannerComponent implements OnInit {
     const isSpanish = lang === 'es';
 
     this.seoService.updatePageSEO({
-      title: isSpanish 
-        ? 'Alex Vicente - Desarrollador de Software Especializado en Angular' 
+      title: isSpanish
+        ? 'Alex Vicente - Desarrollador de Software Especializado en Angular'
         : 'Alex Vicente - Software Developer Angular Specialist',
-      description: isSpanish 
-        ? 'Soy desarrollador de software especializado en Angular, apasionado por crear interfaces web intuitivas y eficientes.' 
+      description: isSpanish
+        ? 'Soy desarrollador de software especializado en Angular, apasionado por crear interfaces web intuitivas y eficientes.'
         : 'I am a software developer specialized in Angular, passionate about creating intuitive and efficient web interfaces.',
-      keywords: isSpanish 
+      keywords: isSpanish
         ? 'Alex Vicente, Desarrollador, Angular, Frontend, Software, TypeScript'
         : 'Alex Vicente, Developer, Angular, Frontend, Software, TypeScript',
       url: `https://alex-vicente.dev/${lang}/inicio`

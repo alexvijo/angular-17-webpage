@@ -27,14 +27,14 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.languageService.initLanguage();
-    
+
     // Set default SEO for the app
     this.seoService.updatePageSEO({
       title: 'Alex Vicente - Frontend Developer & Angular Specialist',
       description: 'Soy desarrollador de software especializado en Angular, con experiencia en testing, CI/CD y arquitectura de software.',
       keywords: 'Angular, TypeScript, JavaScript, Frontend, Desarrollo Web, HTML, CSS, SCSS, Bootstrap, RxJS, Node.js, REST API, CI/CD, Docker'
     });
-    
+
     AOS.init();
   }
 }

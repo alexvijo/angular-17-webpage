@@ -19,7 +19,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ContactComponent implements OnInit {
 
   constructor(
-    private platform: Platform, 
+    private platform: Platform,
     private sanitizer: DomSanitizer,
     private seoService: SeoService,
     private route: ActivatedRoute
@@ -30,13 +30,13 @@ export class ContactComponent implements OnInit {
     const isSpanish = lang === 'es';
 
     this.seoService.updatePageSEO({
-      title: isSpanish 
-        ? 'Contacto - Alex Vicente Desarrollador de Software' 
+      title: isSpanish
+        ? 'Contacto - Alex Vicente Desarrollador de Software'
         : 'Contact - Alex Vicente Software Developer',
-      description: isSpanish 
-        ? 'Ponte en contacto conmigo por email o WhatsApp. Estaré encantado de hablar sobre oportunidades de colaboración.' 
+      description: isSpanish
+        ? 'Ponte en contacto conmigo por email o WhatsApp. Estaré encantado de hablar sobre oportunidades de colaboración.'
         : 'Get in touch with me by email or WhatsApp. I will be happy to discuss collaboration opportunities.',
-      keywords: isSpanish 
+      keywords: isSpanish
         ? 'Contacto, Email, WhatsApp, Consultoría'
         : 'Contact, Email, WhatsApp, Consulting',
       url: `https://alex-vicente.dev/${lang}/contacto`

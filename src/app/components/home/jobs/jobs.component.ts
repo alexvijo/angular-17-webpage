@@ -32,13 +32,13 @@ export class JobsComponent implements OnInit {
     const isSpanish = lang === 'es';
 
     this.seoService.updatePageSEO({
-      title: isSpanish 
-        ? 'Me Interesa - Influencias y Mentores de Alex Vicente' 
+      title: isSpanish
+        ? 'Me Interesa - Influencias y Mentores de Alex Vicente'
         : 'I am interested - Influences and Mentors of Alex Vicente',
-      description: isSpanish 
-        ? 'Descubre las personas e influencias que me inspiran profesionalmente. Creadores de contenido, mentores y referentes en tecnología.' 
+      description: isSpanish
+        ? 'Descubre las personas e influencias que me inspiran profesionalmente. Creadores de contenido, mentores y referentes en tecnología.'
         : 'Discover the people and influences that inspire me professionally. Content creators, mentors and technology leaders.',
-      keywords: isSpanish 
+      keywords: isSpanish
         ? 'Influencias, Mentores, Referentes, Podcasts, YouTubers'
         : 'Influences, Mentors, Leaders, Podcasts, YouTubers',
       url: `https://alex-vicente.dev/${lang}/me-interesa`
