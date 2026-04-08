@@ -1,0 +1,32 @@
+@import "./../../../../variables.scss";
+
+.faq {
+  .faq-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(100, 255, 218, 0.18);
+    border-radius: 6px;
+    background: $LightNavy;
+    padding: 0.8rem 1rem;
+  }
+
+  summary {
+    cursor: pointer;
+    color: $LightestSlate;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  p {
+    margin: 0.7rem 0 0;
+    color: $Slate;
+    line-height: 1.5;
+  }
+}

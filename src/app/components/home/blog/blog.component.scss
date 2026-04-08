@@ -1,6 +1,13 @@
 @import "./../../../../variables.scss";
 
 .blog {
+  .blog-cta {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
   .blog-intro {
     color: $Slate;
     margin-top: 0.8rem;

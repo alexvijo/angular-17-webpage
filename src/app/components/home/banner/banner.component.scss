@@ -54,19 +54,34 @@
             .alex-vicente {
               color: #cdcaca;
               font-weight: 500;
+              font-size: 74px;
+              line-height: 54px;
               text-shadow: 1px 1px 3px #0A182E;
               margin: 0 0 10px 0;
+              @media (max-width: 600px) {
+                font-size: 66px;
+                line-height: 50px;
+              }
+            }
+
+            .hero-accent {
+              background: linear-gradient(90deg, #ff2fa8 0%, #d24dff 52%, #7d7cff 100%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
             }
 
             .front-developer {
               font-weight: 500;
               color: #8892b0;
-              font-size: 78px;
-              line-height: 56px;
+              font-size: 70px;
+              line-height: 52px;
               margin: 0 0 0 0;
               text-shadow: 1px 1px 3px #0A182E;
               @media (max-width: 600px) {
-                font-size: 70px;
+                font-size: 62px;
+                line-height: 48px;
               }
             }
 

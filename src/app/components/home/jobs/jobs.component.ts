@@ -46,7 +46,6 @@ export class JobsComponent implements OnInit {
   }
 
   openLink(link: string) {
-    console.log(link);
     this.openNewWindow(link);
   }
 

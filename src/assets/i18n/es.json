@@ -10,7 +10,8 @@
     "Header.cvName": "CV_Alex_Vicente_Espanol.pdf",
 
     "Banner.Pretitle": "Hola, mi nombre es",
-    "Banner.Description": "Ingeniero IA y desarrollador de software especializado en <span class='underline'>Angular</span>,<br> enfocado en LLM, MLOps y producto digital.<br>Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
+    "Banner.Role": "Desarrollo software<br>con <span class='hero-accent'>agentes IA</span>.",
+    "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Acerca de mi",
@@ -53,10 +54,10 @@
         "Description": []
       },
       {
-        "imageUrl": "https://unavatar.io/youtube/@DevTalles",
+        "imageUrl": "https://unavatar.io/youtube/@fernando_her85",
         "Tab": "Fernando Herrera",
-        "Title": "DevTalles",
-        "Date": "https://www.youtube.com/@DevTalles",
+        "Title": "@fernando_her85",
+        "Date": "https://www.youtube.com/@fernando_her85/videos",
         "Description": []
       },
       {
@@ -130,7 +131,7 @@
         "Description": []
       },
       {
-        "imageUrl": "https://salvadosporlabolsa.com/wp-content/uploads/2022/03/dani-firma-byn.jpg",
+        "imageUrl": "https://img-static.ivoox.com/index.php?w=175&url=https://static-1.ivoox.com/canales/a/a/7/c/aa7ca15672e738da00102dc60a00cb61_XXL.jpg&f=webp",
         "Tab": "Dani Sóñora",
         "Title": "Salvados por la bolsa",
         "Date": "https://www.ivoox.com/podcast-salvados-bolsa_sq_f11177054_1.html",
@@ -357,6 +358,21 @@
         }
     ],
     "Contact.Pretitle": "Entonces...",
+    "Faq.Title": "Preguntas frecuentes",
+    "Faq.Items": [
+      {
+        "question": "¿Qué tipo de proyectos desarrollo con IA?",
+        "answer": "Desarrollo asistentes con agentes IA, integraciones LLM, automatizaciones y experiencias web de producto con Angular."
+      },
+      {
+        "question": "¿Trabajo con modelos locales y en cloud?",
+        "answer": "Sí. Diseño soluciones con LM Studio y Ollama en local, y también con proveedores cloud según coste, latencia y seguridad."
+      },
+      {
+        "question": "¿Qué stack técnico utilizo?",
+        "answer": "Angular, TypeScript, APIs, evaluación de prompts, observabilidad y buenas prácticas de despliegue continuo."
+      }
+    ],
     "Contact.Title": "¡Escríbeme para contactar!",
     "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Te responderé tan pronto vea tu mensaje.",
     "Contact.Btn": "Envíame un email",

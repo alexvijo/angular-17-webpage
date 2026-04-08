@@ -1,0 +1,20 @@
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-box">
+      <div class="about-title mb-4" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="e-font section-title">
+          <span class="code-font n-section-title">05.</span> {{ "Faq.Title" | translate }}
+        </h3>
+      </div>
+
+      <div class="faq-list" data-aos="fade-up" data-aos-duration="1000">
+        @for (item of "Faq.Items" | translate; track item.question) {
+          <details class="faq-item">
+            <summary>{{ item.question }}</summary>
+            <p>{{ item.answer }}</p>
+          </details>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -31,6 +31,7 @@ export class BlogPostComponent implements OnInit {
     }) || null;
 
     if (!this.post) {
+      this.seoService.clearJsonLd();
       return;
     }
 
@@ -43,6 +44,36 @@ export class BlogPostComponent implements OnInit {
       description,
       keywords: this.post.keywords.join(', '),
       url: `https://alex-vicente.dev/${this.language}/blog/${canonicalSlug}`
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: `/es/blog/${this.post.slugEs}`,
+      enPath: `/en/blog/${this.post.slugEn}`
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description,
+      image: 'https://alex-vicente.dev/assets/images/picofme.png',
+      datePublished: this.post.publishedAt,
+      dateModified: this.post.publishedAt,
+      inLanguage: this.language,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://alex-vicente.dev/${this.language}/blog/${canonicalSlug}`
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Alex Vicente',
+        url: 'https://alex-vicente.dev'
+      },
+      publisher: {
+        '@type': 'Person',
+        name: 'Alex Vicente'
+      },
+      keywords: this.post.keywords.join(', ')
     });
   }
 

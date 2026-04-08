@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { BLOG_POSTS, BlogPost } from '../../../data/blog-posts';
 import { SeoService } from '../../../services/seo.service';
 
@@ -33,8 +34,21 @@ export class BlogComponent implements OnInit {
         ? 'Blog sobre Ingenieria IA, agentes, LLM, RAG, MLOps y desarrollo de producto con Angular.'
         : 'Blog about AI Engineering, agents, LLM, RAG, MLOps, and product development with Angular.',
       keywords: this.language === 'es'
-        ? 'Blog IA, Ingeniero IA, LLM, RAG, MLOps, Angular'
+        ? 'Blog IA, Desarrollo con agentes IA, LLM, RAG, MLOps, Angular'
         : 'AI Blog, AI Engineer, LLM, RAG, MLOps, Angular',
+      url: `https://alex-vicente.dev/${this.language}/blog`
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: '/es/blog',
+      enPath: '/en/blog'
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      inLanguage: this.language,
+      name: this.language === 'es' ? 'Blog IA y Software' : 'AI and Software Blog',
       url: `https://alex-vicente.dev/${this.language}/blog`
     });
   }
@@ -49,5 +63,9 @@ export class BlogComponent implements OnInit {
 
   getSlug(post: BlogPost): string {
     return this.language === 'es' ? post.slugEs : post.slugEn;
+  }
+
+  getYouTubeUrl(post: BlogPost): string {
+    return post.youtubeUrl;
   }
 }

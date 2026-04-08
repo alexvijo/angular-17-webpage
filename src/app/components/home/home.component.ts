@@ -4,6 +4,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MoreProjectsComponent } from './more-projects/more-projects.component';
+import { FaqComponent } from './faq/faq.component';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -16,6 +17,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     MoreProjectsComponent,
     JobsComponent,
+    FaqComponent,
     ContactComponent,
     NgbNavModule
 ],

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
@@ -7,10 +8,14 @@ import { Meta, Title } from '@angular/platform-browser';
 export class SeoService {
   private baseUrl = 'https://alex-vicente.dev';
   private defaultImage = `${this.baseUrl}/assets/images/picofme.png`;
+  private readonly managedAlternateSelector = 'link[rel="alternate"][data-seo-managed="true"]';
+  private readonly managedJsonLdId = 'seo-jsonld-managed';
 
   constructor(
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
   updatePageSEO(config: {
@@ -53,24 +58,89 @@ export class SeoService {
     this.updateCanonicalUrl(url);
   }
 
+  updateHreflangAlternates(paths: { esPath: string; enPath: string }) {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    this.document
+      .querySelectorAll(this.managedAlternateSelector)
+      .forEach((element) => element.remove());
+
+    const esUrl = this.toAbsoluteUrl(paths.esPath);
+    const enUrl = this.toAbsoluteUrl(paths.enPath);
+
+    this.appendAlternateLink('es', esUrl);
+    this.appendAlternateLink('en', enUrl);
+    this.appendAlternateLink('x-default', enUrl);
+  }
+
+  updateJsonLd(schema: Record<string, unknown>) {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const existingScript = this.document.getElementById(this.managedJsonLdId);
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = this.managedJsonLdId;
+    script.textContent = JSON.stringify(schema);
+    this.document.head.appendChild(script);
+  }
+
+  clearJsonLd() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    this.document.getElementById(this.managedJsonLdId)?.remove();
+  }
+
   private updateMeta(attrName: string, attrValue: string, content: string) {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     const selector = `meta[${attrName}="${attrValue}"]`;
-    const element = document.querySelector(selector);
+    const element = this.document.querySelector(selector);
 
     if (element) {
       element.setAttribute('content', content);
     } else {
-      const meta = document.createElement('meta');
+      const meta = this.document.createElement('meta');
       meta.setAttribute(attrName, attrValue);
       meta.setAttribute('content', content);
-      document.head.appendChild(meta);
+      this.document.head.appendChild(meta);
     }
   }
 
   private updateCanonicalUrl(url: string) {
-    const link: HTMLLinkElement = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const link: HTMLLinkElement =
+      this.document.querySelector('link[rel="canonical"]') || this.document.createElement('link');
     link.rel = 'canonical';
     link.href = url;
-    document.head.appendChild(link);
+    this.document.head.appendChild(link);
+  }
+
+  private appendAlternateLink(hreflang: string, href: string) {
+    const link = this.document.createElement('link');
+    link.rel = 'alternate';
+    link.hreflang = hreflang;
+    link.href = href;
+    link.setAttribute('data-seo-managed', 'true');
+    this.document.head.appendChild(link);
+  }
+
+  private toAbsoluteUrl(path: string): string {
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    return `${this.baseUrl}${normalizedPath}`;
   }
 }

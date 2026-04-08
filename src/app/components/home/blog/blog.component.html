@@ -11,7 +11,9 @@
           <article class="col-12 col-md-6 col-lg-4">
             <a
               class="blog-card"
-              [routerLink]="['/', language, 'blog', getSlug(post)]"
+              [attr.href]="getYouTubeUrl(post)"
+              target="_blank"
+              rel="noopener noreferrer"
               [attr.aria-label]="getTitle(post)">
               <p class="blog-date">{{ post.publishedAt }}</p>
               <h2 class="blog-title">{{ getTitle(post) }}</h2>
@@ -20,6 +22,15 @@
             </a>
           </article>
         }
+      </div>
+
+      <div class="blog-cta" data-aos="fade-up" data-aos-duration="1000">
+        <a class="main-btn" [routerLink]="['/', language, 'ia-aplicada']">
+          {{ language === 'es' ? 'Ver IA aplicada' : 'View Applied AI' }}
+        </a>
+        <a class="main-btn" [routerLink]="['/', language, 'contacto']">
+          {{ language === 'es' ? 'Contactar para proyectos' : 'Contact for projects' }}
+        </a>
       </div>
     </div>
   </div>

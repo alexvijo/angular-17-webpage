@@ -1,11 +1,4 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './components/home/about/about.component';
-import { BannerComponent } from './components/home/banner/banner.component';
-import { ContactComponent } from './components/home/contact/contact.component';
-import { JobsComponent } from './components/home/jobs/jobs.component';
-import { MoreProjectsComponent } from './components/home/more-projects/more-projects.component';
-import { BlogComponent } from './components/home/blog/blog.component';
-import { BlogPostComponent } from './components/home/blog-post/blog-post.component';
 
 export const routes: Routes = [
     {
@@ -15,35 +8,35 @@ export const routes: Routes = [
     },
     {
         path: ':language/inicio',
-        component: BannerComponent
+        loadComponent: () => import('./components/home/banner/banner.component').then((m) => m.BannerComponent)
     },
     {
         path: ':language/acerca-de-mi',
-        component: AboutComponent
+        loadComponent: () => import('./components/home/about/about.component').then((m) => m.AboutComponent)
     },
     {
         path: ':language/me-interesa',
-        component: JobsComponent
+        loadComponent: () => import('./components/home/jobs/jobs.component').then((m) => m.JobsComponent)
     },
     {
         path: ':language/ia-aplicada',
-        component: MoreProjectsComponent
+        loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)
     },
     {
         path: ':language/blog',
-        component: BlogComponent
+        loadComponent: () => import('./components/home/blog/blog.component').then((m) => m.BlogComponent)
     },
     {
         path: ':language/blog/:slug',
-        component: BlogPostComponent
+        loadComponent: () => import('./components/home/blog-post/blog-post.component').then((m) => m.BlogPostComponent)
     },
     {
         path: ':language/contacto',
-        component: ContactComponent
+        loadComponent: () => import('./components/home/contact/contact.component').then((m) => m.ContactComponent)
     },
     {
         path: ':language',
-        component: BannerComponent
+        loadComponent: () => import('./components/home/banner/banner.component').then((m) => m.BannerComponent)
     },
     {
         path: '**',
