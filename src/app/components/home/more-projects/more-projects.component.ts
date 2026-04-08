@@ -3,6 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Project } from '../../../models/Project.interface';
 import { SeoService } from '../../../services/seo.service';
@@ -11,11 +12,12 @@ import { SeoService } from '../../../services/seo.service';
   selector: 'app-more-projects',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, NgbModule, NgbNavModule],
+  imports: [TranslateModule, NgbModule, NgbNavModule, RouterModule],
   templateUrl: './more-projects.component.html',
   styleUrl: './more-projects.component.scss'
 })
 export class MoreProjectsComponent implements OnInit {
+  isSpanish = true;
 
   filteredProjects: Project[] = [];
   Projects: Project[] = [];
@@ -30,17 +32,18 @@ export class MoreProjectsComponent implements OnInit {
   ngOnInit() {
     const lang = this.route.snapshot.paramMap.get('language') || 'es';
     const isSpanish = lang === 'es';
+    this.isSpanish = isSpanish;
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'IA Aplicada - Master en Inteligencia Artificial para Empresas'
-        : 'Applied AI - Master in Applied Artificial Intelligence for Enterprise',
+        ? 'IA Aplicada - AI Projects, LLM y Agentes IA'
+        : 'Applied AI - AI Projects, LLM and AI Agents',
       description: isSpanish
-        ? 'Índice completo de un Master en Inteligencia Artificial Aplicada para empresas. Cubre ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps y más.'
-        : 'Complete index of a Master in Applied Artificial Intelligence for enterprise. Covers ML, Deep Learning, NLP, Computer Vision, Big Data, MLOps and more.',
+        ? 'Proyectos de IA aplicada con enfoque en AI Agents, LLM, RAG, automatizacion inteligente, metricas de impacto y arquitectura de produccion.'
+        : 'Applied AI projects focused on AI Agents, LLM, RAG, intelligent automation, measurable impact, and production architecture.',
       keywords: isSpanish
-        ? 'IA, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps'
-        : 'AI, Machine Learning, Deep Learning, NLP, Computer Vision, Big Data, MLOps',
+        ? 'AI Developer, LLM Developer, AI Agents, RAG, IA aplicada, automatizacion, MLOps'
+        : 'AI Developer, LLM Developer, AI Agents, RAG, Applied AI, automation, MLOps',
       url: `https://alex-vicente.dev/${lang}/ia-aplicada`
     });
 

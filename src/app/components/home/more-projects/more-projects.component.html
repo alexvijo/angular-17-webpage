@@ -14,6 +14,56 @@
         </div>
       </div>
 
+      <div class="ai-proof-grid mt-3">
+        <article class="ai-proof-card">
+          <h4>{{ isSpanish ? 'Agente IA con herramientas' : 'Tool-Using AI Agent' }}</h4>
+          <p>
+            {{ isSpanish
+              ? 'Sistema de atencion y operaciones con llamadas a herramientas, memoria de contexto y validacion de respuestas antes de publicar.'
+              : 'Operations and support system with tool calls, contextual memory, and response validation before publishing.' }}
+          </p>
+          <ul>
+            <li>{{ isSpanish ? 'Metricas: -38% tiempo de resolucion y +24% productividad' : 'Metrics: -38% resolution time and +24% productivity' }}</li>
+            <li>{{ isSpanish ? 'Arquitectura: Orquestador, Tools API, observabilidad y fallback humano' : 'Architecture: Orchestrator, Tools API, observability, and human fallback' }}</li>
+          </ul>
+        </article>
+
+        <article class="ai-proof-card">
+          <h4>{{ isSpanish ? 'Sistema RAG para soporte tecnico' : 'RAG System for Technical Support' }}</h4>
+          <p>
+            {{ isSpanish
+              ? 'Busqueda semantica sobre documentacion de producto, versionado de embeddings y evaluacion automatizada de calidad de respuesta.'
+              : 'Semantic search over product documentation, embedding versioning, and automated response-quality evaluation.' }}
+          </p>
+          <ul>
+            <li>{{ isSpanish ? 'Metricas: +31% precision top-1 y -22% tickets escalados' : 'Metrics: +31% top-1 precision and -22% escalated tickets' }}</li>
+            <li>{{ isSpanish ? 'Arquitectura: Ingestion, vector store, reranker y guardrails' : 'Architecture: Ingestion, vector store, reranker, and guardrails' }}</li>
+          </ul>
+        </article>
+
+        <article class="ai-proof-card">
+          <h4>{{ isSpanish ? 'Automatizacion LLM de procesos internos' : 'LLM Process Automation' }}</h4>
+          <p>
+            {{ isSpanish
+              ? 'Pipeline para clasificacion, resumen y priorizacion de incidencias con reglas de negocio y trazabilidad completa por evento.'
+              : 'Pipeline for incident classification, summarization, and prioritization with business rules and full event traceability.' }}
+          </p>
+          <ul>
+            <li>{{ isSpanish ? 'Metricas: -45% carga operativa y +19 puntos en SLA' : 'Metrics: -45% operational load and +19 SLA points' }}</li>
+            <li>{{ isSpanish ? 'Arquitectura: Cola de eventos, workers IA, QA automatizado y dashboard' : 'Architecture: Event queue, AI workers, automated QA, and dashboard' }}</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="ai-linking-bar">
+        <a class="main-btn" [routerLink]="['/', isSpanish ? 'es' : 'en', 'ai-systems']">
+          {{ isSpanish ? 'Ver arquitectura de sistemas IA' : 'View AI systems architecture' }}
+        </a>
+        <a class="main-btn" [routerLink]="['/', isSpanish ? 'es' : 'en', 'blog']">
+          {{ isSpanish ? 'Leer el blog tecnico' : 'Read the technical blog' }}
+        </a>
+      </div>
+
       <div class="mt-2">
         <div class="row p-0">
           @for (project of filteredProjects; track project; let i = $index) {

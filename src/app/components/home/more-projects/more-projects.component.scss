@@ -1,6 +1,50 @@
 @import "./../../../../variables.scss";
 
 .more-projects{
+    .ai-proof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .ai-proof-card {
+        background: rgba(17, 34, 64, 0.65);
+        border: 1px solid rgba(100, 255, 218, 0.18);
+        border-radius: 8px;
+        padding: 16px;
+
+        h4 {
+            color: $LightestSlate;
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        p {
+            color: $LightSlate;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #a7b8e3;
+
+            li {
+                margin-bottom: 5px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .ai-linking-bar {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 16px 0 12px 0;
+    }
+
     .proyect-col{
         padding: 10px;
         height: auto;
@@ -133,8 +177,20 @@
 
 @media(max-width: 1300px){
     .more-projects{
+        .ai-proof-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
         .proyect-col{
             height: auto;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .more-projects{
+        .ai-proof-grid {
+            grid-template-columns: 1fr;
         }
     }
 }

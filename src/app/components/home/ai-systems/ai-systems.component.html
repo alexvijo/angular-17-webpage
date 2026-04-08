@@ -1,0 +1,81 @@
+<section class="section ai-systems" id="ai-systems">
+  <div class="container">
+    <div class="section-box">
+      <h1 class="section-title">
+        <span class="n-section-title">05.</span>
+        {{ language === 'es' ? 'AI Systems: como diseno y escalo productos con IA' : 'AI Systems: how I design and scale AI products' }}
+      </h1>
+
+      <p class="lead">
+        {{ language === 'es'
+          ? 'Soy AI Developer y LLM Developer. Diseno sistemas orientados a negocio en los que los agentes IA no son una demo, sino una capacidad operativa con metricas, guardrails y ciclo de mejora continua.'
+          : 'I am an AI Developer and LLM Developer. I design business-oriented systems where AI agents are not demos, but operational capabilities with metrics, guardrails, and continuous improvement loops.' }}
+      </p>
+
+      <div class="systems-grid">
+        <article>
+          <h2>{{ language === 'es' ? '1) Arquitectura de referencia' : '1) Reference architecture' }}</h2>
+          <p>
+            {{ language === 'es'
+              ? 'Un sistema agente robusto necesita separacion clara entre orquestacion, herramientas, memoria y capa de evaluacion. El orquestador decide cuando invocar cada herramienta; la capa de herramientas conecta con APIs internas; la memoria conserva contexto util sin contaminar la respuesta; y la evaluacion valida precision, seguridad y coste antes de pasar a produccion.'
+              : 'A robust agent system needs clear separation between orchestration, tools, memory, and evaluation layers. The orchestrator decides when to invoke each tool; the tool layer connects to internal APIs; memory retains useful context without polluting responses; and the evaluation layer validates quality, safety, and cost before production rollout.' }}
+          </p>
+          <p>
+            {{ language === 'es'
+              ? 'Esta division facilita escalar equipos y reducir deuda tecnica. Tambien permite reemplazar modelos o proveedores sin reescribir la logica de negocio, algo clave cuando cambian precios, latencias o requisitos de privacidad.'
+              : 'This split makes teams easier to scale and reduces technical debt. It also allows model/provider replacement without rewriting business logic, which is critical when prices, latency, or privacy requirements shift.' }}
+          </p>
+        </article>
+
+        <article>
+          <h2>{{ language === 'es' ? '2) Integracion de LLM y RAG' : '2) LLM and RAG integration' }}</h2>
+          <p>
+            {{ language === 'es'
+              ? 'Cuando un caso de uso depende de conocimiento propio de la empresa, uso RAG con estrategia de ingestion versionada, particionado semantico, embeddings monitorizados y reranking. No basta con indexar documentos: hay que medir recall, precision top-k, latencia y tasa de respuestas alucinadas.'
+              : 'When a use case depends on company-specific knowledge, I use RAG with versioned ingestion, semantic chunking, monitored embeddings, and reranking. Indexing documents is not enough: you must measure recall, top-k precision, latency, and hallucination rate.' }}
+          </p>
+          <p>
+            {{ language === 'es'
+              ? 'En paralelo, aplico pruebas de regresion de prompts y escenarios reales para verificar que cada release mejora resultados. De esta forma, el sistema evoluciona con datos y no por intuicion.'
+              : 'In parallel, I run prompt-regression tests and real scenarios to verify every release improves outcomes. That way, the system evolves based on data, not intuition.' }}
+          </p>
+        </article>
+
+        <article>
+          <h2>{{ language === 'es' ? '3) Trade-offs que gestiono en producto' : '3) Product trade-offs I manage' }}</h2>
+          <p>
+            {{ language === 'es'
+              ? 'Cada arquitectura implica decisiones. Modelos grandes mejoran calidad pero suben coste y latencia. Modelos locales mejoran privacidad pero exigen mas operacion. Flujos multiagente aportan flexibilidad pero incrementan complejidad de debugging. Mi enfoque es explicitar estos trade-offs desde el inicio y fijar umbrales de negocio: tiempo de respuesta, coste por tarea, tasa de resolucion y satisfaccion de usuario.'
+              : 'Every architecture comes with decisions. Bigger models improve quality but increase cost and latency. Local models improve privacy but increase operational burden. Multi-agent flows add flexibility but increase debugging complexity. My approach is to make these trade-offs explicit early and set business thresholds: response time, cost per task, resolution rate, and user satisfaction.' }}
+          </p>
+        </article>
+
+        <article>
+          <h2>{{ language === 'es' ? '4) Observabilidad y fiabilidad' : '4) Observability and reliability' }}</h2>
+          <p>
+            {{ language === 'es'
+              ? 'Para operar IA en serio, instrumentar es obligatorio: trazas por herramienta, version de prompt, modelo usado, tiempo por etapa, score de evaluacion y feedback de usuario. Con estos datos, detecto cuellos de botella, degradaciones y oportunidades de optimizacion antes de que afecten al negocio.'
+              : 'To operate AI seriously, instrumentation is mandatory: traces per tool, prompt version, selected model, stage timings, evaluation score, and user feedback. With this data, I detect bottlenecks, regressions, and optimization opportunities before business impact appears.' }}
+          </p>
+          <p>
+            {{ language === 'es'
+              ? 'Tambien incluyo mecanismos de fallback: respuesta segura, escalado a humano y rollback de version cuando un despliegue no cumple objetivos. Eso convierte un prototipo en una capacidad confiable.'
+              : 'I also include fallback mechanisms: safe responses, human escalation, and version rollback when a deployment misses targets. That is what turns a prototype into a reliable capability.' }}
+          </p>
+        </article>
+      </div>
+
+      <div class="systems-cta">
+        <a class="main-btn" [routerLink]="['/', language, 'ia-aplicada']">
+          {{ language === 'es' ? 'Ver casos de IA aplicada' : 'View applied AI cases' }}
+        </a>
+        <a class="main-btn" [routerLink]="['/', language, 'blog']">
+          {{ language === 'es' ? 'Ir al blog tecnico' : 'Go to technical blog' }}
+        </a>
+        <a class="main-btn" [routerLink]="['/', language, 'contacto']">
+          {{ language === 'es' ? 'Hablemos de tu proyecto' : 'Let us discuss your project' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

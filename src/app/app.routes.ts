@@ -23,6 +23,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)
     },
     {
+        path: ':language/ai-systems',
+        loadComponent: () => import('./components/home/ai-systems/ai-systems.component').then((m) => m.AiSystemsComponent)
+    },
+    {
         path: ':language/blog',
         loadComponent: () => import('./components/home/blog/blog.component').then((m) => m.BlogComponent)
     },

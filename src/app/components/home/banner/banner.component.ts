@@ -31,6 +31,7 @@ import { ActivatedRoute } from '@angular/router';
   ]
 })
 export class BannerComponent implements OnInit {
+  isSpanish = true;
 
   constructor(
     private seoService: SeoService,
@@ -40,17 +41,18 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     const lang = this.route.snapshot.paramMap.get('language') || 'es';
     const isSpanish = lang === 'es';
+    this.isSpanish = isSpanish;
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Alex Vicente - Desarrollo software con agentes IA'
-        : 'Alex Vicente - AI Software Developer for Agentic Products',
+        ? 'Alex Vicente - Desarrollador de IA | AI Developer'
+        : 'Alex Vicente - AI Developer | Desarrollador de IA',
       description: isSpanish
-        ? 'Desarrollo software con agentes IA, arquitectura Angular y productos digitales orientados a negocio.'
-        : 'I build AI software with agents, Angular architecture, and business-driven digital products.',
+        ? 'AI Developer especializado en agentes IA, LLM, automatizacion inteligente, RAG y arquitectura Angular orientada a negocio.'
+        : 'AI Developer specialized in AI agents, LLM workflows, intelligent automation, RAG, and business-focused Angular architecture.',
       keywords: isSpanish
-        ? 'Alex Vicente, Desarrollo con agentes IA, AI Developer, Angular, TypeScript, Producto digital'
-        : 'Alex Vicente, AI Developer, Agentic AI, Angular, TypeScript, Product Engineering',
+        ? 'Alex Vicente, Desarrollador de IA, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript'
+        : 'Alex Vicente, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript, Product Engineering',
       url: `https://alex-vicente.dev/${lang}/inicio`
     });
 
@@ -99,7 +101,7 @@ export class BannerComponent implements OnInit {
           mainEntity: {
             '@type': 'Person',
             name: 'Alex Vicente',
-            jobTitle: isSpanish ? 'Desarrollo software con agentes IA' : 'AI Software Developer',
+            jobTitle: isSpanish ? 'Desarrollador de IA' : 'AI Developer',
             url: 'https://alex-vicente.dev',
             sameAs: [
               'https://github.com/alexvijo',

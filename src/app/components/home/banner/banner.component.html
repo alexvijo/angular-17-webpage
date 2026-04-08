@@ -3,11 +3,16 @@
       <div class="section-box-banner">
         <div class="content">
           <div>
-              <h1><span class="n-section-title"></span> {{"Banner.Pretitle" | translate}}</h1>
+              <p class="banner-pretitle"><span class="n-section-title"></span> {{"Banner.Pretitle" | translate}}</p>
           </div>
           <div class='banner-title'>
               <h3 class="alex-vicente">Alex Vicente</h3>
-              <h3 class="front-developer" [innerHTML]="'Banner.Role' | translate"></h3>
+              <h1 class="front-developer">{{ isSpanish ? 'Desarrollador de IA / AI Developer' : 'AI Developer / Desarrollador de IA' }}</h1>
+              <p class="hero-hook">
+                {{ isSpanish
+                  ? 'Construyo sistemas inteligentes con IA para automatizar procesos complejos, acelerar equipos y generar impacto medible en negocio.'
+                  : 'I build intelligent AI systems to automate complex processes, accelerate teams, and drive measurable business impact.' }}
+              </p>
           </div>
           <div class='banner-description'>
               <p [innerHTML]='"Banner.Description" | translate' class="mt-1"></p>
