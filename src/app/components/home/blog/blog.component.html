@@ -3,7 +3,7 @@
     <div class="section-box">
       <h1 class="section-title">
         <span class="n-section-title">03.</span>
-        {{ language === 'es' ? 'Blog de Ingenieria IA' : 'AI Engineering Blog' }}
+        {{ language === 'es' ? 'IA y Futuro del Trabajo' : 'AI and Future of Work' }}
       </h1>
 
       <div class="row g-3 mt-2">
@@ -27,9 +27,6 @@
       <div class="blog-cta" data-aos="fade-up" data-aos-duration="1000">
         <a class="main-btn" [routerLink]="['/', language, 'ia-aplicada']">
           {{ language === 'es' ? 'Ver IA aplicada' : 'View Applied AI' }}
-        </a>
-        <a class="main-btn" [routerLink]="['/', language, 'ai-systems']">
-          {{ language === 'es' ? 'Ver AI Systems' : 'View AI Systems' }}
         </a>
         <a class="main-btn" [routerLink]="['/', language, 'contacto']">
           {{ language === 'es' ? 'Contactar para proyectos' : 'Contact for projects' }}

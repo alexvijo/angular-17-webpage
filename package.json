@@ -17,7 +17,8 @@
     "build:show": "npm run build:href && cd dist\\alexvijo\\browser && http-server -c-1 -o",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "purgecss": "purgecss --config ./purgecss.config.js"
+    "purgecss": "purgecss --config ./purgecss.config.js",
+    "blog:generate:auto": "node scripts/generate-future-work-posts.mjs"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +35,7 @@
     "@ng-bootstrap/ng-bootstrap": "17.0.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "adm-zip": "^0.5.17",
     "alexvijo": "file:",
     "angular-cli-ghpages": "^2.0.1",
     "aos": "^2.3.4",

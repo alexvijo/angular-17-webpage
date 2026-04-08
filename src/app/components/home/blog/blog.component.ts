@@ -28,14 +28,14 @@ export class BlogComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: this.language === 'es'
-        ? 'Blog IA y Software | Alex Vicente'
-        : 'AI and Software Blog | Alex Vicente',
+        ? 'IA y Futuro del Trabajo | Alex Vicente'
+        : 'AI and Future of Work | Alex Vicente',
       description: this.language === 'es'
-        ? 'Blog sobre Ingenieria IA, agentes, LLM, RAG, MLOps y desarrollo de producto con Angular.'
-        : 'Blog about AI Engineering, agents, LLM, RAG, MLOps, and product development with Angular.',
+        ? 'Analisis sobre futuro del empleo, adaptacion profesional, velocidad de cambio por IA y transformacion del sector tecnologico.'
+        : 'Analysis on the future of jobs, professional adaptation, AI-driven speed of change, and transformation in the technology sector.',
       keywords: this.language === 'es'
-        ? 'Blog IA, Desarrollo con agentes IA, LLM, RAG, MLOps, Angular'
-        : 'AI Blog, AI Engineer, LLM, RAG, MLOps, Angular',
+        ? 'Futuro del empleo, IA, trabajos del futuro, reconversion laboral, sector tecnologico'
+        : 'Future of jobs, AI, workforce transformation, reskilling, technology sector',
       url: `https://alex-vicente.dev/${this.language}/blog`
     });
 
@@ -48,7 +48,7 @@ export class BlogComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       inLanguage: this.language,
-      name: this.language === 'es' ? 'Blog IA y Software' : 'AI and Software Blog',
+      name: this.language === 'es' ? 'IA y Futuro del Trabajo' : 'AI and Future of Work',
       url: `https://alex-vicente.dev/${this.language}/blog`
     });
   }

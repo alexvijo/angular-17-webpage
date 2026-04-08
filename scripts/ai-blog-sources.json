@@ -1,0 +1,93 @@
+{
+  "themeEs": "Futuro de los empleos, IA y sector tecnologico",
+  "themeEn": "Future of jobs, AI and the technology sector",
+  "maxPostsPerRun": 2,
+  "youtubeChannels": [
+    {
+      "name": "Two Minute Papers",
+      "channelId": "UCbfYPyITQ-7l4upoX8nvctg"
+    },
+    {
+      "name": "La Inteligencia Artificial",
+      "channelId": "UCl5-lvQyfILb-l2abPk4Ntg"
+    },
+    {
+      "name": "Marc Vidal",
+      "channelId": "UCKC77AR_zWXRTE2GOD_2Uag"
+    }
+  ],
+  "webSources": [
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/"
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "name": "NVIDIA Blog AI",
+      "url": "https://blogs.nvidia.com/blog/category/ai/"
+    },
+    {
+      "name": "MIT Sloan - Future of Work",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/topic/future-of-work"
+    },
+    {
+      "name": "WEF - Future of Jobs",
+      "url": "https://www.weforum.org/stories/future-of-jobs/"
+    },
+    {
+      "name": "McKinsey - Future of Work",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work"
+    },
+    {
+      "name": "OECD AI Policy Observatory",
+      "url": "https://oecd.ai/en/"
+    },
+    {
+      "name": "Microsoft WorkLab",
+      "url": "https://www.microsoft.com/en-us/worklab"
+    },
+    {
+      "name": "IBM Think AI",
+      "url": "https://www.ibm.com/think/topics/artificial-intelligence"
+    },
+    {
+      "name": "Stanford HAI News",
+      "url": "https://hai.stanford.edu/news"
+    }
+  ],
+  "epubSources": [
+    {
+      "name": "Libro IA y trabajo 01",
+      "path": "content/sources/libro-ia-trabajo-01.epub"
+    },
+    {
+      "name": "Libro IA y trabajo 02",
+      "path": "content/sources/libro-ia-trabajo-02.epub"
+    },
+    {
+      "name": "Informe skills y automatizacion",
+      "path": "content/sources/informe-skills-automatizacion.epub"
+    }
+  ],
+  "requiredKeywordsEs": [
+    "futuro del empleo",
+    "adaptacion",
+    "velocidad del cambio",
+    "oficios que mutan",
+    "nuevos oficios"
+  ],
+  "requiredKeywordsEn": [
+    "future of jobs",
+    "adaptation",
+    "speed of change",
+    "jobs transforming",
+    "new roles"
+  ]
+}
