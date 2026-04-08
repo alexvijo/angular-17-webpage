@@ -1,16 +1,16 @@
 {
-  "Header.init": "Inicio",
+  "Header.init": "Home",
   "Header.Item0": "/&nbsp;&nbsp;",
   "Header.Item1": "About me",
-  "Header.Item2": "Interests",
+  "Header.Item2": "AI Projects",
   "Header.Item3": "AI Blog",
-  "Header.Item4": "Applied AI",
+  "Header.Item4": "AI Systems",
   "Header.Item5": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Alex_Vicente_Spanish.pdf",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Role": "AI software development with agents.",
+  "Banner.Role": "I develop software<br>with AI agents.",
   "Banner.Description": "AI software development with agents.<br>Specialized in <span class='underline'>Angular</span> and digital product delivery.<br>Committed to code quality and business impact<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
 
@@ -227,6 +227,12 @@
         "Title": "@karpathy",
         "Date": "https://www.youtube.com/@AndrejKarpathy",
         "Description": []
+      }
+    ],
+
+    "FeatureProjects.Title": "My projects",
+    "FeatureProjects.Label": "Featured Project",
+    "FeatureProjects.Projects": [
       {
         "Title": "Agrourbana",
         "Description": "Monitoring platform built from scratch with auth module, <span class='underline'>configurable charts</span>, <span class='underline'>smart alerts</span>, and <span class='underline'>user management</span>. Includes reactive forms, business rules, and CI/CD-oriented delivery.",
