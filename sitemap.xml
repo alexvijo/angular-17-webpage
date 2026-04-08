@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://alex-vicente.dev/es/contacto</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -99,6 +105,12 @@
   </url>
   <url>
     <loc>https://alex-vicente.dev/en/blog/angular-llm-rag-in-production</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

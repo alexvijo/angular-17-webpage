@@ -22,12 +22,14 @@ Portfolio focused on AI engineering, applied AI, LLM, MLOps, and frontend softwa
 - ES: https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
 - ES: https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
 - ES: https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
+- ES: https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso
 - EN: https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
 - EN: https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
 - EN: https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
+- EN: https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide
 
 ## Recruiting Keywords
-AI Engineer, Ingeniero IA, Applied AI, LLM, RAG, MLOps, Angular, TypeScript, Software Engineer, AI Product Development
+AI Engineer, Desarrollo con agentes IA, Applied AI, LLM, RAG, MLOps, Angular, TypeScript, Software Engineer, AI Product Development
 
 ## Crawling Notes
 - All public pages can be crawled.
