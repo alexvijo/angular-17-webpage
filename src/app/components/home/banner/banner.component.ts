@@ -31,8 +31,6 @@ import { ActivatedRoute } from '@angular/router';
   ]
 })
 export class BannerComponent implements OnInit {
-  isSpanish = true;
-
   constructor(
     private seoService: SeoService,
     private route: ActivatedRoute
@@ -41,7 +39,6 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     const lang = this.route.snapshot.paramMap.get('language') || 'es';
     const isSpanish = lang === 'es';
-    this.isSpanish = isSpanish;
 
     this.seoService.updatePageSEO({
       title: isSpanish

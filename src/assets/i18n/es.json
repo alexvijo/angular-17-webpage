@@ -1,10 +1,10 @@
 {
     "Header.init": "Inicio",
     "Header.Item0": "/&nbsp;&nbsp;",
-    "Header.Item1": "Acerca de mi",
-    "Header.Item2": "Me interesa",
+    "Header.Item1": "Sobre mi",
+    "Header.Item2": "Proyectos IA",
     "Header.Item3": "Blog IA",
-    "Header.Item4": "IA aplicada",
+    "Header.Item4": "Sistemas IA",
     "Header.Item5": "Contacto",
     "Header.cvBtn": "Curriculum",
     "Header.cvName": "CV_Alex_Vicente_Espanol.pdf",
@@ -14,7 +14,7 @@
     "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
-    "AboutMe.Title": "Acerca de mi",
+    "AboutMe.Title": "Sobre mi",
     "AboutMe.Paragraphs": [
         "Soy especialista en el framework <span class='underline'>Angular</span>.",
         "Me dedico a escribir <span class='underline'>pruebas unitarias</span>, realizar <span class='underline'>integración continua</span> y cubrir roles de backend developer utilizando <span class='underline'>Spring Boot</span> y <span class='underline'>MySQL</span>.",
