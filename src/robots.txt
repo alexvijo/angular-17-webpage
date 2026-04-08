@@ -5,6 +5,7 @@ Disallow: /.angular/
 Disallow: /dist/
 
 Sitemap: https://alex-vicente.dev/sitemap.xml
+Host: https://alex-vicente.dev
 
 # Allow common bots
 User-agent: Googlebot
@@ -14,6 +15,18 @@ User-agent: Bingbot
 Allow: /
 
 User-agent: Slurp
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Crawl delay for aggressive bots

@@ -1,0 +1,27 @@
+<section class="section blog-post">
+  <div class="container">
+    <div class="section-box">
+      @if (post) {
+        <article>
+          <a class="back-link" [routerLink]="['/', language, 'blog']">
+            {{ language === 'es' ? 'Volver al blog' : 'Back to blog' }}
+          </a>
+
+          <h1 class="post-title">{{ getTitle(post) }}</h1>
+          <p class="post-meta">{{ post.publishedAt }} • {{ post.keywords.join(' • ') }}</p>
+
+          @for (paragraph of getParagraphs(post); track paragraph) {
+            <p class="post-paragraph">{{ paragraph }}</p>
+          }
+        </article>
+      } @else {
+        <article>
+          <h1 class="post-title">404</h1>
+          <p class="post-paragraph">
+            {{ language === 'es' ? 'Post no encontrado.' : 'Post not found.' }}
+          </p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

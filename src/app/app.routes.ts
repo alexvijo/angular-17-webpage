@@ -4,6 +4,8 @@ import { BannerComponent } from './components/home/banner/banner.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import { JobsComponent } from './components/home/jobs/jobs.component';
 import { MoreProjectsComponent } from './components/home/more-projects/more-projects.component';
+import { BlogComponent } from './components/home/blog/blog.component';
+import { BlogPostComponent } from './components/home/blog-post/blog-post.component';
 
 export const routes: Routes = [
     {
@@ -26,6 +28,14 @@ export const routes: Routes = [
     {
         path: ':language/ia-aplicada',
         component: MoreProjectsComponent
+    },
+    {
+        path: ':language/blog',
+        component: BlogComponent
+    },
+    {
+        path: ':language/blog/:slug',
+        component: BlogPostComponent
     },
     {
         path: ':language/contacto',

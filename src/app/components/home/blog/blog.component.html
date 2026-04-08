@@ -1,0 +1,26 @@
+<section class="section blog" id="blog">
+  <div class="container">
+    <div class="section-box">
+      <h1 class="section-title">
+        <span class="n-section-title">03.</span>
+        {{ language === 'es' ? 'Blog de Ingenieria IA' : 'AI Engineering Blog' }}
+      </h1>
+
+      <div class="row g-3 mt-2">
+        @for (post of posts; track post.slugEs) {
+          <article class="col-12 col-md-6 col-lg-4">
+            <a
+              class="blog-card"
+              [routerLink]="['/', language, 'blog', getSlug(post)]"
+              [attr.aria-label]="getTitle(post)">
+              <p class="blog-date">{{ post.publishedAt }}</p>
+              <h2 class="blog-title">{{ getTitle(post) }}</h2>
+              <p class="blog-excerpt">{{ getExcerpt(post) }}</p>
+              <p class="blog-tags">{{ post.keywords.join(' • ') }}</p>
+            </a>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

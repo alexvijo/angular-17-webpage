@@ -1,0 +1,35 @@
+# alex-vicente.dev - AI Engineer Portfolio
+
+Owner: Alex Vicente
+Primary Language: Spanish (es) and English (en)
+Site: https://alex-vicente.dev
+
+## Summary
+Portfolio focused on AI engineering, applied AI, LLM, MLOps, and frontend software engineering with Angular.
+
+## Main Pages
+- Home (ES): https://alex-vicente.dev/es/inicio
+- Home (EN): https://alex-vicente.dev/en/inicio
+- About (ES): https://alex-vicente.dev/es/acerca-de-mi
+- About (EN): https://alex-vicente.dev/en/acerca-de-mi
+- Applied AI (ES): https://alex-vicente.dev/es/ia-aplicada
+- Applied AI (EN): https://alex-vicente.dev/en/ia-aplicada
+- Blog (ES): https://alex-vicente.dev/es/blog
+- Blog (EN): https://alex-vicente.dev/en/blog
+- Contact: https://alex-vicente.dev/es/contacto
+
+## Blog Posts
+- ES: https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
+- ES: https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
+- ES: https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
+- EN: https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
+- EN: https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
+- EN: https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
+
+## Recruiting Keywords
+AI Engineer, Ingeniero IA, Applied AI, LLM, RAG, MLOps, Angular, TypeScript, Software Engineer, AI Product Development
+
+## Crawling Notes
+- All public pages can be crawled.
+- Canonical URL: https://alex-vicente.dev
+- Sitemap: https://alex-vicente.dev/sitemap.xml

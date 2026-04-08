@@ -1,38 +1,79 @@
-# Alexvijo
+# Alex Vicente - AI Engineer Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0
-and updated to 18.0.3 following [Angular Udate Guide - https://angular.dev/update-guide](https://angular.dev/update-guide?v=17.0-18.0&l=1)
-```bash
-rm -rf node_modules package-lock.json
-npm cache clean --force
-npm uninstall -g @angular/cli 
-npm install -g @angular/cli@18
-ng update @angular/core@18
-npm install @popperjs/core
-npm cache clean --force
-npm install --legacy-peer-deps
-```
+Sitio profesional en Angular orientado a visibilidad SEO para Google, agentes IA y reclutadores que buscan perfiles de Ingeniero IA.
 
-## Development server
+## Objetivo SEO
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto esta optimizado para:
+- Indexacion tecnica (meta tags, robots, sitemap, canonical, hreflang).
+- Descubrimiento por agentes IA (llms.txt).
+- Relevancia semantica para keywords de AI Engineer e Ingeniero IA.
+- Contenido rastreable con blog activo y rutas dedicadas.
 
-## Code scaffolding
+## Keywords Principales
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Ingeniero IA
+- AI Engineer
+- LLM
+- RAG
+- MLOps
+- Angular
+- TypeScript
+- Software Engineer
+- Agentes IA
+- IA aplicada
 
-## Build
+## Estructura Relevante
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- SEO base: src/index.html
+- Reglas crawler: src/robots.txt
+- Mapa del sitio: src/sitemap.xml
+- AI crawler profile: src/llms.txt
+- Blog: src/app/components/home/blog
+- Posts: src/app/components/home/blog-post
+- Dataset de posts: src/app/data/blog-posts.ts
 
-## Running unit tests
+## Ejecutar en local
 
-Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/docs/getting-started).
+1. Instalar dependencias:
+   npm install
+2. Iniciar proyecto:
+   npm run start
+3. Abrir:
+   http://localhost:4200
 
-## Running end-to-end tests
+## Build de produccion
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- npm run build
 
-## Further help
+## Checklist SEO aplicado
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Meta title y description orientados a AI Engineer.
+- Open Graph y Twitter Cards configuradas.
+- Canonical y hreflang base incluidos.
+- JSON-LD para Person y WebSite.
+- robots.txt con acceso para Googlebot y crawlers IA.
+- sitemap.xml con rutas ES/EN, blog y posts.
+- llms.txt con rutas clave para agentes IA.
+- Blog activo con rutas rastreables por post.
+- Copy optimizado en banner y secciones de proyectos IA.
+
+## Backlinks (Plan de Ejecucion)
+
+Los backlinks reales requieren publicacion externa. Para construir autoridad rapidamente:
+
+1. LinkedIn:
+   - Publicar 2-3 posts resumidos del blog.
+   - Enlazar a rutas del blog y a la home.
+2. GitHub profile README:
+   - Incluir enlace al portfolio y al blog.
+3. Medium o Dev.to:
+   - Re-publicar versiones resumidas de 1-2 articulos.
+4. Comunidades tecnicas:
+   - Compartir casos practicos de LLM/RAG con enlace fuente.
+5. Directorios profesionales:
+   - Actualizar perfil con keyword AI Engineer + enlace al sitio.
+
+## Nota importante
+
+Este sitio es SPA en Angular. Para maximo rendimiento SEO en contenido dinamico a gran escala, considera incorporar pre-render o SSR en una iteracion futura.

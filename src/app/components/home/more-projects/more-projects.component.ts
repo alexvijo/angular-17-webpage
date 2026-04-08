@@ -51,9 +51,7 @@ export class MoreProjectsComponent implements OnInit {
         window.scrollTo(0, 0)
     });
 
-    // Get the entire es.json
-    this.translateService.getTranslation('es').subscribe((translations: any) => {
-        console.log("translations", translations)
+    this.translateService.getTranslation(lang).subscribe((translations: any) => {
         if (translations && translations['OtherProjects.Projects']) {
             this.Projects = translations['OtherProjects.Projects'];
             this.filteredProjects = this.Projects;
