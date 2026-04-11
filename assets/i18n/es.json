@@ -2,11 +2,8 @@
     "Header.init": "Inicio",
     "Header.Item0": "/&nbsp;&nbsp;",
     "Header.Item1": "Sobre mi",
-    "Header.Item2": "Proyectos IA",
-    "Header.Item3": "IA y Futuro del Trabajo",
-    "Header.Item5": "Contacto",
-    "Header.cvBtn": "Curriculum",
-    "Header.cvName": "CV_Alex_Vicente_Espanol.pdf",
+    "Header.Item3": "Me interesa",
+    "Header.Item4": "Contacto",
 
     "Banner.Pretitle": "Hola, mi nombre es",
     "Banner.Role": "Desarrollo software<br>con agentes IA.",
@@ -23,6 +20,7 @@
         "Algunas de las tecnologías con las que trabajo incluyen:"
     ],
     "Experience.Title": "Me interesa",
+    "InterestQuotes.Title": "Me interesa lo que dicen",
     "Experience.Jobs": [
         {
             "imageUrl": "https://yt3.googleusercontent.com/JHCZDz37bsTmwoE1o4LEodF5vhsHfk29kCEauDTFr27-7hHXsHHvvWGzcG77v32ERrkpfInkGQ=s160-c-k-c0x00ffffff-no-rj",
