@@ -11,9 +11,7 @@
           <article class="col-12 col-md-6 col-lg-4">
             <a
               class="blog-card"
-              [attr.href]="getYouTubeUrl(post)"
-              target="_blank"
-              rel="noopener noreferrer"
+              [routerLink]="['/', language, 'blog', language === 'es' ? post.slugEs : post.slugEn]"
               [attr.aria-label]="getTitle(post)">
               <p class="blog-date">{{ post.publishedAt }}</p>
               <h2 class="blog-title">{{ getTitle(post) }}</h2>

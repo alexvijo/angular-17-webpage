@@ -18,6 +18,10 @@ export const routes: Routes = [
         path: ':language/me-interesa',
         loadComponent: () => import('./components/home/jobs/jobs.component').then((m) => m.JobsComponent)
     },
+        {
+            path: ':language/ia-y-futuro-del-trabajo',
+            loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)
+        },
     {
         path: ':language/ia-aplicada',
         loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)

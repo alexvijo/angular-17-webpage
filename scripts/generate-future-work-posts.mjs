@@ -10,6 +10,10 @@ const BLOG_POSTS_PATH = path.join(ROOT, 'src', 'app', 'data', 'blog-posts.ts');
 const DEFAULT_MAX_POSTS = 2;
 const MAX_SOURCE_TEXT_CHARS = 10000;
 const MAX_BODY_PARAGRAPHS = 3;
+const DEFAULT_GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+const MAX_LLM_RETRIES = Number(process.env.LLM_MAX_RETRIES || 3);
+const BASE_RETRY_MS = Number(process.env.LLM_BASE_RETRY_MS || 8000);
+const ENABLE_TEMPLATE_FALLBACK = process.env.ENABLE_TEMPLATE_FALLBACK === 'true';
 
 function decodeHtmlEntities(text) {
   return text
@@ -56,6 +60,23 @@ function toSingleQuotedTsString(text) {
 
 function ensureArray(value) {
   return Array.isArray(value) ? value : [];
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function firstWords(text, count) {
+  const words = String(text || '').split(/\s+/).filter(Boolean);
+  return words.slice(0, count).join(' ');
+}
+
+function getGeminiRetryDelayMs(errorText, attempt) {
+  const retrySeconds = String(errorText || '').match(/"retryDelay"\s*:\s*"(\d+)s"/i)?.[1];
+  if (retrySeconds) {
+    return Number(retrySeconds) * 1000;
+  }
+  return BASE_RETRY_MS * attempt;
 }
 
 async function readJson(filePath) {
@@ -247,17 +268,22 @@ function getUsedUrls(blogPostsFileContent) {
   return usedUrls;
 }
 
-async function generatePostWithGemini({ apiKey, config, candidate }) {
+async function generatePostWithGemini({ apiKey, model, config, candidate }) {
+  const requiredKeywordsEs = ensureArray(config.requiredKeywordsEs).join(', ');
+  const requiredKeywordsEn = ensureArray(config.requiredKeywordsEn).join(', ');
+
   const prompt = `You are generating one bilingual blog post object for a developer portfolio.
 Main theme ES: ${config.themeEs}
 Main theme EN: ${config.themeEn}
+Required keywords ES (prioritize naturally): ${requiredKeywordsEs}
+Required keywords EN (prioritize naturally): ${requiredKeywordsEn}
 
 Source type: ${candidate.sourceType}
 Source name: ${candidate.sourceName}
 Source title: ${candidate.title}
 Source URL: ${candidate.url}
 Source text:
-${candidate.sourceText}
+${candidate.sourceText.slice(0, 3500)}
 
 Return ONLY valid JSON object with this exact schema:
 {
@@ -280,31 +306,48 @@ Rules:
 - At least 2 keywords must relate to labor market transformation.
 - Do not hallucinate facts; if uncertain, use careful language.`;
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  let payload;
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: prompt }]
+  for (let attempt = 1; attempt <= MAX_LLM_RETRIES; attempt += 1) {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: prompt }]
+          }
+        ],
+        generationConfig: {
+          temperature: 0.4,
+          responseMimeType: 'application/json'
         }
-      ],
-      generationConfig: {
-        temperature: 0.5,
-        responseMimeType: 'application/json'
-      }
-    })
-  });
+      })
+    });
 
-  if (!response.ok) {
+    if (response.ok) {
+      payload = await response.json();
+      break;
+    }
+
     const errorBody = await response.text();
-    throw new Error(`Gemini request failed (${response.status}): ${errorBody}`);
+    const shouldRetry = response.status === 429 || response.status === 503;
+
+    if (!shouldRetry || attempt === MAX_LLM_RETRIES) {
+      throw new Error(`Gemini request failed (${response.status}): ${errorBody}`);
+    }
+
+    const delayMs = getGeminiRetryDelayMs(errorBody, attempt);
+    console.warn(`Gemini transient error (${response.status}). Retrying in ${delayMs}ms... [attempt ${attempt}/${MAX_LLM_RETRIES}]`);
+    await sleep(delayMs);
   }
 
-  const payload = await response.json();
+  if (!payload) {
+    throw new Error('Gemini response payload is empty after retries.');
+  }
+
   const rawText = payload?.candidates?.[0]?.content?.parts?.[0]?.text;
 
   if (!rawText) {
@@ -349,6 +392,42 @@ Rules:
   };
 }
 
+function generatePostWithTemplate({ config, candidate }) {
+  const today = new Date().toISOString().slice(0, 10);
+  const shortSource = firstWords(candidate.sourceText, 120);
+  const sourceLabel = candidate.sourceType === 'youtube' ? 'video' : candidate.sourceType;
+  const titleEs = `IA y empleo: claves desde ${candidate.sourceName}`;
+  const titleEn = `AI and jobs: key takeaways from ${candidate.sourceName}`;
+
+  return {
+    slugEs: slugify(`${titleEs}-${today}`),
+    slugEn: slugify(`${titleEn}-${today}`),
+    titleEs,
+    titleEn,
+    excerptEs: `Lectura rapida sobre adaptacion laboral y velocidad de cambio en tecnologia a partir de ${sourceLabel}s recientes.`,
+    excerptEn: `A quick read on workforce adaptation and speed of change in tech based on recent ${sourceLabel} sources.`,
+    youtubeUrl: candidate.url,
+    bodyEs: [
+      `El mercado laboral tecnologico se esta reconfigurando con rapidez. Esta fuente (${candidate.sourceName}) aporta senales sobre como cambian los perfiles, las tareas y la demanda de habilidades.`,
+      `La adaptacion efectiva combina tres frentes: alfabetizacion en IA, rediseño de procesos y aprendizaje continuo en herramientas. Esto acelera la productividad y reduce riesgo de obsolescencia profesional.`,
+      `Sintesis de la fuente: ${shortSource}. Para equipos de producto, la prioridad es convertir estas senales en planes concretos de upskilling, automatizacion responsable y nuevos roles.`
+    ],
+    bodyEn: [
+      `The tech labor market is being reshaped quickly. This source (${candidate.sourceName}) provides signals on how profiles, tasks, and skill demand are changing.`,
+      `Effective adaptation combines three fronts: AI literacy, process redesign, and continuous tooling practice. This boosts productivity and lowers professional obsolescence risk.`,
+      `Source synthesis: ${shortSource}. For product teams, the priority is to turn these signals into concrete plans for upskilling, responsible automation, and new role design.`
+    ],
+    keywords: [
+      'future of jobs',
+      'AI workforce',
+      'reskilling',
+      'technology sector',
+      'automation'
+    ],
+    publishedAt: today
+  };
+}
+
 function serializeBlogPost(post) {
   const bodyEs = post.bodyEs.map((paragraph) => `      ${toSingleQuotedTsString(paragraph)}`).join(',\n');
   const bodyEn = post.bodyEn.map((paragraph) => `      ${toSingleQuotedTsString(paragraph)}`).join(',\n');
@@ -384,6 +463,8 @@ async function main() {
     throw new Error('Missing GEMINI_API_KEY environment variable.');
   }
 
+  const model = DEFAULT_GEMINI_MODEL;
+
   const config = await loadSourcesConfig();
   const blogDataBefore = await fs.readFile(BLOG_POSTS_PATH, 'utf-8');
   const usedUrls = getUsedUrls(blogDataBefore);
@@ -402,7 +483,7 @@ async function main() {
 
   for (const candidate of selectedCandidates) {
     try {
-      const post = await generatePostWithGemini({ apiKey, config, candidate });
+      const post = await generatePostWithGemini({ apiKey, model, config, candidate });
       if (usedSlugs.has(post.slugEs) || usedSlugs.has(post.slugEn)) {
         console.warn(`Skipping duplicate slug from source ${candidate.sourceName}.`);
         continue;
@@ -413,6 +494,15 @@ async function main() {
       console.log(`Generated post from ${candidate.sourceType}: ${candidate.title}`);
     } catch (error) {
       console.warn(`Could not generate post from ${candidate.sourceName}: ${error.message}`);
+      if (ENABLE_TEMPLATE_FALLBACK) {
+        const fallbackPost = generatePostWithTemplate({ config, candidate });
+        if (!usedSlugs.has(fallbackPost.slugEs) && !usedSlugs.has(fallbackPost.slugEn)) {
+          usedSlugs.add(fallbackPost.slugEs);
+          usedSlugs.add(fallbackPost.slugEn);
+          generatedPosts.push(fallbackPost);
+          console.log(`Generated fallback post from ${candidate.sourceType}: ${candidate.title}`);
+        }
+      }
     }
   }
 
