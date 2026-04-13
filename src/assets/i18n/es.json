@@ -19,8 +19,8 @@
         "Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar. Estoy capacitado para aprender cualquier habilidad. Mi carácter es lo que me distingue de los demás.",
         "Algunas de las tecnologías con las que trabajo incluyen:"
     ],
-    "Experience.Title": "Me interesa",
-    "InterestQuotes.Title": "Me interesa lo que dicen",
+    "Experience.Title": "Me interesa lo que dicen",
+    "InterestQuotes.Title": "Me interesa",
     "Experience.Jobs": [
         {
             "imageUrl": "https://yt3.googleusercontent.com/JHCZDz37bsTmwoE1o4LEodF5vhsHfk29kCEauDTFr27-7hHXsHHvvWGzcG77v32ERrkpfInkGQ=s160-c-k-c0x00ffffff-no-rj",
@@ -90,6 +90,13 @@
         "Tab": "Brian Tracy",
         "Title": "Psicologia Del exito",
         "Date": "https://www.ivoox.com/psicologia-del-exito-brian-tracy_bk_list_1198_1.html",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kKRxIBJIfdJogx8ZfaWord-96w2CQvJiv1Z_At6ZN3iS4=s160-c-k-c0x00ffffff-no-rj",
+        "Tab": "fermiralles",
+        "Title": "@fermiralles",
+        "Date": "https://www.youtube.com/@fermiralles",
         "Description": []
       },
       {
@@ -216,6 +223,13 @@
         "Tab": "Juan Ramón Rallo",
         "Title": "@juanrallo",
         "Date": "https://www.youtube.com/@juanrallo/videos",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://unavatar.io/youtube/@InversionRacional",
+        "Tab": "Luis Miguel Ortiz",
+        "Title": "@InversionRacional",
+        "Date": "https://www.youtube.com/@InversionRacional",
         "Description": []
       },
       {

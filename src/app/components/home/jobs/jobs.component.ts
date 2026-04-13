@@ -19,6 +19,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './jobs.component.scss'
 })
 export class JobsComponent implements OnInit {
+  categories: { key: string; label: string; items: any[] }[] = [
+    { key: 'humanidades', label: 'Humanidades', items: [] },
+    { key: 'economia', label: 'Economía', items: [] },
+    { key: 'conocimiento', label: 'Conocimiento', items: [] },
+    { key: 'software', label: 'Software', items: [] },
+  ];
+
+  allJobs: any[] = [];
 
   constructor(
     private windowRef: WindowRefService,
@@ -45,6 +53,47 @@ export class JobsComponent implements OnInit {
     });
   }
 
+
+  // Recibe el array de jobs traducido desde el template
+  categorizeJobs(jobs: any[]): any {
+    // Asignación manual por nombre (Tab o Title)
+    const map: { [key: string]: string[] } = {
+      humanidades: [
+        "Pablo d'Ors", 'Bernardo Souvirón', 'Agustín Garcia Calvo', 'Marco Aurelio'
+      ],
+      economia: [
+        'José Luis Cava', 'Marc Vidal', 'Lorenzo Ramirez', 'Juan Ramón Rallo', 'Dani Sóñora', 'Luis Miguel Ortiz'
+      ],
+      conocimiento: [
+        'Steven Bartlett', 'Brian Tracy', 'Gerry Garbulsky', 'Frank Suarez', 'Anton Krupicka'
+      ],
+      software: [
+        'Fernando Herrera', 'Daniel Santos', 'David Battaglia', 'Joshua Morony', 'Alejandro Cuba Ruiz', 'Ángel García Galiano', 'Brad Traversy', 'Bezael Pérez', 'Jimy Dolores', 'FaszCode', 'Miguel Ángel Durán', 'Leifer Mendez', 'Andrej Karpathy'
+      ]
+    };
+    // Limpiar
+    this.categories.forEach(cat => cat.items = []);
+    jobs.forEach(job => {
+      let assigned = false;
+      for (const cat of this.categories) {
+        if (map[cat.key].some(name => job.Tab === name || job.Title === name)) {
+          cat.items.push(job);
+          assigned = true;
+          break;
+        }
+      }
+      // Si no coincide, poner en "Conocimiento" por defecto
+      if (!assigned) {
+        this.categories[2].items.push(job);
+      }
+    });
+    return this.categories;
+  }
+
+  getCategoryIndex(idx: number): string {
+    return (idx + 1).toString().padStart(2, '0') + '.';
+  }
+
   openLink(link: string) {
     this.openNewWindow(link);
   }
@@ -56,6 +105,5 @@ export class JobsComponent implements OnInit {
   openNewWindow(url: string) {
     this.windowRef.nativeWindow.open(url, '_blank');
   }
-
 }
 

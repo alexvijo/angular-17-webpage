@@ -9,13 +9,19 @@
       </div>
 
       <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
-        <div class="image-grid">
-          @for (job of "Experience.Jobs" | translate; track job; let i = $index) {
-            <div [title]="job.Tab">
-              <div (click)="openLink(job.Date)" [title]="job.Date" >
-                <div class="img-background" [style.background-image]="getBackgroundImage(job.imageUrl)"></div>
+        <div class="jobs-categories-centered">
+          @for (cat of categorizeJobs(("Experience.Jobs" | translate)); track cat; let idx = $index) {
+            <div class="jobs-category-group">
+              <div class="image-grid">
+                @for (job of cat.items; track job; let i = $index) {
+                    <div [title]="job.Tab">
+                    <div (click)="openLink(job.Date)" [title]="job.Date">
+                      <div class="img-background" [style.background-image]="getBackgroundImage(job.imageUrl)"></div>
+                    </div>
+                    <div class="company-tab-content" [title]="job.Title">{{job.Tab}}</div>
+                  </div>
+                }
               </div>
-              <div class="company-tab-content" [title]="job.Title">{{job.Tab}}</div>
             </div>
           }
         </div>

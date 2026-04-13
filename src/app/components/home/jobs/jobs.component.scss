@@ -1,3 +1,25 @@
+.jobs-category-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.jobs-category-title-above {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: right;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
 @import "./../../../../variables.scss";
 
 
@@ -27,82 +49,6 @@
         border-color: transparent !important;
         border-radius: 0px;
     }
-
-    a{
-        display: inline-block;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-        -webkit-text-decoration-skip-ink: auto;
-        text-decoration-skip-ink: auto;
-        color: inherit;
-        position: relative;
-        -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        cursor: pointer;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 100%;
-        background-color: transparent;
-        height: 42px;
-        padding: 0 20px 2px;
-        -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        text-align: left;
-        white-space: nowrap;
-        font-family: $CodeFont;
-        font-size: 13px;
-        color: $Slate;
-    }
-
-    li{
-        border-left: 2px solid $LightestNavy;
-        border-left-width: 2px;
-        border-left-style: solid;
-        border-left-color: rgb(48, 60, 85);
-    }
-}
-
-.jobs{
-    margin: auto;
-
-    .title-tab-content{
-        color: $LightestSlate;
-        font-size: 22px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-
-    .job-time{
-        font-family: $CodeFont;
-        font-size: 13px;
-        font-weight: normal;
-            -webkit-letter-spacing: 0.05em;
-        -moz-letter-spacing: 0.05em;
-        -ms-letter-spacing: 0.05em;
-        letter-spacing: 0.05em;
-        color: $LightSlate;
-        margin-bottom: 30px;
-    }
-
-    .job-description{
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 10px;
-        font-size: 18px;
-
-        &:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: $Green;
-        }
-    }
 }
 
 
@@ -129,14 +75,54 @@
 }
 
 
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 
-  .img-background {
+
+.jobs-categories-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin-bottom: 32px;
+}
+
+.jobs-category-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+
+.jobs-category-title-horizontal {
+    display: flex;
+    align-items: center;
+    background: $LightNavy;
+    color: $Green;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 120px;
+    height: 38px;
+    padding: 0 18px;
+    margin-right: 18px;
+    border-radius: 18px;
+    text-align: left;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    border: 1px solid $Green;
+}
+
+.jobs-category-jobs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.job-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-background {
     background-color: #fd5cff;
     position: relative;
     background-repeat: no-repeat;
@@ -149,33 +135,37 @@
     transition: filter 0.3s ease;
 
     &:hover {
-      cursor: pointer;
-      filter: grayscale(0);
+  padding-left: 8px;
+        filter: grayscale(0);
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(90deg, $Green 0%, #0000ff 100%);
-      mix-blend-mode: screen;
-      opacity: 0;
-      transition: opacity 0.5s ease;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, $Green 0%, #0000ff 100%);
+        mix-blend-mode: screen;
+        opacity: 0;
+        transition: opacity 0.5s ease;
     }
 
     &:hover::before {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  .company-tab-content {
+.company-tab-content {
     color: $Green;
     max-width: 140px;
     padding: 11px 45px 0 1px;
     line-height: 20px;
     min-height: 86px;
-  }
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
 }
+
+
