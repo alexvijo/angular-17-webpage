@@ -199,7 +199,7 @@
         "Description": []
       },
       {
-        "imageUrl": "https://m.media-amazon.com/images/I/61pk2aciU1L._SL1200_.jpg",
+        "imageUrl": "https://www.nodualidad.info/imagen/maestros-griegos/marco-aurelio.jpg",
         "Tab": "Marco Aurelio",
         "Title": "",
         "Date": "https://www.amazon.es/gp/product/8416544530/ref=ox_sc_act_title_2?smid=A1AT7YVPFBWXBL&psc=1",
@@ -217,6 +217,13 @@
         "Tab": "Juan Ramón Rallo",
         "Title": "@juanrallo",
         "Date": "https://www.youtube.com/@juanrallo/videos",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://unavatar.io/youtube/@MiguelAnxoBastosTV",
+        "Tab": "Miguel Anxo Bastos",
+        "Title": "@MiguelAnxoBastosTV",
+        "Date": "https://www.youtube.com/@MiguelAnxoBastosTV",
         "Description": []
       },
       {

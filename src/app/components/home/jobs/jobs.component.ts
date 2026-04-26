@@ -59,16 +59,16 @@ export class JobsComponent implements OnInit {
     // Asignación manual por nombre (Tab o Title)
     const map: { [key: string]: string[] } = {
       humanidades: [
-        "Pablo d'Ors", 'Bernardo Souvirón', 'Agustín Garcia Calvo', 'Marco Aurelio'
+        "Pablo d'Ors", 'Bernardo Souvirón', 'Agustín Garcia Calvo', 'Ángel García Galiano', 'Marco Aurelio'
       ],
       economia: [
-        'José Luis Cava', 'Marc Vidal', 'Lorenzo Ramirez', 'Juan Ramón Rallo', 'Dani Sóñora', 'Luis Miguel Ortiz'
+        'Miguel Anxo Bastos' ,'José Luis Cava', 'David Battaglia', 'Juan Ramón Rallo', 'Dani Sóñora', 'Luis Miguel Ortiz', 'Andrej Karpathy'
       ],
       conocimiento: [
-        'Steven Bartlett', 'Brian Tracy', 'Gerry Garbulsky', 'Frank Suarez', 'Anton Krupicka'
+        'Steven Bartlett', 'Lorenzo Ramirez', 'Marc Vidal', 'Brian Tracy', 'Gerry Garbulsky', 'Frank Suarez', 'Anton Krupicka'
       ],
       software: [
-        'Fernando Herrera', 'Daniel Santos', 'David Battaglia', 'Joshua Morony', 'Alejandro Cuba Ruiz', 'Ángel García Galiano', 'Brad Traversy', 'Bezael Pérez', 'Jimy Dolores', 'FaszCode', 'Miguel Ángel Durán', 'Leifer Mendez', 'Andrej Karpathy'
+        'Fernando Herrera', 'Daniel Santos', 'Joshua Morony', 'Alejandro Cuba Ruiz', 'Brad Traversy', 'Bezael Pérez', 'Jimy Dolores', 'FaszCode', 'Miguel Ángel Durán', 'Leifer Mendez'
       ]
     };
     // Limpiar
