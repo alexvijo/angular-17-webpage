@@ -4,13 +4,15 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { SeoService } from '../../../services/seo.service';
 import { ActivatedRoute } from '@angular/router';
+import { PixelCoderComponent } from './pixel-coder/pixel-coder.component';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    TranslateModule
+    TranslateModule,
+    PixelCoderComponent,
 ],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',

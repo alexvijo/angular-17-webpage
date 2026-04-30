@@ -1,16 +1,21 @@
 <section class="section banner" id="banner">
     <div [@bannerTrigger] class="container">
       <div class="section-box-banner">
-        <div class="content">
-          <div>
-              <p class="banner-pretitle"><span class="n-section-title"></span> {{"Banner.Pretitle" | translate}}</p>
+        <div class="banner-layout">
+          <div class="content">
+            <div>
+                <p class="banner-pretitle"><span class="n-section-title"></span> {{"Banner.Pretitle" | translate}}</p>
+            </div>
+            <div class='banner-title'>
+                <h3 class="alex-vicente">Alex Vicente</h3>
+                <h3 class="front-developer" [innerHTML]="'Banner.Role' | translate"></h3>
+            </div>
+            <div class='banner-description'>
+                <p [innerHTML]='"Banner.Description" | translate' class="mt-1"></p>
+            </div>
           </div>
-          <div class='banner-title'>
-              <h3 class="alex-vicente">Alex Vicente</h3>
-              <h3 class="front-developer" [innerHTML]="'Banner.Role' | translate"></h3>
-          </div>
-          <div class='banner-description'>
-              <p [innerHTML]='"Banner.Description" | translate' class="mt-1"></p>
+          <div class="pixel-side">
+            <app-pixel-coder></app-pixel-coder>
           </div>
         </div>
       </div>

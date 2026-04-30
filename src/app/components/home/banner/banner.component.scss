@@ -7,6 +7,7 @@
     .container{
         display: table;
         height: 100vh;
+        width: 100%;
 
         .section-box-banner{
             display: table-cell;
@@ -103,6 +104,27 @@
             }
         }
 
+        .banner-layout {
+          display: flex;
+          align-items: center;
+          gap: 0;
 
+          .content {
+            flex: 1;
+            min-width: 0;
+          }
+
+          .pixel-side {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.92;
+
+            @media (max-width: 992px) {
+              display: none;
+            }
+          }
+        }
     }
 }
