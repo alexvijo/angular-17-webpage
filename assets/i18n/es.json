@@ -6,7 +6,7 @@
     "Header.Item4": "Contacto",
 
     "Banner.Pretitle": "Hola, mi nombre es",
-    "Banner.Role": "Desarrollo software<br>con agentes IA.",
+    "Banner.Role": "Full Stack Developer",
     "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
@@ -387,5 +387,6 @@
     "Contact.Title": "¡Escríbeme para contactar!",
     "Contact.Content": "Estaré encantado de conversar sobre cómo puedo ayudarte. Te responderé tan pronto vea tu mensaje.",
     "Contact.Btn": "Envíame un email",
-    "Contact.Btnwhatsapp": "Mándame un whatsapp"
+    "Contact.Btnwhatsapp": "Mándame un whatsapp",
+    "Contact.Btnlinkedin": "Conéctate en LinkedIn"
 }

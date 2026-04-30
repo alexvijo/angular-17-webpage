@@ -7,7 +7,7 @@
   "Header.Item4": "Contact",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Role": "I develop software<br>with AI agents.",
+  "Banner.Role": "Full Stack Developer",
   "Banner.Description": "AI software development with agents.<br>Specialized in <span class='underline'>Angular</span> and digital product delivery.<br>Committed to code quality and business impact<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
 
@@ -388,5 +388,6 @@
     "Contact.Title": "Write to get in touch!",
     "Contact.Content": "I'll be happy to chat about how I can assist you. Drop me a line, and I'll get back to you as soon as I see your message.",
     "Contact.Btn": "Send me an email",
-    "Contact.Btnwhatsapp": "Send me a WhatsApp message"
+    "Contact.Btnwhatsapp": "Send me a WhatsApp message",
+    "Contact.Btnlinkedin": "Connect on LinkedIn"
 }
