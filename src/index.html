@@ -19,21 +19,26 @@
   <meta property="og:title" content="Alex Vicente | Desarrollo con agentes IA y Desarrollador Software">
   <meta property="og:description" content="IA aplicada para negocio, LLM, MLOps y desarrollo frontend con Angular.">
   <meta property="og:image" content="https://alex-vicente.dev/assets/images/picofme.png">
+  <meta property="og:image:alt" content="Alex Vicente - AI Developer y Desarrollador de Software">
   <meta property="og:url" content="https://alex-vicente.dev">
   <meta property="og:site_name" content="Alex Vicente Portfolio">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@alexvijo">
+  <meta name="twitter:creator" content="@alexvijo">
   <meta name="twitter:title" content="Alex Vicente | Desarrollo con agentes IA y Desarrollador Software">
   <meta name="twitter:description" content="Portafolio profesional con proyectos detallados de IA, LLM, MLOps y Angular.">
   <meta name="twitter:image" content="https://alex-vicente.dev/assets/images/picofme.png">
+  <meta name="twitter:image:alt" content="Alex Vicente - AI Developer y Desarrollador de Software">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://alex-vicente.dev">
   <link rel="alternate" hreflang="es" href="https://alex-vicente.dev/es/inicio">
   <link rel="alternate" hreflang="en" href="https://alex-vicente.dev/en/inicio">
-  <link rel="alternate" hreflang="x-default" href="https://alex-vicente.dev/es/inicio">
+  <link rel="alternate" hreflang="x-default" href="https://alex-vicente.dev/en/inicio">
 
   <script type="application/ld+json">
     {
@@ -41,23 +46,45 @@
       "@graph": [
         {
           "@type": "Person",
+          "@id": "https://alex-vicente.dev/#person",
           "name": "Alex Vicente",
-          "jobTitle": "Desarrollo con agentes IA y Desarrollador de Software",
+          "jobTitle": "AI Developer y Desarrollador de Software",
+          "description": "AI Developer especializado en agentes IA, LLM, automatización inteligente, RAG y arquitectura Angular orientada a negocio.",
           "url": "https://alex-vicente.dev",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://alex-vicente.dev/assets/images/picofme.png"
+          },
+          "sameAs": [
+            "https://github.com/alexvijo",
+            "https://www.linkedin.com/in/alexvicente/"
+          ],
           "knowsAbout": [
             "Artificial Intelligence",
             "Large Language Models",
             "MLOps",
             "Angular",
             "TypeScript",
-            "Software Architecture"
+            "Software Architecture",
+            "RAG",
+            "AI Agents"
           ]
         },
         {
           "@type": "WebSite",
+          "@id": "https://alex-vicente.dev/#website",
           "name": "Alex Vicente Portfolio",
           "url": "https://alex-vicente.dev",
-          "inLanguage": ["es", "en"]
+          "inLanguage": ["es", "en"],
+          "author": { "@id": "https://alex-vicente.dev/#person" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://alex-vicente.dev/es/blog?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
         }
       ]
     }

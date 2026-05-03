@@ -36,7 +36,8 @@ export class BlogComponent implements OnInit {
       keywords: this.language === 'es'
         ? 'Futuro del empleo, IA, trabajos del futuro, reconversion laboral, sector tecnologico'
         : 'Future of jobs, AI, workforce transformation, reskilling, technology sector',
-      url: `https://alex-vicente.dev/${this.language}/blog`
+      url: `https://alex-vicente.dev/${this.language}/blog`,
+      lang: this.language
     });
 
     this.seoService.updateHreflangAlternates({

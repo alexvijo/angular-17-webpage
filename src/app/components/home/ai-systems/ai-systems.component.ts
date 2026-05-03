@@ -32,7 +32,8 @@ export class AiSystemsComponent implements OnInit {
       keywords: this.language === 'es'
         ? 'AI Developer, LLM Developer, AI Agents, RAG, arquitectura IA, observabilidad, MLOps'
         : 'AI Developer, LLM Developer, AI Agents, RAG, AI architecture, observability, MLOps',
-      url: `https://alex-vicente.dev/${this.language}/ai-systems`
+      url: `https://alex-vicente.dev/${this.language}/ai-systems`,
+      lang: this.language
     });
 
     this.seoService.updateHreflangAlternates({

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\src\\\\\\\\assets\\\\\\\\i18n\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\src\\\\\\\\app\\\\\\\\data\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\src\\\\\\\\app\\\\\\\\models\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\content\")",
+      "Bash(head -50 \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\src\\\\\\\\app\\\\\\\\components\\\\\\\\home\\\\\\\\blog-post\\\\\\\\blog-post.component.ts\")",
+      "Bash(grep -A 2 \"@angular\" \"c:\\\\\\\\Users\\\\\\\\alexv\\\\\\\\projects\\\\\\\\alexvijo\\\\\\\\package.json\")",
+      "Bash(npm start *)",
+      "Bash(npx ng *)",
+      "PowerShell(Get-ChildItem 'c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\' | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell(Get-ChildItem 'c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\' | ForEach-Object { \"$\\($_.Name\\) - $\\([math]::Round\\($_.Length/1KB, 1\\)\\) KB\" })",
+      "Bash(findstr /n \"about-me-img\\\\|picofme\\\\|assets.images\" \"src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\")",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\" -Raw; $match = [regex]::Match\\($content, '\\(?s\\)<img class=\"rounded about-me-img\"[^>]+>'\\); $match.Value)",
+      "Bash(cwebp -version)",
+      "Bash(ffmpeg -version)",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(magick -version)",
+      "PowerShell(Get-Command cwebp -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command magick -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command ffmpeg -ErrorAction SilentlyContinue)",
+      "PowerShell(node -e \"try{require\\('sharp'\\);console.log\\('sharp ok'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\" -Raw; $match = [regex]::Match\\($content, 'src=\"data:image/\\([a-z]+\\);base64,\\([^\"]+\\)\"'\\); $ext = $match.Groups[1].Value; $b64 = $match.Groups[2].Value; Write-Host \"Format: $ext, Base64 length: $\\($b64.Length\\)\"; [System.IO.File]::WriteAllBytes\\(\"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\about-me-extracted.$ext\", [Convert]::FromBase64String\\($b64\\)\\); Write-Host \"Saved as about-me-extracted.$ext\")",
+      "PowerShell($f = Get-Item \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\about-me-extracted.jpeg\"; \"$\\([math]::Round\\($f.Length/1KB,1\\)\\) KB\")",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\" -Raw; $imgTag = [regex]::Match\\($content, '<img class=\"rounded about-me-img\"[^>]+>'\\).Value; Write-Host \"Found img tag: $\\($imgTag.Substring\\(0, [Math]::Min\\(80, $imgTag.Length\\)\\)\\)...\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\\" | ForEach-Object { \"$\\($_.Name.PadRight\\(25\\)\\) $\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\" })"
+    ]
+  }
+}

@@ -31,15 +31,39 @@ export class ContactComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Contacto - Alex Vicente Desarrollador de Software'
-        : 'Contact - Alex Vicente Software Developer',
+        ? 'Contacto - Alex Vicente AI Developer'
+        : 'Contact - Alex Vicente AI Developer',
       description: isSpanish
-        ? 'Ponte en contacto conmigo por email o WhatsApp. Estaré encantado de hablar sobre oportunidades de colaboración.'
-        : 'Get in touch with me by email or WhatsApp. I will be happy to discuss collaboration opportunities.',
+        ? 'Ponte en contacto conmigo por email o WhatsApp. Estaré encantado de hablar sobre proyectos de IA, agentes y colaboraciones.'
+        : 'Get in touch with me by email or WhatsApp. Happy to discuss AI projects, agents, and collaboration opportunities.',
       keywords: isSpanish
-        ? 'Contacto, Email, WhatsApp, Consultoría'
-        : 'Contact, Email, WhatsApp, Consulting',
-      url: `https://alex-vicente.dev/${lang}/contacto`
+        ? 'Contacto, Email, WhatsApp, Consultoría, AI Developer, Agentes IA'
+        : 'Contact, Email, WhatsApp, Consulting, AI Developer, AI Agents',
+      url: `https://alex-vicente.dev/${lang}/contacto`,
+      lang
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: '/es/contacto',
+      enPath: '/en/contacto'
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      url: `https://alex-vicente.dev/${lang}/contacto`,
+      inLanguage: lang,
+      name: isSpanish ? 'Contacto - Alex Vicente' : 'Contact - Alex Vicente',
+      mainEntity: {
+        '@type': 'Person',
+        '@id': 'https://alex-vicente.dev/#person',
+        name: 'Alex Vicente',
+        email: 'alexvicentejose@gmail.com',
+        sameAs: [
+          'https://github.com/alexvijo',
+          'https://www.linkedin.com/in/alexvicente/'
+        ]
+      }
     });
   }
 

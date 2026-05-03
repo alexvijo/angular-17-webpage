@@ -42,14 +42,36 @@ export class JobsComponent implements OnInit {
     this.seoService.updatePageSEO({
       title: isSpanish
         ? 'Me Interesa - Influencias y Mentores de Alex Vicente'
-        : 'I am interested - Influences and Mentors of Alex Vicente',
+        : 'What I Follow - Influences and Mentors of Alex Vicente',
       description: isSpanish
         ? 'Descubre las personas e influencias que me inspiran profesionalmente. Creadores de contenido, mentores y referentes en tecnología.'
         : 'Discover the people and influences that inspire me professionally. Content creators, mentors and technology leaders.',
       keywords: isSpanish
         ? 'Influencias, Mentores, Referentes, Podcasts, YouTubers'
         : 'Influences, Mentors, Leaders, Podcasts, YouTubers',
-      url: `https://alex-vicente.dev/${lang}/me-interesa`
+      url: `https://alex-vicente.dev/${lang}/me-interesa`,
+      lang
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: '/es/me-interesa',
+      enPath: '/en/me-interesa'
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `https://alex-vicente.dev/${lang}/me-interesa`,
+      inLanguage: lang,
+      name: isSpanish ? 'Me Interesa - Influencias y Mentores' : 'What I Follow - Influences and Mentors',
+      description: isSpanish
+        ? 'Personas, podcasts y referentes que inspiran mi trabajo como AI Developer.'
+        : 'People, podcasts and leaders that inspire my work as an AI Developer.',
+      author: {
+        '@type': 'Person',
+        '@id': 'https://alex-vicente.dev/#person',
+        name: 'Alex Vicente'
+      }
     });
   }
 

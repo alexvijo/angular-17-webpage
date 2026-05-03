@@ -26,15 +26,39 @@ export class AboutComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Acerca de mi - Alex Vicente Desarrollador de Software'
-        : 'About me - Alex Vicente Software Developer',
+        ? 'Acerca de mi - Alex Vicente AI Developer'
+        : 'About me - Alex Vicente AI Developer',
       description: isSpanish
-        ? 'Conoce mi trayectoria profesional, habilidades y experiencia como desarrollador especializado en Angular y tecnologías web modernas.'
-        : 'Learn about my professional background, skills and experience as a developer specialized in Angular and modern web technologies.',
+        ? 'Conoce mi trayectoria profesional, habilidades y experiencia como AI Developer especializado en agentes IA, LLM y Angular.'
+        : 'Learn about my professional background, skills and experience as an AI Developer specialized in AI agents, LLM, and Angular.',
       keywords: isSpanish
-        ? 'Sobre mí, Experiencia, Habilidades, Angular, Backend, Frontend'
-        : 'About, Experience, Skills, Angular, Backend, Frontend',
-      url: `https://alex-vicente.dev/${lang}/acerca-de-mi`
+        ? 'Sobre mí, Experiencia, Habilidades, AI Developer, Angular, LLM'
+        : 'About, Experience, Skills, AI Developer, Angular, LLM',
+      url: `https://alex-vicente.dev/${lang}/acerca-de-mi`,
+      lang
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: '/es/acerca-de-mi',
+      enPath: '/en/acerca-de-mi'
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      url: `https://alex-vicente.dev/${lang}/acerca-de-mi`,
+      inLanguage: lang,
+      mainEntity: {
+        '@type': 'Person',
+        '@id': 'https://alex-vicente.dev/#person',
+        name: 'Alex Vicente',
+        jobTitle: isSpanish ? 'AI Developer y Desarrollador de Software' : 'AI Developer and Software Engineer',
+        url: 'https://alex-vicente.dev',
+        sameAs: [
+          'https://github.com/alexvijo',
+          'https://www.linkedin.com/in/alexvicente/'
+        ]
+      }
     });
   }
 

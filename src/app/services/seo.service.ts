@@ -23,38 +23,47 @@ export class SeoService {
     description: string;
     keywords?: string;
     image?: string;
+    imageAlt?: string;
     url?: string;
     author?: string;
+    lang?: string;
   }) {
     const title = config.title;
     const description = config.description;
     const url = config.url || this.baseUrl;
     const image = config.image || this.defaultImage;
+    const imageAlt = config.imageAlt || title;
     const keywords = config.keywords || 'Alex Vicente, Developer, Angular, Software Engineer';
+    const lang = config.lang || 'es';
+    const ogLocale = lang === 'en' ? 'en_US' : 'es_ES';
+    const ogLocaleAlternate = lang === 'en' ? 'es_ES' : 'en_US';
 
-    // Title
     this.titleService.setTitle(title);
 
-    // Meta tags
     this.updateMeta('name', 'description', description);
     this.updateMeta('name', 'keywords', keywords);
     this.updateMeta('name', 'author', config.author || 'Alex Vicente');
     this.updateMeta('name', 'viewport', 'width=device-width, initial-scale=1');
 
-    // Open Graph for social sharing
+    // Open Graph
     this.updateMeta('property', 'og:title', title);
     this.updateMeta('property', 'og:description', description);
     this.updateMeta('property', 'og:image', image);
+    this.updateMeta('property', 'og:image:alt', imageAlt);
     this.updateMeta('property', 'og:url', url);
     this.updateMeta('property', 'og:type', 'website');
+    this.updateMeta('property', 'og:locale', ogLocale);
+    this.updateMeta('property', 'og:locale:alternate', ogLocaleAlternate);
 
     // Twitter Card
     this.updateMeta('name', 'twitter:card', 'summary_large_image');
+    this.updateMeta('name', 'twitter:site', '@alexvijo');
+    this.updateMeta('name', 'twitter:creator', '@alexvijo');
     this.updateMeta('name', 'twitter:title', title);
     this.updateMeta('name', 'twitter:description', description);
     this.updateMeta('name', 'twitter:image', image);
+    this.updateMeta('name', 'twitter:image:alt', imageAlt);
 
-    // Canonical URL
     this.updateCanonicalUrl(url);
   }
 
@@ -123,11 +132,13 @@ export class SeoService {
       return;
     }
 
-    const link: HTMLLinkElement =
-      this.document.querySelector('link[rel="canonical"]') || this.document.createElement('link');
-    link.rel = 'canonical';
+    let link: HTMLLinkElement | null = this.document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = this.document.createElement('link');
+      link.rel = 'canonical';
+      this.document.head.appendChild(link);
+    }
     link.href = url;
-    this.document.head.appendChild(link);
   }
 
   private appendAlternateLink(hreflang: string, href: string) {

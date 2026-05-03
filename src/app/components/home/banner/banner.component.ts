@@ -52,7 +52,8 @@ export class BannerComponent implements OnInit {
       keywords: isSpanish
         ? 'Alex Vicente, Desarrollador de IA, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript'
         : 'Alex Vicente, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript, Product Engineering',
-      url: `https://alex-vicente.dev/${lang}/inicio`
+      url: `https://alex-vicente.dev/${lang}/inicio`,
+      lang
     });
 
     this.seoService.updateHreflangAlternates({

@@ -44,7 +44,29 @@ export class MoreProjectsComponent implements OnInit {
       keywords: isSpanish
         ? 'AI Developer, LLM Developer, AI Agents, RAG, IA aplicada, automatizacion, MLOps'
         : 'AI Developer, LLM Developer, AI Agents, RAG, Applied AI, automation, MLOps',
-      url: `https://alex-vicente.dev/${lang}/ia-aplicada`
+      url: `https://alex-vicente.dev/${lang}/ia-aplicada`,
+      lang
+    });
+
+    this.seoService.updateHreflangAlternates({
+      esPath: '/es/ia-aplicada',
+      enPath: '/en/ia-aplicada'
+    });
+
+    this.seoService.updateJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `https://alex-vicente.dev/${lang}/ia-aplicada`,
+      inLanguage: lang,
+      name: isSpanish ? 'IA Aplicada - Proyectos de AI' : 'Applied AI - AI Projects',
+      description: isSpanish
+        ? 'Proyectos de IA aplicada: AI Agents, LLM, RAG y automatización inteligente.'
+        : 'Applied AI projects: AI Agents, LLM, RAG and intelligent automation.',
+      author: {
+        '@type': 'Person',
+        '@id': 'https://alex-vicente.dev/#person',
+        name: 'Alex Vicente'
+      }
     });
 
     this.router.events.subscribe((evt) => {

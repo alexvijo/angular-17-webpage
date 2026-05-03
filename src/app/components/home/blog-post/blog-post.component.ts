@@ -43,7 +43,8 @@ export class BlogPostComponent implements OnInit {
       title: `${title} | Alex Vicente`,
       description,
       keywords: this.post.keywords.join(', '),
-      url: `https://alex-vicente.dev/${this.language}/blog/${canonicalSlug}`
+      url: `https://alex-vicente.dev/${this.language}/blog/${canonicalSlug}`,
+      lang: this.language
     });
 
     this.seoService.updateHreflangAlternates({
