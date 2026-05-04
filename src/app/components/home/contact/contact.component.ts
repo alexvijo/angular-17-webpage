@@ -48,6 +48,12 @@ export class ContactComponent implements OnInit {
       enPath: '/en/contacto'
     });
 
+    this.seoService.updateBreadcrumb([
+      { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
+      { name: isSpanish ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${lang}/inicio` },
+      { name: isSpanish ? 'Contacto' : 'Contact', url: `https://alex-vicente.dev/${lang}/contacto` },
+    ]);
+
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
@@ -61,7 +67,10 @@ export class ContactComponent implements OnInit {
         email: 'alexvicentejose@gmail.com',
         sameAs: [
           'https://github.com/alexvijo',
-          'https://www.linkedin.com/in/alexvicente/'
+          'https://www.linkedin.com/in/alexvicente/',
+          'https://twitter.com/alexvijo',
+          'https://dev.to/alexvijo',
+          'https://alex-vicente.dev'
         ]
       }
     });

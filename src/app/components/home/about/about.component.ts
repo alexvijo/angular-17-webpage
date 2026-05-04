@@ -43,6 +43,12 @@ export class AboutComponent implements OnInit {
       enPath: '/en/acerca-de-mi'
     });
 
+    this.seoService.updateBreadcrumb([
+      { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
+      { name: isSpanish ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${lang}/inicio` },
+      { name: isSpanish ? 'Acerca de mí' : 'About me', url: `https://alex-vicente.dev/${lang}/acerca-de-mi` },
+    ]);
+
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
@@ -56,7 +62,10 @@ export class AboutComponent implements OnInit {
         url: 'https://alex-vicente.dev',
         sameAs: [
           'https://github.com/alexvijo',
-          'https://www.linkedin.com/in/alexvicente/'
+          'https://www.linkedin.com/in/alexvicente/',
+          'https://twitter.com/alexvijo',
+          'https://dev.to/alexvijo',
+          'https://alex-vicente.dev'
         ]
       }
     });

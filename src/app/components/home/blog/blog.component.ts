@@ -45,6 +45,12 @@ export class BlogComponent implements OnInit {
       enPath: '/en/blog'
     });
 
+    this.seoService.updateBreadcrumb([
+      { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
+      { name: this.language === 'es' ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${this.language}/inicio` },
+      { name: 'Blog', url: `https://alex-vicente.dev/${this.language}/blog` },
+    ]);
+
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',

@@ -53,6 +53,12 @@ export class MoreProjectsComponent implements OnInit {
       enPath: '/en/ia-aplicada'
     });
 
+    this.seoService.updateBreadcrumb([
+      { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
+      { name: isSpanish ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${lang}/inicio` },
+      { name: isSpanish ? 'IA Aplicada' : 'Applied AI', url: `https://alex-vicente.dev/${lang}/ia-aplicada` },
+    ]);
+
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',

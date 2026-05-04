@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -14,6 +15,8 @@ export class LanguageService {
 
     constructor(
         public translateService: TranslateService,
+        @Inject(PLATFORM_ID) private platformId: object,
+        @Inject(DOCUMENT) private document: Document,
       ) {
         let defaultLanguage: Language = "es";
         this.languageSubject = new BehaviorSubject<Language>(defaultLanguage);
@@ -30,7 +33,10 @@ export class LanguageService {
       }
 
       private getLanguageFromPath(): Language | null {
-        const path = window.location.pathname || '';
+        if (!isPlatformBrowser(this.platformId)) {
+          return null;
+        }
+        const path = this.document.location?.pathname || '';
         const firstSegment = path.split('?')[0].split('#')[0].split('/').filter(Boolean)[0];
 
         if (firstSegment === 'es' || firstSegment === 'en') {

@@ -50,6 +50,8 @@ export class SeoService {
     this.updateMeta('property', 'og:description', description);
     this.updateMeta('property', 'og:image', image);
     this.updateMeta('property', 'og:image:alt', imageAlt);
+    this.updateMeta('property', 'og:image:width', '1200');
+    this.updateMeta('property', 'og:image:height', '630');
     this.updateMeta('property', 'og:url', url);
     this.updateMeta('property', 'og:type', 'website');
     this.updateMeta('property', 'og:locale', ogLocale);
@@ -98,6 +100,33 @@ export class SeoService {
     script.type = 'application/ld+json';
     script.id = this.managedJsonLdId;
     script.textContent = JSON.stringify(schema);
+    this.document.head.appendChild(script);
+  }
+
+  updateBreadcrumb(items: { name: string; url?: string }[]) {
+    const listItems = items.map((item, index) => {
+      const entry: Record<string, unknown> = {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+      };
+      if (item.url) {
+        entry['item'] = item.url;
+      }
+      return entry;
+    });
+
+    const existing = this.document.getElementById('seo-breadcrumb-jsonld');
+    if (existing) existing.remove();
+
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'seo-breadcrumb-jsonld';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: listItems,
+    });
     this.document.head.appendChild(script);
   }
 

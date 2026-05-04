@@ -24,7 +24,10 @@
       "PowerShell($content = Get-Content \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\" -Raw; $match = [regex]::Match\\($content, 'src=\"data:image/\\([a-z]+\\);base64,\\([^\"]+\\)\"'\\); $ext = $match.Groups[1].Value; $b64 = $match.Groups[2].Value; Write-Host \"Format: $ext, Base64 length: $\\($b64.Length\\)\"; [System.IO.File]::WriteAllBytes\\(\"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\about-me-extracted.$ext\", [Convert]::FromBase64String\\($b64\\)\\); Write-Host \"Saved as about-me-extracted.$ext\")",
       "PowerShell($f = Get-Item \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\about-me-extracted.jpeg\"; \"$\\([math]::Round\\($f.Length/1KB,1\\)\\) KB\")",
       "PowerShell($content = Get-Content \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\about\\\\about.component.html\" -Raw; $imgTag = [regex]::Match\\($content, '<img class=\"rounded about-me-img\"[^>]+>'\\).Value; Write-Host \"Found img tag: $\\($imgTag.Substring\\(0, [Math]::Min\\(80, $imgTag.Length\\)\\)\\)...\")",
-      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\\" | ForEach-Object { \"$\\($_.Name.PadRight\\(25\\)\\) $\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\" })"
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\\" | ForEach-Object { \"$\\($_.Name.PadRight\\(25\\)\\) $\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\" })",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\" -Recurse -Filter \"*.ts\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(node -e \"try { require\\('@angular/ssr/package.json'\\); console.log\\('installed'\\); } catch\\(e\\) { console.log\\('not installed'\\); }\")"
     ]
   }
 }

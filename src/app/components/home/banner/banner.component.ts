@@ -61,6 +61,11 @@ export class BannerComponent implements OnInit {
       enPath: '/en/inicio'
     });
 
+    this.seoService.updateBreadcrumb([
+      { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
+      { name: isSpanish ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${lang}/inicio` },
+    ]);
+
     const faqItems = isSpanish
       ? [
           {
@@ -105,7 +110,10 @@ export class BannerComponent implements OnInit {
             url: 'https://alex-vicente.dev',
             sameAs: [
               'https://github.com/alexvijo',
-              'https://www.linkedin.com/in/alexvicente/'
+              'https://www.linkedin.com/in/alexvicente/',
+              'https://twitter.com/alexvijo',
+              'https://dev.to/alexvijo',
+              'https://alex-vicente.dev'
             ]
           }
         },

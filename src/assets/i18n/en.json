@@ -239,6 +239,13 @@
         "Title": "@karpathy",
         "Date": "https://www.youtube.com/@AndrejKarpathy",
         "Description": []
+      },
+      {
+        "imageUrl": "https://unavatar.io/youtube/@dotcsv",
+        "Tab": "Dot CSV",
+        "Title": "@dotcsv",
+        "Date": "https://www.youtube.com/@dotcsv",
+        "Description": []
       }
     ],
 
