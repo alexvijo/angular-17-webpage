@@ -27,7 +27,9 @@
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\assets\\\\images\\\\\" | ForEach-Object { \"$\\($_.Name.PadRight\\(25\\)\\) $\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\" })",
       "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\" -Recurse -Filter \"*.ts\")",
       "Bash(Select-Object -ExpandProperty FullName)",
-      "Bash(node -e \"try { require\\('@angular/ssr/package.json'\\); console.log\\('installed'\\); } catch\\(e\\) { console.log\\('not installed'\\); }\")"
+      "Bash(node -e \"try { require\\('@angular/ssr/package.json'\\); console.log\\('installed'\\); } catch\\(e\\) { console.log\\('not installed'\\); }\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\jobs\" -Force | ForEach-Object { $_.FullName })",
+      "Bash(npx tsc *)"
     ]
   }
 }

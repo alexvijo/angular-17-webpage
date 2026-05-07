@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, PLATFORM_ID, Renderer2, ViewChild, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
@@ -18,7 +19,13 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.scss'
 })
-export class JobsComponent implements OnInit {
+export class JobsComponent implements OnInit, AfterViewInit {
+  @ViewChild('btcWidget') btcWidget!: ElementRef;
+  @ViewChild('mstrWidget') mstrWidget!: ElementRef;
+
+  private platformId = inject(PLATFORM_ID);
+  private renderer = inject(Renderer2);
+
   categories: { key: string; label: string; items: any[] }[] = [
     { key: 'humanidades', label: 'Humanidades', items: [] },
     { key: 'economia', label: 'Economía', items: [] },
@@ -81,6 +88,56 @@ export class JobsComponent implements OnInit {
     });
   }
 
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadTradingViewWidget(this.btcWidget, 'BITSTAMP:BTCUSD');
+      this.loadTradingViewWidget(this.mstrWidget, 'NASDAQ:MSTR');
+    }
+  }
+
+  private loadTradingViewWidget(container: ElementRef, symbol: string): void {
+    const config = {
+      autosize: true,
+      symbol,
+      interval: '240',
+      range: '1M',
+      timezone: 'Europe/Madrid',
+      theme: 'dark',
+      style: '1',
+      locale: 'es',
+      hide_top_toolbar: false,
+      hide_legend: false,
+      save_image: false,
+      calendar: false,
+      support_host: 'https://www.tradingview.com'
+    };
+
+    const widgetDiv = container.nativeElement.querySelector('.tradingview-widget-container__widget');
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+    script.async = true;
+    script.textContent = JSON.stringify(config);
+    container.nativeElement.appendChild(script);
+    if (widgetDiv) {
+      widgetDiv.style.height = '100%';
+      widgetDiv.style.width = '100%';
+
+      const observer = new MutationObserver(() => {
+        const iframe = widgetDiv.querySelector('iframe');
+        if (iframe) {
+          iframe.style.userSelect = 'none';
+          iframe.style.boxSizing = 'border-box';
+          iframe.style.display = 'block';
+          iframe.style.height = '500px';
+          iframe.style.width = '100%';
+          observer.disconnect();
+        }
+      });
+      observer.observe(widgetDiv, { childList: true, subtree: true });
+    }
+  }
 
   // Recibe el array de jobs traducido desde el template
   categorizeJobs(jobs: any[]): any {
