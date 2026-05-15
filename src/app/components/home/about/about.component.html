@@ -8,7 +8,21 @@
         </h3>
       </div>
       <div class="row">
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <div class="col-12 col-md-6 order-md-2" data-aos="fade-up" data-aos-duration="1000">
+          <div class="about-img-container">
+            <picture>
+                  <source srcset="assets/images/about-me.webp" type="image/webp">
+                  <img class="rounded about-me-img"
+                       src="assets/images/about-me.jpg"
+                       alt="Alex Vicente"
+                       loading="lazy"
+                       decoding="async"
+                       width="500"
+                       height="500">
+                </picture>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-4 mb-md-0 order-md-1">
           <div class="about-description">
             @for (text of "AboutMe.Paragraphs" | translate; track trackByFn($index, text)) {
               <p [innerHTML]="text" data-aos="fade-up" data-aos-duration="1000">
@@ -24,20 +38,6 @@
               <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Postman</span></li>
               <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jenkins (CI/CD) </span></li>
             </ul>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-4 mt-md-0 text-center" data-aos="fade-up" data-aos-duration="1000">
-          <div class="about-img-container">
-            <picture>
-                  <source srcset="assets/images/about-me.webp" type="image/webp">
-                  <img class="rounded about-me-img"
-                       src="assets/images/about-me.jpg"
-                       alt="Alex Vicente"
-                       loading="lazy"
-                       decoding="async"
-                       width="500"
-                       height="500">
-                </picture>
           </div>
         </div>
 

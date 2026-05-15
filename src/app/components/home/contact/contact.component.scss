@@ -45,13 +45,20 @@
                     -ms-flex-pack: center;
                     justify-content: center;
                 }
-                
-                .contact-title{
-                  color: #ababab;
-                  line-height: 45px;
-                  font-size: 60px;
-                  font-weight: 600;
-                }
+
+                                .contact-title{
+                                      color: #cdcaca;
+                                    font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+                                    font-weight: 400;
+                                    font-size: 70px;
+                                    line-height: 52px;
+                                    margin: 0;
+                                    text-shadow: 1px 1px 3px #0A182E;
+                                    @media (max-width: 600px) {
+                                        font-size: 62px;
+                                        line-height: 48px;
+                                    }
+                                }
             }
         }
     }

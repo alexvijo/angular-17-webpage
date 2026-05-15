@@ -1,5 +1,26 @@
 @import "./../../../../variables.scss";
 
+.about .row {
+    align-items: flex-start;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        width: auto;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+
+    @media (max-width: 767px) {
+        > * {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
 .about{
     section {
         background-color: #000000;
@@ -7,7 +28,7 @@
 
     .about-description{
         margin-top: 30px;
-        max-width: 480px;
+        /* max-width: 683px; */
     }
 
     .about-img-container{
@@ -15,8 +36,8 @@
         height: 0;
         padding-bottom: calc(100% / 1.618);
         position: relative;
-        background: #1E1C36; /* #000000;*/
-        margin-top: 35px;
+        background: #1E1C36;
+        margin-top: 21px;
 
         &:after{
           content: "";
@@ -41,9 +62,7 @@
           border: 1px solid #d3792a;
           border-radius: 0px !important;
         }
-
     }
-
 
     .skills-list{
         display: grid;
@@ -116,4 +135,3 @@
         }
     }
 }
-
