@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -24,7 +24,6 @@ export class MoreProjectsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private translateService: TranslateService,
     private seoService: SeoService,
     private route: ActivatedRoute
   ) {}
@@ -36,38 +35,38 @@ export class MoreProjectsComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'IA Aplicada - AI Projects, LLM y Agentes IA'
-        : 'Applied AI - AI Projects, LLM and AI Agents',
+        ? 'Proyectos propios - Repositorios GitHub y experimentos'
+        : 'Own Projects - GitHub Repositories and experiments',
       description: isSpanish
-        ? 'Proyectos de IA aplicada con enfoque en AI Agents, LLM, RAG, automatizacion inteligente, metricas de impacto y arquitectura de produccion.'
-        : 'Applied AI projects focused on AI Agents, LLM, RAG, intelligent automation, measurable impact, and production architecture.',
+        ? 'Listado de proyectos propios y repositorios de GitHub con pruebas y experimentos de desarrollo.'
+        : 'List of own projects and GitHub repositories with development tests and experiments.',
       keywords: isSpanish
-        ? 'AI Developer, LLM Developer, AI Agents, RAG, IA aplicada, automatizacion, MLOps'
-        : 'AI Developer, LLM Developer, AI Agents, RAG, Applied AI, automation, MLOps',
-      url: `https://alex-vicente.dev/${lang}/ia-aplicada`,
+        ? 'proyectos propios, github, repositorios, experimentos, portfolio'
+        : 'own projects, github, repositories, experiments, portfolio',
+      url: `https://alex-vicente.dev/${lang}/proyectos-propios`,
       lang
     });
 
     this.seoService.updateHreflangAlternates({
-      esPath: '/es/ia-aplicada',
-      enPath: '/en/ia-aplicada'
+      esPath: '/es/proyectos-propios',
+      enPath: '/en/proyectos-propios'
     });
 
     this.seoService.updateBreadcrumb([
       { name: 'Alex Vicente', url: 'https://alex-vicente.dev' },
       { name: isSpanish ? 'Inicio' : 'Home', url: `https://alex-vicente.dev/${lang}/inicio` },
-      { name: isSpanish ? 'IA Aplicada' : 'Applied AI', url: `https://alex-vicente.dev/${lang}/ia-aplicada` },
+      { name: isSpanish ? 'Proyectos propios' : 'Own projects', url: `https://alex-vicente.dev/${lang}/proyectos-propios` },
     ]);
 
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      url: `https://alex-vicente.dev/${lang}/ia-aplicada`,
+      url: `https://alex-vicente.dev/${lang}/proyectos-propios`,
       inLanguage: lang,
-      name: isSpanish ? 'IA Aplicada - Proyectos de AI' : 'Applied AI - AI Projects',
+      name: isSpanish ? 'Proyectos propios - Repositorios GitHub' : 'Own projects - GitHub repositories',
       description: isSpanish
-        ? 'Proyectos de IA aplicada: AI Agents, LLM, RAG y automatización inteligente.'
-        : 'Applied AI projects: AI Agents, LLM, RAG and intelligent automation.',
+        ? 'Listado de proyectos y repositorios de GitHub con pruebas y experimentos.'
+        : 'List of projects and GitHub repositories with tests and experiments.',
       author: {
         '@type': 'Person',
         '@id': 'https://alex-vicente.dev/#person',
@@ -82,19 +81,29 @@ export class MoreProjectsComponent implements OnInit {
         window.scrollTo(0, 0)
     });
 
-    this.translateService.getTranslation(lang).subscribe((translations: any) => {
-        if (translations && translations['OtherProjects.Projects']) {
-            this.Projects = translations['OtherProjects.Projects'];
-            this.filteredProjects = this.Projects;
-          } else {
-            console.error('OtherProjects.Projects is undefined');
-          }
-      });
+    this.Projects = [
+      {
+        Title: isSpanish ? 'Vivienda Scraper' : 'Vivienda Scraper',
+        Description: isSpanish
+          ? 'Un buscador de viviendas en tiempo real que agrega resultados de múltiples portales inmobiliarios españoles con mapa interactivo integrado.'
+          : 'Scraper to extract and analyze housing listings. A test and automation project on GitHub.',
+        ghLink: 'https://github.com/alexvijo/vivienda-scraper',
+        demoLink: 'https://github.com/alexvijo/vivienda-scraper',
+        Technologies: ['Python', 'Scraping', 'Automation']
+      }
+    ];
+    this.filteredProjects = [...this.Projects];
   }
 
-  redirect(route: string, event: any) {
-    const id = event.target.id;
-    if(id=='demoLink' || id=='ghLink'){
+  redirect(project: Project, event: Event) {
+    const route = project.demoLink || project.ghLink;
+    if (!route) {
+      return;
+    }
+
+    const target = event.target as HTMLElement | null;
+    const id = target?.id;
+    if(id=='demoLink' || id=='ghLink' || id=='repoLink'){
       return
     }
     window.open(route, '_blank');

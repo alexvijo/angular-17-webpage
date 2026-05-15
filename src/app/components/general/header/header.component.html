@@ -21,6 +21,14 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
+        <a ngbNavLink (click)='navigateTo("proyectos-propios")' [ngClass]="{'active': true}">
+          <span class="underline nav-text">
+            <span class='nav-number'>02. </span> {{"Header.Item2" | translate}}
+          </span>
+        </a>
+        <ng-template ngbNavContent></ng-template>
+      </li>
+      <li ngbNavItem>
         <a ngbNavLink (click)='navigateTo("me-interesa")' [ngClass]="{'active': true}">
           <span class="underline nav-text">
             <span class='nav-number'>03. </span> <span>{{"InterestQuotes.Title" | translate}}</span>
@@ -79,6 +87,11 @@
             <li>
               <a (click)='navigateTo("acerca-de-mi")'>
                 <span>01. </span> {{"Header.Item1" | translate}}
+              </a>
+            </li>
+            <li>
+              <a (click)='navigateTo("proyectos-propios")'>
+                <span>02. </span> {{"Header.Item2" | translate}}
               </a>
             </li>
             <li>

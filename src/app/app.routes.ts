@@ -23,8 +23,13 @@ export const routes: Routes = [
             loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)
         },
     {
-        path: ':language/ia-aplicada',
+        path: ':language/proyectos-propios',
         loadComponent: () => import('./components/home/more-projects/more-projects.component').then((m) => m.MoreProjectsComponent)
+    },
+    {
+        path: ':language/ia-aplicada',
+        redirectTo: ':language/proyectos-propios',
+        pathMatch: 'full'
     },
     {
         path: ':language/blog',

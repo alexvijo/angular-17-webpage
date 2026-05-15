@@ -2,7 +2,7 @@
   "Header.init": "Home",
   "Header.Item0": "/&nbsp;&nbsp;",
   "Header.Item1": "About me",
-  "Header.Item2": "AI and Future of Work",
+  "Header.Item2": "Lab",
   "Header.Item3": "I'm interested",
   "Header.Item4": "Contact",
 
@@ -261,7 +261,7 @@
         "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
       }
     ],
-    "OtherProjects.Title": "Applied AI",
+    "OtherProjects.Title": "Own projects",
     "OtherProjects.Projects": [
         {
             "Title": "Machine Learning Fundamentals",

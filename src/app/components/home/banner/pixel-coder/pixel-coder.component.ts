@@ -30,7 +30,7 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
   private frame = 0;
   private readonly P = 8;
 
-  private readonly HAIR   = '#5C3317';
+  private readonly HAIR   = '#A06B3C';
   private readonly SKIN   = '#FFBC8B';
   private readonly EYES   = '#2A1A0A';
 
@@ -57,7 +57,7 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy() { cancelAnimationFrame(this.raf); }
 
   private loop() {
-    this.frame++;
+    this.frame += 0.5;
     this.render();
     this.raf = requestAnimationFrame(() => this.loop());
   }
@@ -147,14 +147,15 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
 
     // ── HEAD ─────────────────────────────────────────
     // Hair top (castaño, volumen natural)
-    r(20, 3, 10, 4, this.HAIR);
+    r(21, 3, 8, 1, this.HAIR);   // rounded top corners
+    r(20, 4, 10, 3, this.HAIR);
     r(19, 4, 1, 7, this.HAIR);   // left side
     r(30, 4, 1, 7, this.HAIR);   // right side
     r(19, 3, 2, 3, this.HAIR);   // left temple
     r(29, 3, 2, 3, this.HAIR);   // right temple
     // Slight hair texture on top
-    r(21, 3, 1, 1, '#7A4A22');
-    r(25, 3, 2, 1, '#7A4A22');
+    r(22, 3, 1, 1, '#BF8A58');
+    r(25, 3, 2, 1, '#BF8A58');
 
     // Face
     r(20, 5, 10, 10, this.SKIN);
@@ -173,21 +174,21 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
     r(21, 9, 2, 1, this.EYES);
     r(27, 9, 2, 1, this.EYES);
 
-    // Glasses – left lens
-    r(20, 8, 4, 1, '#8892b0');
-    r(20, 11, 4, 1, '#8892b0');
+    // Glasses – left lens (thinner frame)
+    r(20, 8, 3, 1, '#8892b0');
+    r(20, 10, 3, 1, '#8892b0');
     r(20, 8, 1, 3, '#8892b0');
-    r(23, 8, 1, 3, '#8892b0');
+    r(22, 8, 1, 3, '#8892b0');
     ctx.fillStyle = 'rgba(125,124,255,0.12)';
-    ctx.fillRect(21 * P, 9 * P, 2 * P, 2 * P);
+    ctx.fillRect(21 * P, 9 * P, 1 * P, 1 * P);
 
-    // Glasses – right lens
-    r(26, 8, 4, 1, '#8892b0');
-    r(26, 11, 4, 1, '#8892b0');
+    // Glasses – right lens (thinner frame)
+    r(26, 8, 3, 1, '#8892b0');
+    r(26, 10, 3, 1, '#8892b0');
     r(26, 8, 1, 3, '#8892b0');
-    r(29, 8, 1, 3, '#8892b0');
+    r(28, 8, 1, 3, '#8892b0');
     ctx.fillStyle = 'rgba(125,124,255,0.12)';
-    ctx.fillRect(27 * P, 9 * P, 2 * P, 2 * P);
+    ctx.fillRect(27 * P, 9 * P, 1 * P, 1 * P);
 
     // Glasses bridge
     r(24, 9, 2, 1, '#8892b0');

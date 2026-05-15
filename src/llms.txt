@@ -12,8 +12,8 @@ Portfolio focused on AI engineering, applied AI, LLM, MLOps, and frontend softwa
 - Home (EN): https://alex-vicente.dev/en/inicio
 - About (ES): https://alex-vicente.dev/es/acerca-de-mi
 - About (EN): https://alex-vicente.dev/en/acerca-de-mi
-- Applied AI (ES): https://alex-vicente.dev/es/ia-aplicada
-- Applied AI (EN): https://alex-vicente.dev/en/ia-aplicada
+- Applied AI (ES): https://alex-vicente.dev/es/proyectos-propios
+- Applied AI (EN): https://alex-vicente.dev/en/proyectos-propios
 - Blog (ES): https://alex-vicente.dev/es/blog
 - Blog (EN): https://alex-vicente.dev/en/blog
 - Contact: https://alex-vicente.dev/es/contacto

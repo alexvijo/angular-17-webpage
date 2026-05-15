@@ -4,8 +4,8 @@
 /en/acerca-de-mi
 /es/me-interesa
 /en/me-interesa
-/es/ia-aplicada
-/en/ia-aplicada
+/es/proyectos-propios
+/en/proyectos-propios
 /es/ia-y-futuro-del-trabajo
 /en/ia-y-futuro-del-trabajo
 /es/blog

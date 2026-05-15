@@ -1,50 +1,6 @@
 @import "./../../../../variables.scss";
 
 .more-projects{
-    .ai-proof-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
-    }
-
-    .ai-proof-card {
-        background: rgba(17, 34, 64, 0.65);
-        border: 1px solid rgba(100, 255, 218, 0.18);
-        border-radius: 8px;
-        padding: 16px;
-
-        h4 {
-            color: $LightestSlate;
-            margin: 0 0 8px 0;
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        p {
-            color: $LightSlate;
-            margin-bottom: 8px;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 18px;
-            color: #a7b8e3;
-
-            li {
-                margin-bottom: 5px;
-                font-size: 14px;
-                line-height: 18px;
-            }
-        }
-    }
-
-    .ai-linking-bar {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin: 16px 0 12px 0;
-    }
-
     .proyect-col{
         padding: 10px;
         height: auto;
@@ -73,43 +29,102 @@
             -ms-flex-align: flex-start;
             align-items: flex-start;
             position: relative;
-            padding: 1rem 1.3rem;
+            padding: 1.1rem 1.2rem 1rem;
             height: 100%;
-            border-radius: 3px;
+            border-radius: 8px;
             -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
             transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
             background-color: $LightNavy;
+            border: 1px solid rgba(100, 255, 218, 0.12);
             cursor: pointer;
 
             &:hover {
                 -webkit-transform: translateY(-5px);
                 -ms-transform: translateY(-5px);
                 transform: translateY(-5px);
+                border-color: rgba(100, 255, 218, 0.38);
             }
             &:hover, &:focus {
                 box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
             }
 
-            svg{
-                width: 40px;
-                height: 40px;
-                color: $Green;
+            .project-card-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                .folder-badge {
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(100, 255, 218, 0.12);
+                    border: 1px solid rgba(100, 255, 218, 0.25);
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        object-fit: contain;
+                    }
+                }
+
+                .repo-action {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $LightSlate;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+
+                    i {
+                        font-size: 19px;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $Green;
+                        background: rgba(100, 255, 218, 0.1);
+                    }
+                }
             }
 
             .other-proyect-title{
-                font-size: 22px;
-                font-weight: 300;
+                font-size: 32px;
+                font-weight: 600;
                 color: $LightestSlate;
-                margin: 12px 0 0;
+                margin: 2px 0 0;
                 padding: 0 0 0 0;
+                line-height: 1.08;
             }
 
             .other-proyect-description{
-              font-size: 17px;
+              font-size: 19px;
               padding: 0;
-              margin: 4px 0 0 0;
-              line-height: 16px;
+              margin: 12px 0 0 0;
+              line-height: 1.2;
               color: $LightSlate;
+            }
+
+            .repo-link {
+                display: inline-block;
+                margin-top: 14px;
+                font-size: 18px;
+                color: $Green;
+                word-break: break-all;
+                text-decoration: none;
+                line-height: 1.3;
+                padding-left: 0;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
             }
 
             .more-projects-skills{
@@ -129,13 +144,13 @@
                 -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
                 padding: 0;
-                margin: 9px 0 0;
+                margin: 14px 0 0;
                 list-style: none;
 
                 li{
-                    font-size: 12px;
-                    color: $Slate;
-                    line-height: 1.75;
+                    font-size: 26px;
+                    color: #8892b0;
+                    line-height: 1.25;
                     margin-right: 15px;
                     font-family: $CodeFont;
                     .underline{
@@ -177,20 +192,52 @@
 
 @media(max-width: 1300px){
     .more-projects{
-        .ai-proof-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-
         .proyect-col{
             height: auto;
+
+            .more-proyect-box {
+                .other-proyect-title {
+                    font-size: 28px;
+                }
+
+                .other-proyect-description {
+                    font-size: 18px;
+                }
+
+                .repo-link {
+                    font-size: 16px;
+                }
+
+                .more-projects-skills li {
+                    font-size: 22px;
+                }
+            }
         }
     }
 }
 
 @media(max-width: 768px){
     .more-projects{
-        .ai-proof-grid {
-            grid-template-columns: 1fr;
+        .proyect-col {
+            .more-proyect-box {
+                padding: 1rem 1rem 0.95rem;
+
+                .other-proyect-title {
+                    font-size: 26px;
+                }
+
+                .other-proyect-description {
+                    font-size: 16px;
+                }
+
+                .repo-link {
+                    font-size: 15px;
+                }
+
+                .more-projects-skills li {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
