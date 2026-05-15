@@ -2,12 +2,13 @@
     "Header.init": "Inicio",
     "Header.Item0": "/&nbsp;&nbsp;",
     "Header.Item1": "Sobre mi",
+    "Header.Item2": "Laboratorio",
     "Header.Item3": "Me interesa",
     "Header.Item4": "Contacto",
 
     "Banner.Pretitle": "Hola, mi nombre es",
     "Banner.Role": "Full Stack Developer",
-    "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
+    "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código<br> y el impacto en negocio<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Sobre mi",
@@ -260,7 +261,7 @@
         "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
       }
     ],
-    "OtherProjects.Title": "IA aplicada",
+    "OtherProjects.Title": "Proyectos propios",
     "OtherProjects.Projects": [
         {
             "Title": "Fundamentos de Machine Learning",
