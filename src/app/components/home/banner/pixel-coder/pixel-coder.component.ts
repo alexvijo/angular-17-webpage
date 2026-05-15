@@ -124,6 +124,22 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
     r(19, 21, 1, 11, this.SLEEVE);   // left shoulder
     r(30, 21, 1, 11, this.SLEEVE);   // right shoulder
 
+    // ── BITCOIN LOGO ON SHIRT ────────────────────────
+    const BTC = '#F7931A';
+    // Vertical stem
+    r(24, 22, 1, 5, BTC);
+    // Top bump
+    r(25, 22, 1, 1, BTC);
+    r(26, 23, 1, 1, BTC);
+    r(25, 24, 1, 1, BTC);
+    // Bottom bump
+    r(25, 24, 1, 1, BTC);
+    r(26, 25, 1, 1, BTC);
+    r(25, 26, 1, 1, BTC);
+    // Serifs top/bottom
+    r(23, 22, 1, 1, BTC);
+    r(23, 26, 1, 1, BTC);
+
     // ── ARMS ─────────────────────────────────────────
     // Left arm toward keyboard
     r(15, 25 + armOff, 5, 3, this.SLEEVE);
@@ -143,75 +159,75 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
     }
 
     // ── NECK ─────────────────────────────────────────
-    r(23, 16, 4, 5, this.SKIN);
+    r(23, 18, 4, 3, this.SKIN);
 
     // ── HEAD ─────────────────────────────────────────
     // Hair top (castaño, volumen natural)
-    r(21, 3, 8, 1, this.HAIR);   // rounded top corners
-    r(20, 4, 10, 3, this.HAIR);
-    r(19, 4, 1, 7, this.HAIR);   // left side
-    r(30, 4, 1, 7, this.HAIR);   // right side
-    r(19, 3, 2, 3, this.HAIR);   // left temple
-    r(29, 3, 2, 3, this.HAIR);   // right temple
+    r(21, 6, 8, 1, this.HAIR);   // top row (skip 1px each corner)
+    r(20, 7, 10, 3, this.HAIR);  // full width
+    r(19, 7, 1, 7, this.HAIR);   // left side
+    r(30, 7, 1, 7, this.HAIR);   // right side
+    r(20, 6, 1, 1, this.HAIR);   // left corner soften
+    r(29, 6, 1, 1, this.HAIR);   // right corner soften
     // Slight hair texture on top
-    r(22, 3, 1, 1, '#BF8A58');
-    r(25, 3, 2, 1, '#BF8A58');
+    r(23, 6, 1, 1, '#BF8A58');
+    r(26, 6, 2, 1, '#BF8A58');
 
     // Face
-    r(20, 5, 10, 10, this.SKIN);
-    r(19, 6, 1, 8, this.SKIN);
-    r(30, 6, 1, 8, this.SKIN);
+    r(20, 8, 10, 10, this.SKIN);
+    r(19, 9, 1, 8, this.SKIN);
+    r(30, 9, 1, 8, this.SKIN);
 
     // Ears
-    r(18, 9, 1, 2, this.SKIN);
-    r(31, 9, 1, 2, this.SKIN);
+    r(18, 12, 1, 2, this.SKIN);
+    r(31, 12, 1, 2, this.SKIN);
 
     // Eyebrows
-    r(20, 7, 3, 1, this.HAIR);
-    r(26, 7, 3, 1, this.HAIR);
+    r(20, 10, 3, 1, this.HAIR);
+    r(26, 10, 3, 1, this.HAIR);
 
     // Eyes
-    r(21, 9, 2, 1, this.EYES);
-    r(27, 9, 2, 1, this.EYES);
+    r(21, 12, 2, 1, this.EYES);
+    r(27, 12, 2, 1, this.EYES);
 
     // Glasses – left lens (thinner frame)
-    r(20, 8, 3, 1, '#8892b0');
-    r(20, 10, 3, 1, '#8892b0');
-    r(20, 8, 1, 3, '#8892b0');
-    r(22, 8, 1, 3, '#8892b0');
+    r(20, 11, 3, 1, '#8892b0');
+    r(20, 13, 3, 1, '#8892b0');
+    r(20, 11, 1, 3, '#8892b0');
+    r(22, 11, 1, 3, '#8892b0');
     ctx.fillStyle = 'rgba(125,124,255,0.12)';
-    ctx.fillRect(21 * P, 9 * P, 1 * P, 1 * P);
+    ctx.fillRect(21 * P, 12 * P, 1 * P, 1 * P);
 
     // Glasses – right lens (thinner frame)
-    r(26, 8, 3, 1, '#8892b0');
-    r(26, 10, 3, 1, '#8892b0');
-    r(26, 8, 1, 3, '#8892b0');
-    r(28, 8, 1, 3, '#8892b0');
+    r(26, 11, 3, 1, '#8892b0');
+    r(26, 13, 3, 1, '#8892b0');
+    r(26, 11, 1, 3, '#8892b0');
+    r(28, 11, 1, 3, '#8892b0');
     ctx.fillStyle = 'rgba(125,124,255,0.12)';
-    ctx.fillRect(27 * P, 9 * P, 1 * P, 1 * P);
+    ctx.fillRect(27 * P, 12 * P, 1 * P, 1 * P);
 
     // Glasses bridge
-    r(24, 9, 2, 1, '#8892b0');
+    r(24, 12, 2, 1, '#8892b0');
 
     // Screen glow reflection on glasses
     ctx.fillStyle = `rgba(244,30,162,${glow * 0.25})`;
-    ctx.fillRect(21 * P, 9 * P, 2 * P, 2 * P);
-    ctx.fillRect(27 * P, 9 * P, 2 * P, 2 * P);
+    ctx.fillRect(21 * P, 12 * P, 2 * P, 2 * P);
+    ctx.fillRect(27 * P, 12 * P, 2 * P, 2 * P);
 
     // Nose
-    r(24, 11, 2, 1, '#EEA07A');
-    r(23, 12, 1, 1, '#EEA07A');
-    r(25, 12, 1, 1, '#EEA07A');
+    r(24, 14, 2, 1, '#EEA07A');
+    r(23, 15, 1, 1, '#EEA07A');
+    r(25, 15, 1, 1, '#EEA07A');
 
     // Mouth (slight smile)
-    r(22, 13, 6, 1, this.MOUTH);
-    r(22, 14, 1, 1, '#AA6644');   // left corner
-    r(27, 14, 1, 1, '#AA6644');   // right corner
+    r(22, 16, 6, 1, this.MOUTH);
+    r(22, 17, 1, 1, '#AA6644');   // left corner
+    r(27, 17, 1, 1, '#AA6644');   // right corner
 
     // Light stubble (foto muestra algo de barba ligera)
-    r(21, 13, 1, 1, '#DDA080');
-    r(28, 13, 1, 1, '#DDA080');
-    r(22, 14, 5, 1, '#DDA080');
+    r(21, 16, 1, 1, '#DDA080');
+    r(28, 16, 1, 1, '#DDA080');
+    r(22, 17, 5, 1, '#DDA080');
 
     // ── SCANLINES ────────────────────────────────────
     ctx.fillStyle = 'rgba(0,0,0,0.09)';
