@@ -125,6 +125,17 @@
               display: none;
             }
           }
+
+          .pixel-side-mobile {
+            display: none;
+            justify-content: center;
+            margin-top: 32px;
+            opacity: 0.92;
+
+            @media (max-width: 992px) {
+              display: flex;
+            }
+          }
         }
     }
 }
