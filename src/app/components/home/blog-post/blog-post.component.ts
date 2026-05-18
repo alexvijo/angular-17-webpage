@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BLOG_POSTS, BlogPost } from '../../../data/blog-posts';
 import { SeoService } from '../../../services/seo.service';
@@ -7,7 +7,7 @@ import { SeoService } from '../../../services/seo.service';
 @Component({
     selector: 'app-blog-post',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, RouterModule],
+    imports: [RouterModule],
     templateUrl: './blog-post.component.html',
     styleUrl: './blog-post.component.scss'
 })
