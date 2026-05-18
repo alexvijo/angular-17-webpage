@@ -8,7 +8,7 @@
 
     "Banner.Pretitle": "Hola, mi nombre es",
     "Banner.Role": "Full Stack Developer",
-    "Banner.Description": "Especializado en <span class='underline'>Angular</span> y producto digital.<br>Comprometido con la calidad del código<br> y el impacto en negocio<span class='blinking-cursor'>_</span>",
+    "Banner.Description": "Comprometido con la calidad del código<br> y el impacto en negocio<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Sobre mi",
@@ -245,6 +245,13 @@
         "Tab": "Dot CSV",
         "Title": "@dotcsv",
         "Date": "https://www.youtube.com/@dotcsv",
+        "Description": []
+      },
+      {
+        "imageUrl": "https://unavatar.io/youtube/@mouredev",
+        "Tab": "Brais Moure",
+        "Title": "@mouredev",
+        "Date": "https://www.youtube.com/@mouredev",
         "Description": []
       }
     ],
