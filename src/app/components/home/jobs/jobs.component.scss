@@ -1,3 +1,5 @@
+@use "./../../../../variables" as *;
+
 .jobs-category-group {
     display: flex;
     flex-direction: column;
@@ -20,7 +22,6 @@
     gap: 20px;
     width: 100%;
 }
-@import "./../../../../variables.scss";
 
 
 ::ng-deep .jobs .jobs-tabs {
