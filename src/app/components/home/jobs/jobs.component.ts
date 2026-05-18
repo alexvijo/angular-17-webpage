@@ -8,16 +8,15 @@ import { SeoService } from '../../../services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-jobs',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    TranslateModule,
-    NgbModule,
-    NgbNavModule
-],
-  templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.scss'
+    selector: 'app-jobs',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        TranslateModule,
+        NgbModule,
+        NgbNavModule
+    ],
+    templateUrl: './jobs.component.html',
+    styleUrl: './jobs.component.scss'
 })
 export class JobsComponent implements OnInit, AfterViewInit {
   @ViewChild('btcWidget') btcWidget!: ElementRef;

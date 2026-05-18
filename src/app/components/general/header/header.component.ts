@@ -7,12 +7,11 @@ import { CommonModule } from '@angular/common';
 import { NgbDropdown, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule, RouterModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [TranslateModule, CommonModule, NgbModule, NgbNavModule, RouterModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
 

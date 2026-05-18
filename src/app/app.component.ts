@@ -7,16 +7,15 @@ import { SeoService } from './services/seo.service';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    HeaderComponent,
-    RouterOutlet,
-    FooterComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        HeaderComponent,
+        RouterOutlet,
+        FooterComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'alexvijo';

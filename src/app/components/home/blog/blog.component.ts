@@ -6,12 +6,11 @@ import { BLOG_POSTS, BlogPost } from '../../../data/blog-posts';
 import { SeoService } from '../../../services/seo.service';
 
 @Component({
-  selector: 'app-blog',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+    selector: 'app-blog',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, RouterModule],
+    templateUrl: './blog.component.html',
+    styleUrl: './blog.component.scss'
 })
 export class BlogComponent implements OnInit {
   posts: BlogPost[] = BLOG_POSTS;

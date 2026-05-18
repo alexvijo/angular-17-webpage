@@ -9,12 +9,11 @@ import { Project } from '../../../models/Project.interface';
 import { SeoService } from '../../../services/seo.service';
 
 @Component({
-  selector: 'app-more-projects',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, NgbModule, NgbNavModule, RouterModule],
-  templateUrl: './more-projects.component.html',
-  styleUrl: './more-projects.component.scss'
+    selector: 'app-more-projects',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [TranslateModule, NgbModule, NgbNavModule, RouterModule],
+    templateUrl: './more-projects.component.html',
+    styleUrl: './more-projects.component.scss'
 })
 export class MoreProjectsComponent implements OnInit {
   isSpanish = true;

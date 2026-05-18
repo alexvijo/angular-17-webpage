@@ -5,12 +5,11 @@ import { BLOG_POSTS, BlogPost } from '../../../data/blog-posts';
 import { SeoService } from '../../../services/seo.service';
 
 @Component({
-  selector: 'app-blog-post',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './blog-post.component.html',
-  styleUrl: './blog-post.component.scss'
+    selector: 'app-blog-post',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, RouterModule],
+    templateUrl: './blog-post.component.html',
+    styleUrl: './blog-post.component.scss'
 })
 export class BlogPostComponent implements OnInit {
   language: 'es' | 'en' = 'es';

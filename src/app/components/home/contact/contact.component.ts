@@ -7,14 +7,13 @@ import { SeoService } from '../../../services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    TranslateModule
-],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        TranslateModule
+    ],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
 

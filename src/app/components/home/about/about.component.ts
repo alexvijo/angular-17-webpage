@@ -6,12 +6,11 @@ import { SeoService } from '../../../services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslateModule, NgbModule, NgbNavModule],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+    selector: 'app-about',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [TranslateModule, NgbModule, NgbNavModule],
+    templateUrl: './about.component.html',
+    styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
 
