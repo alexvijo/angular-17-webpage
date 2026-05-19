@@ -124,21 +124,22 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
     r(19, 21, 1, 11, this.SLEEVE);   // left shoulder
     r(30, 21, 1, 11, this.SLEEVE);   // right shoulder
 
-    // ── BITCOIN LOGO ON SHIRT ────────────────────────
-    const BTC = '#F7931A';
-    // Vertical stem
-    r(24, 22, 1, 5, BTC);
-    // Top bump
-    r(25, 22, 1, 1, BTC);
-    r(26, 23, 1, 1, BTC);
-    r(25, 24, 1, 1, BTC);
-    // Bottom bump
-    r(25, 24, 1, 1, BTC);
-    r(26, 25, 1, 1, BTC);
-    r(25, 26, 1, 1, BTC);
-    // Serifs top/bottom
-    r(23, 22, 1, 1, BTC);
-    r(23, 26, 1, 1, BTC);
+    // ── PIXEL MONSTER ICON ON SHIRT ─────────────────
+    const IC  = '#E8734A'; // orange body
+    const ICE = this.SHIRT; // dark cutout (eyes/mouth/gaps)
+    // Antenas top
+    r(22, 22, 1, 1, IC);
+    r(26, 22, 1, 1, IC);
+    // Body: 7×5 block, cols 21-27, rows 23-27
+    r(21, 23, 7, 5, IC);
+    // Eyes (dark cutouts, 1×2 each)
+    r(22, 24, 1, 2, ICE);
+    r(25, 24, 1, 2, ICE);
+    // Legs: 4 thin columns, rows 28
+    r(21, 28, 1, 1, IC);
+    r(23, 28, 1, 1, IC);
+    r(25, 28, 1, 1, IC);
+    r(27, 28, 1, 1, IC);
 
     // ── ARMS ─────────────────────────────────────────
     // Left arm toward keyboard
