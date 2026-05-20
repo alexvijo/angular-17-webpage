@@ -88,7 +88,16 @@ export class MoreProjectsComponent implements OnInit {
           : 'Scraper to extract and analyze housing listings. A test and automation project on GitHub.',
         ghLink: 'https://github.com/alexvijo/vivienda-scraper',
         demoLink: 'https://github.com/alexvijo/vivienda-scraper',
-        Technologies: ['Python', 'Scraping', 'Automation']
+        Technologies: []
+      },
+      {
+        Title: isSpanish ? 'Empleo Scraper' : 'Empleo Scraper',
+        Description: isSpanish
+          ? 'Scraper de ofertas de empleo que extrae y agrega resultados de múltiples portales de trabajo españoles.'
+          : 'Job listings scraper that extracts and aggregates results from multiple Spanish job portals.',
+        ghLink: 'https://github.com/alexvijo/empleo-scraper',
+        demoLink: 'https://github.com/alexvijo/empleo-scraper',
+        Technologies: []
       }
     ];
     this.filteredProjects = [...this.Projects];
