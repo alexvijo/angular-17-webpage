@@ -2,26 +2,6 @@
 
 Sitio profesional en Angular orientado a visibilidad SEO para Google, agentes IA y reclutadores que buscan perfiles de Desarrollo con agentes IA.
 
-## Objetivo SEO
-
-Este proyecto esta optimizado para:
-- Indexacion tecnica (meta tags, robots, sitemap, canonical, hreflang).
-- Descubrimiento por agentes IA (llms.txt).
-- Relevancia semantica para keywords de AI Engineer y Desarrollo con agentes IA.
-- Contenido rastreable con blog activo y rutas dedicadas.
-
-## Keywords Principales
-
-- Desarrollo con agentes IA
-- AI Engineer
-- LLM
-- RAG
-- MLOps
-- Angular
-- TypeScript
-- Software Engineer
-- Agentes IA
-- IA aplicada
 
 ## Estructura Relevante
 
