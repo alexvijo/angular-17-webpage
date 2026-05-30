@@ -46,6 +46,32 @@
         <div class="tradingview-widget-container" #mstrWidget>
           <div class="tradingview-widget-container__widget"></div>
         </div>
+        <div class="power-law-widget-container">
+          <div class="power-law-header">Bitcoin Power Law (Prediccion)</div>
+          <svg class="power-law-chart" viewBox="0 0 1000 500" preserveAspectRatio="none" role="img" aria-label="Bitcoin Power Law prediction chart">
+            <g class="grid">
+              @for (tick of powerLawPriceTicks; track tick.y) {
+                <line x1="84" [attr.y1]="tick.y" x2="988" [attr.y2]="tick.y"></line>
+                <text x="6" [attr.y]="tick.y - 3">{{ tick.label }}</text>
+              }
+              @for (tick of powerLawYearTicks; track tick.year) {
+                <line [attr.x1]="tick.x" y1="14" [attr.x2]="tick.x" y2="476"></line>
+                <text [attr.x]="tick.x + 4" y="496">{{ tick.year }}</text>
+              }
+            </g>
+            <polyline class="price" fill="none" [attr.points]="powerLawPricePath"></polyline>
+            <polyline class="support" fill="none" [attr.points]="powerLawSupportPath"></polyline>
+            <polyline class="center" fill="none" [attr.points]="powerLawCenterPath"></polyline>
+            <polyline class="resistance" fill="none" [attr.points]="powerLawResistancePath"></polyline>
+          </svg>
+          <div class="power-law-model">{{ powerLawModelLabel }}</div>
+          <div class="power-law-legend">
+            <span class="legend-price">Precio BTC</span>
+            <span class="legend-support">Soporte</span>
+            <span class="legend-center">Linea central</span>
+            <span class="legend-resistance">Resistencia</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/general/header/header.component';
 import { FooterComponent } from './components/general/footer/footer.component';
 import { LanguageService } from './services/language.service';
 import { SeoService } from './services/seo.service';
+import { VisitStatsMailService } from './services/visit-stats-mail.service';
 import * as AOS from 'aos';
 
 @Component({
@@ -21,7 +22,8 @@ export class AppComponent {
   title = 'alexvijo';
   constructor(
     private languageService: LanguageService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private visitStatsMailService: VisitStatsMailService
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +34,8 @@ export class AppComponent {
       description: 'AI Developer especializado en agentes IA, LLM, automatización inteligente, RAG y arquitectura Angular orientada a negocio.',
       keywords: 'Alex Vicente, AI Developer, Desarrollador de IA, AI Agents, LLM, RAG, Angular, TypeScript, MLOps'
     });
+
+    void this.visitStatsMailService.trackVisitAndSendStats();
 
     AOS.init();
   }
