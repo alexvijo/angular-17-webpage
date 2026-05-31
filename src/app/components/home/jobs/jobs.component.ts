@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, PLATFORM_ID, Renderer2, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, PLATFORM_ID, ViewChild, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
@@ -32,8 +32,24 @@ export class JobsComponent implements OnInit, AfterViewInit {
   powerLawPriceTicks: { y: number; label: string }[] = [];
   powerLawModelLabel = '';
 
+  // Crosshair
+  crosshairVisible = false;
+  crosshairX = 0;
+  crosshairDate = '';
+  crosshairTooltips: { label: string; y: number; color: string; textColor: string }[] = [];
+
+  private chartStartMs = 0;
+  private chartTotalMs = 1;
+  private chartMinLogY = 3.5;
+  private chartLogSpan = 4.5;
+  private chartGenesisMs = 0;
+  private chartCenterA = -17.01593313;
+  private chartCenterB = 5.84509376;
+  private chartBandUp = 0.7293;
+  private chartBandDown = 0.4501;
+  private chartPriceData: { ts: number; price: number }[] = [];
+
   private platformId = inject(PLATFORM_ID);
-  private renderer = inject(Renderer2);
   private http = inject(HttpClient);
   private cdr = inject(ChangeDetectorRef);
 
@@ -121,72 +137,48 @@ export class JobsComponent implements OnInit, AfterViewInit {
 
   private async buildPowerLawChartPaths(): Promise<void> {
     const genesisDate = new Date('2009-01-03T00:00:00Z');
-    const regressionStartDate = new Date('2010-07-01T00:00:00Z');
-    const startDate = new Date('2020-01-01T00:00:00Z');
+    const startDate = new Date('2025-01-01T00:00:00Z');
     const endDate = new Date('2030-12-01T00:00:00Z');
 
-    let centerA = -16.4945;
-    let centerB = 5.68823;
-    let residualStd = 0.5;
+    // Parametros canonicos del Power Law de Bitcoin (Harold Christopher Burger)
+    const centerA = -17.01593313;
+    const centerB = 5.84509376;
+    // Bandas asimétricas calibradas contra BitBO: +0.7293 arriba, -0.4501 abajo
+    const bandUp   = 0.7293;
+    const bandDown = 0.4501;
 
-    const history = await this.fetchBtcHistory().catch(() => [] as [number, number][]);
-    if (history.length > 0) {
-      const regression = this.computeLogLogRegression(history, genesisDate, regressionStartDate);
-      if (regression) {
-        centerA = regression.intercept;
-        centerB = regression.slope;
-        residualStd = regression.residualStd;
-      }
-    }
-
-    // Si la regresion devuelve valores no validos, usa parametros de respaldo.
-    if (!Number.isFinite(centerA) || !Number.isFinite(centerB) || !Number.isFinite(residualStd) || centerB <= 0) {
-      centerA = -16.4945;
-      centerB = 5.68823;
-      residualStd = 0.5;
-    }
-
-    const supportA = centerA - residualStd;
+    const supportA = centerA - bandDown;
     const supportB = centerB;
-    const resistanceA = centerA + residualStd;
+    const resistanceA = centerA + bandUp;
     const resistanceB = centerB;
 
-    const points: { date: Date; support: number; center: number; resistance: number; price?: number }[] = [];
+    const history = await this.fetchBtcHistory().catch(() => [] as [number, number][]);
+
+    const startMs = startDate.getTime();
+    const endMs = endDate.getTime();
+    const totalMs = endMs - startMs;
+
+    // Lineas del modelo: una muestra mensual desde 2020 hasta 2040
+    const modelPoints: { ts: number; support: number; center: number; resistance: number }[] = [];
     const cursor = new Date(startDate);
-
-    const monthlyPriceMap = new Map<string, number>();
-    for (const [ts, price] of history) {
-      if (!Number.isFinite(ts) || !Number.isFinite(price) || price <= 0) {
-        continue;
-      }
-      const d = new Date(ts);
-      const key = `${d.getUTCFullYear()}-${d.getUTCMonth()}`;
-      monthlyPriceMap.set(key, price);
-    }
-
-    while (cursor <= endDate) {
+    while (cursor.getTime() <= endMs) {
       const days = Math.max(1, Math.floor((cursor.getTime() - genesisDate.getTime()) / (1000 * 60 * 60 * 24)));
       const logDays = Math.log10(days);
-      const key = `${cursor.getUTCFullYear()}-${cursor.getUTCMonth()}`;
       const support = Math.pow(10, supportA + supportB * logDays);
       const center = Math.pow(10, centerA + centerB * logDays);
       const resistance = Math.pow(10, resistanceA + resistanceB * logDays);
-      if (!Number.isFinite(support) || !Number.isFinite(center) || !Number.isFinite(resistance)) {
-        cursor.setMonth(cursor.getMonth() + 1);
-        continue;
+      if (Number.isFinite(support) && Number.isFinite(center) && Number.isFinite(resistance)) {
+        modelPoints.push({ ts: cursor.getTime(), support, center, resistance });
       }
-
-      points.push({
-        date: new Date(cursor),
-        support,
-        center,
-        resistance,
-        price: monthlyPriceMap.get(key),
-      });
       cursor.setMonth(cursor.getMonth() + 1);
     }
 
-    if (points.length < 2) {
+    // Precio real: todos los puntos diarios de la API filtrados al rango visible
+    const priceDataPoints = history.filter(
+      ([ts, price]) => Number.isFinite(ts) && Number.isFinite(price) && price > 0 && ts >= startMs && ts <= endMs
+    );
+
+    if (modelPoints.length < 2) {
       this.powerLawPricePath = '';
       this.powerLawSupportPath = '';
       this.powerLawCenterPath = '';
@@ -200,114 +192,81 @@ export class JobsComponent implements OnInit, AfterViewInit {
 
     const plotWidth = this.powerLawChartWidth - this.powerLawChartPadding.left - this.powerLawChartPadding.right;
     const plotHeight = this.powerLawChartHeight - this.powerLawChartPadding.top - this.powerLawChartPadding.bottom;
-    const minX = 0;
-    const maxX = Math.max(1, points.length - 1);
-    const valuesForScale = points
-      .flatMap(p => [p.support, p.center, p.resistance, p.price || p.center])
-      .filter(v => Number.isFinite(v) && v > 0);
-    if (valuesForScale.length === 0) {
-      this.cdr.markForCheck();
-      return;
-    }
-    const minLogY = Math.floor(Math.log10(Math.min(...valuesForScale)) * 2) / 2;
-    const maxLogY = Math.ceil(Math.log10(Math.max(...valuesForScale)) * 2) / 2;
-    const logSpan = Math.max(0.5, maxLogY - minLogY);
 
-    const xFor = (i: number) => this.powerLawChartPadding.left + ((i - minX) / (maxX - minX)) * plotWidth;
+    // Escala ajustada para 2025-2030: soporte inicio ~$35k, resistencia final ~$3.4M
+    const minLogY = 4.3;   // ~$20,000
+    const maxLogY = 6.8;   // ~$6,300,000
+    const logSpan = maxLogY - minLogY;
+
+    this.chartStartMs = startMs;
+    this.chartTotalMs = totalMs;
+    this.chartMinLogY = minLogY;
+    this.chartLogSpan = logSpan;
+    this.chartGenesisMs = genesisDate.getTime();
+    this.chartCenterA = centerA;
+    this.chartCenterB = centerB;
+    this.chartBandUp = bandUp;
+    this.chartBandDown = bandDown;
+    this.chartPriceData = priceDataPoints.map(([ts, price]) => ({ ts, price }));
+
+    // X lineal basada en timestamp para alinear precio y modelo correctamente
+    const xForTs = (ts: number) => this.powerLawChartPadding.left + ((ts - startMs) / totalMs) * plotWidth;
     const yFor = (price: number) => {
       const y = (Math.log10(price) - minLogY) / logSpan;
       return this.powerLawChartPadding.top + (1 - y) * plotHeight;
     };
 
-    const toPath = (values: number[]) => values
-      .map((v, i) => ({ x: xFor(i), y: yFor(v) }))
+    const modelToPath = (vals: { ts: number; val: number }[]) => vals
+      .map(p => ({ x: xForTs(p.ts), y: yFor(p.val) }))
       .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y))
       .map(p => `${p.x.toFixed(2)},${p.y.toFixed(2)}`)
       .join(' ');
 
-    const priceSeries = points.map(p => p.price ?? p.center);
-    this.powerLawPricePath = toPath(priceSeries);
-    this.powerLawSupportPath = toPath(points.map(p => p.support));
-    this.powerLawCenterPath = toPath(points.map(p => p.center));
-    this.powerLawResistancePath = toPath(points.map(p => p.resistance));
+    // Precio real diario
+    const pricePathPts = priceDataPoints
+      .map(([ts, price]) => ({ x: xForTs(ts), y: yFor(price), ts, price }))
+      .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y));
+    this.powerLawPricePath = pricePathPts.map(p => `${p.x.toFixed(2)},${p.y.toFixed(2)}`).join(' ');
 
-    this.powerLawYearTicks = points
-      .map((p, i) => ({ i, year: p.date.getUTCFullYear(), month: p.date.getUTCMonth() }))
-      .filter(p => p.month === 0)
-      .map(p => ({ x: xFor(p.i), year: p.year }));
+    this.powerLawSupportPath    = modelToPath(modelPoints.map(p => ({ ts: p.ts, val: p.support })));
+    this.powerLawCenterPath     = modelToPath(modelPoints.map(p => ({ ts: p.ts, val: p.center })));
+    this.powerLawResistancePath = modelToPath(modelPoints.map(p => ({ ts: p.ts, val: p.resistance })));
 
-    const priceTickSet = new Set<number>();
-    for (let v = Math.ceil(minLogY); v <= Math.floor(maxLogY); v += 1) {
-      priceTickSet.add(Math.pow(10, v));
-    }
-    for (let v = Math.ceil(minLogY * 2) / 2; v <= Math.floor(maxLogY * 2) / 2; v += 0.5) {
-      priceTickSet.add(Math.pow(10, v));
-    }
-
-    this.powerLawPriceTicks = Array.from(priceTickSet)
-      .sort((a, b) => b - a)
-      .filter(price => {
-        const y = yFor(price);
-        return y >= this.powerLawChartPadding.top && y <= this.powerLawChartHeight - this.powerLawChartPadding.bottom;
+    this.powerLawYearTicks = modelPoints
+      .filter(p => {
+        const d = new Date(p.ts);
+        return d.getUTCMonth() === 0;
       })
-      .map(price => ({ y: yFor(price), label: this.formatUsd(price) }));
+      .map(p => ({ x: xForTs(p.ts), year: new Date(p.ts).getUTCFullYear() }));
 
-    this.powerLawModelLabel = `Regresion log-log real: log10(P) = ${centerA.toFixed(4)} + ${centerB.toFixed(4)} * log10(dias)`;
+    // Ticks en potencias de 10 dentro del rango visible
+    const priceTicks = [10_000, 100_000, 1_000_000, 10_000_000, 100_000_000];
+    this.powerLawPriceTicks = priceTicks
+      .map(price => ({ y: yFor(price), label: this.formatUsd(price) }))
+      .filter(t => t.y >= this.powerLawChartPadding.top && t.y <= this.powerLawChartHeight - this.powerLawChartPadding.bottom);
+
+    this.powerLawModelLabel = `Power Law: log10(P) = ${centerA.toFixed(4)} + ${centerB.toFixed(4)} × log10(días desde genesis)`;
     this.cdr.markForCheck();
   }
 
   private async fetchBtcHistory(): Promise<[number, number][]> {
-    const url = 'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=max&interval=daily';
-    const response = await firstValueFrom(this.http.get<{ prices: [number, number][] }>(url));
-    return response.prices ?? [];
-  }
-
-  private computeLogLogRegression(
-    prices: [number, number][],
-    genesisDate: Date,
-    startDate: Date
-  ): { intercept: number; slope: number; residualStd: number } | null {
-    const samples = prices
-      .filter(([ts, price]) => ts >= startDate.getTime() && price > 0)
-      .map(([ts, price]) => {
-        const days = Math.max(1, Math.floor((ts - genesisDate.getTime()) / (1000 * 60 * 60 * 24)));
-        return { x: Math.log10(days), y: Math.log10(price) };
-      });
-
-    if (samples.length < 20) {
-      return null;
-    }
-
-    const n = samples.length;
-    const sumX = samples.reduce((acc, s) => acc + s.x, 0);
-    const sumY = samples.reduce((acc, s) => acc + s.y, 0);
-    const sumXY = samples.reduce((acc, s) => acc + s.x * s.y, 0);
-    const sumX2 = samples.reduce((acc, s) => acc + s.x * s.x, 0);
-
-    const denominator = n * sumX2 - sumX * sumX;
-    if (denominator === 0) {
-      return null;
-    }
-
-    const slope = (n * sumXY - sumX * sumY) / denominator;
-    const intercept = (sumY - slope * sumX) / n;
-
-    const residualVariance = samples.reduce((acc, s) => {
-      const est = intercept + slope * s.x;
-      const residual = s.y - est;
-      return acc + residual * residual;
-    }, 0) / n;
-
-    return {
-      intercept,
-      slope,
-      residualStd: Math.sqrt(residualVariance),
-    };
+    // blockchain.info devuelve datos diarios desde 2009, sin limite de plan
+    // timestamps en segundos y precio en USD como {x, y}
+    const url = 'https://api.blockchain.info/charts/market-price?timespan=all&format=json&sampled=true&cors=true';
+    const response = await firstValueFrom(
+      this.http.get<{ values: { x: number; y: number }[] }>(url)
+    );
+    return (response.values ?? []).map(v => [v.x * 1000, v.y] as [number, number]);
   }
 
   private formatUsd(value: number): string {
+    if (value >= 1_000_000_000) {
+      const b = value / 1_000_000_000;
+      return `$${Number.isInteger(b) ? b : b.toFixed(1)}B`;
+    }
     if (value >= 1_000_000) {
-      return `$${(value / 1_000_000).toFixed(1)}M`;
+      const m = value / 1_000_000;
+      return `$${Number.isInteger(m) ? m : m.toFixed(1)}M`;
     }
     if (value >= 1_000) {
       return `$${Math.round(value / 1_000)}k`;
@@ -392,6 +351,76 @@ export class JobsComponent implements OnInit, AfterViewInit {
       }
     });
     return this.categories;
+  }
+
+  onChartMouseMove(event: MouseEvent): void {
+    const svg = event.currentTarget as SVGSVGElement;
+    const rect = svg.getBoundingClientRect();
+    const svgX = ((event.clientX - rect.left) / rect.width) * this.powerLawChartWidth;
+    const svgY = ((event.clientY - rect.top) / rect.height) * this.powerLawChartHeight;
+
+    const pad = this.powerLawChartPadding;
+    if (svgX < pad.left || svgX > this.powerLawChartWidth - pad.right ||
+        svgY < pad.top  || svgY > this.powerLawChartHeight - pad.bottom) {
+      this.crosshairVisible = false;
+      this.cdr.markForCheck();
+      return;
+    }
+
+    this.crosshairX = svgX;
+
+    // Fecha: invertir X → timestamp
+    const plotWidth = this.powerLawChartWidth - pad.left - pad.right;
+    const plotHeight = this.powerLawChartHeight - pad.top - pad.bottom;
+    const ratio = (svgX - pad.left) / plotWidth;
+    const ts = this.chartStartMs + ratio * this.chartTotalMs;
+    const d = new Date(ts);
+    const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    this.crosshairDate = `${d.getUTCDate()} ${months[d.getUTCMonth()]} '${String(d.getUTCFullYear()).slice(2)}`;
+
+    // Calcular Y en SVG para un precio dado
+    const yForPrice = (price: number) => {
+      const yr = (Math.log10(price) - this.chartMinLogY) / this.chartLogSpan;
+      return pad.top + (1 - yr) * plotHeight;
+    };
+
+    // Dias desde genesis para la fecha bajo el cursor
+    const days = Math.max(1, Math.floor((ts - this.chartGenesisMs) / 86400000));
+    const logDays = Math.log10(days);
+    const resistance = Math.pow(10, (this.chartCenterA + this.chartBandUp)   + this.chartCenterB * logDays);
+    const center     = Math.pow(10,  this.chartCenterA                        + this.chartCenterB * logDays);
+    const support    = Math.pow(10, (this.chartCenterA - this.chartBandDown)  + this.chartCenterB * logDays);
+
+    // Precio real: punto más cercano en tiempo
+    const tooltips: { label: string; y: number; color: string; textColor: string }[] = [];
+
+    tooltips.push({ label: this.formatUsd(resistance), y: yForPrice(resistance), color: '#9b59b6', textColor: '#fff' });
+
+    // Precio real solo si existe dato histórico en esa fecha (pasado)
+    if (this.chartPriceData.length > 0 && ts <= Date.now()) {
+      let closest = this.chartPriceData[0];
+      let minDist = Math.abs(ts - closest.ts);
+      for (const pt of this.chartPriceData) {
+        const dist = Math.abs(ts - pt.ts);
+        if (dist < minDist) { minDist = dist; closest = pt; }
+      }
+      tooltips.push({ label: this.formatUsd(closest.price), y: yForPrice(closest.price), color: '#f39c12', textColor: '#000' });
+    }
+
+    tooltips.push({ label: this.formatUsd(center),     y: yForPrice(center),     color: '#27ae60', textColor: '#fff' });
+    tooltips.push({ label: this.formatUsd(support),    y: yForPrice(support),    color: '#e74c3c', textColor: '#fff' });
+
+    // Ordenar por Y ascendente para que no se solapen
+    tooltips.sort((a, b) => a.y - b.y);
+
+    this.crosshairTooltips = tooltips;
+    this.crosshairVisible = true;
+    this.cdr.markForCheck();
+  }
+
+  onChartMouseLeave(): void {
+    this.crosshairVisible = false;
+    this.cdr.markForCheck();
   }
 
   getCategoryIndex(idx: number): string {

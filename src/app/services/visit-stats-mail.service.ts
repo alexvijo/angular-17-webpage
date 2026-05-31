@@ -14,7 +14,7 @@ export class VisitStatsMailService {
 
   // Configuracion basica para servicio gratuito.
   // Reemplaza con tu email real para activar el envio.
-  private readonly recipientEmail = 'alexvicentejose@gmail.com';
+  private readonly recipientEmail = 'alex-vicente.dev.lyricist910@passmail.net';
   private readonly countApiNamespace = 'alex-vicente-dev';
   private readonly throttleHours = 6;
 

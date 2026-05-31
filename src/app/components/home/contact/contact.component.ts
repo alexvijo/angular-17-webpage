@@ -1,8 +1,6 @@
 
-import { ChangeDetectionStrategy, Component, OnInit, SecurityContext } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { Platform } from '@angular/cdk/platform';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { SeoService } from '../../../services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -18,8 +16,6 @@ import { ActivatedRoute } from '@angular/router';
 export class ContactComponent implements OnInit {
 
   constructor(
-    private platform: Platform,
-    private sanitizer: DomSanitizer,
     private seoService: SeoService,
     private route: ActivatedRoute
   ) { }
@@ -33,11 +29,11 @@ export class ContactComponent implements OnInit {
         ? 'Contacto - Alex Vicente AI Developer'
         : 'Contact - Alex Vicente AI Developer',
       description: isSpanish
-        ? 'Ponte en contacto conmigo por email o WhatsApp. Estaré encantado de hablar sobre proyectos de IA, agentes y colaboraciones.'
-        : 'Get in touch with me by email or WhatsApp. Happy to discuss AI projects, agents, and collaboration opportunities.',
+        ? 'Ponte en contacto conmigo por email o LinkedIn. Estaré encantado de hablar sobre proyectos de IA, agentes y colaboraciones.'
+        : 'Get in touch with me by email or LinkedIn. Happy to discuss AI projects, agents, and collaboration opportunities.',
       keywords: isSpanish
-        ? 'Contacto, Email, WhatsApp, Consultoría, AI Developer, Agentes IA'
-        : 'Contact, Email, WhatsApp, Consulting, AI Developer, AI Agents',
+        ? 'Contacto, Email, LinkedIn, Consultoría, AI Developer, Agentes IA'
+        : 'Contact, Email, LinkedIn, Consulting, AI Developer, AI Agents',
       url: `https://alex-vicente.dev/${lang}/contacto`,
       lang
     });
@@ -63,7 +59,7 @@ export class ContactComponent implements OnInit {
         '@type': 'Person',
         '@id': 'https://alex-vicente.dev/#person',
         name: 'Alex Vicente',
-        email: 'alexvicentejose@gmail.com',
+        email: 'alex-vicente.dev.lyricist910@passmail.net',
         sameAs: [
           'https://github.com/alexvijo',
           'https://www.linkedin.com/in/alexvicente/',
@@ -73,15 +69,6 @@ export class ContactComponent implements OnInit {
         ]
       }
     });
-  }
-
-  openWhatsApp() {
-    const url = this.platform.ANDROID || this.platform.IOS
-                ? 'whatsapp://send?phone=34644720496'
-                : 'https://web.whatsapp.com/send?phone=34644720496';
-    const safeUrl: SafeUrl = this.sanitizer.bypassSecurityTrustUrl(url);
-    const sanitizedUrl = this.sanitizer.sanitize(SecurityContext.URL, safeUrl) || '';
-    window.open(sanitizedUrl, '_blank');
   }
 
 }
