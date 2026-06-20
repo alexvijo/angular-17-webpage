@@ -65,16 +65,16 @@ export class BannerComponent implements OnInit {
     const faqItems = isSpanish
       ? [
           {
-            question: 'Que tipo de proyectos desarrollo con IA?',
+            question: '¿Qué tipo de proyectos desarrollo con IA?',
             answer: 'Desarrollo asistentes con agentes IA, integraciones LLM, automatizaciones y experiencias web de producto con Angular.'
           },
           {
-            question: 'Trabajo con modelos locales y en cloud?',
-            answer: 'Si. Diseno soluciones con LM Studio y Ollama en local, y tambien con proveedores cloud segun coste, latencia y seguridad.'
+            question: '¿Trabajo con modelos locales y en cloud?',
+            answer: 'Sí. Diseño soluciones con LM Studio y Ollama en local, y también con proveedores cloud según coste, latencia y seguridad.'
           },
           {
-            question: 'Que stack tecnico utilizo?',
-            answer: 'Angular, TypeScript, APIs, evaluacion de prompts, observabilidad y buenas practicas de despliegue continuo.'
+            question: '¿Qué stack técnico utilizo?',
+            answer: 'Angular, TypeScript, APIs, evaluación de prompts, observabilidad y buenas prácticas de despliegue continuo.'
           }
         ]
       : [

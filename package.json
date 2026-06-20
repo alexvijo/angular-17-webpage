@@ -10,7 +10,7 @@
     "build": "ng build && npm run purgecss",
     "build:href": "ng build --base-href ./",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
-    "build:github-pages": "ng deploy --base-href=https://alex-vicente.dev/",
+    "build:github-pages": "ng build --base-href=https://alex-vicente.dev/ && npm run purgecss",
     "watch": "ng build --watch --configuration development",
     "delete:docs": "del docs",
     "copy:dist": "xcopy /E /I /H dist\\alexvijo\\browser\\* docs",

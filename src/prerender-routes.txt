@@ -10,6 +10,16 @@
 /en/ia-y-futuro-del-trabajo
 /es/blog
 /en/blog
+/es/blog/headroom-netflix-compresion-contexto-agentes-ia
+/en/blog/headroom-netflix-context-compression-ai-agents
+/es/blog/codegraph-codigo-sin-busquedas-ciegas
+/en/blog/codegraph-code-without-blind-searches
+/es/blog/agent-skills-autoskills-supercharge-claude-code
+/en/blog/agent-skills-autoskills-supercharge-claude-code
+/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity
+/en/blog/geo-aeo-seo-optimize-web-for-ai-chatgpt-perplexity
+/es/blog/como-revisar-prs-automaticamente-con-agentes-ia
+/en/blog/how-to-review-prs-automatically-with-ai-agents
 /es/blog/roadmap-ingeniero-ia-2026
 /en/blog/ai-engineer-roadmap-2026
 /es/blog/como-construyo-agentes-ia-en-producto

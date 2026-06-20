@@ -50,23 +50,37 @@ export class AboutComponent implements OnInit {
 
     this.seoService.updateJsonLd({
       '@context': 'https://schema.org',
-      '@type': 'ProfilePage',
-      url: `https://alex-vicente.dev/${lang}/acerca-de-mi`,
-      inLanguage: lang,
-      mainEntity: {
-        '@type': 'Person',
-        '@id': 'https://alex-vicente.dev/#person',
-        name: 'Alex Vicente',
-        jobTitle: isSpanish ? 'AI Developer y Desarrollador de Software' : 'AI Developer and Software Engineer',
-        url: 'https://alex-vicente.dev',
-        sameAs: [
-          'https://github.com/alexvijo',
-          'https://www.linkedin.com/in/alexvicente/',
-          'https://twitter.com/alexvijo',
-          'https://dev.to/alexvijo',
-          'https://alex-vicente.dev'
-        ]
-      }
+      '@graph': [
+        {
+          '@type': 'AboutPage',
+          '@id': `https://alex-vicente.dev/${lang}/acerca-de-mi`,
+          url: `https://alex-vicente.dev/${lang}/acerca-de-mi`,
+          inLanguage: lang,
+          name: isSpanish ? 'Acerca de mí - Alex Vicente' : 'About me - Alex Vicente',
+          description: isSpanish
+            ? 'Trayectoria profesional, habilidades y experiencia de Alex Vicente como AI Developer especializado en agentes IA, LLM y Angular.'
+            : 'Professional background, skills and experience of Alex Vicente as an AI Developer specialized in AI agents, LLM, and Angular.',
+          mainEntity: { '@id': 'https://alex-vicente.dev/#person' }
+        },
+        {
+          '@type': 'Person',
+          '@id': 'https://alex-vicente.dev/#person',
+          name: 'Alex Vicente',
+          jobTitle: isSpanish ? 'AI Developer y Desarrollador de Software' : 'AI Developer and Software Engineer',
+          url: 'https://alex-vicente.dev',
+          knowsAbout: [
+            'Artificial Intelligence', 'Large Language Models', 'RAG', 'AI Agents',
+            'LangGraph', 'LangChain', 'LangSmith', 'MLOps', 'Angular', 'TypeScript',
+            'Python', 'FastAPI', 'Docker', 'Software Architecture'
+          ],
+          sameAs: [
+            'https://github.com/alexvijo',
+            'https://www.linkedin.com/in/alexvicente/',
+            'https://twitter.com/alexvijo',
+            'https://dev.to/alexvijo'
+          ]
+        }
+      ]
     });
   }
 

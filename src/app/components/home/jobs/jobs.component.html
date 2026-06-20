@@ -47,71 +47,30 @@
           <div class="tradingview-widget-container__widget"></div>
         </div>
         <div class="power-law-widget-container">
-          <svg class="power-law-chart" viewBox="0 0 1000 500" preserveAspectRatio="none" role="img"
-               aria-label="Bitcoin Power Law prediction chart 2020-2040"
-               (mousemove)="onChartMouseMove($event)"
-               (mouseleave)="onChartMouseLeave()">
-            <!-- Fondo negro -->
-            <rect x="0" y="0" width="1000" height="500" fill="#000"></rect>
-            <rect x="84" y="14" width="904" height="462" fill="#111"></rect>
-
-            <!-- Grid -->
+          <div class="power-law-header">Bitcoin Power Law (Prediccion)</div>
+          <svg class="power-law-chart" viewBox="0 0 1000 500" preserveAspectRatio="none" role="img" aria-label="Bitcoin Power Law prediction chart">
             <g class="grid">
               @for (tick of powerLawPriceTicks; track tick.y) {
                 <line x1="84" [attr.y1]="tick.y" x2="988" [attr.y2]="tick.y"></line>
-                <text x="6" [attr.y]="tick.y + 4" class="grid-label-y">{{ tick.label }}</text>
+                <text x="6" [attr.y]="tick.y - 3">{{ tick.label }}</text>
               }
               @for (tick of powerLawYearTicks; track tick.year) {
                 <line [attr.x1]="tick.x" y1="14" [attr.x2]="tick.x" y2="476"></line>
-                <text [attr.x]="tick.x - 10" y="494" class="grid-label-x">{{ tick.year }}</text>
+                <text [attr.x]="tick.x + 4" y="496">{{ tick.year }}</text>
               }
             </g>
-
-            <!-- Label eje Y -->
-            <text x="14" y="260" class="axis-label" transform="rotate(-90, 14, 260)">USD</text>
-
-            <!-- Lineas del modelo -->
-            <polyline class="resistance" fill="none" [attr.points]="powerLawResistancePath"></polyline>
-            <polyline class="center" fill="none" [attr.points]="powerLawCenterPath"></polyline>
-            <polyline class="support" fill="none" [attr.points]="powerLawSupportPath"></polyline>
-            <!-- Precio real encima -->
             <polyline class="price" fill="none" [attr.points]="powerLawPricePath"></polyline>
-
-            <!-- Leyenda interna (esquina inferior derecha) -->
-            <g class="chart-legend" transform="translate(710, 360)">
-              <rect x="0" y="0" width="260" height="108" rx="4" fill="rgba(0,0,0,0.7)" stroke="rgba(255,255,255,0.12)" stroke-width="1"></rect>
-              <line x1="12" y1="22" x2="36" y2="22" stroke="#f39c12" stroke-width="2"></line>
-              <text x="44" y="27" class="legend-text">Price end of day</text>
-              <line x1="12" y1="46" x2="36" y2="46" stroke="#9b59b6" stroke-width="2"></line>
-              <text x="44" y="51" class="legend-text">Resistance</text>
-              <line x1="12" y1="70" x2="36" y2="70" stroke="#27ae60" stroke-width="2"></line>
-              <text x="44" y="75" class="legend-text">Linear regression fit</text>
-              <line x1="12" y1="94" x2="36" y2="94" stroke="#e74c3c" stroke-width="2"></line>
-              <text x="44" y="99" class="legend-text">Support</text>
-            </g>
-
-            <!-- Crosshair -->
-            @if (crosshairVisible) {
-              <!-- Linea vertical -->
-              <line class="crosshair-line" [attr.x1]="crosshairX" y1="14" [attr.x2]="crosshairX" y2="476"></line>
-
-              <!-- Tooltip fecha en eje X -->
-              <g [attr.transform]="'translate(' + crosshairX + ', 482)'">
-                <rect x="-36" y="-11" width="72" height="16" rx="3" fill="#1a1a2e" stroke="rgba(255,255,255,0.25)" stroke-width="1"></rect>
-                <text x="0" y="3" class="crosshair-label-text" text-anchor="middle">{{ crosshairDate }}</text>
-              </g>
-
-              <!-- Tooltips por cada linea del modelo, anclados a la linea vertical -->
-              @for (tip of crosshairTooltips; track tip.color) {
-                <line class="crosshair-line" x1="84" [attr.y1]="tip.y" x2="988" [attr.y2]="tip.y"></line>
-                <g [attr.transform]="'translate(' + crosshairX + ', ' + tip.y + ')'">
-                  <rect x="-46" y="-13" width="92" height="26" rx="4" [attr.fill]="tip.color"></rect>
-                  <text x="0" y="6" class="crosshair-tip-text" text-anchor="middle" [attr.fill]="tip.textColor">{{ tip.label }}</text>
-                </g>
-              }
-            }
+            <polyline class="support" fill="none" [attr.points]="powerLawSupportPath"></polyline>
+            <polyline class="center" fill="none" [attr.points]="powerLawCenterPath"></polyline>
+            <polyline class="resistance" fill="none" [attr.points]="powerLawResistancePath"></polyline>
           </svg>
           <div class="power-law-model">{{ powerLawModelLabel }}</div>
+          <div class="power-law-legend">
+            <span class="legend-price">Precio BTC</span>
+            <span class="legend-support">Soporte</span>
+            <span class="legend-center">Linea central</span>
+            <span class="legend-resistance">Resistencia</span>
+          </div>
         </div>
       </div>
     </div>

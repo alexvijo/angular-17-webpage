@@ -29,7 +29,8 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(node -e \"try { require\\('@angular/ssr/package.json'\\); console.log\\('installed'\\); } catch\\(e\\) { console.log\\('not installed'\\); }\")",
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\jobs\" -Force | ForEach-Object { $_.FullName })",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
