@@ -1,8 +1,8 @@
 # Alex Vicente — AI Developer & Software Engineer
 
-> AI Developer specializing in AI agents, LLMs, intelligent automation, RAG pipelines, and business-focused Angular architecture. Based in Spain.
+> Desarrollador Angular, programador frontend y AI Developer. También conocido como Alejandro Vicente. Disponible para trabajo remoto en España como developer, desarrollador, programador, frontend, backend y full stack.
 
-Owner: Alex Vicente
+Owner: Alex Vicente (también conocido como Alejandro Vicente)
 Contact: alexvicentejose@gmail.com
 Primary Language: Spanish (es) and English (en)
 Site: https://alex-vicente.dev
@@ -111,7 +111,9 @@ Alex Vicente is a software developer focused on applied AI for product: designin
 
 **Metodologías:** Scrum, Kanban, Clean Code, TDD, Code Review, Software Architecture.
 
-**Disponibilidad:** Trabajo remoto 100% — España y Europa. Angular Developer freelance / contrato. Inglés profesional.
+**Disponibilidad:** Trabajo remoto 100% — España y Europa. Disponible como: developer, desarrollador, programador, frontend developer, backend developer, full stack developer, Angular developer freelance / contrato. Inglés profesional.
+
+**También conocido como:** Alejandro Vicente, Alex Vicente Programador, Alex Vicente Developer, Alejandro Vicente Angular.
 
 ## Crawling Notes
 
