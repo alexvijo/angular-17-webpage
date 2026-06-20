@@ -50,6 +50,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://alex-vicente.dev/es/blog/headroom-netflix-compresion-contexto-agentes-ia</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/es/blog/codegraph-codigo-sin-busquedas-ciegas</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/es/blog/agent-skills-autoskills-supercharge-claude-code</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/es/blog/como-revisar-prs-automaticamente-con-agentes-ia</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -129,6 +159,36 @@
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/headroom-netflix-context-compression-ai-agents</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/codegraph-code-without-blind-searches</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/agent-skills-autoskills-supercharge-claude-code</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/geo-aeo-seo-optimize-web-for-ai-chatgpt-perplexity</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alex-vicente.dev/en/blog/how-to-review-prs-automatically-with-ai-agents</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026</loc>

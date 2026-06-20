@@ -1,37 +1,91 @@
-# alex-vicente.dev - AI Engineer Portfolio
+# Alex Vicente — AI Developer & Software Engineer
+
+> AI Developer specializing in AI agents, LLMs, intelligent automation, RAG pipelines, and business-focused Angular architecture. Based in Spain.
 
 Owner: Alex Vicente
+Contact: alexvicentejose@gmail.com
 Primary Language: Spanish (es) and English (en)
 Site: https://alex-vicente.dev
+GitHub: https://github.com/alexvijo
+LinkedIn: https://www.linkedin.com/in/alexvicente/
 
-## Summary
-Portfolio focused on AI engineering, applied AI, LLM, MLOps, and frontend software engineering with Angular.
+## About
+
+Alex Vicente is a software developer focused on applied AI for product: designing and implementing agents with LangGraph and CrewAI, RAG pipelines with embeddings and vector databases (Chroma, Pinecone), LLM integration in Angular products, and production observability with LangSmith. He also builds full-stack applications with Angular 18, FastAPI, and TypeScript.
 
 ## Main Pages
+
 - Home (ES): https://alex-vicente.dev/es/inicio
 - Home (EN): https://alex-vicente.dev/en/inicio
 - About (ES): https://alex-vicente.dev/es/acerca-de-mi
 - About (EN): https://alex-vicente.dev/en/acerca-de-mi
-- Applied AI (ES): https://alex-vicente.dev/es/proyectos-propios
-- Applied AI (EN): https://alex-vicente.dev/en/proyectos-propios
+- Projects (ES): https://alex-vicente.dev/es/proyectos-propios
+- Projects (EN): https://alex-vicente.dev/en/proyectos-propios
 - Blog (ES): https://alex-vicente.dev/es/blog
 - Blog (EN): https://alex-vicente.dev/en/blog
 - Contact: https://alex-vicente.dev/es/contacto
 
-## Blog Posts
-- ES: https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
-- ES: https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
-- ES: https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
-- ES: https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso
-- EN: https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
-- EN: https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
-- EN: https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
-- EN: https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide
+## Blog Posts (Technical Articles)
 
-## Recruiting Keywords
-AI Engineer, Desarrollo con agentes IA, Applied AI, LLM, RAG, MLOps, Angular, TypeScript, Software Engineer, AI Product Development
+- https://alex-vicente.dev/es/blog/headroom-netflix-compresion-contexto-agentes-ia
+  Title: Headroom: cómo Netflix redujo un 92% el coste de sus agentes IA
+  Summary: Tejas Chopra (Netflix Senior Engineer) built Headroom, an open source context compression layer that reduced token costs from $200/day to $30/day. Achieves 92% token reduction on code search and SRE debugging using AST-aware compression, JSON optimization, and a HuggingFace prose compressor. Works as CLI wrapper, HTTP proxy, or MCP server.
+
+- https://alex-vicente.dev/es/blog/codegraph-codigo-sin-busquedas-ciegas
+  Title: CodeGraph: deja de buscar código a ciegas con tus agentes IA
+  Summary: CodeGraph builds a tree-sitter AST knowledge graph of your repository and exposes it as an MCP server. Replaces grep+cat exploration (5,000 tokens) with structured queries (200 tokens). Key tools: codegraph_explore, codegraph_impact, codegraph_callers, codegraph_callees.
+
+- https://alex-vicente.dev/es/blog/agent-skills-autoskills-supercharge-claude-code
+  Title: Agent Skills y autoskills: cómo potenciar tu agente IA en 30 segundos
+  Summary: Agent Skills are portable Markdown files that give AI agents domain know-how. autoskills (npx autoskills) auto-detects your tech stack and installs the best skills. Covers top skills for developers: geo-seo-claude, code-review, codegraph, security-review, verify, simplify.
+
+- https://alex-vicente.dev/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity
+  Title: GEO, AEO y SEO: cómo optimizar tu web para que la IA te cite
+  Summary: AI-referred traffic grew 527% YoY. GEO (Generative Engine Optimization) makes content citable by ChatGPT, Perplexity, Claude, and Google AI Overviews. Key levers: llms.txt, FAQPage schema, AI crawler access, extractable paragraph format (130-170 words), and prerendering for SPAs.
+
+- https://alex-vicente.dev/es/blog/como-revisar-prs-automaticamente-con-agentes-ia
+  Title: Cómo revisar PRs automáticamente con agentes IA (y no morir en el intento)
+  Summary: Three-layer automated PR review workflow: code-review (ultra) for correctness bugs and inline comments, security-review for auth/validation changes, and verify to confirm fixes don't introduce regressions. Covers what to delegate to agents vs. what to reserve for human judgment.
+
+- https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
+  Title: Roadmap para convertirte en Ingeniero IA en 2026
+  Summary: Practical guide to skills, tools, and projects needed to work as an AI Engineer in 2026. Covers LLM fundamentals, RAG pipelines with vector databases, agent orchestration with LangGraph/CrewAI, MLOps with MLflow and Docker, and Angular/React for AI interfaces.
+
+- https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
+  Title: AI Engineer Roadmap for 2026
+  Summary: English version of the AI Engineer roadmap covering LLMs, RAG, agents, MLOps, and frontend for AI.
+
+- https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
+  Title: Cómo construyo agentes IA en producto real
+  Summary: Real process for building AI agents in production: tool definition, LangGraph orchestration, episodic/semantic/procedural memory, exponential backoff error handling, and LangSmith tracing for prompt optimization.
+
+- https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
+  Title: How I Build AI Agents for Real Products
+  Summary: English version of the AI agent production guide.
+
+- https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
+  Title: Angular + LLM + RAG: mi stack en producción
+  Summary: Production stack combining Angular 18 (standalone components, lazy loading, SSE streaming) with FastAPI + LangChain RAG backend. Covers OpenAI embeddings, Chroma/Pinecone vector stores, reranking, cost management, and LangSmith observability.
+
+- https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
+  Title: Angular + LLM + RAG: My Production Stack
+  Summary: English version of the Angular + LLM + RAG production stack guide.
+
+- https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso
+  Title: LLM Studio local con Ollama: guía paso a paso
+  Summary: Step-by-step guide to setting up a local LLM environment with Ollama and Open WebUI. Covers model selection (Mistral 7B, Llama 3, Phi-3 Mini), Docker setup, and OpenAI-compatible API integration for LangChain and LlamaIndex.
+
+- https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide
+  Title: Local LLM Studio with Ollama: Step-by-Step Guide
+  Summary: English version of the local LLM setup guide.
+
+## Core Expertise
+
+Angular, TypeScript, Python, FastAPI, LangChain, LangGraph, LangSmith, RAG, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, MLOps, Docker, CI/CD, Chroma, Pinecone, embeddings, AI agents, intelligent automation, Server-Sent Events, streaming.
 
 ## Crawling Notes
-- All public pages can be crawled.
+
+- All public pages can be crawled (GPTBot, ClaudeBot, PerplexityBot explicitly allowed in robots.txt).
 - Canonical URL: https://alex-vicente.dev
 - Sitemap: https://alex-vicente.dev/sitemap.xml
+- Languages: Spanish (es) and English (en) — all content available in both languages.
