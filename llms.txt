@@ -105,7 +105,7 @@ Alex Vicente is a software developer focused on applied AI for product: designin
 
 **Backend:** Node.js, NestJS, Express.js, FastAPI, Spring Boot, Java, Kotlin, REST API, Server-Sent Events, WebSockets, GraphQL.
 
-**AI / LLM:** LangGraph, LangChain, LangSmith, RAG, AI Agents, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, embeddings, vector databases, MLOps, prompt engineering, GitHub Copilot, IA-native development.
+**AI / LLM:** LangGraph, LangChain, LangSmith, RAG, AI Agents, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, embeddings, vector databases, MLOps, prompt engineering, Claude Code, IA-native development.
 
 **Data & Infra:** MongoDB, SQL, Chroma, Pinecone, Docker, CI/CD, GitHub Actions, Jenkins, SonarQube, Jira, Confluence.
 
