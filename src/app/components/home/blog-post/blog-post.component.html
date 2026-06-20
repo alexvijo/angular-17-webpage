@@ -11,7 +11,7 @@
           <p class="post-meta">{{ post.publishedAt }} • {{ post.keywords.join(' • ') }}</p>
 
           @for (paragraph of getParagraphs(post); track paragraph) {
-            <p class="post-paragraph">{{ paragraph }}</p>
+            <p class="post-paragraph" [innerHTML]="formatParagraph(paragraph)"></p>
           }
         </article>
       } @else {

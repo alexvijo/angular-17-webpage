@@ -5,9 +5,10 @@
   "Header.Item2": "Lab",
   "Header.Item3": "I'm interested",
   "Header.Item4": "Contact",
+  "Header.Item5": "Blog",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Role": "Full Stack Developer",
+  "Banner.Role": "I am a Software Developer",
   "Banner.Description": "Committed to code quality<br> and business impact<span class='blinking-cursor'>_</span>",
   "Banner.ActionBtn": "Send me an email",
 

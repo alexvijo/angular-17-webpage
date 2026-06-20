@@ -23,9 +23,7 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "src/prerender-routes.txt"
-            },
+            "outputMode": "static",
             "polyfills": [
               "@angular/localize/init",
               "zone.js"
@@ -118,7 +116,9 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://alex-vicente.dev/",
-            "repo": "git@github.com:alexvijo/angular-17-webpage.git"
+            "repo": "git@github.com:alexvijo/angular-17-webpage.git",
+            "noBuild": true,
+            "dir": "dist/alexvijo/browser"
           }
         }
       }

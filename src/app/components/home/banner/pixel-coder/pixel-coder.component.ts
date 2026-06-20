@@ -3,9 +3,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  Inject,
   OnDestroy,
+  PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-pixel-coder',
@@ -28,6 +31,8 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
   private ctx!: CanvasRenderingContext2D;
   private raf!: number;
   private frame = 0;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
   private readonly P = 8;
 
   private readonly HAIR   = '#A06B3C';
@@ -50,11 +55,16 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
   private readonly codeLengths = [10, 6, 14, 3, 12, 8, 16, 5, 11, 4, 13, 7, 9, 15, 6, 11, 10, 8, 14, 3];
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     this.ctx = this.canvasRef.nativeElement.getContext('2d')!;
     this.loop();
   }
 
-  ngOnDestroy() { cancelAnimationFrame(this.raf); }
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.platformId)) {
+      cancelAnimationFrame(this.raf);
+    }
+  }
 
   private loop() {
     this.frame += 0.5;

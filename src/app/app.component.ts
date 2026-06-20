@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/general/header/header.component';
 import { FooterComponent } from './components/general/footer/footer.component';
@@ -23,7 +24,8 @@ export class AppComponent {
   constructor(
     private languageService: LanguageService,
     private seoService: SeoService,
-    private visitStatsMailService: VisitStatsMailService
+    private visitStatsMailService: VisitStatsMailService,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
   ngOnInit(): void {
@@ -35,8 +37,9 @@ export class AppComponent {
       keywords: 'Alex Vicente, AI Developer, Desarrollador de IA, AI Agents, LLM, RAG, Angular, TypeScript, MLOps'
     });
 
-    void this.visitStatsMailService.trackVisitAndSendStats();
-
-    AOS.init();
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init();
+      void this.visitStatsMailService.trackVisitAndSendStats();
+    }
   }
 }

@@ -30,7 +30,8 @@
       "Bash(node -e \"try { require\\('@angular/ssr/package.json'\\); console.log\\('installed'\\); } catch\\(e\\) { console.log\\('not installed'\\); }\")",
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\alexv\\\\projects\\\\alexvijo\\\\src\\\\app\\\\components\\\\home\\\\jobs\" -Force | ForEach-Object { $_.FullName })",
       "Bash(npx tsc *)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "PowerShell(npm run deploy)"
     ]
   }
 }

@@ -91,4 +91,14 @@ export class BlogPostComponent implements OnInit {
   getParagraphs(post: BlogPost): string[] {
     return this.language === 'es' ? post.bodyEs : post.bodyEn;
   }
+
+  formatParagraph(text: string): string {
+    // Wrap backtick content in <code>
+    let result = text.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
+    // If the whole paragraph is a command line (starts with npm/pip/docker/ollama/npx/headroom/codegraph), wrap entirely
+    if (/^(npm|pip|docker|ollama|npx|headroom|codegraph)\b/.test(text.trim())) {
+      result = `<code class="inline-code block-code">${text}</code>`;
+    }
+    return result;
+  }
 }
