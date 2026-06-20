@@ -29,23 +29,43 @@ Alex Vicente is a software developer focused on applied AI for product: designin
 
 - https://alex-vicente.dev/es/blog/headroom-netflix-compresion-contexto-agentes-ia
   Title: Headroom: cómo Netflix redujo un 92% el coste de sus agentes IA
-  Summary: Tejas Chopra (Netflix Senior Engineer) built Headroom, an open source context compression layer that reduced token costs from $200/day to $30/day. Achieves 92% token reduction on code search and SRE debugging using AST-aware compression, JSON optimization, and a HuggingFace prose compressor. Works as CLI wrapper, HTTP proxy, or MCP server.
+  Summary: Tejas Chopra (Netflix) built Headroom, an open source context compression layer that cut token costs from $200/day to $30/day. Achieves 92% reduction on code search (17,765→1,408 tokens) using AST compression, SmartCrusher for JSON, and HuggingFace prose model. Install: npm install -g headroom-ai && headroom wrap claude
+
+- https://alex-vicente.dev/en/blog/headroom-netflix-context-compression-ai-agents
+  Title: Headroom: How Netflix Cut AI Agent Token Costs by 92%
+  Summary: English version. Headroom compresses LLM context using 6 methods by content type. Real cost reduction from $200 to $30/day. No accuracy degradation on GSM8K, TruthfulQA, SQuAD v2. Works as CLI wrapper, HTTP proxy, Python/TypeScript library, or MCP server.
 
 - https://alex-vicente.dev/es/blog/codegraph-codigo-sin-busquedas-ciegas
   Title: CodeGraph: deja de buscar código a ciegas con tus agentes IA
-  Summary: CodeGraph builds a tree-sitter AST knowledge graph of your repository and exposes it as an MCP server. Replaces grep+cat exploration (5,000 tokens) with structured queries (200 tokens). Key tools: codegraph_explore, codegraph_impact, codegraph_callers, codegraph_callees.
+  Summary: CodeGraph builds a tree-sitter AST knowledge graph exposed as MCP server. Replaces grep+cat (5,000 tokens) with structured queries (200 tokens). codegraph_explore returns multi-file code in one call. codegraph_impact gives full dependency tree before refactoring. Install: npm install -g codegraph && codegraph init -i
+
+- https://alex-vicente.dev/en/blog/codegraph-code-without-blind-searches
+  Title: CodeGraph: Stop Searching Code Blindly with Your AI Agents
+  Summary: English version. Local SQLite index, no external server, sub-millisecond reads. From 15,000 to 3,000 tokens to understand a complete system. Tools: codegraph_search, codegraph_callers, codegraph_callees, codegraph_impact, codegraph_explore, codegraph_node.
 
 - https://alex-vicente.dev/es/blog/agent-skills-autoskills-supercharge-claude-code
   Title: Agent Skills y autoskills: cómo potenciar tu agente IA en 30 segundos
-  Summary: Agent Skills are portable Markdown files that give AI agents domain know-how. autoskills (npx autoskills) auto-detects your tech stack and installs the best skills. Covers top skills for developers: geo-seo-claude, code-review, codegraph, security-review, verify, simplify.
+  Summary: Agent Skills are portable Markdown files giving AI agents domain know-how. npx autoskills auto-detects your stack and installs the best skills in 30 seconds. Must-haves: geo-seo-claude, code-review, codegraph, security-review, verify. Install: npm install -g @anthropic-ai/claude-code && npx autoskills
+
+- https://alex-vicente.dev/en/blog/agent-skills-autoskills-supercharge-claude-code
+  Title: Agent Skills and autoskills: How to Supercharge Your AI Agent in 30 Seconds
+  Summary: English version. Skills work in Claude Code, Codex CLI, Cursor, and OpenCode without modification. A well-written skill saves 5-10 round trips per task. Community has 100+ public skills at awesomeskill.ai.
 
 - https://alex-vicente.dev/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity
   Title: GEO, AEO y SEO: cómo optimizar tu web para que la IA te cite
-  Summary: AI-referred traffic grew 527% YoY. GEO (Generative Engine Optimization) makes content citable by ChatGPT, Perplexity, Claude, and Google AI Overviews. Key levers: llms.txt, FAQPage schema, AI crawler access, extractable paragraph format (130-170 words), and prerendering for SPAs.
+  Summary: AI-referred traffic grew 527% YoY. GEO optimizes for LLM citation vs. Google ranking. Key levers: llms.txt in domain root, FAQPage schema with real questions, allow GPTBot/ClaudeBot/PerplexityBot in robots.txt. SPAs without SSR show empty pages to all crawlers — fix that first. Audit: npx install github.com/zubair-trabzada/geo-seo-claude
+
+- https://alex-vicente.dev/en/blog/geo-aeo-seo-optimize-web-for-ai-chatgpt-perplexity
+  Title: GEO, AEO, and SEO: How to Optimize Your Web for AI Citation
+  Summary: English version. Georgia Tech/Princeton/IIT Delhi study: 30-115% more LLM visibility with GEO optimization. Extractable paragraphs 130-170 words, numbered steps, comparison tables have highest citability.
 
 - https://alex-vicente.dev/es/blog/como-revisar-prs-automaticamente-con-agentes-ia
   Title: Cómo revisar PRs automáticamente con agentes IA (y no morir en el intento)
-  Summary: Three-layer automated PR review workflow: code-review (ultra) for correctness bugs and inline comments, security-review for auth/validation changes, and verify to confirm fixes don't introduce regressions. Covers what to delegate to agents vs. what to reserve for human judgment.
+  Summary: Three-layer automated PR review: code-review ultra (correctness bugs + inline comments with --comment), security-review (auth/validation changes), verify (browser navigation to catch regressions). Rule: delegate bug detection to agent, reserve design decisions for humans. Install: npm install -g @anthropic-ai/claude-code && npx autoskills
+
+- https://alex-vicente.dev/en/blog/how-to-review-prs-automatically-with-ai-agents
+  Title: How to Review PRs Automatically with AI Agents (and Not Die Trying)
+  Summary: English version. Agents are good at detecting local problems (uninitialized variables, missing input validation) but bad at judging abstraction correctness or business logic fit. Use ultra level for multi-angle parallel subagent analysis.
 
 - https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
   Title: Roadmap para convertirte en Ingeniero IA en 2026
