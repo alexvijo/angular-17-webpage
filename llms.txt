@@ -101,7 +101,17 @@ Alex Vicente is a software developer focused on applied AI for product: designin
 
 ## Core Expertise
 
-Angular, TypeScript, Python, FastAPI, LangChain, LangGraph, LangSmith, RAG, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, MLOps, Docker, CI/CD, Chroma, Pinecone, embeddings, AI agents, intelligent automation, Server-Sent Events, streaming.
+**Frontend:** Angular 18, Angular 20, TypeScript, RxJS, NgRx, Angular Material, PrimeNG, Standalone Components, Microfrontends, Lazy Loading, Angular CLI, Webpack, Vite, esbuild, HTML5, CSS3, SCSS.
+
+**Backend:** Node.js, NestJS, Express.js, FastAPI, Spring Boot, Java, Kotlin, REST API, Server-Sent Events, WebSockets, GraphQL.
+
+**AI / LLM:** LangGraph, LangChain, LangSmith, RAG, AI Agents, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, embeddings, vector databases, MLOps, prompt engineering, GitHub Copilot, IA-native development.
+
+**Data & Infra:** MongoDB, SQL, Chroma, Pinecone, Docker, CI/CD, GitHub Actions, Jenkins, SonarQube, Jira, Confluence.
+
+**Metodologías:** Scrum, Kanban, Clean Code, TDD, Code Review, Software Architecture.
+
+**Disponibilidad:** Trabajo remoto 100% — España y Europa. Angular Developer freelance / contrato. Inglés profesional.
 
 ## Crawling Notes
 
