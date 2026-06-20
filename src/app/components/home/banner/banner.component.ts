@@ -43,11 +43,11 @@ export class BannerComponent implements OnInit {
         ? 'Alex Vicente - Desarrollador de IA | AI Developer'
         : 'Alex Vicente - AI Developer | Desarrollador de IA',
       description: isSpanish
-        ? 'AI Developer especializado en agentes IA, LLM, automatizacion inteligente, RAG y arquitectura Angular orientada a negocio.'
-        : 'AI Developer specialized in AI agents, LLM workflows, intelligent automation, RAG, and business-focused Angular architecture.',
+        ? 'Desarrollador Angular y AI Developer con experiencia en agentes IA, LLM, RAG, TypeScript, RxJS, Node.js y arquitectura frontend orientada a negocio. Disponible para proyectos remotos en España.'
+        : 'Angular Developer and AI Developer with experience in AI agents, LLM, RAG, TypeScript, RxJS, Node.js, and business-focused frontend architecture. Available for remote projects in Spain.',
       keywords: isSpanish
-        ? 'Alex Vicente, Desarrollador de IA, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript'
-        : 'Alex Vicente, AI Developer, LLM Developer, AI Agents, RAG, Angular, TypeScript, Product Engineering',
+        ? 'Alex Vicente,Desarrollador Angular, Programador Angular, Developer Angular, Desarrollador Frontend, Desarrollador Backend, Desarrollador Full Stack, Programador Full Stack, AI Developer, Angular remoto España, LLM Developer, Agentes IA, RAG, TypeScript, RxJS, NgRx, Node.js, Spring Boot, CI/CD, Docker, Microfrontends, Claude Code, IA Native, Angular 18, Angular 20, NestJS, REST API, Scrum, Clean Code, SonarQube, LangGraph, LangChain, MLOps'
+        : 'Alex Vicente,Angular Developer, Angular Programmer, Frontend Developer, Backend Developer, Full Stack Developer, Angular Developer Spain remote, AI Developer, LLM Developer, AI Agents, RAG, TypeScript, RxJS, NgRx, Node.js, Microfrontends, Claude Code, AI Native, Angular 18, Angular 20, NestJS, REST API, LangGraph, LangChain, MLOps',
       url: `https://alex-vicente.dev/${lang}/inicio`,
       lang
     });
@@ -65,30 +65,38 @@ export class BannerComponent implements OnInit {
     const faqItems = isSpanish
       ? [
           {
-            question: '¿Qué tipo de proyectos desarrollo con IA?',
-            answer: 'Desarrollo asistentes con agentes IA, integraciones LLM, automatizaciones y experiencias web de producto con Angular.'
+            question: '¿Qué stack técnico utilizo como desarrollador Angular?',
+            answer: 'Angular 18-20, TypeScript, RxJS, NgRx, Angular Material, Node.js, REST APIs, CI/CD con GitHub Actions, Docker y SonarQube. También trabajo con microfrontends y standalone components.'
           },
           {
-            question: '¿Trabajo con modelos locales y en cloud?',
-            answer: 'Sí. Diseño soluciones con LM Studio y Ollama en local, y también con proveedores cloud según coste, latencia y seguridad.'
+            question: '¿Estoy disponible para trabajo remoto en España?',
+            answer: 'Sí, trabajo en modalidad 100% remoto para empresas en España y Europa. Tengo experiencia en equipos distribuidos con metodologías ágiles (Scrum, Kanban) y herramientas como Jira y Confluence.'
           },
           {
-            question: '¿Qué stack técnico utilizo?',
-            answer: 'Angular, TypeScript, APIs, evaluación de prompts, observabilidad y buenas prácticas de despliegue continuo.'
+            question: '¿Qué experiencia tengo en IA aplicada al desarrollo?',
+            answer: 'Desarrollo agentes IA con LangGraph y LangChain, pipelines RAG, integraciones LLM con Angular, y uso de Claude Code y Claude Code para desarrollo IA-native. Experiencia con MLOps, LangSmith y modelos locales con Ollama.'
+          },
+          {
+            question: '¿Trabajo con backend además de frontend Angular?',
+            answer: 'Sí. Trabajo como Full Stack con Node.js, Express, NestJS, FastAPI y Spring Boot. Manejo MongoDB, SQL y bases de datos vectoriales como Chroma y Pinecone.'
           }
         ]
       : [
           {
-            question: 'What kind of AI projects do I build?',
-            answer: 'I build agentic assistants, LLM integrations, automations, and product-ready web experiences with Angular.'
+            question: 'What is my Angular technical stack?',
+            answer: 'Angular 18-20, TypeScript, RxJS, NgRx, Angular Material, Node.js, REST APIs, CI/CD with GitHub Actions, Docker, and SonarQube. I also work with microfrontends and standalone components.'
           },
           {
-            question: 'Do I work with local and cloud models?',
-            answer: 'Yes. I design solutions with local stacks like LM Studio and Ollama, and cloud providers based on cost, latency, and security.'
+            question: 'Am I available for remote work in Spain?',
+            answer: 'Yes, I work 100% remotely for companies in Spain and Europe. I have experience in distributed teams with agile methodologies (Scrum, Kanban) and tools like Jira and Confluence.'
           },
           {
-            question: 'What is my core technical stack?',
-            answer: 'Angular, TypeScript, APIs, prompt evaluation, observability, and continuous delivery best practices.'
+            question: 'What is my experience in AI-native development?',
+            answer: 'I build AI agents with LangGraph and LangChain, RAG pipelines, LLM integrations with Angular, and use Claude Code and Claude Code for AI-native development. Experience with MLOps, LangSmith, and local models with Ollama.'
+          },
+          {
+            question: 'Do I work with backend as well as Angular frontend?',
+            answer: 'Yes. I work as Full Stack with Node.js, Express, NestJS, FastAPI, and Spring Boot. I handle MongoDB, SQL, and vector databases like Chroma and Pinecone.'
           }
         ];
 
