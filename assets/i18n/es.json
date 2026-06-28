@@ -7,9 +7,9 @@
     "Header.Item4": "Contacto",
     "Header.Item5": "Blog",
 
-    "Banner.Pretitle": "Hola, mi nombre es",
-    "Banner.Role": "soy Desarrollador de SW",
-    "Banner.Description": "Comprometido con la calidad del código y el impacto en negocio<span class='blinking-cursor'>_</span>",
+    "Banner.Pretitle": "Hola, soy",
+    "Banner.Role": "Desarrollador Full-stack",
+    "Banner.Description": "Aporto conocimiento transversal de un humano; para el resto, cuento con Claude Code<span class='blinking-cursor'>_</span>",
     "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Sobre mi",
@@ -71,13 +71,6 @@
         "Tab": "Daniel Santos",
         "Title": "Mr. Santos",
         "Date": "https://www.youtube.com/@MrSantos",
-        "Description": []
-      },
-      {
-        "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nw4xlzfT5u3snP6fTJHZW_yQm1-ZgEfa0veu7Ah2Ukx7k=s176-c-k-c0x00ffffff-no-rj",
-        "Tab": "David Battaglia",
-        "Title": "@DavidBattaglia",
-        "Date": "https://www.youtube.com/@DavidBattaglia",
         "Description": []
       },
       {
