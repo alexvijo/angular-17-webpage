@@ -137,9 +137,6 @@ export class PixelCoderComponent implements AfterViewInit, OnDestroy {
     // ── PIXEL MONSTER ICON ON SHIRT ─────────────────
     const IC  = '#E8734A'; // orange body
     const ICE = this.SHIRT; // dark cutout (eyes/mouth/gaps)
-    // Antenas top
-    r(22, 22, 1, 1, IC);
-    r(26, 22, 1, 1, IC);
     // Body: 7×5 block, cols 21-27, rows 23-27
     r(21, 23, 7, 5, IC);
     // Eyes (dark cutouts, 1×2 each)

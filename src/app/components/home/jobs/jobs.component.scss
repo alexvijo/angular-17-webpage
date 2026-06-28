@@ -179,6 +179,10 @@
             width: 100%;
             height: 500px;
         }
+
+        iframe {
+            min-height: 300px;
+        }
     }
 
     .power-law-widget-container {

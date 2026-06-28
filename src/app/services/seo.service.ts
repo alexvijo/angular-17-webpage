@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID, DOCUMENT } from '@angular/core';
+import { Inject, Injectable, DOCUMENT } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
@@ -14,8 +13,7 @@ export class SeoService {
   constructor(
     private titleService: Title,
     private metaService: Meta,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: object
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   updatePageSEO(config: {
@@ -70,10 +68,6 @@ export class SeoService {
   }
 
   updateHreflangAlternates(paths: { esPath: string; enPath: string }) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     this.document
       .querySelectorAll(this.managedAlternateSelector)
       .forEach((element) => element.remove());
@@ -87,10 +81,6 @@ export class SeoService {
   }
 
   updateJsonLd(schema: Record<string, unknown>) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     const existingScript = this.document.getElementById(this.managedJsonLdId);
     if (existingScript) {
       existingScript.remove();
@@ -131,18 +121,10 @@ export class SeoService {
   }
 
   clearJsonLd() {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     this.document.getElementById(this.managedJsonLdId)?.remove();
   }
 
   private updateMeta(attrName: string, attrValue: string, content: string) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     const selector = `meta[${attrName}="${attrValue}"]`;
     const element = this.document.querySelector(selector);
 
@@ -157,10 +139,6 @@ export class SeoService {
   }
 
   private updateCanonicalUrl(url: string) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     let link: HTMLLinkElement | null = this.document.querySelector('link[rel="canonical"]');
     if (!link) {
       link = this.document.createElement('link');
