@@ -8,19 +8,31 @@
   "Header.Item5": "Blog",
 
   "Banner.Pretitle": "Hi, my name is",
-  "Banner.Role": "I'm a SW Developer",
-  "Banner.Description": "Committed to code quality<br> and business impact<span class='blinking-cursor'>_</span>",
+  "Banner.Role": "AI Engineer · Full-stack",
+  "Banner.Description": "I build, validate and maintain real AI systems in production.<br>I bring the judgment; Claude Code handles the rest<span class='blinking-cursor'>_</span>",
+  "Skills.AI Engineering": "Taking AI to production: model APIs, evals, security and observability.",
+  "Skills.Agentes IA": "Multi-agent orchestration with LangGraph and LangChain, human in the loop.",
+  "Skills.RAG": "Semantic search over internal documentation with vector databases.",
+  "Skills.Claude Code": "AI-native development: AI proposes, I review, test and explain every change.",
+  "Skills.System Design": "Scalable architectures, documented technical decisions and business trade-offs.",
+  "Skills.Angular": "Enterprise frontend with standalone components, signals and microfrontends.",
+  "Skills.TypeScript": "Typed, maintainable code built to scale.",
+  "Skills.RxJS / NgRx": "Reactive programming and predictable state management.",
+  "Skills.Node.js / NestJS": "REST APIs and modular backend services.",
+  "Skills.Spring Boot": "Robust Java backend with MySQL.",
+  "Skills.Testing": "Unit and e2e tests: never merge code you do not understand.",
+  "Skills.Docker / CI/CD": "Reproducible deployments and pipelines with GitHub Actions and SonarQube.",
   "Banner.ActionBtn": "Send me an email",
 
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-    "I specialize in the <span class='underline'>Angular</span> framework.",
-    "I work on writing <span class='underline'>unit tests</span>, performing <span class='underline'>continuous integration</span>, and also covering backend developer roles with <span class='underline'>Spring Boot</span> and <span class='underline'>MySQL</span>.",
-    "My skills also include implementing system improvements, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
-    "I am the culmination of many skills and talents. I like to observe those who think disruptively and step out of their comfort zone.",
-    "I define myself <span class='underline'>not</span> by the work I have done but <span class='underline'>by the work I want to do</span>. I can learn any skill. My way of being is what sets me apart from others.",
-    "Some technologies I work with are:"
+      "I'm a <span class='underline'>generalist</span> software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.",
+      "Rather than a single technology, my specialty is <span class='underline'>solving problems</span>: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.",
+      "I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the <span class='underline'>quality</span> that keeps them running (testing, continuous integration and deployment).",
+      "I use AI as a multiplier, not a replacement: it proposes, I bring the <span class='underline'>judgment</span>, reviewing, validating and explaining every technical decision.",
+      "I'm inspired by people who think disruptively and step out of their comfort zone. I define myself not by the work I've done but by the work I aspire to do: I can learn any skill, and my character is what sets me apart."
   ],
+  "AboutMe.ToolsTitle": "My everyday tools",
   "Experience.Title": "Interests",
   "InterestQuotes.Title": "I'm interested in what they say",
   "Experience.Jobs": [
@@ -193,10 +205,10 @@
         "Description": []
       },
       {
-        "imageUrl": "https://www.nodualidad.info/imagen/maestros-griegos/marco-aurelio.jpg",
-        "Tab": "Marco Aurelio",
-        "Title": "",
-        "Date": "https://www.amazon.es/gp/product/8416544530/ref=ox_sc_act_title_2?smid=A1AT7YVPFBWXBL&psc=1",
+        "imageUrl": "https://unavatar.io/x/Recuenco",
+        "Tab": "Javier Recuenco",
+        "Title": "@Recuenco",
+        "Date": "https://x.com/Recuenco",
         "Description": []
       },
       {

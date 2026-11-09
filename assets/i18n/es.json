@@ -8,19 +8,31 @@
     "Header.Item5": "Blog",
 
     "Banner.Pretitle": "Hola, soy",
-    "Banner.Role": "Desarrollador Full-stack",
-    "Banner.Description": "Aporto conocimiento transversal de un ser humano; para el resto, cuento con Claude Code<span class='blinking-cursor'>_</span>",
+    "Banner.Role": "AI Engineer · Full-stack",
+    "Banner.Description": "Construyo, valido y mantengo sistemas reales con IA en producción.<br>El criterio lo pongo yo; el resto, con Claude Code<span class='blinking-cursor'>_</span>",
+    "Skills.AI Engineering": "Llevar la IA a producción: APIs de modelos, evaluación, seguridad y observabilidad.",
+    "Skills.Agentes IA": "Orquestación de sistemas multiagente con LangGraph y LangChain, con humano en el bucle.",
+    "Skills.RAG": "Búsqueda semántica sobre documentación interna con bases de datos vectoriales.",
+    "Skills.Claude Code": "Desarrollo IA-native: la IA propone, yo reviso, testeo y explico cada cambio.",
+    "Skills.System Design": "Arquitecturas escalables, decisiones técnicas documentadas y trade-offs de negocio.",
+    "Skills.Angular": "Frontend empresarial con standalone components, signals y microfrontends.",
+    "Skills.TypeScript": "Código tipado, mantenible y preparado para escalar.",
+    "Skills.RxJS / NgRx": "Programación reactiva y gestión de estado predecible.",
+    "Skills.Node.js / NestJS": "APIs REST y servicios backend modulares.",
+    "Skills.Spring Boot": "Backend Java robusto con MySQL.",
+    "Skills.Testing": "Pruebas unitarias y e2e: nunca se mergea código que no se entiende.",
+    "Skills.Docker / CI/CD": "Despliegues reproducibles y pipelines con GitHub Actions y SonarQube.",
     "Banner.ActionBtn": "Envíame un email",
 
     "AboutMe.Title": "Sobre mi",
     "AboutMe.Paragraphs": [
-        "Soy especialista en el framework <span class='underline'>Angular</span>.",
-        "Me dedico a escribir <span class='underline'>pruebas unitarias</span>, realizar <span class='underline'>integración continua</span> y cubrir roles de backend developer utilizando <span class='underline'>Spring Boot</span> y <span class='underline'>MySQL</span>.",
-        "Mis habilidades incluyen la implementación de mejoras en sistemas, la optimización de sitios, la estandarización de patrones y la propuesta y ejecución de ideas que aporten valor a los proyectos en los que participo.",
-        "Poseo un conjunto diversificado de habilidades y talentos. Me inspiran las personas que piensan de manera disruptiva y se aventuran fuera de su zona cómoda.",
-        "Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar. Estoy capacitado para aprender cualquier habilidad. Mi carácter es lo que me distingue de los demás.",
-        "Algunas de las tecnologías con las que trabajo incluyen:"
+        "Soy un ingeniero de software <span class='underline'>generalista</span>: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.",
+        "Más que en una tecnología concreta, me especializo en <span class='underline'>resolver problemas</span>: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.",
+        "Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la <span class='underline'>calidad</span> que los sostiene (testing, integración continua y despliegue).",
+        "Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el <span class='underline'>criterio</span>, reviso, valido y explico cada decisión técnica.",
+        "Me inspiran las personas que piensan de manera disruptiva y salen de su zona cómoda. Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar: puedo aprender cualquier habilidad, y mi carácter es lo que me distingue."
     ],
+    "AboutMe.ToolsTitle": "Mis herramientas del día a día",
     "Experience.Title": "Me interesa lo que dicen",
     "InterestQuotes.Title": "Me interesa",
     "Experience.Jobs": [
@@ -193,10 +205,10 @@
         "Description": []
       },
       {
-        "imageUrl": "https://www.nodualidad.info/imagen/maestros-griegos/marco-aurelio.jpg",
-        "Tab": "Marco Aurelio",
-        "Title": "",
-        "Date": "https://www.amazon.es/gp/product/8416544530/ref=ox_sc_act_title_2?smid=A1AT7YVPFBWXBL&psc=1",
+        "imageUrl": "https://unavatar.io/x/Recuenco",
+        "Tab": "Javier Recuenco",
+        "Title": "@Recuenco",
+        "Date": "https://x.com/Recuenco",
         "Description": []
       },
       {
