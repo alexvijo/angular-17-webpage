@@ -9,7 +9,7 @@
 
   "Banner.Pretitle": "Hi, my name is",
   "Banner.Role": "AI Engineer · Full-stack",
-  "Banner.Description": "I take AI products from idea to production: design, development, testing and deployment.<br>I bring the judgment; Claude Code handles the rest<span class='blinking-cursor'>_</span>",
+  "Banner.Description": "Full Stack Developer in Barcelona with 10+ years of experience. I take AI products from idea to production: design, development, testing and deployment.<br>I bring the judgment; Claude Code handles the rest<span class='blinking-cursor'>_</span>",
   "Skills.AI Engineering": "Integrating existing models into products: LLM APIs, evals, context, tokens and observability.",
   "Skills.Agentes IA": "Multi-agent orchestration with LangGraph and LangChain, human in the loop.",
   "Skills.MCP": "Connecting AI agents to tools, APIs and business data through the Model Context Protocol.",
