@@ -43,11 +43,11 @@ export class BannerComponent implements OnInit {
         ? 'Alex Vicente | AI Engineer · Full-stack'
         : 'Alex Vicente | AI Engineer · Full-stack',
       description: isSpanish
-        ? 'Alex Vicente, desarrollador Full Stack y AI Engineer en Barcelona con más de 10 años de experiencia: Angular, Spring Boot, Python/FastAPI, agentes IA, MCP y RAG en producción. Disponible en remoto.'
-        : 'Alex Vicente, Full Stack Developer and AI Engineer in Barcelona with 10+ years of experience: Angular, Spring Boot, Python/FastAPI, AI agents, MCP and RAG in production. Available remotely.',
+        ? 'Alex (Alejandro) Vicente, desarrollador Full Stack y AI Engineer en Barcelona con más de 10 años de experiencia: Angular, Spring Boot, Python/FastAPI, agentes IA, MCP y RAG en producción. Disponible en remoto.'
+        : 'Alex (Alejandro) Vicente, Full Stack Developer and AI Engineer in Barcelona with 10+ years of experience: Angular, Spring Boot, Python/FastAPI, AI agents, MCP and RAG in production. Available remotely.',
       keywords: isSpanish
-        ? 'Alex Vicente, Desarrollador Full Stack, Desarrollador Full Stack Barcelona, AI Engineer, Ingeniero IA, Ingeniero de IA freelance, Forward Deployed Engineer, AI Developer, LLM Developer, Agentes IA, MCP, Model Context Protocol, RAG, Seguridad LLM, Prompt Injection, LLMOps, Claude Code, IA Native, LangGraph, LangChain, Automatización con IA, Desarrollador Full Stack, Desarrollador Angular, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, remoto España'
-        : 'Alex Vicente, Full Stack Developer, Full Stack Developer Barcelona, AI Engineer, Freelance AI Engineer, Forward Deployed Engineer, AI Developer, LLM Developer, AI Agents, MCP, Model Context Protocol, RAG, LLM Security, Prompt Injection, LLMOps, Claude Code, AI Native, LangGraph, LangChain, AI Automation, Full Stack Developer, Angular Developer, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, remote Spain',
+        ? 'Alex Vicente, Alejandro Vicente, Desarrollador Full Stack, Desarrollador Full Stack Barcelona, AI Engineer, Ingeniero IA, Ingeniero de IA freelance, Forward Deployed Engineer, AI Developer, LLM Developer, Agentes IA, MCP, Model Context Protocol, RAG, Seguridad LLM, Prompt Injection, LLMOps, Claude Code, IA Native, LangGraph, LangChain, Automatización con IA, Desarrollador Full Stack, Desarrollador Angular, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, remoto España'
+        : 'Alex Vicente, Alejandro Vicente, Full Stack Developer, Full Stack Developer Barcelona, AI Engineer, Freelance AI Engineer, Forward Deployed Engineer, AI Developer, LLM Developer, AI Agents, MCP, Model Context Protocol, RAG, LLM Security, Prompt Injection, LLMOps, Claude Code, AI Native, LangGraph, LangChain, AI Automation, Full Stack Developer, Angular Developer, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, remote Spain',
       url: `https://alex-vicente.dev/${lang}/inicio`,
       lang
     });
