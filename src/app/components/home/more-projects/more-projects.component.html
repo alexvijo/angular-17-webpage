@@ -1,14 +1,13 @@
 <section class="section more-projects" id="more-projects">
-  @defer (on viewport) {
   <div class="container">
     <div class="section-box">
       <div class="pixel-coder-intro">
         <app-pixel-coder></app-pixel-coder>
       </div>
       <div class="d-flex flex-md-row flex-column justify-content-between">
-        <h3 class="section-title m-0">
+        <h1 class="section-title m-0">
           <span class='n-section-title'>01.</span> {{"OtherProjects.Title" | translate}}
-        </h3>
+        </h1>
         <div class="input-group mb-2">
           <input type="text" class="form-control" (keyup)="filterProjects($event)" placeholder="">
           <span class="input-group-text search-icon">
@@ -50,8 +49,5 @@
       </div>
     </div>
   </div>
-  } @placeholder {
-  <div>Proyectos propios...</div>
-}
 </section>
 

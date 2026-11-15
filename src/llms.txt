@@ -1,17 +1,31 @@
-# Alex Vicente — AI Developer & Software Engineer
+# Alex Vicente — AI Engineer
 
-> Desarrollador Angular, programador frontend y AI Developer. Disponible para trabajo remoto en España como developer, desarrollador, programador, frontend, backend y full stack.
+> Alex Vicente is an AI Engineer based in Barcelona, Spain. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
 
 Owner: Alex Vicente
+Role: AI Engineer (generalist software engineer: product, frontend, backend, data and AI)
+Location: Barcelona, Spain — remote
 Contact: alexvicentejose@gmail.com
 Primary Language: Spanish (es) and English (en)
 Site: https://alex-vicente.dev
 GitHub: https://github.com/alexvijo
 LinkedIn: https://www.linkedin.com/in/alexvicente/
+Previous site (archived): https://alexvijo.github.io/
 
 ## About
 
-Alex Vicente is a software developer focused on applied AI for product: designing and implementing agents with LangGraph and CrewAI, RAG pipelines with embeddings and vector databases (Chroma, Pinecone), LLM integration in Angular products, and production observability with LangSmith. He also builds full-stack applications with Angular 18, FastAPI, and TypeScript.
+Alex Vicente is an AI Engineer who builds complete products on top of existing AI models rather than training them. He designs, builds, tests and deploys AI agents orchestrated with LangGraph and LangChain, connects them to tools and business data through MCP, builds RAG pipelines with embeddings and vector databases (Chroma, Pinecone), hardens LLM systems against prompt injection with guardrails, and runs them in production with evaluation, observability (LangSmith) and cost control. He also delivers the surrounding software end to end: Angular/TypeScript frontends, Node.js/NestJS, FastAPI and Spring Boot backends, Docker and GitHub Actions CI/CD. He uses Claude Code for AI-native development: the AI proposes, he reviews, tests and explains every change.
+
+## Projects
+
+- private-rag — https://github.com/alexvijo/private-rag
+  Local RAG chat over your own documents (PDF, DOCX, XLSX, EPUB, TXT, CSV) with source citations. FastAPI + ChromaDB + sentence-transformers backend, Angular frontend, configurable LLM (local Ollama or OpenAI).
+
+- Agents and process automation — AI agents that run business workflows end to end, connected to tools and APIs via MCP, with a human in the loop.
+
+- LLMs in production (LLMOps) — prompt evaluation, observability, cost control and continuous delivery of LLM applications.
+
+- Claude Code with local models (Ollama) — private, offline AI-assisted development with no per-token cost.
 
 ## Main Pages
 
@@ -101,21 +115,22 @@ Alex Vicente is a software developer focused on applied AI for product: designin
 
 ## Core Expertise
 
-**Frontend:** Angular 18, Angular 20, TypeScript, RxJS, NgRx, Angular Material, PrimeNG, Standalone Components, Microfrontends, Lazy Loading, Angular CLI, Webpack, Vite, esbuild, HTML5, CSS3, SCSS.
+**AI Engineering:** AI agents (LangGraph, LangChain), Model Context Protocol (MCP), RAG, embeddings and vector databases (Chroma, Pinecone), LLM evaluation, LLMOps and observability (LangSmith), LLM security (prompt injection, guardrails, sensitive-data handling), cost and latency optimization, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), local models with Ollama, Claude Code and AI-native development.
 
-**Backend:** Node.js, NestJS, Express.js, FastAPI, Spring Boot, Java, Kotlin, REST API, Server-Sent Events, WebSockets, GraphQL.
+**Frontend:** Angular (standalone components, signals, SSR), TypeScript, RxJS, NgRx, microfrontends.
 
-**AI / LLM:** LangGraph, LangChain, LangSmith, RAG, AI Agents, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), Ollama, Open WebUI, embeddings, vector databases, MLOps, prompt engineering, Claude Code, IA-native development.
+**Backend:** Node.js, NestJS, FastAPI, Spring Boot (Java), REST APIs, Server-Sent Events.
 
-**Data & Infra:** MongoDB, SQL, Chroma, Pinecone, Docker, CI/CD, GitHub Actions, Jenkins, SonarQube, Jira, Confluence.
+**Data & Infra:** MongoDB, SQL, Docker, CI/CD with GitHub Actions, SonarQube.
 
-**Metodologías:** Scrum, Kanban, Clean Code, TDD, Code Review, Software Architecture.
+**Way of working:** System design with documented trade-offs, testing (unit and e2e), code review, Scrum/Kanban.
 
-**Disponibilidad:** Trabajo remoto 100% — España y Europa. Disponible como: developer, desarrollador, programador, frontend developer, backend developer, full stack developer, Angular developer. Inglés profesional.
+**Availability:** Open to AI Engineer roles — 100% remote, Spain and Europe — and to turnkey AI projects for small businesses and direct clients. Professional English.
 
 ## Crawling Notes
 
 - All public pages can be crawled (GPTBot, ClaudeBot, PerplexityBot explicitly allowed in robots.txt).
-- Canonical URL: https://alex-vicente.dev
+- Canonical URL: https://alex-vicente.dev/ — the older site https://alexvijo.github.io/ is archived and points here.
+- Full content for LLMs: https://alex-vicente.dev/llms-full.txt
 - Sitemap: https://alex-vicente.dev/sitemap.xml
 - Languages: Spanish (es) and English (en) — all content available in both languages.

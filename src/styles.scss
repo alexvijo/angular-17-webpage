@@ -172,7 +172,7 @@ a{
 }
 
 @media (max-width: 1000px){
-    .banner h2, .banner h3, .big-title{
+    .banner h1, .banner h2, .banner h3, .big-title{
         font-size: 70px !important;
     }
     .big-subtitle{
@@ -181,7 +181,7 @@ a{
 }
 
 @media (max-width: 768px){
-    .banner h2, .banner h3, .big-title{
+    .banner h1, .banner h2, .banner h3, .big-title{
         font-size: 60px; /* !important;*/
     }
     .section-title {
@@ -193,13 +193,13 @@ a{
 }
 
 @media (max-width: 480px){
-    .banner h2, .banner h3, .big-title{
+    .banner h1, .banner h2, .banner h3, .big-title{
         font-size: 50px; /*!important;*/
     }
 }
 
 @media (max-width: 376px){
-    .banner h2, .banner h3, .big-title{
+    .banner h1, .banner h2, .banner h3, .big-title{
         font-size: 67px !important;
     }
 }

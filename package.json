@@ -7,6 +7,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
+    "prebuild": "node scripts/generate-llms-full.mjs",
     "build": "ng build --base-href=https://alex-vicente.dev/ && npm run purgecss && copy dist\\alexvijo\\browser\\index.csr.html dist\\alexvijo\\browser\\index.html",
     "deploy": "npm run build && ng deploy",
     "test": "jest",

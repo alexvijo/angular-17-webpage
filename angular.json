@@ -37,6 +37,7 @@
               "src/robots.txt",
               "src/sitemap.xml",
               "src/llms.txt",
+              "src/llms-full.txt",
               "src/prerender-routes.txt"
             ],
             "styles": [
