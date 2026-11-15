@@ -32,9 +32,9 @@ export class AppComponent {
     this.languageService.initLanguage();
 
     this.seoService.updatePageSEO({
-      title: 'Alex Vicente - AI Developer | Desarrollador de IA',
-      description: 'AI Developer especializado en agentes IA, LLM, automatización inteligente, RAG y arquitectura Angular orientada a negocio.',
-      keywords: 'Alex Vicente, AI Developer, Desarrollador de IA, AI Agents, LLM, RAG, Angular, TypeScript, MLOps'
+      title: 'Alex Vicente | AI Engineer · Full-stack',
+      description: 'Alex (Alejandro) Vicente, desarrollador Full Stack y AI Engineer en Barcelona con más de 10 años de experiencia: Angular, Spring Boot, Python/FastAPI, agentes IA, MCP y RAG en producción. Disponible en remoto.',
+      keywords: 'Alex Vicente, Alejandro Vicente, Desarrollador Full Stack, AI Engineer, Agentes IA, MCP, RAG, Angular, Spring Boot, Python'
     });
 
     if (isPlatformBrowser(this.platformId)) {
