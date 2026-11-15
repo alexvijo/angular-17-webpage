@@ -35,11 +35,11 @@ export class MoreProjectsComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Proyectos propios - Repositorios GitHub y experimentos'
-        : 'Own Projects - GitHub Repositories and experiments',
+        ? 'Proyectos - Alex Vicente | AI Engineer · Full-stack'
+        : 'Projects - Alex Vicente | AI Engineer · Full-stack',
       description: isSpanish
-        ? 'Listado de proyectos propios y repositorios de GitHub con pruebas y experimentos de desarrollo.'
-        : 'List of own projects and GitHub repositories with development tests and experiments.',
+        ? 'Proyectos de Alex Vicente contados como problema, solución y resultado: RAG privado con IA local, agregador de vivienda y automatización de búsqueda de empleo.'
+        : 'Projects by Alex Vicente told as problem, solution and result: private RAG with local AI, a housing aggregator and job-search automation.',
       keywords: isSpanish
         ? 'proyectos propios, github, repositorios, experimentos, portfolio'
         : 'own projects, github, repositories, experiments, portfolio',
@@ -81,24 +81,34 @@ export class MoreProjectsComponent implements OnInit {
         window.scrollTo(0, 0)
     });
 
+    // Cada proyecto se cuenta como problema → solución → resultado, no como lista de tecnologías.
     this.Projects = [
       {
-        Title: isSpanish ? 'Vivienda Scraper' : 'Vivienda Scraper',
+        Title: 'Private RAG',
         Description: isSpanish
-          ? 'Un buscador de viviendas en tiempo real que agrega resultados de múltiples portales inmobiliarios españoles con mapa interactivo integrado.'
-          : 'Scraper to extract and analyze housing listings. A test and automation project on GitHub.',
-        ghLink: 'https://github.com/alexvijo/vivienda-scraper',
-        demoLink: 'https://github.com/alexvijo/vivienda-scraper',
-        Technologies: []
+          ? 'Problema: usar IA sobre documentación interna sin enviarla a terceros. Solución: chat RAG que responde sobre tus PDF, DOCX, XLSX, EPUB, TXT y CSV citando la fuente exacta de cada dato, con un LLM local (Ollama) u OpenAI. Resultado: respuestas verificables y datos que nunca salen del equipo.'
+          : 'Problem: using AI on internal documents without sending them to third parties. Solution: a RAG chat that answers over your PDF, DOCX, XLSX, EPUB, TXT and CSV files citing the exact source of every fact, with a local LLM (Ollama) or OpenAI. Result: verifiable answers and data that never leaves the machine.',
+        ghLink: 'https://github.com/alexvijo/private-rag',
+        demoLink: 'https://github.com/alexvijo/private-rag',
+        Technologies: ['RAG', 'FastAPI', 'ChromaDB', 'Ollama', 'Angular']
       },
       {
-        Title: isSpanish ? 'Empleo Scraper' : 'Empleo Scraper',
+        Title: 'Vivienda Scraper',
         Description: isSpanish
-          ? 'Scraper de ofertas de empleo que extrae y agrega resultados de múltiples portales de trabajo españoles.'
-          : 'Job listings scraper that extracts and aggregates results from multiple Spanish job portals.',
+          ? 'Problema: buscar piso obliga a revisar a mano varios portales con anuncios duplicados. Solución: buscador en tiempo real que agrega 6 portales inmobiliarios (Idealista, Fotocasa, Pisos.com, Habitaclia, YaEncontre, Trovimap) en un mapa interactivo, con filtros y caché de 30 minutos. Resultado: una sola búsqueda en lugar de seis.'
+          : 'Problem: house hunting means checking several portals by hand, full of duplicate listings. Solution: a real-time search that aggregates 6 Spanish real-estate portals (Idealista, Fotocasa, Pisos.com, Habitaclia, YaEncontre, Trovimap) on an interactive map, with filters and a 30-minute cache. Result: one search instead of six.',
+        ghLink: 'https://github.com/alexvijo/vivienda-scraper',
+        demoLink: 'https://github.com/alexvijo/vivienda-scraper',
+        Technologies: ['Python', 'FastAPI', 'Angular', 'Leaflet', 'SQLite']
+      },
+      {
+        Title: 'Empleo Scraper',
+        Description: isSpanish
+          ? 'Problema: las ofertas relevantes se pierden entre portales y las mejores se cubren en horas. Solución: agregador que automatiza las búsquedas en portales de empleo españoles, deduplica resultados y los centraliza en un panel. Resultado: búsqueda de empleo automatizada en lugar de manual.'
+          : 'Problem: relevant job offers get lost across portals and the best ones are filled within hours. Solution: an aggregator that automates searches on Spanish job portals, deduplicates results and centralizes them in one dashboard. Result: automated job search instead of manual.',
         ghLink: 'https://github.com/alexvijo/empleo-scraper',
         demoLink: 'https://github.com/alexvijo/empleo-scraper',
-        Technologies: []
+        Technologies: ['Python', 'FastAPI', 'Playwright', 'SQLAlchemy', 'Angular']
       }
     ];
     this.filteredProjects = [...this.Projects];

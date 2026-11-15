@@ -30,7 +30,53 @@
         "Más que en una tecnología concreta, me especializo en <span class='underline'>resolver problemas</span>: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.",
         "Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la <span class='underline'>calidad</span> que los sostiene (testing, integración continua y despliegue).",
         "Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el <span class='underline'>criterio</span>, reviso, valido y explico cada decisión técnica.",
+        "Trabajo cerca del negocio: entiendo el problema con el cliente, lo convierto en producto y lo llevo a producción midiendo su <span class='underline'>impacto</span> (tiempo ahorrado, costes de cloud y tokens, uso real). Diez años como freelance con clientes propios me enseñaron que el software vale por lo que resuelve.",
         "Me inspiran las personas que piensan de manera disruptiva y salen de su zona cómoda. Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar: puedo aprender cualquier habilidad, y mi carácter es lo que me distingue."
+    ],
+    "Career.Title": "Experiencia e impacto",
+    "Career.Items": [
+      {
+        "role": "Telefonica Technical Engineer",
+        "company": "Westcon-Comstor",
+        "period": "2024 – actualidad · remoto",
+        "impact": "Ingeniero técnico para la cuenta de Telefónica."
+      },
+      {
+        "role": "Software Developer",
+        "company": "Eurecat – Centro Tecnológico de Catalunya",
+        "period": "2019 – 2024",
+        "impact": "Casi 5 años desarrollando, probando y manteniendo varias aplicaciones web en producción de principio a fin, con Spring Boot, Angular y Docker."
+      },
+      {
+        "role": "JavaScript Developer",
+        "company": "Between Technology",
+        "period": "2018 – 2019",
+        "impact": "Migré y mejoré aplicaciones de Penguin Random House Grupo Editorial para Android e iOS (Angular, Ionic, Cordova); refactoricé y documenté APIs en PHP."
+      },
+      {
+        "role": "Full-stack Developer",
+        "company": "Ingenia",
+        "period": "2018",
+        "impact": "Desarrollo y mejora de la web de reservas de romeuferries.com."
+      },
+      {
+        "role": "Web Developer",
+        "company": "Ciber Spain",
+        "period": "2015 – 2016",
+        "impact": "Desarrollé y probé toda la interfaz de «Clínica Online», en uso por clientes de Mútua Universal."
+      },
+      {
+        "role": "Developer Consultant",
+        "company": "Altran",
+        "period": "2014 – 2015",
+        "impact": "Consultor front-end: integración de interfaces en proyectos de cliente."
+      },
+      {
+        "role": "Desarrollador web freelance",
+        "company": "Clientes propios",
+        "period": "2008 – 2018",
+        "impact": "Diez años trabajando directamente con clientes: interfaces responsive y accesibles, SPAs sobre APIs REST y temas WordPress a medida."
+      }
     ],
     "AboutMe.ToolsTitle": "Mis herramientas del día a día",
     "Experience.Title": "Me interesa lo que dicen",

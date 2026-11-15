@@ -1,8 +1,8 @@
 # Alex Vicente — AI Engineer
 
-> Alex Vicente is an AI Engineer based in Barcelona, Spain. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
+> Alex (Alejandro) Vicente is a Full Stack Developer and AI Engineer based in Barcelona, Spain, with 10+ years of experience. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
 
-Owner: Alex Vicente
+Owner: Alex Vicente (Alejandro Vicente)
 Role: AI Engineer (generalist software engineer: product, frontend, backend, data and AI)
 Location: Barcelona, Spain — remote
 Contact: alexvicentejose@gmail.com
@@ -140,7 +140,7 @@ Alex Vicente is an AI Engineer who builds complete products on top of existing A
 ## Perfil (es)
 AI Engineer · Full-stack — Desarrollador Full Stack en Barcelona con más de 10 años de experiencia. Llevo productos con IA de la idea a producción: diseño, desarrollo, testing y despliegue.El criterio lo pongo yo; el resto, con Claude Code
 
-Soy un ingeniero de software generalista: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.
+Soy Alex (Alejandro) Vicente, desarrollador Full Stack y AI Engineer en Barcelona, un ingeniero de software generalista: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.
 Más que en una tecnología concreta, me especializo en resolver problemas: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.
 Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la calidad que los sostiene (testing, integración continua y despliegue).
 Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el criterio, reviso, valido y explico cada decisión técnica.
@@ -181,7 +181,7 @@ A: APIs de LLM, MCP, LangGraph, Angular, TypeScript, Node.js, Spring Boot, testi
 ## Profile (en)
 AI Engineer · Full-stack — Full Stack Developer in Barcelona with 10+ years of experience. I take AI products from idea to production: design, development, testing and deployment.I bring the judgment; Claude Code handles the rest
 
-I'm a generalist software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.
+I'm Alex (Alejandro) Vicente, a Full Stack Developer and AI Engineer in Barcelona — a generalist software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.
 Rather than a single technology, my specialty is solving problems: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.
 I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the quality that keeps them running (testing, continuous integration and deployment).
 I use AI as a multiplier, not a replacement: it proposes, I bring the judgment, reviewing, validating and explaining every technical decision.
