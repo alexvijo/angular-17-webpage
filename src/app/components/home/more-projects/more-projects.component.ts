@@ -7,11 +7,12 @@ import { RouterModule } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Project } from '../../../models/Project.interface';
 import { SeoService } from '../../../services/seo.service';
+import { PixelCoderComponent } from '../../general/pixel-coder/pixel-coder.component';
 
 @Component({
     selector: 'app-more-projects',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [TranslateModule, NgbModule, NgbNavModule, RouterModule],
+    imports: [TranslateModule, NgbModule, NgbNavModule, RouterModule, PixelCoderComponent],
     templateUrl: './more-projects.component.html',
     styleUrl: './more-projects.component.scss'
 })

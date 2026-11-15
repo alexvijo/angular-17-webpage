@@ -28,19 +28,37 @@
               <p [innerHTML]="text" data-aos="fade-up" data-aos-duration="1000">
               </p>
             }
-            <ul class="skills-list" data-aos="fade-up">
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Angular </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">RxJS</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">HTML5 &amp; (S)CSS </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">NgRX </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Docker</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jest/Cypress </span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Postman</span></li>
-              <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jenkins (CI/CD) </span></li>
-            </ul>
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <div class="section-box">
+      <div class="about-title mb-4" data-aos="fade-up">
+        <h3 class="section-title">
+          <span class='n-section-title'>02.</span> {{"AboutMe.ToolsTitle" | translate}}
+        </h3>
+      </div>
+      <div class="tools-orbit-wrapper" data-aos="fade-up">
+        <div class="tools-orbit-track">
+          <ul class="tools-orbit" [style.--tools-count]="tools.length">
+            @for (tool of tools; track tool.name; let i = $index) {
+              <li class="tool-orbit-item" [style.--i]="i" [title]="tool.name">
+                <span class="tool-orbit-spin-counter">
+                  <span class="tool-orbit-icon">
+                    @if (tool.icon) {
+                      <img [src]="tool.icon" [alt]="tool.name" loading="lazy" width="28" height="28">
+                    } @else {
+                      <span class="tool-orbit-emoji" aria-hidden="true">{{tool.emoji}}</span>
+                    }
+                  </span>
+                  <span class="tool-orbit-label">{{tool.name}}</span>
+                </span>
+              </li>
+            }
+          </ul>
+        </div>
       </div>
     </div>
   </div>

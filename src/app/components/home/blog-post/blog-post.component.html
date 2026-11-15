@@ -1,27 +1,54 @@
 <section class="section blog-post">
   <div class="container">
     <div class="section-box">
-      @if (post) {
-        <article>
-          <a class="back-link" [routerLink]="['/', language, 'blog']">
-            {{ language === 'es' ? 'Volver al blog' : 'Back to blog' }}
-          </a>
+      <div class="cmd-window" data-aos="fade-up" data-aos-duration="800">
+        <div class="cmd-body">
+          @if (post) {
+            <article>
+              <p class="cmd-line">
+                <span class="cmd-prompt">alex&#64;alexvicente-dev</span><span class="cmd-sep">:</span><span class="cmd-path">~/blog</span><span class="cmd-dollar">$</span> cat {{ (language === 'es' ? post.slugEs : post.slugEn) }}.post
+              </p>
+              <p class="cmd-line">&nbsp;</p>
 
-          <h1 class="post-title">{{ getTitle(post) }}</h1>
-          <p class="post-meta">{{ post.publishedAt }} • {{ post.keywords.join(' • ') }}</p>
+              <h1 class="post-title"># {{ getTitle(post) }}</h1>
+              <p class="post-meta"># {{ post.publishedAt }} | tags: {{ post.keywords.join(', ') }}</p>
+              <p class="cmd-line">&nbsp;</p>
 
-          @for (paragraph of getParagraphs(post); track paragraph) {
-            <p class="post-paragraph" [innerHTML]="formatParagraph(paragraph)"></p>
+              @for (paragraph of getParagraphs(post); track paragraph) {
+                <p class="post-paragraph" [innerHTML]="formatParagraph(paragraph)"></p>
+              }
+
+              <p class="cmd-line mt-3">
+                <span class="cmd-prompt">alex&#64;alexvicente-dev</span><span class="cmd-sep">:</span><span class="cmd-path">~/blog</span><span class="cmd-dollar">$</span> cd ..
+              </p>
+              <a class="back-link" [routerLink]="['/', language, 'blog']">
+                &#8618; {{ language === 'es' ? 'volver al blog' : 'back to blog' }}
+              </a>
+              <p class="cmd-line mt-2">
+                <span class="cmd-prompt">alex&#64;alexvicente-dev</span><span class="cmd-sep">:</span><span class="cmd-path">~/blog</span><span class="cmd-dollar">$</span>
+                <span class="cmd-caret">&#9608;</span>
+              </p>
+            </article>
+          } @else {
+            <article>
+              <p class="cmd-line">
+                <span class="cmd-prompt">alex&#64;alexvicente-dev</span><span class="cmd-sep">:</span><span class="cmd-path">~/blog</span><span class="cmd-dollar">$</span> cat {{ language === 'es' ? 'post-no-encontrado' : 'post-not-found' }}.post
+              </p>
+              <p class="cmd-line cmd-error">
+                cat: {{ language === 'es' ? 'post-no-encontrado' : 'post-not-found' }}.post:
+                {{ language === 'es' ? 'No existe el archivo o el directorio' : 'No such file or directory' }}
+              </p>
+              <h1 class="post-title"># 404</h1>
+              <p class="post-paragraph">
+                {{ language === 'es' ? 'Post no encontrado.' : 'Post not found.' }}
+              </p>
+              <a class="back-link" [routerLink]="['/', language, 'blog']">
+                &#8618; {{ language === 'es' ? 'volver al blog' : 'back to blog' }}
+              </a>
+            </article>
           }
-        </article>
-      } @else {
-        <article>
-          <h1 class="post-title">404</h1>
-          <p class="post-paragraph">
-            {{ language === 'es' ? 'Post no encontrado.' : 'Post not found.' }}
-          </p>
-        </article>
-      }
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -14,6 +14,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
+  readonly tools = [
+    { name: 'FortiClient', icon: 'https://cdn.simpleicons.org/fortinet/8892b0' },
+    { name: 'Visual Studio Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+    { name: 'Claude Code', icon: 'https://cdn.simpleicons.org/claude/8892b0' },
+    { name: 'Jira', icon: 'https://cdn.simpleicons.org/jira/8892b0' },
+    { name: 'Bitbucket', icon: 'https://cdn.simpleicons.org/bitbucket/8892b0' },
+    { name: 'Microsoft Teams', emoji: '💬' },
+    { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/8892b0' },
+    { name: 'SonarQube', icon: 'https://cdn.simpleicons.org/sonarqubeserver/8892b0' },
+  ];
+
   constructor(
     private seoService: SeoService,
     private route: ActivatedRoute
@@ -25,14 +36,14 @@ export class AboutComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Acerca de mi - Alex Vicente AI Developer'
-        : 'About me - Alex Vicente AI Developer',
+        ? 'Acerca de mi - Alex Vicente AI Engineer'
+        : 'About me - Alex Vicente AI Engineer',
       description: isSpanish
-        ? 'Conoce mi trayectoria profesional, habilidades y experiencia como AI Developer especializado en agentes IA, LLM y Angular.'
-        : 'Learn about my professional background, skills and experience as an AI Developer specialized in AI agents, LLM, and Angular.',
+        ? 'Ingeniero de software generalista: producto, frontend, backend e IA en producción. Resuelvo problemas de principio a fin con criterio y calidad.'
+        : 'Generalist software engineer: product, frontend, backend and AI in production. I solve problems end to end with judgment and quality.',
       keywords: isSpanish
-        ? 'Alex Vicente,Desarrollador Angular, Programador Angular, Desarrollador Frontend, Desarrollador Backend, Desarrollador Full Stack, Programador Full Stack, Programador Frontend, Angular España remoto, AI Developer, Angular 18, Angular 20, TypeScript, RxJS, NgRx, Node.js, NestJS, Spring Boot, Microfrontends, Standalone Components, LangGraph, LangChain, RAG, Agentes IA, Claude Code, CI/CD, Docker, Scrum, Clean Code, MLOps, LangSmith, Ollama'
-        : 'Alex Vicente,Angular Developer, Angular Programmer, Frontend Developer, Backend Developer, Full Stack Developer, Angular Developer Spain remote, AI Developer, Angular 18, Angular 20, TypeScript, RxJS, NgRx, Node.js, NestJS, Spring Boot, Microfrontends, LangGraph, LangChain, RAG, AI Agents, Claude Code, CI/CD, Docker, Scrum, Clean Code, MLOps, LangSmith, Ollama',
+        ? 'Alex Vicente, AI Engineer, Ingeniero IA, Ingeniero de software generalista, Forward Deployed Engineer, AI Developer, Agentes IA, MCP, RAG, Seguridad LLM, LLMOps, LangGraph, LangChain, LangSmith, Claude Code, Ollama, Desarrollador Full Stack, Desarrollador Angular, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, Clean Code, remoto España'
+        : 'Alex Vicente, AI Engineer, Generalist Software Engineer, Forward Deployed Engineer, AI Developer, AI Agents, MCP, RAG, LLM Security, LLMOps, LangGraph, LangChain, LangSmith, Claude Code, Ollama, Full Stack Developer, Angular Developer, TypeScript, Node.js, NestJS, Spring Boot, CI/CD, Docker, Clean Code, remote Spain',
       url: `https://alex-vicente.dev/${lang}/acerca-de-mi`,
       lang
     });
@@ -66,7 +77,7 @@ export class AboutComponent implements OnInit {
           '@type': 'Person',
           '@id': 'https://alex-vicente.dev/#person',
           name: 'Alex Vicente',
-          jobTitle: isSpanish ? 'AI Developer y Desarrollador de Software' : 'AI Developer and Software Engineer',
+          jobTitle: isSpanish ? 'Ingeniero de Software generalista y AI Engineer' : 'Generalist Software Engineer and AI Engineer',
           url: 'https://alex-vicente.dev',
           knowsAbout: [
             'Angular', 'Angular 18', 'Angular 20', 'TypeScript', 'RxJS', 'NgRx',

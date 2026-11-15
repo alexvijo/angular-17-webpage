@@ -13,7 +13,7 @@ import { SeoService } from '../../../services/seo.service';
     styleUrl: './blog.component.scss'
 })
 export class BlogComponent implements OnInit {
-  posts: BlogPost[] = BLOG_POSTS;
+  posts: BlogPost[] = [...BLOG_POSTS].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   language: 'es' | 'en' = 'es';
 
   constructor(

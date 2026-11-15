@@ -1,0 +1,70 @@
+@use "./../../../../../variables" as *;
+
+.skills-folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 278px;
+}
+
+.folder-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-icon {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(244, 30, 162, 0.35));
+
+  .folder-back {
+    fill: #7d7cff;
+  }
+
+  .folder-front {
+    fill: $Green;
+  }
+}
+
+.file-name {
+  font-family: $CodeFont;
+  font-size: 15px;
+  color: $LightestSlate;
+  background: $LightNavy;
+  border: 1px solid $LightestNavy;
+  border-radius: 4px;
+  padding: 3px 10px;
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-chip {
+  font-family: $CodeFont;
+  font-size: 13px;
+  color: $Slate;
+  background: $LightNavy;
+  border: 1px solid $LightestNavy;
+  border-radius: 4px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  cursor: help;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    color: $Green;
+    border-color: $Green;
+    outline: none;
+  }
+}

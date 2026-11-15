@@ -5,7 +5,7 @@
     </a>
     <ul ngbNav #nav="ngbNav" class="menu-ul">
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("inicio")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("inicio")' [ngClass]="{'active': isActivePage('inicio')}">
           <span class="underline nav-text">
             <span class='nav-number'>00. </span>  <span [innerHTML]='"Header.Item0" | translate'></span>
           </span>
@@ -13,7 +13,7 @@
         <ng-template ngbNavContent>First content</ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("acerca-de-mi")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("acerca-de-mi")' [ngClass]="{'active': isActivePage('acerca-de-mi')}">
           <span class="underline nav-text">
             <span class='nav-number'>01. </span> {{"Header.Item1" | translate}}
           </span>
@@ -21,7 +21,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("proyectos-propios")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("proyectos-propios")' [ngClass]="{'active': isActivePage('proyectos-propios')}">
           <span class="underline nav-text">
             <span class='nav-number'>02. </span> {{"Header.Item2" | translate}}
           </span>
@@ -29,7 +29,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("me-interesa")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("me-interesa")' [ngClass]="{'active': isActivePage('me-interesa')}">
           <span class="underline nav-text">
             <span class='nav-number'>03. </span> <span>{{"InterestQuotes.Title" | translate}}</span>
           </span>
@@ -37,7 +37,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("blog")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("blog")' [ngClass]="{'active': isActivePage('blog')}">
           <span class="underline nav-text">
             <span class='nav-number'>04. </span> <span>{{"Header.Item5" | translate}}</span>
           </span>
@@ -45,7 +45,7 @@
         <ng-template ngbNavContent></ng-template>
       </li>
       <li ngbNavItem>
-        <a ngbNavLink (click)='navigateTo("contacto")' [ngClass]="{'active': true}">
+        <a ngbNavLink (click)='navigateTo("contacto")' [ngClass]="{'active': isActivePage('contacto')}">
           <span class="underline nav-text">
             <span class='nav-number'>05. </span> <span>{{"Header.Item4" | translate}}</span>
           </span>

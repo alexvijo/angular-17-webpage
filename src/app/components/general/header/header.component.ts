@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Language, LanguageService } from '../../../services/language.service';
 import { TranslateModule} from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NgbDropdown, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { filter } from 'rxjs';
 
 @Component({
     selector: 'app-header',
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
   pageYPosition: number | undefined;
   languageFormControl: FormControl= new FormControl();
   cvName: string = "";
+  activePage: string = '';
 
   @ViewChild('myDropdown') myDropdown!: NgbDropdown;
 
@@ -29,6 +31,19 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.languageFormControl.setValue(this.languageService.getLanguage(), { emitEvent: false });
+    this.updateActivePage();
+
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => this.updateActivePage());
+  }
+
+  private updateActivePage(): void {
+    this.activePage = this.getCurrentPathSegments()[1] || 'inicio';
+  }
+
+  isActivePage(page: string): boolean {
+    return this.activePage === page;
   }
 
   navigateTo(page: string) {

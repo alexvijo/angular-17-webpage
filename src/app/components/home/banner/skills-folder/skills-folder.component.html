@@ -1,0 +1,20 @@
+<div class="skills-folder">
+  <div class="folder-icon-wrapper">
+    <svg class="folder-icon" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M2 2C2 0.895431 2.89543 0 4 0H9.17157C9.70201 0 10.2107 0.210714 10.5858 0.585786L12 2H20C21.1046 2 22 2.89543 22 4V16C22 17.1046 21.1046 18 20 18H4C2.89543 18 2 17.1046 2 16V2Z"
+        class="folder-back" />
+      <path
+        d="M0 6C0 4.89543 0.895431 4 2 4H21C22.1046 4 23 4.89543 23 6V16C23 17.1046 22.1046 18 21 18H2C0.895431 18 0 17.1046 0 16V6Z"
+        class="folder-front" />
+    </svg>
+    <span class="file-name">{{ fileName }}</span>
+  </div>
+
+  <ul class="skills-list">
+    @for (skill of skills; track skill) {
+      <li class="skill-chip" tabindex="0" [attr.title]="'Skills.' + skill | translate"
+          [attr.aria-label]="skill + ': ' + ('Skills.' + skill | translate)">{{ skill }}</li>
+    }
+  </ul>
+</div>
