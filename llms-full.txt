@@ -1,0 +1,488 @@
+# Alex Vicente — AI Engineer
+
+> Alex Vicente is an AI Engineer based in Barcelona, Spain. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
+
+Owner: Alex Vicente
+Role: AI Engineer (generalist software engineer: product, frontend, backend, data and AI)
+Location: Barcelona, Spain — remote
+Contact: alexvicentejose@gmail.com
+Primary Language: Spanish (es) and English (en)
+Site: https://alex-vicente.dev
+GitHub: https://github.com/alexvijo
+LinkedIn: https://www.linkedin.com/in/alexvicente/
+Previous site (archived): https://alexvijo.github.io/
+
+## About
+
+Alex Vicente is an AI Engineer who builds complete products on top of existing AI models rather than training them. He designs, builds, tests and deploys AI agents orchestrated with LangGraph and LangChain, connects them to tools and business data through MCP, builds RAG pipelines with embeddings and vector databases (Chroma, Pinecone), hardens LLM systems against prompt injection with guardrails, and runs them in production with evaluation, observability (LangSmith) and cost control. He also delivers the surrounding software end to end: Angular/TypeScript frontends, Node.js/NestJS, FastAPI and Spring Boot backends, Docker and GitHub Actions CI/CD. He uses Claude Code for AI-native development: the AI proposes, he reviews, tests and explains every change.
+
+## Projects
+
+- private-rag — https://github.com/alexvijo/private-rag
+  Local RAG chat over your own documents (PDF, DOCX, XLSX, EPUB, TXT, CSV) with source citations. FastAPI + ChromaDB + sentence-transformers backend, Angular frontend, configurable LLM (local Ollama or OpenAI).
+
+- Agents and process automation — AI agents that run business workflows end to end, connected to tools and APIs via MCP, with a human in the loop.
+
+- LLMs in production (LLMOps) — prompt evaluation, observability, cost control and continuous delivery of LLM applications.
+
+- Claude Code with local models (Ollama) — private, offline AI-assisted development with no per-token cost.
+
+## Main Pages
+
+- Home (ES): https://alex-vicente.dev/es/inicio
+- Home (EN): https://alex-vicente.dev/en/inicio
+- About (ES): https://alex-vicente.dev/es/acerca-de-mi
+- About (EN): https://alex-vicente.dev/en/acerca-de-mi
+- Projects (ES): https://alex-vicente.dev/es/proyectos-propios
+- Projects (EN): https://alex-vicente.dev/en/proyectos-propios
+- Blog (ES): https://alex-vicente.dev/es/blog
+- Blog (EN): https://alex-vicente.dev/en/blog
+- Contact: https://alex-vicente.dev/es/contacto
+
+## Blog Posts (Technical Articles)
+
+- https://alex-vicente.dev/es/blog/headroom-netflix-compresion-contexto-agentes-ia
+  Title: Headroom: cómo Netflix redujo un 92% el coste de sus agentes IA
+  Summary: Tejas Chopra (Netflix) built Headroom, an open source context compression layer that cut token costs from $200/day to $30/day. Achieves 92% reduction on code search (17,765→1,408 tokens) using AST compression, SmartCrusher for JSON, and HuggingFace prose model. Install: npm install -g headroom-ai && headroom wrap claude
+
+- https://alex-vicente.dev/en/blog/headroom-netflix-context-compression-ai-agents
+  Title: Headroom: How Netflix Cut AI Agent Token Costs by 92%
+  Summary: English version. Headroom compresses LLM context using 6 methods by content type. Real cost reduction from $200 to $30/day. No accuracy degradation on GSM8K, TruthfulQA, SQuAD v2. Works as CLI wrapper, HTTP proxy, Python/TypeScript library, or MCP server.
+
+- https://alex-vicente.dev/es/blog/codegraph-codigo-sin-busquedas-ciegas
+  Title: CodeGraph: deja de buscar código a ciegas con tus agentes IA
+  Summary: CodeGraph builds a tree-sitter AST knowledge graph exposed as MCP server. Replaces grep+cat (5,000 tokens) with structured queries (200 tokens). codegraph_explore returns multi-file code in one call. codegraph_impact gives full dependency tree before refactoring. Install: npm install -g codegraph && codegraph init -i
+
+- https://alex-vicente.dev/en/blog/codegraph-code-without-blind-searches
+  Title: CodeGraph: Stop Searching Code Blindly with Your AI Agents
+  Summary: English version. Local SQLite index, no external server, sub-millisecond reads. From 15,000 to 3,000 tokens to understand a complete system. Tools: codegraph_search, codegraph_callers, codegraph_callees, codegraph_impact, codegraph_explore, codegraph_node.
+
+- https://alex-vicente.dev/es/blog/agent-skills-autoskills-supercharge-claude-code
+  Title: Agent Skills y autoskills: cómo potenciar tu agente IA en 30 segundos
+  Summary: Agent Skills are portable Markdown files giving AI agents domain know-how. npx autoskills auto-detects your stack and installs the best skills in 30 seconds. Must-haves: geo-seo-claude, code-review, codegraph, security-review, verify. Install: npm install -g @anthropic-ai/claude-code && npx autoskills
+
+- https://alex-vicente.dev/en/blog/agent-skills-autoskills-supercharge-claude-code
+  Title: Agent Skills and autoskills: How to Supercharge Your AI Agent in 30 Seconds
+  Summary: English version. Skills work in Claude Code, Codex CLI, Cursor, and OpenCode without modification. A well-written skill saves 5-10 round trips per task. Community has 100+ public skills at awesomeskill.ai.
+
+- https://alex-vicente.dev/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity
+  Title: GEO, AEO y SEO: cómo optimizar tu web para que la IA te cite
+  Summary: AI-referred traffic grew 527% YoY. GEO optimizes for LLM citation vs. Google ranking. Key levers: llms.txt in domain root, FAQPage schema with real questions, allow GPTBot/ClaudeBot/PerplexityBot in robots.txt. SPAs without SSR show empty pages to all crawlers — fix that first. Audit: npx install github.com/zubair-trabzada/geo-seo-claude
+
+- https://alex-vicente.dev/en/blog/geo-aeo-seo-optimize-web-for-ai-chatgpt-perplexity
+  Title: GEO, AEO, and SEO: How to Optimize Your Web for AI Citation
+  Summary: English version. Georgia Tech/Princeton/IIT Delhi study: 30-115% more LLM visibility with GEO optimization. Extractable paragraphs 130-170 words, numbered steps, comparison tables have highest citability.
+
+- https://alex-vicente.dev/es/blog/como-revisar-prs-automaticamente-con-agentes-ia
+  Title: Cómo revisar PRs automáticamente con agentes IA (y no morir en el intento)
+  Summary: Three-layer automated PR review: code-review ultra (correctness bugs + inline comments with --comment), security-review (auth/validation changes), verify (browser navigation to catch regressions). Rule: delegate bug detection to agent, reserve design decisions for humans. Install: npm install -g @anthropic-ai/claude-code && npx autoskills
+
+- https://alex-vicente.dev/en/blog/how-to-review-prs-automatically-with-ai-agents
+  Title: How to Review PRs Automatically with AI Agents (and Not Die Trying)
+  Summary: English version. Agents are good at detecting local problems (uninitialized variables, missing input validation) but bad at judging abstraction correctness or business logic fit. Use ultra level for multi-angle parallel subagent analysis.
+
+- https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
+  Title: Roadmap para convertirte en Ingeniero IA en 2026
+  Summary: Practical guide to skills, tools, and projects needed to work as an AI Engineer in 2026. Covers LLM fundamentals, RAG pipelines with vector databases, agent orchestration with LangGraph/CrewAI, MLOps with MLflow and Docker, and Angular/React for AI interfaces.
+
+- https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
+  Title: AI Engineer Roadmap for 2026
+  Summary: English version of the AI Engineer roadmap covering LLMs, RAG, agents, MLOps, and frontend for AI.
+
+- https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
+  Title: Cómo construyo agentes IA en producto real
+  Summary: Real process for building AI agents in production: tool definition, LangGraph orchestration, episodic/semantic/procedural memory, exponential backoff error handling, and LangSmith tracing for prompt optimization.
+
+- https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
+  Title: How I Build AI Agents for Real Products
+  Summary: English version of the AI agent production guide.
+
+- https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
+  Title: Angular + LLM + RAG: mi stack en producción
+  Summary: Production stack combining Angular 18 (standalone components, lazy loading, SSE streaming) with FastAPI + LangChain RAG backend. Covers OpenAI embeddings, Chroma/Pinecone vector stores, reranking, cost management, and LangSmith observability.
+
+- https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
+  Title: Angular + LLM + RAG: My Production Stack
+  Summary: English version of the Angular + LLM + RAG production stack guide.
+
+- https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso
+  Title: LLM Studio local con Ollama: guía paso a paso
+  Summary: Step-by-step guide to setting up a local LLM environment with Ollama and Open WebUI. Covers model selection (Mistral 7B, Llama 3, Phi-3 Mini), Docker setup, and OpenAI-compatible API integration for LangChain and LlamaIndex.
+
+- https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide
+  Title: Local LLM Studio with Ollama: Step-by-Step Guide
+  Summary: English version of the local LLM setup guide.
+
+## Core Expertise
+
+**AI Engineering:** AI agents (LangGraph, LangChain), Model Context Protocol (MCP), RAG, embeddings and vector databases (Chroma, Pinecone), LLM evaluation, LLMOps and observability (LangSmith), LLM security (prompt injection, guardrails, sensitive-data handling), cost and latency optimization, LLMs (OpenAI, Anthropic Claude, Llama, Mistral), local models with Ollama, Claude Code and AI-native development.
+
+**Frontend:** Angular (standalone components, signals, SSR), TypeScript, RxJS, NgRx, microfrontends.
+
+**Backend:** Node.js, NestJS, FastAPI, Spring Boot (Java), REST APIs, Server-Sent Events.
+
+**Data & Infra:** MongoDB, SQL, Docker, CI/CD with GitHub Actions, SonarQube.
+
+**Way of working:** System design with documented trade-offs, testing (unit and e2e), code review, Scrum/Kanban.
+
+**Availability:** Open to AI Engineer roles — 100% remote, Spain and Europe — and to turnkey AI projects for small businesses and direct clients. Professional English.
+
+## Crawling Notes
+
+- All public pages can be crawled (GPTBot, ClaudeBot, PerplexityBot explicitly allowed in robots.txt).
+- Canonical URL: https://alex-vicente.dev/ — the older site https://alexvijo.github.io/ is archived and points here.
+- Full content for LLMs: https://alex-vicente.dev/llms-full.txt
+- Sitemap: https://alex-vicente.dev/sitemap.xml
+- Languages: Spanish (es) and English (en) — all content available in both languages.
+
+---
+
+## Perfil (es)
+AI Engineer · Full-stack — Llevo productos con IA de la idea a producción: diseño, desarrollo, testing y despliegue.El criterio lo pongo yo; el resto, con Claude Code
+
+Soy un ingeniero de software generalista: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.
+Más que en una tecnología concreta, me especializo en resolver problemas: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.
+Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la calidad que los sostiene (testing, integración continua y despliegue).
+Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el criterio, reviso, valido y explico cada decisión técnica.
+Me inspiran las personas que piensan de manera disruptiva y salen de su zona cómoda. Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar: puedo aprender cualquier habilidad, y mi carácter es lo que me distingue.
+
+### Skills
+- AI Engineering: Integrar modelos existentes en producto: APIs de LLM, evaluación, contexto, tokens y observabilidad.
+- Agentes IA: Orquestación de sistemas multiagente con LangGraph y LangChain, con humano en el bucle.
+- MCP: Conecto agentes de IA a herramientas, APIs y datos de negocio mediante Model Context Protocol.
+- RAG: Búsqueda semántica sobre documentación interna con bases de datos vectoriales.
+- LLM Security: Defensa frente a prompt injection, guardrails y control de datos sensibles en sistemas con IA.
+- Claude Code: Desarrollo IA-native: la IA propone, yo reviso, testeo y explico cada cambio.
+- System Design: Arquitecturas escalables, decisiones técnicas documentadas y trade-offs de negocio.
+- Angular / TypeScript: Frontend empresarial tipado con signals, RxJS/NgRx y microfrontends.
+- Node.js / NestJS: APIs REST y servicios backend modulares.
+- Spring Boot: Backend Java robusto con MySQL.
+- Testing: Pruebas unitarias y e2e: nunca se mergea código que no se entiende.
+- Cloud / CI/CD: Despliegues reproducibles con Docker y GitHub Actions, monitorización y control de costes en producción.
+
+### Proyectos
+- Claude Code en Local con Ollama: Claude Code conectado a LLMs locales con Ollama: desarrollo asistido por IA privado, sin coste por token y sin conexión. (Claude, Ollama, LLM Local, Open Source)
+- Agentes y Automatización de Procesos: Agentes de IA que ejecutan flujos de trabajo de negocio de principio a fin, conectados a herramientas y APIs vía MCP, con humano en el bucle. (LangGraph, MCP, Node.js, Automatización)
+- LLM en Producción (LLMOps): Del prototipo a producción: evaluación de prompts, observabilidad, control de costes y despliegue continuo de aplicaciones con LLM. (Docker, CI/CD, LangSmith, Observabilidad)
+- Procesamiento de Lenguaje con LLM: Extracción de datos, clasificación de textos y búsqueda semántica (RAG) sobre documentación interna. (LLM, RAG, Embeddings, Vector DB)
+- Seguridad en Sistemas con IA: Protección frente a prompt injection, guardrails, gestión de datos sensibles y detección de anomalías. (LLM Security, Guardrails, Anomaly Detection)
+- IA Aplicada a Negocio: Casos de uso reales en empresa: análisis del problema, solución con IA, implantación y medición del retorno (ROI). (Estrategia, Implantación, ROI)
+
+### FAQ
+Q: ¿Qué tipo de proyectos desarrollo con IA?
+A: Productos completos con IA: agentes, integraciones con LLM vía API y MCP, RAG sobre datos internos y automatizaciones, desde el diseño hasta el despliegue.
+Q: ¿Trabajo con empresas y con clientes directos?
+A: Sí. Me incorporo a equipos de producto y también trabajo con empresas pequeñas y clientes directos que necesitan una solución con IA llave en mano.
+Q: ¿Trabajo con modelos locales y en cloud?
+A: Sí. Diseño soluciones con LM Studio y Ollama en local, y también con proveedores cloud según coste, latencia y seguridad.
+Q: ¿Qué stack técnico utilizo?
+A: APIs de LLM, MCP, LangGraph, Angular, TypeScript, Node.js, Spring Boot, testing, observabilidad y despliegue continuo.
+
+## Profile (en)
+AI Engineer · Full-stack — I take AI products from idea to production: design, development, testing and deployment.I bring the judgment; Claude Code handles the rest
+
+I'm a generalist software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.
+Rather than a single technology, my specialty is solving problems: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.
+I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the quality that keeps them running (testing, continuous integration and deployment).
+I use AI as a multiplier, not a replacement: it proposes, I bring the judgment, reviewing, validating and explaining every technical decision.
+I'm inspired by people who think disruptively and step out of their comfort zone. I define myself not by the work I've done but by the work I aspire to do: I can learn any skill, and my character is what sets me apart.
+
+### Skills
+- AI Engineering: Integrating existing models into products: LLM APIs, evals, context, tokens and observability.
+- Agentes IA: Multi-agent orchestration with LangGraph and LangChain, human in the loop.
+- MCP: Connecting AI agents to tools, APIs and business data through the Model Context Protocol.
+- RAG: Semantic search over internal documentation with vector databases.
+- LLM Security: Defending against prompt injection, guardrails and sensitive-data handling in AI systems.
+- Claude Code: AI-native development: AI proposes, I review, test and explain every change.
+- System Design: Scalable architectures, documented technical decisions and business trade-offs.
+- Angular / TypeScript: Typed enterprise frontend with signals, RxJS/NgRx and microfrontends.
+- Node.js / NestJS: REST APIs and modular backend services.
+- Spring Boot: Robust Java backend with MySQL.
+- Testing: Unit and e2e tests: never merge code you do not understand.
+- Cloud / CI/CD: Reproducible deployments with Docker and GitHub Actions, monitoring and cost control in production.
+
+### Projects
+- Claude Code on Local with Ollama: Claude Code connected to local LLMs with Ollama: private, offline AI-assisted development with no per-token cost. (Claude, Ollama, Local LLM, Open Source)
+- Agents and Process Automation: AI agents that run business workflows end to end, connected to tools and APIs through MCP, with a human in the loop. (LangGraph, MCP, Node.js, Automation)
+- LLMs in Production (LLMOps): From prototype to production: prompt evaluation, observability, cost control and continuous delivery of LLM applications. (Docker, CI/CD, LangSmith, Observability)
+- Language Processing with LLMs: Data extraction, text classification and semantic search (RAG) over internal documentation. (LLM, RAG, Embeddings, Vector DB)
+- Security in AI Systems: Protection against prompt injection, guardrails, sensitive-data handling and anomaly detection. (LLM Security, Guardrails, Anomaly Detection)
+- Applied AI for Business: Real enterprise use cases: problem analysis, AI solution, rollout and return-on-investment (ROI) tracking. (Strategy, Rollout, ROI)
+
+### FAQ
+Q: What kind of AI projects do I build?
+A: Complete AI products: agents, LLM integrations through APIs and MCP, RAG over internal data and automations, from design to deployment.
+Q: Do I work with companies and direct clients?
+A: Yes. I join product teams and also work with small businesses and direct clients who need a turnkey AI solution.
+Q: Do I work with local and cloud models?
+A: Yes. I design solutions with local stacks like LM Studio and Ollama, and cloud providers based on cost, latency, and security.
+Q: What is my core technical stack?
+A: LLM APIs, MCP, LangGraph, Angular, TypeScript, Node.js, Spring Boot, testing, observability and continuous delivery.
+
+---
+
+## Blog — full text
+
+### Automatizar la búsqueda de trabajo con Claude Code
+URL: https://alex-vicente.dev/es/blog/automatizar-busqueda-de-trabajo-con-claude-code
+Published: 2026-07-07 · Author: Alex Vicente
+
+Miguel Ángel Durán (midudev) compartió un repositorio que usa Claude Code como agente para automatizar buena parte del proceso de búsqueda de empleo: analizar ofertas, adaptar el CV y preparar la candidatura. Te cuento la idea y qué opino de este enfoque.
+
+Miguel Ángel Durán (midudev) compartió en LinkedIn un repositorio pensado para automatizar la búsqueda de trabajo apoyándose en Claude Code. La idea de partida es sencilla: clonas el repo, rellenas tu perfil (experiencia, stack, objetivos) y dejas que el agente haga el trabajo pesado sobre cada oferta que le pases.
+
+A partir de ahí, el agente se encarga de tareas que normalmente consumen horas: evaluar si una oferta encaja con tu perfil, adaptar el CV al lenguaje y requisitos concretos de cada puesto, redactar una carta de presentación específica y ayudarte a preparar la entrevista con las preguntas más probables según la empresa y el rol.
+
+Mi lectura: automatizar el papeleo de la búsqueda tiene sentido y ahorra tiempo real, pero el valor sigue estando en cómo alimentas al agente — un perfil bien definido y ejemplos concretos de tu trabajo marcan la diferencia entre una candidatura genérica y una que de verdad destaca. Instala Claude Code con: `npm install -g @anthropic-ai/claude-code`
+
+### Automating Your Job Search with Claude Code
+URL: https://alex-vicente.dev/en/blog/automate-job-search-with-claude-code
+Published: 2026-07-07 · Author: Alex Vicente
+
+Miguel Ángel Durán (midudev) shared a repository that uses Claude Code as an agent to automate a large part of the job search process: analyzing offers, tailoring your CV, and preparing your application. Here's the idea and what I think about this approach.
+
+Miguel Ángel Durán (midudev) shared a repository on LinkedIn designed to automate the job search process using Claude Code. The starting idea is simple: clone the repo, fill in your profile (experience, stack, goals), and let the agent handle the heavy lifting for each job offer you feed it.
+
+From there, the agent takes care of tasks that normally eat up hours: evaluating whether an offer fits your profile, tailoring your CV to the specific language and requirements of each role, writing a targeted cover letter, and helping you prepare for the interview with the most likely questions based on the company and position.
+
+My take: automating the paperwork side of job hunting makes sense and saves real time, but the value still comes down to how well you feed the agent — a well-defined profile and concrete examples of your work are what separate a generic application from one that actually stands out. Install Claude Code with: `npm install -g @anthropic-ai/claude-code`
+
+### Por qué la actitud pesa más que el stack perfecto en una entrevista
+URL: https://alex-vicente.dev/es/blog/actitud-vs-stack-perfecto-en-procesos-de-seleccion
+Published: 2026-07-07 · Author: Alex Vicente
+
+Natalia G., reclutadora, compartió en LinkedIn una experiencia de selección que invita a repensar qué se valora realmente en un proceso técnico: no cumplir el 100% del stack no descarta a un candidato si demuestra ganas reales de aprender.
+
+La reclutadora Natalia G. contó en LinkedIn una experiencia de un proceso de selección para un perfil Full Stack semi senior. El equipo no buscaba a alguien perfecto, sino a alguien con ganas de aprender y de proponer. Entre varios candidatos sólidos, uno destacó sin cumplir todos los requisitos técnicos: ante preguntas sobre tecnologías concretas del equipo, admitía con naturalidad que aún no las manejaba.
+
+Lo que marcó la diferencia fue su actitud durante la propia entrevista: iba anotando lo que desconocía y explicaba que lo investigaría al terminar, por interés genuino en el stack de la empresa y en lo que demanda el mercado. La reclutadora decidió avanzarlo igualmente, siendo transparente con el líder técnico sobre esas carencias. En la siguiente entrevista, el candidato llegó habiendo investigado, con criterio propio y mostrando interés real por el rol — y terminó siendo seleccionado.
+
+La reflexión que deja la historia: no solo se contrata experiencia técnica, también actitud, intención y capacidad de construir sobre lo que ya se sabe. Cuando una oportunidad interesa de verdad, se nota en cómo te preparas, en cómo preguntas y en cómo te involucras.
+
+### Why Attitude Matters More Than the Perfect Stack in an Interview
+URL: https://alex-vicente.dev/en/blog/attitude-vs-perfect-stack-in-hiring-processes
+Published: 2026-07-07 · Author: Alex Vicente
+
+Recruiter Natalia G. shared a hiring experience on LinkedIn that invites us to rethink what really matters in a technical process: not meeting 100% of the stack doesn't rule out a candidate who shows genuine eagerness to learn.
+
+Recruiter Natalia G. shared a hiring story on LinkedIn about a selection process for a semi-senior Full Stack role. The team wasn't looking for a perfect candidate, but for someone eager to learn and take initiative. Among several strong candidates, one stood out without meeting every technical requirement: when asked about specific technologies used by the team, they openly admitted not knowing them yet.
+
+What made the difference was their attitude during the interview itself: they took notes on what they didn't know and explained they would research it afterward, out of genuine interest in the company's stack and in what the market currently demands. The recruiter decided to move them forward anyway, being transparent with the technical lead about those gaps. In the following interview, the candidate arrived having done their research, showed independent judgment, and demonstrated real interest in the role — and ended up being hired.
+
+The takeaway from the story: companies don't just hire technical experience, they also hire attitude, intent, and the ability to build on what you already know. When an opportunity genuinely interests you, it shows in how you prepare, how you ask questions, and how you engage.
+
+### Cómo revisar PRs automáticamente con agentes IA (y no morir en el intento)
+URL: https://alex-vicente.dev/es/blog/como-revisar-prs-automaticamente-con-agentes-ia
+Published: 2026-06-15 · Author: Alex Vicente
+
+Revisar pull requests es el cuello de botella de cualquier equipo de desarrollo. Los agentes IA pueden hacer la primera pasada: detectar bugs, señalar código muerto, verificar convenciones y comprobar que los tests cubren lo que deben. Te cuento cómo montarlo con Claude Code y cuándo no delegar.
+
+En equipos con ciclos rápidos los PRs se acumulan y el review superficial se vuelve la norma. Los agentes IA no reemplazan el juicio humano — pero pueden hacer la primera pasada y liberar al reviewer para decisiones de arquitectura.
+
+El workflow en tres capas: `code-review ultra` analiza el diff completo, detecta bugs de corrección y deja comentarios inline con `--comment`. `security-review` corre sobre cambios en autenticación y validación. `verify` comprueba que la corrección no introduce regresiones abriendo el navegador. Regla: delega detección de bugs al agente, reserva diseño y lógica de negocio al humano.
+
+Instala los skills con: `npm install -g @anthropic-ai/claude-code && npx autoskills`
+
+### How to Review PRs Automatically with AI Agents (and Not Die Trying)
+URL: https://alex-vicente.dev/en/blog/how-to-review-prs-automatically-with-ai-agents
+Published: 2026-06-15 · Author: Alex Vicente
+
+Reviewing pull requests is the bottleneck of any development team. AI agents can do the first pass: detect bugs, flag dead code, verify conventions, and check that tests cover what they should. Here's how to set it up with Claude Code and when not to delegate.
+
+In teams with fast cycles, PRs pile up and superficial review becomes the norm. AI agents don't replace human judgment — but they can do the first pass and free the reviewer for architecture decisions.
+
+The three-layer workflow: `code-review ultra` analyzes the complete diff, detects correctness bugs, and leaves inline comments with `--comment`. `security-review` runs on auth and validation changes. `verify` checks that the fix doesn't introduce regressions by opening the browser. Rule: delegate bug detection to the agent, reserve design and business logic for the human.
+
+Install the skills with: `npm install -g @anthropic-ai/claude-code && npx autoskills`
+
+### GEO, AEO y SEO: cómo optimizar tu web para que la IA te cite
+URL: https://alex-vicente.dev/es/blog/geo-aeo-seo-optimizar-web-para-ia-chatgpt-perplexity
+Published: 2026-06-12 · Author: Alex Vicente
+
+El tráfico referido por IA creció un 527% en el último año, pero solo el 23% de los desarrolladores optimiza para este canal. GEO (Generative Engine Optimization) no es reemplazar el SEO clásico — es añadir una capa que hace tu contenido citable por ChatGPT, Perplexity, Claude y Google AI Overviews.
+
+Georgia Tech, Princeton e IIT Delhi demostraron que optimizar para citabilidad IA da entre un 30% y 115% más de visibilidad en respuestas de LLMs. El tráfico referido por IA crece al 527% interanual, pero la mayoría de webs de developers siguen solo en SEO clásico.
+
+Las tres palancas técnicas clave: 1) `llms.txt` en la raíz del dominio — describe en lenguaje natural quién eres y qué páginas tienes. 2) Schema `FAQPage` con preguntas reales — los LLMs extraen las respuestas directamente. 3) Permitir GPTBot, ClaudeBot y PerplexityBot en tu `robots.txt`. Si tu web es una SPA sin SSR, ese es el primer fix.
+
+Audita tu web con: `npx install github.com/zubair-trabzada/geo-seo-claude` y luego `/geo audit tu-dominio.com`
+
+### GEO, AEO, and SEO: How to Optimize Your Web for AI Citation
+URL: https://alex-vicente.dev/en/blog/geo-aeo-seo-optimize-web-for-ai-chatgpt-perplexity
+Published: 2026-06-12 · Author: Alex Vicente
+
+AI-referred traffic grew 527% in the past year, but only 23% of developers optimize for this channel. GEO (Generative Engine Optimization) isn't replacing classic SEO — it's adding a layer that makes your content citable by ChatGPT, Perplexity, Claude, and Google AI Overviews.
+
+Georgia Tech, Princeton, and IIT Delhi showed that optimizing for AI citability gives 30-115% more visibility in LLM responses. AI-referred traffic grows at 527% year-over-year, but most developer websites are still only optimized for classic SEO.
+
+The three key technical levers: 1) `llms.txt` in your domain root — describes in natural language who you are and what pages you have. 2) `FAQPage` schema with real questions — LLMs extract answers directly. 3) Allow GPTBot, ClaudeBot, and PerplexityBot in your `robots.txt`. If your site is an SPA without SSR, that's the first fix.
+
+Audit your site with: `npx install github.com/zubair-trabzada/geo-seo-claude` and then `/geo audit your-domain.com`
+
+### Agent Skills y autoskills: cómo potenciar tu agente IA en 30 segundos
+URL: https://alex-vicente.dev/es/blog/agent-skills-autoskills-supercharge-claude-code
+Published: 2026-06-08 · Author: Alex Vicente
+
+Los Agent Skills son la forma más rápida de dar superpoderes a Claude Code, Cursor o Codex. Y con autoskills, una herramienta detecta automáticamente tu stack y te instala los mejores. Aquí te explico qué son, cómo funcionan y cuáles no deberían faltarte.
+
+Un Agent Skill es un fichero Markdown con YAML frontmatter que le dice al agente cuándo activarse, qué herramientas usar y cómo secuenciar el trabajo. A diferencia de un MCP server (que gestiona la integración técnica), el Skill contiene el know-how: cuándo usarlo, en qué orden, cómo formatear el resultado. Funciona en Claude Code, Codex, Cursor y OpenCode sin cambios.
+
+El punto de entrada más rápido es `npx autoskills` en la raíz del proyecto: detecta tu stack y te instala los skills más relevantes en 30 segundos. Los imprescindibles: `geo-seo-claude`, `code-review`, `codegraph`, `security-review` y `verify`. Un skill bien escrito ahorra 5-10 mensajes de ida y vuelta por tarea.
+
+Instala el gestor de skills con: `npm install -g @anthropic-ai/claude-code && npx autoskills`
+
+### Agent Skills and autoskills: How to Supercharge Your AI Agent in 30 Seconds
+URL: https://alex-vicente.dev/en/blog/agent-skills-autoskills-supercharge-claude-code
+Published: 2026-06-08 · Author: Alex Vicente
+
+Agent Skills are the fastest way to give superpowers to Claude Code, Cursor, or Codex. And with autoskills, a tool automatically detects your stack and installs the best ones. Here's what they are, how they work, and which ones you shouldn't miss.
+
+An Agent Skill is a Markdown file with YAML frontmatter that tells the agent when to activate, which tools to use, and how to sequence the work. Unlike an MCP server (which handles technical integration), the Skill contains the know-how: when to use it, in what order, how to format the result. Works in Claude Code, Codex, Cursor, and OpenCode without changes.
+
+The fastest entry point is `npx autoskills` in your project root: it detects your stack and installs the most relevant skills in 30 seconds. Must-haves: `geo-seo-claude`, `code-review`, `codegraph`, `security-review`, and `verify`. A well-written skill saves 5-10 round trips per task.
+
+Install the skills manager with: `npm install -g @anthropic-ai/claude-code && npx autoskills`
+
+### CodeGraph: deja de buscar código a ciegas con tus agentes IA
+URL: https://alex-vicente.dev/es/blog/codegraph-codigo-sin-busquedas-ciegas
+Published: 2026-06-05 · Author: Alex Vicente
+
+Los agentes IA pierden hasta un 40% de su ventana de contexto buscando código con grep y cat. CodeGraph construye un grafo de conocimiento de tu repositorio con tree-sitter y responde en milisegundos qué llama a qué, qué romperías si cambias X, y dónde está definida cada función.
+
+Sin CodeGraph, el patrón de un agente en tu repo es siempre el mismo: grep, cat, grep, read... miles de tokens antes de escribir una línea. CodeGraph construye un grafo AST de todo tu repositorio con tree-sitter y lo expone como servidor MCP para consultas en milisegundos.
+
+"¿Qué pasaría si cambio esta función?" con grep: 4-8 llamadas y 5.000 tokens. Con codegraph_impact: 1 llamada y 200 tokens. codegraph_explore devuelve código de múltiples ficheros en una sola llamada — de 15.000 a 3.000 tokens para entender un sistema completo. Índice SQLite local, sin servidor externo.
+
+Instala con: `npm install -g codegraph && codegraph init -i`
+
+### CodeGraph: Stop Searching Code Blindly with Your AI Agents
+URL: https://alex-vicente.dev/en/blog/codegraph-code-without-blind-searches
+Published: 2026-06-05 · Author: Alex Vicente
+
+AI agents waste up to 40% of their context window searching code with grep and cat. CodeGraph builds a knowledge graph of your repo with tree-sitter and answers in milliseconds what calls what, what you'd break if you change X, and where each function is defined.
+
+Without CodeGraph, the pattern of an agent in your repo is always the same: grep, cat, grep, read... thousands of tokens before writing a line. CodeGraph builds an AST graph of your entire repository with tree-sitter and exposes it as an MCP server for millisecond queries.
+
+"What would happen if I change this function?" with grep: 4-8 calls and 5,000 tokens. With codegraph_impact: 1 call and 200 tokens. codegraph_explore returns code from multiple files in a single call — from 15,000 to 3,000 tokens to understand a complete system. Local SQLite index, no external server.
+
+Install with: `npm install -g codegraph && codegraph init -i`
+
+### Headroom: cómo Netflix redujo un 92% el coste de sus agentes IA
+URL: https://alex-vicente.dev/es/blog/headroom-netflix-compresion-contexto-agentes-ia
+Published: 2026-06-01 · Author: Alex Vicente
+
+Un ingeniero de Netflix estaba quemando 200 dólares al día en tokens. Su solución open source comprime el contexto antes de enviarlo al LLM y lo ha reducido a 30 dólares. Aquí te explico cómo funciona y cómo aplicarlo a tus proyectos.
+
+Tejas Chopra (Netflix) quemaba 200 dólares al día en tokens con sus agentes IA. No era un problema de modelo — era puro volumen de contexto. Cada llamada a herramienta, cada log, cada resultado de búsqueda se acumulaba hasta hacer inmanejable la ventana. Su solución: Headroom, una capa de compresión open source entre tu agente y el LLM.
+
+Headroom comprime el contexto usando seis métodos según el tipo: AST para código (tree-sitter), SmartCrusher para JSON, y un modelo HuggingFace para prosa. Resultados reales: 17.765 → 1.408 tokens en búsqueda de código (92%). Coste: de 200 a 30 dólares diarios. Sin degradación en benchmarks de precisión.
+
+Instala y activa con: `npm install -g headroom-ai && headroom wrap claude`
+
+### Headroom: How Netflix Cut AI Agent Token Costs by 92%
+URL: https://alex-vicente.dev/en/blog/headroom-netflix-context-compression-ai-agents
+Published: 2026-06-01 · Author: Alex Vicente
+
+A Netflix engineer was burning $200/day on tokens. His open source solution compresses context before sending it to the LLM, cutting costs to $30/day. Here's how it works and how to apply it to your projects.
+
+Tejas Chopra (Netflix) was burning $200/day on tokens with his AI agents. Not a model problem — pure context volume. Every tool call, log, and search result accumulated until the window became unmanageable. His solution: Headroom, an open source compression layer between your agent and the LLM.
+
+Headroom compresses context using six methods by type: AST for code (tree-sitter), SmartCrusher for JSON, and a HuggingFace model for prose. Real results: 17,765 → 1,408 tokens in code search (92%). Cost: from $200 to $30/day. No degradation on accuracy benchmarks.
+
+Install and activate with: `npm install -g headroom-ai && headroom wrap claude`
+
+### Roadmap para convertirte en Ingeniero IA en 2026
+URL: https://alex-vicente.dev/es/blog/roadmap-ingeniero-ia-2026
+Published: 2026-05-03 · Author: Alex Vicente
+
+Guía práctica con las habilidades, herramientas y proyectos clave que necesitas para trabajar como AI Engineer en 2026: LLMs, RAG, agentes, MLOps y más.
+
+El rol de AI Engineer ha evolucionado rápido. Ya no basta con Python y llamar a OpenAI — las empresas buscan perfiles capaces de diseñar, desplegar y mantener sistemas de IA en producción.
+
+Las áreas clave para 2026: fundamentos de LLMs (contexto, temperatura, tokenización), pipelines RAG con embeddings y bases de datos vectoriales, y orquestación de agentes con LangGraph o CrewAI. En la capa de ingeniería, MLOps con MLflow, Docker y CI/CD.
+
+Mi recomendación: construye proyectos reales desde el primer día. Un asistente RAG sobre documentos propios o un agente que automatice una tarea repetitiva. El portfolio habla por encima del CV. Para empezar: `npm install -g langchain-cli && pip install langchain langgraph mlflow`
+
+### AI Engineer Roadmap for 2026
+URL: https://alex-vicente.dev/en/blog/ai-engineer-roadmap-2026
+Published: 2026-05-03 · Author: Alex Vicente
+
+A practical guide to the skills, tools, and key projects you need to work as an AI Engineer in 2026: LLMs, RAG, agents, MLOps, and more.
+
+The AI Engineer role has evolved fast. Knowing Python and calling an OpenAI API is no longer enough — companies want profiles capable of designing, deploying, and maintaining AI systems in production.
+
+Key areas for 2026: LLM fundamentals (context, temperature, tokenization), RAG pipelines with embeddings and vector databases, and agent orchestration with LangGraph or CrewAI. At the engineering layer, MLOps with MLflow, Docker, and CI/CD.
+
+My recommendation: build real projects from day one. A RAG assistant on your own documents or an agent that automates a repetitive task. The portfolio speaks louder than the CV. To get started: `npm install -g langchain-cli && pip install langchain langgraph mlflow`
+
+### Cómo construyo agentes IA en producto real
+URL: https://alex-vicente.dev/es/blog/como-construyo-agentes-ia-en-producto
+Published: 2026-05-03 · Author: Alex Vicente
+
+Mi proceso para diseñar e implementar agentes IA en productos reales: desde la definición de herramientas y memoria hasta el manejo de errores y la evaluación en producción.
+
+Construir un agente para producción es otro reto completamente distinto al demo. Lo primero: definir con precisión qué problema resuelve y qué herramientas necesita. Un agente sin herramientas bien definidas es un LLM con ilusión de autonomía.
+
+Uso LangGraph para orquestar el flujo con nodos claros. La memoria es el punto más subestimado: separo episódica (historial), semántica (RAG) y procedimental (instrucciones del sistema). Para errores, reintentos con backoff exponencial y trazas en LangSmith para detectar patrones de fallo.
+
+Instala el stack completo con: `pip install langgraph langsmith langchain-openai`
+
+### How I Build AI Agents for Real Products
+URL: https://alex-vicente.dev/en/blog/how-i-build-ai-agents-for-product
+Published: 2026-05-03 · Author: Alex Vicente
+
+My process for designing and implementing AI agents in real products: from defining tools and memory to error handling and production evaluation.
+
+Building an agent for production is a completely different challenge from a demo. First: precisely define what problem it solves and what tools it needs. An agent without well-defined tools is just an LLM with the illusion of autonomy.
+
+I use LangGraph to orchestrate the flow with clear nodes. Memory is the most underestimated piece: I separate episodic (history), semantic (RAG), and procedural (system instructions). For errors, retries with exponential backoff and LangSmith traces to detect failure patterns.
+
+Install the full stack with: `pip install langgraph langsmith langchain-openai && npm install -g @langchain/cli`
+
+### Angular + LLM + RAG: mi stack en producción
+URL: https://alex-vicente.dev/es/blog/angular-llm-rag-en-produccion
+Published: 2026-05-03 · Author: Alex Vicente
+
+Cómo combino Angular en el frontend con un backend LLM+RAG para construir aplicaciones de IA orientadas a negocio que funcionan de verdad en producción.
+
+Cuando tienes que entregar un producto real, el stack RAG cambia completamente respecto a los tutoriales. En el frontend uso Angular 18 con standalone components y Server-Sent Events para streaming de respuestas sin bloquear la UI.
+
+El backend: FastAPI + LangChain, embeddings de OpenAI, Chroma como vector store local (o Pinecone en cloud) y retriever con reranking. Los puntos críticos en producción son coste (caché de embeddings), latencia (precomputar en ingest time) y observabilidad con LangSmith.
+
+Instala el backend con: `pip install fastapi langchain chromadb openai langsmith && npm install @angular/core@18`
+
+### Angular + LLM + RAG: My Production Stack
+URL: https://alex-vicente.dev/en/blog/angular-llm-rag-in-production
+Published: 2026-05-03 · Author: Alex Vicente
+
+How I combine Angular on the frontend with an LLM+RAG backend to build business-oriented AI applications that actually work in production.
+
+When you have to deliver a real product, the RAG stack changes completely from tutorials. On the frontend I use Angular 18 with standalone components and Server-Sent Events for response streaming without blocking the UI.
+
+The backend: FastAPI + LangChain, OpenAI embeddings, Chroma as local vector store (or Pinecone in cloud), and retriever with reranking. Critical production points: cost (embedding cache), latency (precompute at ingest time), and observability with LangSmith.
+
+Install the backend with: `pip install fastapi langchain chromadb openai langsmith && npm install @angular/core@18`
+
+### LLM Studio local con Ollama: guía paso a paso
+URL: https://alex-vicente.dev/es/blog/openclaw-llm-studio-local-guia-paso-a-paso
+Published: 2026-05-03 · Author: Alex Vicente
+
+Cómo montar tu propio entorno de LLMs local con Ollama, Open WebUI y modelos como Llama 3 o Mistral. Sin coste, sin privacidad comprometida, con control total.
+
+Ollama te da un LLM local en menos de 20 minutos: cero coste por token, privacidad total y experimentación sin límites. Soporta macOS, Linux y Windows.
+
+Descarga un modelo con `ollama pull llama3`. Para hardware modesto: Mistral 7B o Phi-3 Mini. Con GPU de 16GB VRAM: Llama 3 8B o Gemma 2 9B. Open WebUI (Docker) añade una interfaz tipo ChatGPT conectada a tus modelos. Ollama expone una API compatible con OpenAI en localhost:11434 — cualquier cliente (LangChain, LlamaIndex) funciona sin cambios.
+
+Instala con: `npm install -g ollama && ollama pull llama3 && docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:main`
+
+### Local LLM Studio with Ollama: Step-by-Step Guide
+URL: https://alex-vicente.dev/en/blog/openclaw-llm-studio-local-step-by-step-guide
+Published: 2026-05-03 · Author: Alex Vicente
+
+How to set up your own local LLM environment with Ollama, Open WebUI, and models like Llama 3 or Mistral. No cost, no privacy compromises, full control.
+
+Ollama gives you a local LLM in under 20 minutes: zero cost per token, full privacy, and unlimited experimentation. Supports macOS, Linux, and Windows.
+
+Download a model with `ollama pull llama3`. For modest hardware: Mistral 7B or Phi-3 Mini. With 16GB VRAM GPU: Llama 3 8B or Gemma 2 9B. Open WebUI (Docker) adds a ChatGPT-like interface connected to your local models. Ollama exposes an OpenAI-compatible API at localhost:11434 — any client (LangChain, LlamaIndex) works without changes.
+
+Install with: `npm install -g ollama && ollama pull llama3 && docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:main`
