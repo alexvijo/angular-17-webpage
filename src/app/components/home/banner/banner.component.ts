@@ -40,8 +40,8 @@ export class BannerComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Alex Vicente | Desarrollador Full Stack y AI Engineer en Barcelona'
-        : 'Alex Vicente | Full Stack Developer & AI Engineer in Barcelona',
+        ? 'Alex Vicente | AI Engineer · Full-stack'
+        : 'Alex Vicente | AI Engineer · Full-stack',
       description: isSpanish
         ? 'Alex Vicente, desarrollador Full Stack y AI Engineer en Barcelona con más de 10 años de experiencia: Angular, Spring Boot, Python/FastAPI, agentes IA, MCP y RAG en producción. Disponible en remoto.'
         : 'Alex Vicente, Full Stack Developer and AI Engineer in Barcelona with 10+ years of experience: Angular, Spring Boot, Python/FastAPI, AI agents, MCP and RAG in production. Available remotely.',
