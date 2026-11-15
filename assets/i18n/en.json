@@ -30,7 +30,53 @@
       "Rather than a single technology, my specialty is <span class='underline'>solving problems</span>: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.",
       "I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the <span class='underline'>quality</span> that keeps them running (testing, continuous integration and deployment).",
       "I use AI as a multiplier, not a replacement: it proposes, I bring the <span class='underline'>judgment</span>, reviewing, validating and explaining every technical decision.",
+      "I work close to the business: I understand the problem with the client, turn it into a product and take it to production measuring its <span class='underline'>impact</span> (time saved, cloud and token costs, real usage). Ten years freelancing with my own clients taught me that software is worth what it solves.",
       "I'm inspired by people who think disruptively and step out of their comfort zone. I define myself not by the work I've done but by the work I aspire to do: I can learn any skill, and my character is what sets me apart."
+  ],
+  "Career.Title": "Experience and impact",
+  "Career.Items": [
+    {
+      "role": "Telefonica Technical Engineer",
+      "company": "Westcon-Comstor",
+      "period": "2024 – present · remote",
+      "impact": "Technical engineer for the Telefónica account."
+    },
+    {
+      "role": "Software Developer",
+      "company": "Eurecat – Technology Centre of Catalonia",
+      "period": "2019 – 2024",
+      "impact": "Almost 5 years building, testing and maintaining several production web applications end to end with Spring Boot, Angular and Docker."
+    },
+    {
+      "role": "JavaScript Developer",
+      "company": "Between Technology",
+      "period": "2018 – 2019",
+      "impact": "Migrated and improved Penguin Random House Grupo Editorial apps for Android and iOS (Angular, Ionic, Cordova); refactored and documented PHP APIs."
+    },
+    {
+      "role": "Full-stack Developer",
+      "company": "Ingenia",
+      "period": "2018",
+      "impact": "Built and improved the romeuferries.com booking website."
+    },
+    {
+      "role": "Web Developer",
+      "company": "Ciber Spain",
+      "period": "2015 – 2016",
+      "impact": "Built and tested the whole UI of “Clínica Online”, used by Mútua Universal clients."
+    },
+    {
+      "role": "Developer Consultant",
+      "company": "Altran",
+      "period": "2014 – 2015",
+      "impact": "Front-end consultant: UI integration on client projects."
+    },
+    {
+      "role": "Freelance web developer",
+      "company": "Own clients",
+      "period": "2008 – 2018",
+      "impact": "Ten years working directly with clients: responsive, accessible UIs, SPAs on REST APIs and custom WordPress themes."
+    }
   ],
   "AboutMe.ToolsTitle": "My everyday tools",
   "Experience.Title": "Interests",

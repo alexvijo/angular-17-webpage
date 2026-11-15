@@ -144,6 +144,7 @@ Soy Alex (Alejandro) Vicente, desarrollador Full Stack y AI Engineer en Barcelon
 Más que en una tecnología concreta, me especializo en resolver problemas: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.
 Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la calidad que los sostiene (testing, integración continua y despliegue).
 Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el criterio, reviso, valido y explico cada decisión técnica.
+Trabajo cerca del negocio: entiendo el problema con el cliente, lo convierto en producto y lo llevo a producción midiendo su impacto (tiempo ahorrado, costes de cloud y tokens, uso real). Diez años como freelance con clientes propios me enseñaron que el software vale por lo que resuelve.
 Me inspiran las personas que piensan de manera disruptiva y salen de su zona cómoda. Me defino no por el trabajo que he realizado, sino por el que aspiro a realizar: puedo aprender cualquier habilidad, y mi carácter es lo que me distingue.
 
 ### Skills
@@ -185,6 +186,7 @@ I'm Alex (Alejandro) Vicente, a Full Stack Developer and AI Engineer in Barcelon
 Rather than a single technology, my specialty is solving problems: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.
 I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the quality that keeps them running (testing, continuous integration and deployment).
 I use AI as a multiplier, not a replacement: it proposes, I bring the judgment, reviewing, validating and explaining every technical decision.
+I work close to the business: I understand the problem with the client, turn it into a product and take it to production measuring its impact (time saved, cloud and token costs, real usage). Ten years freelancing with my own clients taught me that software is worth what it solves.
 I'm inspired by people who think disruptively and step out of their comfort zone. I define myself not by the work I've done but by the work I aspire to do: I can learn any skill, and my character is what sets me apart.
 
 ### Skills
