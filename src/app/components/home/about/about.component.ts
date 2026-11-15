@@ -36,8 +36,8 @@ export class AboutComponent implements OnInit {
 
     this.seoService.updatePageSEO({
       title: isSpanish
-        ? 'Acerca de mi - Alex Vicente AI Engineer'
-        : 'About me - Alex Vicente AI Engineer',
+        ? 'Sobre mí - Alex Vicente, Desarrollador Full Stack y AI Engineer'
+        : 'About me - Alex Vicente, Full Stack Developer & AI Engineer',
       description: isSpanish
         ? 'Ingeniero de software generalista: producto, frontend, backend e IA en producción. Resuelvo problemas de principio a fin con criterio y calidad.'
         : 'Generalist software engineer: product, frontend, backend and AI in production. I solve problems end to end with judgment and quality.',
