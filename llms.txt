@@ -1,8 +1,8 @@
 # Alex Vicente — AI Engineer
 
-> Alex Vicente is an AI Engineer based in Barcelona, Spain. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
+> Alex (Alejandro) Vicente is a Full Stack Developer and AI Engineer based in Barcelona, Spain, with 10+ years of experience. He takes AI products from idea to production: AI agents, LLM and MCP (Model Context Protocol) integrations, RAG over internal data, LLM security and deployment. Available remotely for companies in Spain and Europe and for direct clients.
 
-Owner: Alex Vicente
+Owner: Alex Vicente (Alejandro Vicente)
 Role: AI Engineer (generalist software engineer: product, frontend, backend, data and AI)
 Location: Barcelona, Spain — remote
 Contact: alexvicentejose@gmail.com

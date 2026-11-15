@@ -26,7 +26,7 @@
 
     "AboutMe.Title": "Sobre mi",
     "AboutMe.Paragraphs": [
-        "Soy un ingeniero de software <span class='underline'>generalista</span>: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.",
+        "Soy Alex (Alejandro) Vicente, desarrollador Full Stack y AI Engineer en Barcelona, un ingeniero de software <span class='underline'>generalista</span>: me muevo con soltura entre producto, frontend, backend, datos e inteligencia artificial.",
         "Más que en una tecnología concreta, me especializo en <span class='underline'>resolver problemas</span>: entender el negocio, dividir lo complejo en partes manejables y elegir la herramienta adecuada para cada caso.",
         "Construyo de principio a fin: interfaces con Angular, APIs con Node.js o Spring Boot, sistemas con IA en producción y la <span class='underline'>calidad</span> que los sostiene (testing, integración continua y despliegue).",
         "Uso la IA como un multiplicador, no como un sustituto: ella propone y yo aporto el <span class='underline'>criterio</span>, reviso, valido y explico cada decisión técnica.",

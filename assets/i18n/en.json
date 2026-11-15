@@ -26,7 +26,7 @@
 
   "AboutMe.Title": "About me",
   "AboutMe.Paragraphs": [
-      "I'm a <span class='underline'>generalist</span> software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.",
+      "I'm Alex (Alejandro) Vicente, a Full Stack Developer and AI Engineer in Barcelona — a <span class='underline'>generalist</span> software engineer, comfortable moving across product, frontend, backend, data and artificial intelligence.",
       "Rather than a single technology, my specialty is <span class='underline'>solving problems</span>: understanding the business, breaking complexity into manageable pieces and picking the right tool for each job.",
       "I build end to end: interfaces with Angular, APIs with Node.js or Spring Boot, AI systems in production and the <span class='underline'>quality</span> that keeps them running (testing, continuous integration and deployment).",
       "I use AI as a multiplier, not a replacement: it proposes, I bring the <span class='underline'>judgment</span>, reviewing, validating and explaining every technical decision.",
