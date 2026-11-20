@@ -28,7 +28,7 @@ export class SeoService {
   }) {
     const title = config.title;
     const description = config.description;
-    const url = config.url || this.baseUrl;
+    const url = this.withTrailingSlash(config.url || this.baseUrl);
     const image = config.image || this.defaultImage;
     const imageAlt = config.imageAlt || title;
     const keywords = config.keywords || 'Alex Vicente, Developer, Angular, Software Engineer';
@@ -159,6 +159,19 @@ export class SeoService {
 
   private toAbsoluteUrl(path: string): string {
     const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-    return `${this.baseUrl}${normalizedPath}`;
+    return this.withTrailingSlash(`${this.baseUrl}${normalizedPath}`);
+  }
+
+  /**
+   * GitHub Pages sirve cada ruta prerenderizada como carpeta y redirige con 301
+   * `/es/inicio` → `/es/inicio/`. El canonical y el hreflang deben apuntar a la URL
+   * final (con barra) para que Google no vea un canonical que redirige.
+   */
+  private withTrailingSlash(url: string): string {
+    const [base, hash = ''] = url.split('#');
+    if (base.endsWith('/') || /\.[a-z0-9]+$/i.test(base.split('/').pop() || '')) {
+      return url;
+    }
+    return `${base}/${hash ? '#' + hash : ''}`;
   }
 }
